@@ -8,3 +8,6 @@ La idea del sitio no es competir con sitios masivos como Despegar, Al Mundo, Ava
 
 En ese sentido, Despegar, Avantrip y Al Mundo tienen una estructura estética similar que ayuda a que la experiencia de usuario sea mas amigable. Entonces, rápidamente el usuario puede acceder a la oferta del negocio sin perder tiempo en entender el ordenamiento de la información que desea. Asímismo, las funciones y motores de búsquedas ocupan un lugar preponderante para que el usuario considere el sitio web práctico y funcional a lo que necesita.
 En tanto, sitios como Europamundo y Juliá Tours, si bien son sitios web de venta mayorista pueden ser atractivos como referencia, ya que apuntan a un público nicho de oferta premium. Entonces, nos pueden ayudar a diferenciar, a priori, rasgos particulares a la hora de comunicar sus servicios para ese público.
+
+
+link wireframe: https://www.figma.com/file/1lYmp2x5UWVXay46kh81tg/Wireframes

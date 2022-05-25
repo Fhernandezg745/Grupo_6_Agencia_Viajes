@@ -1,0 +1,2 @@
+El sitio ofrece servicios de una agencia de viajes tradicional, desde paquetes turisticos tradicionales a destinos nacionales a internacionales, como asi tambien productos diferenciados de lujo para clientes premium como experiencias en safari o destinos exoticos.
+La idea del sitio no es competir con sitios masivos como Despegar, Al Mundo, Avantrip, etc. sino mas bien enfocarse en el producto de gama premium. Si bien no consideramos competencia a las ya nombradas, las mismas serviran de una guia para estructurar nuestro desarrollo web.

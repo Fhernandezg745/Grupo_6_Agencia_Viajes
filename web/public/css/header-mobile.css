@@ -6,3 +6,65 @@
     font-family: 'Montserrat Alternates', sans-serif;
     font-size: 15px;
 }
+
+.RRSS {
+  float: right;
+  padding-right: 15px;
+}
+
+.iconoRS {
+    color: #049473;
+}
+
+.main-header {
+    background-color: #949494;
+}
+
+.logo {
+    width: 15%;
+    height: auto;
+}
+
+.top-header {
+    justify-content: space-between;
+    display: flex;
+    flex-flow: row wrap;
+    padding: 10px;
+    align-items: center;
+    row-gap: 1rem;
+}
+
+.navRight {
+    display: flex;
+    flex-direction: row;
+}
+
+#burgerMenu {
+    text-align: center;
+}
+
+#burgerMenu a {
+    background: #049473;
+    width: 24px;
+    height: 24px;
+    margin: 12px;
+    padding: 1px;
+    border: 0.5px solid black;
+    color: hsl(210, 100%, 100%);
+    font-size: 16px;
+    text-decoration: none;
+    display: inline-block;
+    box-sizing: border-box;
+    border-radius: 3px;
+}
+
+.site {
+ display: flex;
+ flex-direction: row;
+ justify-content: center;
+ align-content: center;
+}
+
+.site a {
+    padding: 1rem;
+}

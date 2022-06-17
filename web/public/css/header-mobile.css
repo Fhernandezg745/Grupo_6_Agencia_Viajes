@@ -3,9 +3,8 @@
     padding: 0px;
     box-sizing: border-box;
     border: none;
-<<<<<<< HEAD
-    font-family: 'Roboto', sans-serif;
-    font-size: 12px;
+    font-family: 'Montserrat Alternates', sans-serif;
+    font-size: 15px;
 }
 
 .RRSS {
@@ -57,8 +56,4 @@
     display: inline-block;
     box-sizing: border-box;
     border-radius: 3px;
-=======
-    font-family: 'Montserrat Alternates', sans-serif;
-    font-size: 15px;
->>>>>>> e83f997ee99a8dd814c6df082ac15462768508e7
 }

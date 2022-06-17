@@ -1,4 +1,5 @@
 footer {
+    font-family: 'Montserrat Alternates', sans-serif;
     background-color: #64bda5;
     display: flex;
     justify-content: space-evenly;
@@ -23,7 +24,14 @@ footer {
     font-size: 3rem;
 }
 
+.nav-link-footer {
+    display: flex;
+    flex-wrap: wrap;
+    flex-grow: 1;
+}
+
 .nav-link-footer a {
+    flex-grow: 1;
     margin-bottom: 10px;
     display: flex;
     flex-wrap: wrap;
@@ -32,8 +40,21 @@ footer {
     font-size: 1.2rem;
 }
 
+.nav-link-footer div {
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.a-footer {
+    width: 100%;
+    display: flex;
+    flex-wrap: wrap;
+    font-size: 1.2rem;
+    padding-left: 1rem;
+}
+
 .foot-icon {
-    font-size: 1em;
+    font-size: 1.7em;
     margin-bottom: 10px;
     color: #1259c3;
 }

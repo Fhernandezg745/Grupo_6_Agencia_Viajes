@@ -57,3 +57,14 @@
     box-sizing: border-box;
     border-radius: 3px;
 }
+
+.site {
+ display: flex;
+ flex-direction: row;
+ justify-content: center;
+ align-content: center;
+}
+
+.site a {
+    padding: 1rem;
+}

@@ -29,5 +29,11 @@ footer {
     flex-wrap: wrap;
     text-decoration: none;
     color: #4c4c4a;
-    font-size: 1.5rem;
+    font-size: 1.2rem;
+}
+
+.foot-icon {
+    font-size: 1em;
+    margin-bottom: 10px;
+    color: #1259c3;
 }

@@ -1,60 +1,120 @@
-footer {
-    font-family: 'Montserrat Alternates', sans-serif;
-    background-color: #64bda5;
-    display: flex;
-    justify-content: space-evenly;
-    padding: 10px;
-    box-sizing: border-box;
+body {
+    margin: 0;
+    display: grid;
+    grid-template-rows: auto 1fr auto;
+    font-size: 14px;
+    background-color: #f4f4f4;
+    align-items: start;
+    min-height: 100vh;
 }
 
-.links-footer-section {
-    border: 0.5px solid #ccc;
-    background-color: #09a889;
+.footer {
     display: flex;
-    width: 30%;
-    flex-wrap: wrap;
-    justify-content: center;
-    box-shadow: 0px 0px 10px rgb(100, 100, 100);
-    border-radius: 10px;
-    padding: 10px;
+    flex-flow: row wrap;
+    padding: 20px 30px 20px 30px;
+    color: #2f2f2f;
+    background-color: #fff;
+    border-top: 1px solid #e5e5e5;
 }
 
-.links-footer-section .nav-link-footer .h4-footer {
-    margin-bottom: 15px;
-    font-size: 3rem;
+.footer>* {
+    flex: 1 100%;
 }
 
-.nav-link-footer {
-    display: flex;
-    flex-wrap: wrap;
-    flex-grow: 1;
+.footerA i {
+    font-size: 1rem;
+    margin-right: 0.8rem;
 }
 
-.nav-link-footer a {
-    flex-grow: 1;
-    margin-bottom: 10px;
-    display: flex;
-    flex-wrap: wrap;
+.footerMain {
+    margin-right: 1.25em;
+    margin-bottom: 2em;
+}
+
+.footer .footerMain .footerPerfil {}
+
+.footerPerfil {
+    width: 40%;
+    height: 20%;
+}
+
+.footerMain h2 {
+    margin-top: 0;
+    font-size: 15px;
+    font-weight: 400;
+}
+
+.navTitle {
+    font-weight: 400;
+    font-size: 15px;
+}
+
+.footer address {
+    font-style: normal;
+    color: #999;
+}
+
+.footer a {
     text-decoration: none;
-    color: #4c4c4a;
-    font-size: 1.2rem;
 }
 
-.nav-link-footer div {
+.footerNav {
+    display: flex;
+    flex-flow: row wrap;
+}
+
+.footerNav>* {
+    flex: 1 50%;
+    margin-right: 1.25em;
+}
+
+.navList a {
+    color: #999;
+}
+
+.legal {
+    margin-top: 10px;
     display: flex;
     flex-wrap: wrap;
+    color: #999;
+    justify-content: right;
 }
 
-.a-footer {
-    width: 100%;
-    display: flex;
-    flex-wrap: wrap;
-    font-size: 1.2rem;
-    padding-left: 1rem;
-}
-
-.foot-icon {
-    font-size: 1.7em;
+.footer .footerMain h2 {
     margin-bottom: 10px;
-    color: #1259c3;
+}
+
+.footer .footerNav h2 {
+    margin-top: 20px;
+}
+
+.footer .footerNav .navItems .navList {
+    display: flex;
+    flex-direction: column;
+    flex-wrap: wrap;
+    justify-content: space-evenly;
+}
+
+.footer .footerNav .navItems {
+    margin-top: 30px;
+    margin: 0;
+}
+
+.footerNav {
+    width: 30vw;
+    display: flex;
+    flex-wrap: wrap;
+}
+
+.footer .footerNav .navItems .navList {
+    width: 100%;
+}
+
+.footer .footerNav .navItems .navTitle {
+    width: 100%;
+}
+
+.footer .footerNav .navItems .navList .footerA {
+    margin-top: 10px;
+    font-size: 0.8rem;
 }

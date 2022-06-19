@@ -2,4 +2,8 @@
     .bottomClassMain {
         grid-template-columns: 1fr 1fr;
     }
+    .mainClass .topClassMain {
+        left: 45vw;
+        bottom: 10vw;
+    }
 }

@@ -1,0 +1,14 @@
+    @media screen and (min-width: 480px) {
+        .footer .footerNav .navItems .navList .footerA {
+            font-size: 1rem;
+        }
+        .footerNav>* {
+            flex: 1;
+        }
+        .footerMain {
+            flex: 1 0px;
+        }
+        .footerNav {
+            flex: 2 0px;
+        }
+    }

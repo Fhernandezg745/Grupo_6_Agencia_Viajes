@@ -10,8 +10,9 @@
 .RRSS {
     display: flex;
     flex-direction: row;
-    float: right;
-    padding-right: 15px;        
+	justify-content: flex-end;
+    padding-right: 15px;
+	background-color: #049473;
 }
     
 .RRSSItems {

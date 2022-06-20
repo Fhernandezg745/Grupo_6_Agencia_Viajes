@@ -1,0 +1,15 @@
+@media screen and (min-width: 780px) {
+    .bottomClassMain {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .mainClass .topClassMain {
+        left: 45vw;
+        bottom: 10vw;
+    }
+}
+
+@media screen and (min-width: 980px) {
+    .bottomClassMain {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+}

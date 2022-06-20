@@ -8,63 +8,60 @@
 }
 
 .RRSS {
-  float: right;
-  padding-right: 15px;
+    display: flex;
+    flex-direction: row;
+    float: right;
+    padding-right: 15px;        
 }
-
-.iconoRS {
-    color: #049473;
+    
+.RRSSItems {
+    padding: 0.4rem;
+}
+    
+.RRSS .RRSSItems a i {
+    color: #c7c7c7;
 }
 
 .main-header {
-    background-color: #949494;
+	background-color:#049473;
+	padding: 20px 40px;
+	height: 80px;
+	top:-100px;
 }
 
-.logo {
-    width: 15%;
-    height: auto;
+.logoHB {
+    width: 50px;
 }
 
-.top-header {
-    justify-content: space-between;
-    display: flex;
-    flex-flow: row wrap;
-    padding: 10px;
-    align-items: center;
-    row-gap: 1rem;
+.main-header .header-limiter {
+	max-width: 1200px;
+	text-align: center;
+	margin: 0 auto;
 }
 
-.navRight {
-    display: flex;
-    flex-direction: row;
+.main-header .header-limiter h1 {
+	float: left;
 }
 
-#burgerMenu {
-    text-align: center;
+.main-header .header-limiter nav {
+	font:16px;
+	line-height: 40px;
+	float: right;
 }
 
-#burgerMenu a {
-    background: #049473;
-    width: 24px;
-    height: 24px;
-    margin: 12px;
-    padding: 1px;
-    border: 0.5px solid black;
-    color: hsl(210, 100%, 100%);
-    font-size: 16px;
-    text-decoration: none;
-    display: inline-block;
-    box-sizing: border-box;
-    border-radius: 3px;
+.main-header .header-limiter nav a{
+	display: inline-block;
+	padding: 0 5px;
+	text-decoration:none;
+	color: #ffffff;
+	opacity: 0.9;
 }
 
-.site {
- display: flex;
- flex-direction: row;
- justify-content: center;
- align-content: center;
+.main-header .header-limiter nav a:hover{
+	opacity: 1;
 }
 
-.site a {
-    padding: 1rem;
+.main-header .header-limiter nav a.selected {
+	color: #7c7c7c;
+	opacity: 1;
 }

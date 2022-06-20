@@ -1,0 +1,19 @@
+{
+  "name": "grupo_6_agencia_viajes",
+  "version": "1.0.0",
+  "description": "",
+  "main": "index.js",
+  "scripts": {
+    "test": "echo \"Error: no test specified\" && exit 1"
+  },
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/Fhernandezg745/Grupo_6_Agencia_Viajes.git"
+  },
+  "author": "",
+  "license": "ISC",
+  "bugs": {
+    "url": "https://github.com/Fhernandezg745/Grupo_6_Agencia_Viajes/issues"
+  },
+  "homepage": "https://github.com/Fhernandezg745/Grupo_6_Agencia_Viajes#readme"
+}

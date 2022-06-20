@@ -1,0 +1,20 @@
+@media screen and (min-width: 480px) {
+
+.RRSS {
+    display: flex;
+    flex-direction: row;
+    justify-content: flex-end;
+    padding-right: 15px;
+    background-color: #049473;
+}
+        
+.RRSSItems {
+    padding: 0.4rem;
+}
+        
+.RRSS .RRSSItems a i {
+    color: #c7c7c7;
+}
+
+    
+}

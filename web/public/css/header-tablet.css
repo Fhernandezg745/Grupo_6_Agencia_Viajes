@@ -16,5 +16,28 @@
     color: #c7c7c7;
 }
 
+.main-header .top-header .site {
+	font:16px;
+	line-height: 40px;
+	float: right;
+}
+
+.main-header .top-header .site a{
+	display: inline-block;
+	padding: 0 5px;
+	text-decoration:none;
+	color: #ffffff;
+	opacity: 0.9;
+}
+
+.main-header .top-header .site a:hover{
+	opacity: 1;
+}
+
+.main-header .top-header .site a.selected {
+	color: #7c7c7c;
+	opacity: 1;
+}
+
     
 }

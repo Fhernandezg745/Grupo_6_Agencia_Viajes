@@ -1,0 +1,47 @@
+@media screen and (min-width: 780px) {
+    * {
+        margin: 0px;
+        padding: 0px;
+        box-sizing: border-box;
+        border: none;
+        font-family: 'Montserrat Alternates', sans-serif;
+        font-size: 15px;
+    }
+    .RRSS {}
+    .main-header {
+        border-top: solid 1px black;
+        background-color: #049473;
+        padding: 0px 40px;
+    }
+    .main-header .top-header {
+        align-items: center;
+        width: 100%;
+        display: flex;
+        justify-content: space-between;
+        flex-flow: row;
+        flex-wrap: wrap;
+    }
+    .main-header .top-header .nav-logo {
+        width: 20%;
+        height: auto;
+        float: left;
+    }
+    .main-header .top-header .site {
+        height: 40%;
+        display: flex;
+        flex-wrap: wrap;
+        align-items: center;
+        justify-items: center;
+        gap: 1rem;
+    }
+    .logoHB {
+        width: 120px;
+        height: 120px;
+    }
+    #buttonRegistrate {}
+    #buttonIngresa {}
+    .container-name {
+        margin-left: 30px;
+        margin-top: 60px;
+    }
+}

@@ -1,5 +1,14 @@
 @media screen and (min-width: 480px) {
     .bottomClassMain {
+        display: flex;
+        flex-wrap: wrap;
+    }
+    .bottomClassMain .firstSection {
+        display: grid;
+        grid-template-columns: 1fr 1fr;
+    }
+    .bottomClassMain .lastSection {
+        display: grid;
         grid-template-columns: 1fr 1fr;
     }
     .mainClass .topClassMain {

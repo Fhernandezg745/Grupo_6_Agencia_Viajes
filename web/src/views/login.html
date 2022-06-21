@@ -18,6 +18,7 @@
         <link rel="stylesheet" href="./css/footer-mobile.css">
         <link rel="stylesheet" href="./css/footer-tablet.css">
         <link rel="stylesheet" href="./css/footer-desktop.css">
+        <link rel="stylesheet" href="./css/register-login.css">
 </head>
 <body>
   <section class="RRSS">
@@ -74,7 +75,24 @@
           </nav>
       </section>
   </header>
-
+  <main>
+    <section>
+    <form action="/" method="post" class="formAreaRegister">
+        <fieldset class="labelFieldset">
+            <label for="usuario"><i class="fa-solid fa-user registerIcon"></i> Usuario</label>
+            <input type="text" name="usuario" placeholder="Ingrese nombre de usuario" class="inputTextFieldRegister" required>
+        </fieldset>
+        <fieldset class="labelFieldset">
+            <label for="password"><i class="fa-solid fa-lock registerIcon"></i> Contraseña</label>
+            <input type="password" name="password" id="password" placeholder="Ingresa tu contraseña" class="inputTextFieldRegister" required>
+        </fieldset>
+        <fieldset class="buttonField">
+            <a href="/"><input type="submit" value="Enviar" name="enviar" class="sendButton"></a>
+            <a href="/"><input type="reset" value="Borrar" name="borrar" class="sendButton"></a>
+        </fieldset>
+    </form>      
+  </section>
+  </main>
     <footer class="footer">
         <section class="footerMain">
             <figure>

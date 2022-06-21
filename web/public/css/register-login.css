@@ -6,9 +6,9 @@
     flex-direction: column;
     justify-content: center;
     background-color:#3ab494;
-    width: 40%;
-    margin-left: 30%;
-    margin-right: 30%;
+    width: 60vw;
+    margin-left: 20vw;
+    margin-right: 20vw;
     border-radius: 22px;
 }
 
@@ -22,20 +22,22 @@
 .formAreaRegister .labelFieldset label {
     color: #4c4c4a;
     display: flex;
-    width: 35%;
-    font-size: 14px;
+    width: 15vw;
+    font-size: 0.8em;
     height: 2rem;
     border-radius: 4px;
     padding-left: 10px;
 }
 
 .formAreaRegister .labelFieldset .inputTextFieldRegister {
-    margin-left: 5%;
+    margin-left: 1em;
+    padding-left: 1em;
     background-color: #c7c7c7;
     border-bottom: 2px solid #7c7c7c;
+    font-size: 0.8em;
     display: flex;
-    width: 40%;
-    height: 2rem;
+    width: 20vw;
+    height: 2em;
     border-radius: 4px;
     justify-content: center;
 }

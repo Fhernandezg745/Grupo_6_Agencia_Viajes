@@ -18,7 +18,7 @@
         <link rel="stylesheet" href="./css/footer-mobile.css">
         <link rel="stylesheet" href="./css/footer-tablet.css">
         <link rel="stylesheet" href="./css/footer-desktop.css">
-        <link rel="stylesheet" href="./css/register-mobile.css">
+        <link rel="stylesheet" href="./css/register-login.css">
 </head>
 <body>
   <section class="RRSS">
@@ -84,7 +84,7 @@
       </fieldset>
       <fieldset class="labelFieldset">
           <label for="usuario"><i class="fa-solid fa-user registerIcon"></i> Usuario</label>
-          <input type="text" name="usuario" placeholder="Ingrese nombre de usuari@" class="inputTextFieldRegister" required>
+          <input type="text" name="usuario" placeholder="Ingrese nombre de usuario" class="inputTextFieldRegister" required>
       </fieldset>
       <fieldset class="labelFieldset">
           <label for="nacimiento"><i class="fa-solid fa-calendar-days registerIcon"></i> Fecha de nacimiento</label>
@@ -105,8 +105,11 @@
       <fieldset class="labelFieldset">
           <label for="password"><i class="fa-solid fa-lock registerIcon"></i> Crear contraseña</label>
           <input type="password" name="password" id="password" placeholder="Ingresa una contraseña" class="inputTextFieldRegister" required>
-          <input type="password" name="password" id="passwordCheked" placeholder="Confirmar contraseña" class="inputTextFieldRegister registration" required>
       </fieldset>
+      <fieldset class="labelFieldset">
+        <label for="password"></label>
+        <input type="password" name="password" id="passwordCheked" placeholder="Confirmar contraseña" class="inputTextFieldRegister registration" required>
+    </fieldset>
       <fieldset class="buttonField">
           <a href="/"><input type="submit" value="Enviar" name="enviar" class="sendButton"></a>
           <a href="/"><input type="reset" value="Borrar" name="borrar" class="sendButton"></a>

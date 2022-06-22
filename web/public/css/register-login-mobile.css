@@ -1,7 +1,7 @@
 * {
     box-sizing: border-box;
     border: none;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Varela Round', sans-serif;
 }
 
 .formAreaRegister {
@@ -10,7 +10,7 @@
     display: inline-flex;
     flex-direction: column;
     justify-content: center;
-    background-color:#3ab494;
+    background-color: #3ab494;
     width: 60vw;
     margin-top: 5vw;
     margin-left: 20vw;
@@ -75,9 +75,7 @@
     font-weight: 300px;
 }
 
-
 .sendButton:hover {
     background-color: #09a889;
-    border:#4c4c4a solid 2px;
+    border: #4c4c4a solid 2px;
 }
-

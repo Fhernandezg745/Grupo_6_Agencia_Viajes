@@ -9,6 +9,9 @@
         left: 45vw;
         bottom: 10vw;
     }
+    .bottomClassMain .fancyHeader h2 {
+        font-size: large;
+    }
 }
 
 @media screen and (min-width: 980px) {

@@ -15,4 +15,11 @@
         left: 45vw;
         bottom: 10vw;
     }
+    .bottomClassMain .firstSection {
+        margin-bottom: 5vw;}
+    .middleClassMain .articleExperiencias {
+        width: 15vw;
+        margin-bottom: 30px;
+    }
+
 }

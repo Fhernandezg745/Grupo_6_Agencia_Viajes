@@ -17,7 +17,7 @@
 .RRSS .RRSSItems {
     width: 26px;
     height: 100%;
-    border: 0px;
+    border: 1px solid #fff;
 }
 
 .RRSS .RRSSItems a {
@@ -28,7 +28,7 @@
 
 .RRSS .RRSSItems:hover {
     border: 1px solid rgba(0, 233, 175, 0.707);
-    border-radius: 30px;
+    border-radius: 10px;
 }
 
 .RRSS .RRSSItems:hover i {

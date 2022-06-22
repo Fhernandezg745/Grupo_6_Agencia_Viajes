@@ -1,5 +1,8 @@
 @media screen and (min-width: 780px) {
-    .bottomClassMain {
+    .bottomClassMain .firstSection {
+        grid-template-columns: 1fr 1fr 1fr;
+    }
+    .bottomClassMain .lastSection {
         grid-template-columns: 1fr 1fr 1fr;
     }
     .mainClass .topClassMain {
@@ -9,7 +12,10 @@
 }
 
 @media screen and (min-width: 980px) {
-    .bottomClassMain {
+    .bottomClassMain .firstSection {
+        grid-template-columns: 1fr 1fr 1fr 1fr;
+    }
+    .bottomClassMain .lastSection {
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
 }

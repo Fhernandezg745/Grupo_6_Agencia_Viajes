@@ -1,42 +1,49 @@
-
+* {
+    box-sizing: border-box;
+    border: none;
+    font-family: 'Roboto', sans-serif;
+}
 
 .formAreaRegister {
+    padding: 1em;
     border: 4px #09a889 solid;
     display: inline-flex;
     flex-direction: column;
     justify-content: center;
     background-color:#3ab494;
     width: 60vw;
+    margin-top: 5vw;
     margin-left: 20vw;
     margin-right: 20vw;
+    margin-bottom: 10vw;
     border-radius: 22px;
 }
 
 .labelFieldset {
-    margin-left: 4%;
+    margin-left: 4px;
     padding: 1vw;
     display: flex;
-    align-items: center;
+    justify-content: center;
 }
 
 .formAreaRegister .labelFieldset label {
     color: #4c4c4a;
     display: flex;
     width: 15vw;
-    font-size: 0.8em;
+    font-size: 0.5em;
     height: 2rem;
     border-radius: 4px;
-    padding-left: 10px;
+    padding-left: 5px;
 }
 
 .formAreaRegister .labelFieldset .inputTextFieldRegister {
-    margin-left: 1em;
+    margin-left: 2em;
     padding-left: 1em;
     background-color: #c7c7c7;
     border-bottom: 2px solid #7c7c7c;
-    font-size: 0.8em;
+    font-size: 0.5em;
     display: flex;
-    width: 20vw;
+    width: 30vw;
     height: 2em;
     border-radius: 4px;
     justify-content: center;
@@ -54,7 +61,7 @@
 }
 
 .buttonField a {
-    width: 25%;
+    width: 30%;
 }
 
 .sendButton {
@@ -65,7 +72,7 @@
     background-color: #4c4c4a;
     color: #c7c7c7;
     border-radius: 5px;
-    font-weight: 300;
+    font-weight: 300px;
 }
 
 
@@ -73,3 +80,4 @@
     background-color: #09a889;
     border:#4c4c4a solid 2px;
 }
+

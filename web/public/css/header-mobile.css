@@ -36,7 +36,7 @@
 }
 
 
-/*=============================== BOTTOM HEADER =================================*/
+/*===============================MAIN HEADER =================================*/
 
 #burgerMenu a {
     background: hsl(159, 7%, 62%);
@@ -73,6 +73,11 @@
 
 .main-header .top-header .site .buttonNavSite2 {
     display: none
+}
+
+.main-header .top-header .site .iconMobile {
+    text-decoration: none;
+    color: rgba(255, 255, 255, 0);
 }
 
 .main-header .top-header .site .iconMobile i {
@@ -125,4 +130,8 @@
 
 .main-header .sectionSearch {
     display: none;
+}
+
+.mainSelectorContainer option .none {
+    color: #fff;
 }

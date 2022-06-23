@@ -1,0 +1,3 @@
+Como proceso de retrospectiva del primer sprint podemos destacar que se cumplieron los objetivos de realización y entrega en los plazos estipulados. Deberiamos seguir en esa línea de cumplimiento para no atrasar la asimilación de conceptos y poder entender mejor la etapa de cada módulo y su sprint correspondiente.
+Necesitamos más comunicación interna que nos faltó durante el transcurso del período del primer sprint. En ese sentido, deberiamos utiliziar mas las herramientas de comunicación interna fiables.
+Tambien, como parte de esa mejora en comunicación interna, asentar las stories o tareas a rezlizar para que el grupo sepa el estado del proyecto. Tdoo esto, seguramente se podrá trabajar mejor con la implementación de trello u otra plataforma. 

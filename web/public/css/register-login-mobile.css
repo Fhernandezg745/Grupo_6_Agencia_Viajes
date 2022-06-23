@@ -1,16 +1,45 @@
 * {
+    margin: 0px;
+    padding: 0px;
     box-sizing: border-box;
     border: none;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Varela Round', sans-serif;
+    font-size: 12px;
+}
+
+.imageLogin {
+    background-image: url(/assets/mapa_camara_2.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: #cccccc;
+    width: 100%;
+    height: 80vh;
+}
+
+.imageRegister {
+    background-image: url(/assets/mapa_camara_bcg.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: #cccccc;
+    width: 100%;
+    height: auto;
+}
+
+.header {
+    padding-top: 50px;
+    color: white;
+    font-size: 20px;
+    text-align: center;
 }
 
 .formAreaRegister {
     padding: 1em;
-    border: 4px #09a889 solid;
     display: inline-flex;
     flex-direction: column;
     justify-content: center;
-    background-color:#3ab494;
+    background-color: rgba(27, 148, 103, 0.734);
     width: 60vw;
     margin-top: 5vw;
     margin-left: 20vw;
@@ -25,9 +54,24 @@
     display: flex;
     justify-content: center;
 }
+.bottomCheck {
+    font-size: 0.5rem;
+    color: #cccccc;
+    margin-left: 4px;
+    padding: 1vw;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.bottomCheck label{
+    font-size: 0.6rem;
+}
+.bottomCheck input{
+    margin-left: 5px;
+}
 
 .formAreaRegister .labelFieldset label {
-    color: #4c4c4a;
+    color: rgba(255, 255, 255, 0.734);
     display: flex;
     width: 15vw;
     font-size: 0.5em;
@@ -39,7 +83,7 @@
 .formAreaRegister .labelFieldset .inputTextFieldRegister {
     margin-left: 2em;
     padding-left: 1em;
-    background-color: #c7c7c7;
+    background-color: rgba(255, 255, 255, 0.734);
     border-bottom: 2px solid #7c7c7c;
     font-size: 0.5em;
     display: flex;
@@ -75,9 +119,7 @@
     font-weight: 300px;
 }
 
-
 .sendButton:hover {
-    background-color: #09a889;
-    border:#4c4c4a solid 2px;
+    background-color: rgba(255, 255, 255, 0.734);
+    color: #4c4c4a;
 }
-

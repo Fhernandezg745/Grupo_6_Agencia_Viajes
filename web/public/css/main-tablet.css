@@ -6,6 +6,7 @@
     .bottomClassMain .firstSection {
         display: grid;
         grid-template-columns: 1fr 1fr;
+        height: auto;
     }
     .bottomClassMain .lastSection {
         display: grid;
@@ -14,5 +15,29 @@
     .mainClass .topClassMain {
         left: 45vw;
         bottom: 10vw;
+    }
+    .bottomClassMain .firstSection {
+        margin-bottom: 5vw;
+    }
+    .middleClassMain .articleExperiencias {
+        width: 15vw;
+        margin-bottom: 30px;
+    }
+    .mainClass .sectionSearch form {
+        flex-direction: row;
+    }
+    .mainClass .sectionSearch form button {
+        font-family: 'Varela Round', sans-serif;
+        font-weight: 600;
+        margin-left: 10px;
+        margin-top: 0px;
+        border-radius: 3px;
+        width: 15%;
+    }
+    .mainClass .sectionSearch {
+        flex-wrap: wrap-reverse;
+    }
+    .mainClass .sectionSearch form {
+        max-height: 40px;
     }
 }

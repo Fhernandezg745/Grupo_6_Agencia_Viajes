@@ -35,6 +35,9 @@
     color: rgba(0, 233, 175, 0.707);
 }
 
+
+/*=============================== BOTTOM HEADER =================================*/
+
 #burgerMenu a {
     background: hsl(159, 7%, 62%);
     width: 24px;
@@ -55,22 +58,16 @@
     width: 100%;
     display: flex;
     justify-content: space-between;
-    flex-flow: row;
-    flex-wrap: wrap;
 }
 
 .main-header .top-header .nav-logo {
-    width: 20%;
+    width: 50%;
     height: auto;
-    float: left;
 }
 
 .main-header .top-header .site {
     height: 40%;
     display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    justify-items: center;
     gap: 1rem;
 }
 
@@ -123,4 +120,9 @@
     width: 30%;
     display: flex;
     flex-wrap: wrap;
+    background-color: #049473;
+}
+
+.main-header .sectionSearch {
+    display: none;
 }

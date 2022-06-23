@@ -4,9 +4,9 @@
 .caja1 {
   margin: 20px;
   border-radius: 22px;
-  background-color: #3ab494;
+  background-color: rgba(27, 148, 103, 0.734);
   padding: 1em;
-  border: 4px #09a889 solid;
+  
   flex-basis: 100%;
   display: flex;
   flex-wrap: wrap;
@@ -15,7 +15,6 @@
   flex-basis: 50%;
   display: block;
   margin-bottom: 10px;
-  
   margin-bottom: 10px;
   color: #4c4c4a;
 }
@@ -25,7 +24,7 @@
   padding-top: 5px;
   padding-bottom: 5px;
   margin-bottom: 10px;
-  background-color: #c7c7c7;
+  background-color: rgba(255, 255, 255, 0.734);
 }
 .articleDetails {
   width: 90%;
@@ -47,9 +46,10 @@ div > p{
     
 }
 .articleTitle{
-    color: black;
-    font-size: 14px;
-    margin: 5px 15px;
+  font-size: larger;
+  margin-top: 10px;
+  text-transform: uppercase;
+  color: goldenrod;
 }
 .articleFigure{
     margin: 0;
@@ -71,7 +71,7 @@ div > p{
   padding: none;
 }
 .textArea{
-  background-color: #c7c7c7;
+  background-color: rgba(255, 255, 255, 0.734);
   color: #4c4c4a;
   font-size: 12px;
   font-family: "Roboto", sans-serif;
@@ -79,6 +79,7 @@ div > p{
   width: 100%;
   border: none;
   margin-bottom: 20px;
+  padding: 10px;
   
 
 }

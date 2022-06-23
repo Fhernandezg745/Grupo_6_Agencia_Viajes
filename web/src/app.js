@@ -4,7 +4,7 @@ const server = express();
 const port = process.env.PORT || 3002;
 
 server.listen(port, () =>
-    console.log(`Abriendo el servidor http://localhost:${port}`)
+  console.log(`Abriendo el servidor http://localhost:${port}`)
 );
 
 const public = path.resolve(__dirname, "../public");
@@ -12,17 +12,21 @@ const public = path.resolve(__dirname, "../public");
 server.use(express.static(public));
 
 server.get("/", (req, res) =>
-    res.sendFile(path.resolve(__dirname, "./views/home.html"))
+  res.sendFile(path.resolve(__dirname, "./views/home.html"))
 );
 
 server.get("/login.html", (req, res) =>
-    res.sendFile(path.resolve(__dirname, "./views/login.html"))
+  res.sendFile(path.resolve(__dirname, "./views/login.html"))
 );
 
 server.get("/register.html", (req, res) =>
-    res.sendFile(path.resolve(__dirname, "./views/register.html"))
+  res.sendFile(path.resolve(__dirname, "./views/register.html"))
 );
 
 server.get("/details.html", (req, res) =>
-    res.sendFile(path.resolve(__dirname, "./views/details.html"))
+  res.sendFile(path.resolve(__dirname, "./views/details.html"))
+);
+
+server.get("/carrito.html", (req, res) =>
+  res.sendFile(path.resolve(__dirname, "./views/carrito.html"))
 );

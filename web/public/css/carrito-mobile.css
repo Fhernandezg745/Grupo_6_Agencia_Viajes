@@ -1,0 +1,84 @@
+.main-carrito {
+  display: block;
+}
+.caja1 {
+  margin: 20px;
+  border-radius: 22px;
+  background-color: #3ab494;
+  padding: 1em;
+  border: 4px #09a889 solid;
+  flex-basis: 100%;
+  display: flex;
+  flex-wrap: wrap;
+}
+.usuario {
+  flex-basis: 50%;
+  display: block;
+  margin-bottom: 10px;
+  
+  margin-bottom: 10px;
+  color: #4c4c4a;
+}
+.articleMainContainer {
+  display: block;
+  border-radius: 5px;
+  padding-top: 5px;
+  padding-bottom: 5px;
+  margin-bottom: 10px;
+  background-color: #c7c7c7;
+}
+.articleDetails {
+  width: 90%;
+  padding: 0 5px;
+  font-family: "Roboto", sans-serif;
+  font-size: 14px;
+  padding-bottom: 10px;
+  justify-content: center;
+
+  
+}
+.articleImg {
+  width: 90%;
+ margin: 0 10px;
+}
+div > p{
+    margin-top: 0px;
+    display: inline;
+    
+}
+.articleTitle{
+    color: black;
+    font-size: 14px;
+    margin: 5px 15px;
+}
+.articleFigure{
+    margin: 0;
+}
+.pagar{
+  display: block;
+    flex-basis: 50%;
+    text-decoration: none;
+    padding: 5px 0;
+    text-align: center;
+    background-color: #4c4c4a;
+    color: #c7c7c7;
+    border-radius: 8px;
+    font-weight: 300px;
+    margin: 5px auto;
+
+}
+.precioArticuloMain{
+  padding: none;
+}
+.textArea{
+  background-color: #c7c7c7;
+  color: #4c4c4a;
+  font-size: 12px;
+  font-family: "Roboto", sans-serif;
+  border-radius: 5px;
+  width: 100%;
+  border: none;
+  margin-bottom: 20px;
+  
+
+}

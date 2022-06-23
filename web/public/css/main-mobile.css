@@ -125,7 +125,7 @@ main {
 }
 
 .sectionSearch .mainSelectorContainer select {
-    color: #fff;
+    color: black;
     background-color: rgba(198, 194, 182, 0);
     text-align: left;
     align-items: left;

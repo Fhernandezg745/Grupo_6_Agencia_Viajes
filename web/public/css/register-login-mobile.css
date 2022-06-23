@@ -54,6 +54,21 @@
     display: flex;
     justify-content: center;
 }
+.bottomCheck {
+    font-size: 0.5rem;
+    color: #cccccc;
+    margin-left: 4px;
+    padding: 1vw;
+    display: flex;
+    flex-wrap: nowrap;
+}
+
+.bottomCheck label{
+    font-size: 0.6rem;
+}
+.bottomCheck input{
+    margin-left: 5px;
+}
 
 .formAreaRegister .labelFieldset label {
     color: rgba(255, 255, 255, 0.734);

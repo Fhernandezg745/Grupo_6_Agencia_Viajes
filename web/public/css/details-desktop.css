@@ -1,0 +1,73 @@
+@media screen and (min-width: 780px) {
+
+    .mainDetails {
+        display: flex;
+        flex-direction: row;
+        background-color: #fff;
+    }
+    
+    .mainFigureDetails img {
+        width: 35vw;
+        margin-top: 2.5vw;
+        margin-left: 7.5vw;
+        margin-right: 7.5vw;
+        height: auto;
+    }
+    
+    .mainImageDetails {
+        width: 20vw;
+        height: auto;
+    }
+
+    .main-top-details .description-product1 {
+        display: flex;
+        flex-direction: column;
+        width: 20vw;
+    }
+
+    .main-top-details .description-product1 h1 {
+        font-size: 1.5em;
+        width: 35vw;
+        margin-top: 2.5vw;
+        margin-left: 7.5vw;
+        margin-right: 7.5vw;
+        height: auto;
+        color: goldenrod;
+    }
+    
+    .main-top-details .description-product1 h2 {
+        font-size: 1em;
+        color: goldenrod;
+        width: 35vw;
+        margin-left: 7.5vw;
+        margin-right: 7.5vw;
+        height: auto;
+    }
+
+    .listDetails {
+        width: 30vw;
+    }
+
+    .description-product1 .articleDetails {
+        text-decoration: none;
+        font-size: 1.4rem;
+        width: 35vw;
+        margin-top: 2.5vw;
+        margin-left: 7.5vw;
+        margin-right: 7.5vw;
+        height: auto;
+    }
+
+    .description-product1 .articleDetails .precioArticuloMain {
+        align-items: center;
+        width: 20%;
+        height: auto;
+        background-color: #c7c7c7;
+        border-radius: 2px;
+        border: 1px solid grey;
+        margin-left: auto;
+        margin-right: 0;
+        box-shadow: 0px 0px 10px rgb(100, 100, 100);
+    }
+}
+

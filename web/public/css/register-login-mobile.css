@@ -4,6 +4,13 @@
     font-family: 'Varela Round', sans-serif;
 }
 
+main section .formAreaRegister {
+    background-image: url(./assets/Harbor_piezas_institucionales/FILOSOFIAHT07.png);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+}
+
 .formAreaRegister {
     padding: 1em;
     border: 4px #09a889 solid;

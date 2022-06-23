@@ -4,11 +4,21 @@
     font-family: 'Varela Round', sans-serif;
 }
 
-main section .formAreaRegister {
-    background-image: url(./assets/Harbor_piezas_institucionales/FILOSOFIAHT07.png);
+.image {
+    background-image: url(../assets/Harbor_piezas_institucionales/FILOSOFIA.HT-03.png);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
+    background-color: #cccccc;
+    width: 100%;
+    height: 80vh;
+}
+
+.header {
+    padding-top: 50px;
+    color: white;
+    font-size: 20px;
+    text-align: center;
 }
 
 .formAreaRegister {

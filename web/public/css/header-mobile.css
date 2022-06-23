@@ -120,6 +120,7 @@
     width: 30%;
     display: flex;
     flex-wrap: wrap;
+    background-color: #049473;
 }
 
 .main-header .sectionSearch {

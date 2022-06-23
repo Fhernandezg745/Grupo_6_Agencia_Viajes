@@ -34,4 +34,10 @@
         border-radius: 3px;
         width: 15%;
     }
+    .mainClass .sectionSearch {
+        flex-wrap: wrap-reverse;
+    }
+    .mainClass .sectionSearch form {
+        max-height: 40px;
+    }
 }

@@ -52,8 +52,14 @@
     margin-left: 4px;
     padding: 1vw;
     display: flex;
+    flex-wrap: wrap;
     justify-content: center;
 }
+
+.labelFieldset .recordarPass {
+    font-size: 5px;
+}
+
 .bottomCheck {
     font-size: 0.5rem;
     color: #cccccc;
@@ -63,10 +69,11 @@
     flex-wrap: nowrap;
 }
 
-.bottomCheck label{
+.bottomCheck label {
     font-size: 0.6rem;
 }
-.bottomCheck input{
+
+.bottomCheck input {
     margin-left: 5px;
 }
 

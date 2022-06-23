@@ -25,30 +25,38 @@
         align-items: center;
         width: 100%;
         display: flex;
-        justify-content: space-between;
         flex-flow: row;
         flex-wrap: wrap;
     }
+    .main-header .top-header .nav-logo {
+        width: 30%;
+    }
     .main-header .top-header .site {
+        display: flex;
+        flex-direction: row;
+        flex-wrap: wrap;
+        gap: 1rem;
         width: 60%;
+        max-width: 600px;
         height: auto;
     }
+    .main-header .top-header nav {
+        display: flex;
+        flex-wrap: wrap;
+    }
     .main-header .top-header .site .buttonNavSite {
-        height: 40%;
         display: flex;
         flex-wrap: wrap;
         align-items: center;
-        justify-items: center;
-        gap: 1rem;
-    }
-    .main-header .top-header .site .buttonNavSite {
         box-sizing: border-box;
         overflow: auto;
         border-radius: 5px;
         color: black;
         font-size: 0.6rem;
+        text-align: center;
+        padding: 10px;
         text-transform: uppercase;
-        width: 14%;
+        width: auto;
         height: 30px;
         border: 3px solid #494949;
     }

@@ -6,6 +6,7 @@
     .bottomClassMain .firstSection {
         display: grid;
         grid-template-columns: 1fr 1fr;
+        height: auto;
     }
     .bottomClassMain .lastSection {
         display: grid;
@@ -16,10 +17,10 @@
         bottom: 10vw;
     }
     .bottomClassMain .firstSection {
-        margin-bottom: 5vw;}
+        margin-bottom: 5vw;
+    }
     .middleClassMain .articleExperiencias {
         width: 15vw;
         margin-bottom: 30px;
     }
-
 }

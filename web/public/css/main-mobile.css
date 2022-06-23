@@ -3,7 +3,7 @@
     padding: 0px;
     box-sizing: border-box;
     border: none;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Varela Round', sans-serif;
     font-size: 12px;
 }
 
@@ -43,7 +43,7 @@ main {
     position: relative;
     background-color: #fff;
     border: 2px solid blue;
-    background-size:cover;
+    background-size: cover;
 }
 
 .mainFigure img {
@@ -143,7 +143,7 @@ main {
 
 /* ====================================MIDDLE MAIN ARTICLES============================= */
 
-.headerExperiencias{
+.headerExperiencias {
     text-align: center;
     font-size: x-large;
     color: #4c4c4a;
@@ -160,11 +160,11 @@ main {
     width: 100%;
     justify-content: center;
 }
+
 .middleClassMain div {
     display: flex;
     flex-direction: column;
     flex-wrap: wrap;
-
 }
 
 .middleClassMain div .tituloExperiencias {
@@ -188,16 +188,18 @@ main {
     box-shadow: inset 0 0 0 0 #54b3d6;
     color: #049473;
     padding: 0 .15rem;
-    margin: 0 ;
+    margin: 0;
     transition: color .5s ease-in-out, box-shadow .5s ease-in-out;
-  }
+}
 
 .middleClassMain div:hover a {
     color: #fff;
     box-shadow: inset 200px 0 0 0 #1bac94;
-  }
+}
+
 
 /* ====================================BOTTOM MAIN ARTICLES============================= */
+
 .bottomClassMain {
     padding: 20px;
     box-sizing: border-box;
@@ -227,10 +229,7 @@ main {
     bottom: 10px;
     position: relative;
     display: inline-block;
-    
 }
-
-
 
 .bottomClassMain .firstSection {
     display: flex;
@@ -262,8 +261,6 @@ main {
     width: 100%;
     height: 100%;
 }
-
-
 
 .articleMainContainer {
     position: relative;
@@ -298,7 +295,16 @@ main {
     padding: 20px;
 }
 
+.articleMainContainer .articleDetails li {
+    margin-top: 5px;
+}
+
+.articleMainContainer .articleDetails i {
+    font-size: 1.2rem;
+}
+
 .articleMainContainer .articleDetails h3 {
+    font-size: larger;
     margin-top: 10px;
     text-transform: uppercase;
     color: goldenrod;
@@ -311,8 +317,9 @@ main {
 }
 
 .articleMainContainer .articleDetails .precioArticuloMain {
-    align-items: center;
-    width: 50%;
+    display: flex;
+    justify-content: center;
+    width: 100%;
     height: 50%;
     background-color: #c7c7c7;
     border-radius: 2px;
@@ -332,7 +339,8 @@ main {
 }
 
 .precioArticuloMain p {
-    font-family: 'Segoe UI', Tahoma, Geneva, Verdana, sans-serif;
+    font-family: 'Varela Round', sans-serif;
+    font-weight: 500;
     font-size: 1.5rem;
     text-align: right;
     width: auto;

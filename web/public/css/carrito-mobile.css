@@ -1,61 +1,66 @@
 .main-carrito {
-  display: block;
+    display: block;
 }
-.caja1 {
-  margin: 20px;
-  border-radius: 22px;
-  background-color: rgba(27, 148, 103, 0.734);
-  padding: 1em;
-  
-  flex-basis: 100%;
-  display: flex;
-  flex-wrap: wrap;
-}
-.usuario {
-  flex-basis: 50%;
-  display: block;
-  margin-bottom: 10px;
-  margin-bottom: 10px;
-  color: #4c4c4a;
-}
-.articleMainContainer {
-  display: block;
-  border-radius: 5px;
-  padding-top: 5px;
-  padding-bottom: 5px;
-  margin-bottom: 10px;
-  background-color: rgba(255, 255, 255, 0.734);
-}
-.articleDetails {
-  width: 90%;
-  padding: 0 5px;
-  font-family: "Roboto", sans-serif;
-  font-size: 14px;
-  padding-bottom: 10px;
-  justify-content: center;
 
-  
+.caja1 {
+    margin: 20px;
+    border-radius: 22px;
+    background-color: rgba(27, 148, 103, 0.734);
+    padding: 1em;
+    flex-basis: 100%;
+    display: flex;
+    flex-wrap: wrap;
 }
+
+.usuario {
+    flex-basis: 50%;
+    display: block;
+    margin-bottom: 10px;
+    margin-bottom: 10px;
+    color: #4c4c4a;
+}
+
+.articleMainContainer {
+    display: block;
+    border-radius: 5px;
+    padding-top: 5px;
+    padding-bottom: 5px;
+    margin-bottom: 10px;
+    background-color: rgba(255, 255, 255, 0.734);
+}
+
+.articleDetails {
+    width: 90%;
+    padding: 0 5px;
+    font-family: "Roboto", sans-serif;
+    font-size: 14px;
+    padding-bottom: 10px;
+    justify-content: center;
+}
+
 .articleImg {
-  width: 90%;
- margin: 0 10px;
+    width: 90%;
+    margin: 0 10px;
 }
-div > p{
+
+.usuario p {
     margin-top: 0px;
     display: inline;
-    
 }
-.articleTitle{
-  font-size: larger;
-  margin-top: 10px;
-  text-transform: uppercase;
-  color: goldenrod;
+
+.articleTitle {
+    font-size: larger;
+    margin-top: 10px;
+    text-transform: uppercase;
+    color: goldenrod;
 }
-.articleFigure{
+
+.articleFigure {
     margin: 0;
 }
-.pagar{
-  display: block;
+
+.pagar {
+    display: block;
     flex-basis: 50%;
     text-decoration: none;
     padding: 5px 0;
@@ -65,21 +70,20 @@ div > p{
     border-radius: 8px;
     font-weight: 300px;
     margin: 5px auto;
-
 }
-.precioArticuloMain{
-  padding: none;
-}
-.textArea{
-  background-color: rgba(255, 255, 255, 0.734);
-  color: #4c4c4a;
-  font-size: 12px;
-  font-family: "Roboto", sans-serif;
-  border-radius: 5px;
-  width: 100%;
-  border: none;
-  margin-bottom: 20px;
-  padding: 10px;
-  
 
+.precioArticuloMain {
+    padding: none;
+}
+
+.textArea {
+    background-color: rgba(255, 255, 255, 0.734);
+    color: #4c4c4a;
+    font-size: 12px;
+    font-family: "Roboto", sans-serif;
+    border-radius: 5px;
+    width: 100%;
+    border: none;
+    margin-bottom: 20px;
+    padding: 10px;
 }

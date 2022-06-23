@@ -1,38 +1,40 @@
 <!DOCTYPE html>
 <html lang="en">
-    <head>
-        <meta charset="UTF-8">
-        <meta http-equiv="X-UA-Compatible" content="IE=edge">
-        <meta name="viewport" content="width=device-width, initial-scale=1.0">
-        <title>Harbortrip</title>
-        <link rel="preconnect" href="https://fonts.googleapis.com">
-        <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
-        <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Montserrat+Alternates&display=swap" rel="stylesheet">
-        <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-        <link rel="stylesheet" href="./css/header-mobile.css">
-        <link rel="stylesheet" href="./css/header-tablet.css">
-        <link rel="stylesheet" href="./css/header-desktop.css">
-        <link rel="stylesheet" href="./css/footer-mobile.css">
-        <link rel="stylesheet" href="./css/footer-tablet.css">
-        <link rel="stylesheet" href="./css/footer-desktop.css">
-        <link rel="stylesheet" href="./css/register-login-mobile.css">
-        <link rel="stylesheet" href="./css/register-login-desktop.css">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harbortrip</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Montserrat&family=Montserrat+Alternates&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="./css/header-mobile.css">
+    <link rel="stylesheet" href="./css/header-tablet.css">
+    <link rel="stylesheet" href="./css/header-desktop.css">
+    <link rel="stylesheet" href="./css/footer-mobile.css">
+    <link rel="stylesheet" href="./css/footer-tablet.css">
+    <link rel="stylesheet" href="./css/footer-desktop.css">
+    <link rel="stylesheet" href="./css/register-login-mobile.css">
+    <link rel="stylesheet" href="./css/register-login-desktop.css">
 </head>
+
 <body>
     <section class="RRSS">
         <section class="RRSSCointainer">
             <div class="RRSSItems">
-                <a href="">
+                <a href="https://www.youtube.com/">
                     <i class="fa-brands fa-youtube"></i>
                 </a>
             </div>
             <div class="RRSSItems">
-                <a href="">
+                <a href="https://twitter.com/">
                     <i class="fa-brands fa-twitter"></i>
                 </a>
             </div>
             <div class="RRSSItems">
-                <a href="">
+                <a href="https://ar.linkedin.com/">
                     <i class="fa-brands fa-linkedin"></i>
                 </a>
             </div>
@@ -58,13 +60,23 @@
                 </a>
             </nav>
             <nav class="site">
-                <a href="" class="buttonNavSite">Información Útil</a>
-                <a href="" class="buttonNavSite">Destinos</a>
-                <a href="" class="buttonNavSite">Destacados</a>
-                <a href="" class="buttonNavSite">Experiencias</a>
-                <a href="" class="buttonNavSite">Quienes somos</a>
-                <a href="/login.html" class="iconMobile" value="Login"><i class="fa-solid fa-arrow-right-to-bracket"></i></a>
-                <a href="/register.html" class="iconMobile" value="Register"><i class="fa-solid fa-id-card"></i> </a>
+                <a href="" class="buttonNavSite">
+                    <p>Información Útil</p>
+                </a>
+                <a href="" class="buttonNavSite">
+                    <p>Destinos</p>
+                </a>
+                <a href="" class="buttonNavSite">
+                    <p>Destacados</p>
+                </a>
+                <a href="" class="buttonNavSite">
+                    <p>Experiencias</p>
+                </a>
+                <a href="" class="buttonNavSite">
+                    <p>Quienes somos</p>
+                </a>
+                <a href="/login.html" class="iconMobile" value="Login"><i class="fa-solid fa-arrow-right-to-bracket" ></i></a>
+                <a href="/register.html" class="iconMobile" value="Register"><i class="fa-solid fa-id-card" ></i> </a>
             </nav>
         </section>
         <section class="mobileHeader">
@@ -75,48 +87,52 @@
             </nav>
         </section>
     </header>
-<main>
-  <section>
-  <form action="/" method="post" class="formAreaRegister">
-      <fieldset class="labelFieldset">
-          <label for="nombre"><i class="fa-solid fa-id-card registerIcon"></i> Nombre completo</label>
-          <input type="text" name="nombre" placeholder="Ingresa tu nombre" class="inputTextFieldRegister" required>
-      </fieldset>
-      <fieldset class="labelFieldset">
-          <label for="usuario"><i class="fa-solid fa-user registerIcon"></i> Usuario</label>
-          <input type="text" name="usuario" placeholder="Ingrese nombre de usuario" class="inputTextFieldRegister" required>
-      </fieldset>
-      <fieldset class="labelFieldset">
-          <label for="nacimiento"><i class="fa-solid fa-calendar-days registerIcon"></i> Fecha de nacimiento</label>
-          <input type="date" name="nacimiento" id="date" placeholder="Fecha de nacimiento" class="inputTextFieldRegister">
-      </fieldset>
-      <fieldset class="labelFieldset">
-        <label for="codPostal"><i class="fa-solid fa-envelope foot-icon registerIcon"></i> Código postal</label>
-        <input type="number" name="codPostal" placeholder="1900" class="inputTextFieldRegister">
-    </fieldset>
-      <fieldset class="labelFieldset">
-          <label for="direccion"><i class="fa-solid fa-location-dot registerIcon"></i> Dirección</label>
-          <input type="text" name="direccion" placeholder="Calle 7 n° 1307" class="inputTextFieldRegister">
-      </fieldset>
-      <fieldset class="labelFieldset">
-          <label for="email"><i class="fa-solid fa-envelope-open-text registerIcon"></i> E-mail</label>
-          <input type="email" name="email" id="email" placeholder="Ingresa tu email" class="inputTextFieldRegister">
-      </fieldset>
-      <fieldset class="labelFieldset">
-          <label for="password"><i class="fa-solid fa-lock registerIcon"></i> Crear contraseña</label>
-          <input type="password" name="password" id="password" placeholder="Ingresa una contraseña" class="inputTextFieldRegister" required>
-      </fieldset>
-      <fieldset class="labelFieldset">
-        <label for="password"></label>
-        <input type="password" name="password" id="passwordCheked" placeholder="Confirmar contraseña" class="inputTextFieldRegister registration" required>
-    </fieldset>
-      <fieldset class="buttonField">
-          <a href="/"><input type="submit" value="Enviar" name="enviar" class="sendButton"></a>
-          <a href="/"><input type="reset" value="Borrar" name="borrar" class="sendButton"></a>
-      </fieldset>
-  </form>      
-</section>
-</main>
+
+
+    <main>
+        <section class="imageRegister">
+            <form action="/" method="post" class="formAreaRegister">
+                <fieldset class="labelFieldset">
+                    <label for="nombre"><i class="fa-solid fa-id-card registerIcon"></i> Nombre completo</label>
+                    <input type="text" name="nombre" placeholder="Ingresa tu nombre" class="inputTextFieldRegister" required>
+                </fieldset>
+                <fieldset class="labelFieldset">
+                    <label for="usuario"><i class="fa-solid fa-user registerIcon"></i> Usuario</label>
+                    <input type="text" name="usuario" placeholder="Ingrese nombre de usuario" class="inputTextFieldRegister" required>
+                </fieldset>
+                <fieldset class="labelFieldset">
+                    <label for="nacimiento"><i class="fa-solid fa-calendar-days registerIcon"></i> Fecha de nacimiento</label>
+                    <input type="date" name="nacimiento" id="date" placeholder="Fecha de nacimiento" class="inputTextFieldRegister">
+                </fieldset>
+                <fieldset class="labelFieldset">
+                    <label for="codPostal"><i class="fa-solid fa-envelope foot-icon registerIcon"></i> Código postal</label>
+                    <input type="number" name="codPostal" placeholder="1900" class="inputTextFieldRegister">
+                </fieldset>
+                <fieldset class="labelFieldset">
+                    <label for="direccion"><i class="fa-solid fa-location-dot registerIcon"></i> Dirección</label>
+                    <input type="text" name="direccion" placeholder="Calle 7 n° 1307" class="inputTextFieldRegister">
+                </fieldset>
+                <fieldset class="labelFieldset">
+                    <label for="email"><i class="fa-solid fa-envelope-open-text registerIcon"></i> E-mail</label>
+                    <input type="email" name="email" id="email" placeholder="Ingresa tu email" class="inputTextFieldRegister">
+                </fieldset>
+                <fieldset class="labelFieldset">
+                    <label for="password"><i class="fa-solid fa-lock registerIcon"></i> Crear contraseña</label>
+                    <input type="password" name="password" id="password" placeholder="Ingresa una contraseña" class="inputTextFieldRegister" required>
+                </fieldset>
+                <fieldset class="labelFieldset">
+                    <label for="password"></label>
+                    <input type="password" name="password" id="passwordCheked" placeholder="Confirmar contraseña" class="inputTextFieldRegister registration" required>
+                </fieldset>
+                <fieldset class="buttonField">
+                    <a href="/"><input type="submit" value="Enviar" name="enviar" class="sendButton"></a>
+                    <a href="/"><input type="reset" value="Borrar" name="borrar" class="sendButton"></a>
+                </fieldset>
+            </form>
+        </section>
+    </main>
+
+
     <footer class="footer">
         <section class="footerMain">
             <figure>
@@ -125,7 +141,7 @@
             <h2>Dirección</h2>
             <address>
                     <i class="fa-solid fa-location-dot foot-icon"></i> Calle XX numero XXXX La Plata</a>
-          </address>
+            </address>
         </section>
 
         <section class="footerNav">
@@ -160,7 +176,8 @@
         </section>
         <div class="legal">
             <p>&copy; 2019 Harbor Trip. All rights reserved.</p>
->>>>>>> 3b30d36828202811624c365a64b973ad15f21a9a
+            >>>>>>> 3b30d36828202811624c365a64b973ad15f21a9a
     </footer>
 </body>
+
 </html>

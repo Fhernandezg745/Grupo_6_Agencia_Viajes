@@ -85,10 +85,4 @@
         display: inline-block;
         transition: all 0.8s ease 0.1s;
     }
-    .buttonNavSite:hover {
-        color: #ffffff;
-        background: #09a889;
-        border-color: #09a889;
-        transition: all 0.4s ease 0s;
-    }
 }

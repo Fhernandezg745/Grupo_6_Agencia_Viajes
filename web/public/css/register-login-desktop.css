@@ -1,7 +1,5 @@
 @media screen and (min-width: 780px) {
-
     .formAreaRegister .labelFieldset label {
-        color: #4c4c4a;
         display: flex;
         width: 15vw;
         font-size: 1.2em;
@@ -9,7 +7,6 @@
         border-radius: 4px;
         padding-left: 10px;
     }
-    
     .formAreaRegister .labelFieldset .inputTextFieldRegister {
         margin-left: 3em;
         padding-left: 1em;
@@ -22,9 +19,7 @@
         border-radius: 4px;
         justify-content: center;
     }
-
     .buttonField a {
         width: 20%;
     }
-
 }

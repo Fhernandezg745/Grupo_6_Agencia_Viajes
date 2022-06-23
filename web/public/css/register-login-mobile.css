@@ -1,17 +1,30 @@
 * {
+    margin: 0px;
+    padding: 0px;
     box-sizing: border-box;
     border: none;
     font-family: 'Varela Round', sans-serif;
+    font-size: 12px;
 }
 
-.image {
-    background-image: url(../assets/Harbor_piezas_institucionales/FILOSOFIA.HT-03.png);
+.imageLogin {
+    background-image: url(/assets/mapa_camara_2.jpeg);
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     background-color: #cccccc;
     width: 100%;
     height: 80vh;
+}
+
+.imageRegister {
+    background-image: url(/assets/mapa_camara_bcg.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: #cccccc;
+    width: 100%;
+    height: auto;
 }
 
 .header {
@@ -23,11 +36,10 @@
 
 .formAreaRegister {
     padding: 1em;
-    border: 4px #09a889 solid;
     display: inline-flex;
     flex-direction: column;
     justify-content: center;
-    background-color: #3ab494;
+    background-color: rgba(27, 148, 103, 0.734);
     width: 60vw;
     margin-top: 5vw;
     margin-left: 20vw;
@@ -44,7 +56,7 @@
 }
 
 .formAreaRegister .labelFieldset label {
-    color: #4c4c4a;
+    color: rgba(255, 255, 255, 0.734);
     display: flex;
     width: 15vw;
     font-size: 0.5em;
@@ -56,7 +68,7 @@
 .formAreaRegister .labelFieldset .inputTextFieldRegister {
     margin-left: 2em;
     padding-left: 1em;
-    background-color: #c7c7c7;
+    background-color: rgba(255, 255, 255, 0.734);
     border-bottom: 2px solid #7c7c7c;
     font-size: 0.5em;
     display: flex;
@@ -93,6 +105,6 @@
 }
 
 .sendButton:hover {
-    background-color: #09a889;
-    border: #4c4c4a solid 2px;
+    background-color: rgba(255, 255, 255, 0.734);
+    color: #4c4c4a;
 }

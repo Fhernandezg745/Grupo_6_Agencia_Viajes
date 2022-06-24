@@ -1,16 +1,29 @@
-@media screen and (min-width: 780px)  {
-.articleMainContainer{
-    box-shadow: 0px 0px 10px rgb(100 100 100);
-    margin-top: 10px;
-    width: 100%;
-    padding: 10px;
-    box-sizing: border-box
-}
-.articleDetails{
-    border-bottom: 1px solid #a4a4a4;
-    border-left: 1px solid #a4a4a4;
-    border-right: 1px solid #a4a4a4;
-    box-sizing: border-box;
-    padding: 20px;
-}
+@media screen and (min-width: 780px) {
+    .articleMainContainer {
+        box-shadow: 0px 0px 10px rgb(100 100 100);
+        margin-top: 10px;
+        width: 100%;
+        padding: 10px;
+        box-sizing: border-box
+    }
+    .pax-box {
+        padding: 40px;
+        margin-bottom: 0;
+    }
+    .articleDetails {
+        border-bottom: 1px solid #a4a4a4;
+        border-left: 1px solid #a4a4a4;
+        border-right: 1px solid #a4a4a4;
+        box-sizing: border-box;
+        padding: 20px;
+    }
+    .reservaConsulta {
+        height: 20vw;
+    }
+    .pagar {
+        padding: 10px;
+    }
+    .confirmaReserva {
+        margin-bottom: 30px;
+    }
 }

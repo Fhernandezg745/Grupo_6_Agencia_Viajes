@@ -10,16 +10,15 @@
     <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
     <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
-    <link rel="stylesheet" href="./css/header-mobile.css" />
-    <link rel="stylesheet" href="./css/header-tablet.css" />
-    <link rel="stylesheet" href="./css/header-desktop.css" />
-    <link rel="stylesheet" href="./css/carrito-mobile.css" />
-    <link rel="stylesheet" href="./css/carrito-tablet.css" />
-    <link rel="stylesheet" href="./css/carrito-desktop.css" />
-    <link rel="stylesheet" href="./css/footer-mobile.css" />
-    <link rel="stylesheet" href="./css/footer-tablet.css" />
-    <link rel="stylesheet" href="./css/footer-desktop.css" />
-    <link rel="stylesheet" href="./css/details-mobile.css" />
+    <link rel="stylesheet" href="./css/header-mobile.css">
+    <link rel="stylesheet" href="./css/header-tablet.css">
+    <link rel="stylesheet" href="./css/header-desktop.css">
+    <link rel="stylesheet" href="./css/carrito-mobile.css">
+    <link rel="stylesheet" href="./css/carrito-tablet.css">
+    <link rel="stylesheet" href="./css/carrito-desktop.css">
+    <link rel="stylesheet" href="./css/footer-mobile.css">
+    <link rel="stylesheet" href="./css/footer-tablet.css">
+    <link rel="stylesheet" href="./css/footer-desktop.css">
 </head>
 
 <body>
@@ -91,22 +90,23 @@
     </header>
 
     <main class="main-carrito">
-        
+
         <section class="top-section-header-carrito">
-            <nav class="volver"> <a href="/details.html">Volver atrás</a></nav>
-            <div class="titleCotiz"><h2>Detalles de la cotización actual</h2>
+            <div class="titleCotiz">
+                <h2>Detalles de la cotización actual</h2>
             </div>
+            <nav class="volver"> <a href="/details.html">Volver atrás <i class="fa-solid fa-rotate-left"></i></a></nav>
         </section>
-        
+
         <section class="reserva-seleccionada">
             <div class="articleDetails">
                 <div class="categoria-estrellas">
-                <i class="fa-solid fa-star estrellas"></i>
-                <i class="fa-solid fa-star estrellas"></i>
-                <i class="fa-solid fa-star estrellas"></i>
-                <i class="fa-solid fa-star estrellas"></i>
-                <i class="fa-solid fa-star estrellasEmpty"></i>
-            </div>
+                    <i class="fa-solid fa-star estrellas"></i>
+                    <i class="fa-solid fa-star estrellas"></i>
+                    <i class="fa-solid fa-star estrellas"></i>
+                    <i class="fa-solid fa-star estrellas"></i>
+                    <i class="fa-solid fa-star estrellasEmpty"></i>
+                </div>
                 <span> <ul class="listDetails">
                 <li><i class="fa-solid fa-bed"></i> 8 noches de alojamiento en el hotel hoteleria 4 estrellas</li>
                 <li><i class="fa-solid fa-bus"></i> traslados in/out y entre hoteles</li>
@@ -122,8 +122,7 @@
         </section>
 
         <section class="pax-box"><h2>Datos de los pasajeros</h2>
-            <div class="pax-titular">Pasajero 1 (Adulto + 18 años) <i class="fa-solid fa-circle-check"></i>
-            </div>
+            <h3 class="pax-titular">Pasajero 1 (Adulto + 18 años) <i class="fa-solid fa-circle-check"></i></h3>
             <div class="pax-form">
                 <form action="/" method="get" class="">
                     <fieldset class="fieldset-box-pax">
@@ -141,37 +140,49 @@
                     <fieldset class="fieldset-box-pax">
                         <label for="nacimiento">Fecha de nacimiento</label>
                         <input type="date" name="nacimiento" id="date" class="" required>
-                    </fieldset>    
-            </div>            
+                    </fieldset>   
+                </form>     
+            </div>
+            <div>
+                <h3 class="pax-titular">Pasajero 2 (Adulto + 18 años) <i class="fa-solid fa-circle-check"></i></h3>
+                <div class="pax-form">
+                    <form action="/" method="get" class="">
+                        <fieldset class="fieldset-box-pax">
+                            <label for="">Nombre</label>
+                            <input type="text" name="nombre" class="" required>
+                        </fieldset>
+                        <fieldset class="fieldset-box-pax">
+                            <label for="">Apellido</label>
+                            <input type="text" name="apellido" class="" required>
+                        </fieldset>
+                        <fieldset class="fieldset-box-pax">
+                            <label for="">DNI o Pasaporte</label>
+                            <input type="number" name="dni" class="" required>
+                        </fieldset>
+                        <fieldset class="fieldset-box-pax">
+                            <label for="nacimiento">Fecha de nacimiento</label>
+                            <input type="date" name="nacimiento" id="date" class="" required>
+                        </fieldset>    
+                    </form>    
+                </div>  
+                <div class="masPax">
+                    <p>Deseo agregar otro/s pasajero/s <input type="checkbox" name="agregarPax"> </p>
+                </div>     
+            </div>    
         </section>
 
-        <section class="pax-box"><h2>Datos de los pasajeros</h2>
-            <div class="pax-titular">Pasajero 1 (Adulto + 18 años) <i class="fa-solid fa-circle-check"></i>
-            </div>
-            <div class="pax-form">
-                <form action="/" method="get" class="">
-                    <fieldset class="fieldset-box-pax">
-                        <label for="">Nombre</label>
-                        <input type="text" name="nombre" class="" required>
-                    </fieldset>
-                    <fieldset class="fieldset-box-pax">
-                        <label for="">Apellido</label>
-                        <input type="text" name="apellido" class="" required>
-                    </fieldset>
-                    <fieldset class="fieldset-box-pax">
-                        <label for="">DNI o Pasaporte</label>
-                        <input type="number" name="dni" class="" required>
-                    </fieldset>
-                    <fieldset class="fieldset-box-pax">
-                        <label for="nacimiento">Fecha de nacimiento</label>
-                        <input type="date" name="nacimiento" id="date" class="" required>
-                    </fieldset>    
-            </div>            
+        <section class="reservaConsulta">
+            <h3>Observaciones o consultas de su reserva :</h3>
+            <fieldset class="boxReservaConsulta">
+                <input type="textarea">
+            </fieldset>
         </section>
-        
-        
+
+
+        <form class="confirmaReserva">
         <a class="pagar" href="/">Reservar</a>
-
+        <p><input type="checkbox" name="agregarPax" required> Acepto las condiciones </p>
+        </form>
     </main>
     <footer class="footer">
         <section class="footerMain">
@@ -180,10 +191,9 @@
             </figure>
             <h2>Dirección</h2>
             <address>
-          <a>
+        <a>
             <i class="fa-solid fa-location-dot foot-icon"></i> Calle XX numero
-            XXXX La Plata</a
-          >
+            XXXX La Plata</a>
         </address>
         </section>
         <section class="footerNav">

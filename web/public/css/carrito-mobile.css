@@ -87,3 +87,94 @@
     margin-bottom: 20px;
     padding: 10px;
 }
+
+.top-section-header-carrito {
+    display: flex;
+    background-color: #8cccb4;
+    width: 100%;
+    height: 3em;
+    margin-bottom: 1.5em;
+}
+
+.top-section-header-carrito .volver {
+    margin-left: 0;
+    margin-right: 3em;
+}
+
+.top-section-header-carrito .titleCotiz {
+    display: flex;
+    justify-content: center;
+    text-align: center;
+    font-size: 1rem;
+    margin-left: 20vw;
+}
+
+.top-section-header-carrito .titleCotiz h2 {
+    font-size: 0.8rem;
+    margin-top: 2vh;
+}
+
+.reserva-seleccionada {
+    width: 100%;
+}
+
+.reserva-seleccionada .articleDetails {
+    width: 100%;
+    border: 1px solid #474747;
+    margin-bottom: 2em;
+}
+
+.reserva-seleccionada .articleDetails .listDetails {
+    list-style: none;
+}
+
+.reserva-seleccionada .articleDetails .estrellas {
+     color: goldenrod;    
+}
+
+.reserva-seleccionada .articleDetails .estrellasEmpty {
+    color: #474747;
+}
+
+.pax-box {
+    display: flex;
+    justify-content: center;
+    margin-left: 9vw;
+    margin-right: 9vw;
+    width: 80vw;
+    flex-direction: column;
+    border: #474747 1px solid;
+    padding: 2em;
+}
+
+.pax-box h2 {
+    float: left;
+    margin-bottom: 1em;
+}
+
+.pax-box .pax-titular {
+    background-color:rgba(27, 148, 103, 0.734);
+    width: 100%;
+    height: 2em;
+    font-size: 1em;
+}
+
+.pax-form form {
+    display: flex;
+    flex-direction: row;
+    align-items: center;
+    margin-top: 1em;
+}
+
+.fieldset-box-pax {
+    width: 100%;
+}
+
+.fieldset-box-pax label {
+  font-size: 1.1em;  
+}
+
+.fieldset-box-pax input {
+    border: #474747 1px solid;
+    width: 15em;
+}

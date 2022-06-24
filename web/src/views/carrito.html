@@ -19,6 +19,7 @@
     <link rel="stylesheet" href="./css/footer-mobile.css" />
     <link rel="stylesheet" href="./css/footer-tablet.css" />
     <link rel="stylesheet" href="./css/footer-desktop.css" />
+    <link rel="stylesheet" href="./css/details-mobile.css" />
 </head>
 
 <body>
@@ -90,62 +91,86 @@
     </header>
 
     <main class="main-carrito">
-        <section class="caja1">
-            <div class="usuario">
-                <p>Laura Solis</p>
-                <p>3131628334</p>
-                </br>
-                <p>Cra 7 #12-144</p>
-                <p>343587</p>
-                <p>lau@gmail.com</p>
+        
+        <section class="top-section-header-carrito">
+            <nav class="volver"> <a href="/details.html">Volver atrás</a></nav>
+            <div class="titleCotiz"><h2>Detalles de la cotización actual</h2>
             </div>
-            <div class="articleBox">
-                <article class="articleMainContainer">
-                    <figure class="articleFigure">
-
-                        <img class="articleImg" src="./assets/great-wall-china-600x400.jpeg" alt="" />
-                    </figure>
-                    <div class="articleDetails">
-                        <li><i class="fa-solid fa-bed"></i> 12 noches de alojamiento en hoteleria 4 estrellas</li>
-                        <li><i class="fa-solid fa-bus"></i> traslados in/out y entre hoteles</li>
-                        <li><i class="fa-solid fa-van-shuttle"></i> Itinenrario/excursiones: Beijin, Xian, Guilin, Shanghai </li>
-                        <li><i class="fa-solid fa-plane-departure"></i> aereos incluidos</li>
-                        <h3 class="articleTitle"> Maravillas de China - Etnias (13 dias/ 12 noches)</h3>
-                        <div class="precioArticuloMain">
-                            <p>Desde $3339 USD*</p>
-                        </div>
-                        <p>*Precio por persona en base doble</p>
-
-
-                    </div>
-                </article>
-                <article class="articleMainContainer">
-                    <figure class="articleFigure">
-
-                        <img class="articleImg" src="./assets/petra-jordania-600x400.jpeg" alt="">
-                    </figure>
-                    <div class="articleDetails">
-                        <li><i class="fa-solid fa-bed"></i> 8 noches de alojamiento en hoteleria 4 estrellas</li>
-                        <li><i class="fa-solid fa-bus"></i> traslados in/out y entre hoteles</li>
-                        <li><i class="fa-solid fa-van-shuttle"></i> Itinenrario/excursiones: Amman, Petra, Wadi Rum, Mar muerto</li>
-                        <li><i class="fa-solid fa-plane-departure"></i> aereos incluidos</li>
-                        <h3 class="articleTitle">Petra - Jordania (09 dias/ 08 noches)</h3>
-                        <div class="precioArticuloMain">
-                            <p>Desde $1987 USD*</p>
-                        </div>
-                        <p>*Precio por persona en base doble</p>
-                        <div class="precioArticuloMain">
-                            <p>$4000 USD*</p>
-                        </div>
-                        <p>*Precio por persona en base doble</p>
-                    </div>
-                </article>
-            </div>
-
-            <textarea class="textArea" name="comentario" rows="5" id="comentario" placeholder="Comentarios, dudas o sugerencias"></textArea>
-
-            <a class="pagar" href="/">Pagar</a>
         </section>
+        
+        <section class="reserva-seleccionada">
+            <div class="articleDetails">
+                <div class="categoria-estrellas">
+                <i class="fa-solid fa-star estrellas"></i>
+                <i class="fa-solid fa-star estrellas"></i>
+                <i class="fa-solid fa-star estrellas"></i>
+                <i class="fa-solid fa-star estrellas"></i>
+                <i class="fa-solid fa-star estrellasEmpty"></i>
+            </div>
+                <span> <ul class="listDetails">
+                <li><i class="fa-solid fa-bed"></i> 8 noches de alojamiento en el hotel hoteleria 4 estrellas</li>
+                <li><i class="fa-solid fa-bus"></i> traslados in/out y entre hoteles</li>
+                <li><i class="fa-solid fa-van-shuttle"></i> Itinenrario/excursiones: Amman, Petra, Wadi Rum, Mar muerto</li>
+                <li><i class="fa-solid fa-plane-departure"></i> aereos incluidos</li>
+                <h3 class="articleTitle">Petra - Jordania (09 dias/ 08 noches)</h3>
+            </ul>
+            <div class="precioArticuloMain">
+                <p>$1987 USD*</p>
+                <p class="condition">*Precio por persona en base doble</p>
+            </div>
+        </div>
+        </section>
+
+        <section class="pax-box"><h2>Datos de los pasajeros</h2>
+            <div class="pax-titular">Pasajero 1 (Adulto + 18 años) <i class="fa-solid fa-circle-check"></i>
+            </div>
+            <div class="pax-form">
+                <form action="/" method="get" class="">
+                    <fieldset class="fieldset-box-pax">
+                        <label for="">Nombre</label>
+                        <input type="text" name="nombre" class="" required>
+                    </fieldset>
+                    <fieldset class="fieldset-box-pax">
+                        <label for="">Apellido</label>
+                        <input type="text" name="apellido" class="" required>
+                    </fieldset>
+                    <fieldset class="fieldset-box-pax">
+                        <label for="">DNI o Pasaporte</label>
+                        <input type="number" name="dni" class="" required>
+                    </fieldset>
+                    <fieldset class="fieldset-box-pax">
+                        <label for="nacimiento">Fecha de nacimiento</label>
+                        <input type="date" name="nacimiento" id="date" class="" required>
+                    </fieldset>    
+            </div>            
+        </section>
+
+        <section class="pax-box"><h2>Datos de los pasajeros</h2>
+            <div class="pax-titular">Pasajero 1 (Adulto + 18 años) <i class="fa-solid fa-circle-check"></i>
+            </div>
+            <div class="pax-form">
+                <form action="/" method="get" class="">
+                    <fieldset class="fieldset-box-pax">
+                        <label for="">Nombre</label>
+                        <input type="text" name="nombre" class="" required>
+                    </fieldset>
+                    <fieldset class="fieldset-box-pax">
+                        <label for="">Apellido</label>
+                        <input type="text" name="apellido" class="" required>
+                    </fieldset>
+                    <fieldset class="fieldset-box-pax">
+                        <label for="">DNI o Pasaporte</label>
+                        <input type="number" name="dni" class="" required>
+                    </fieldset>
+                    <fieldset class="fieldset-box-pax">
+                        <label for="nacimiento">Fecha de nacimiento</label>
+                        <input type="date" name="nacimiento" id="date" class="" required>
+                    </fieldset>    
+            </div>            
+        </section>
+        
+        
+        <a class="pagar" href="/">Reservar</a>
 
     </main>
     <footer class="footer">

@@ -1,3 +1,11 @@
+// Sprint 1
 Como proceso de retrospectiva del primer sprint podemos destacar que se cumplieron los objetivos de realización y entrega en los plazos estipulados. Deberiamos seguir en esa línea de cumplimiento para no atrasar la asimilación de conceptos y poder entender mejor la etapa de cada módulo y su sprint correspondiente.
-Necesitamos más comunicación interna que nos faltó durante el transcurso del período del primer sprint. En ese sentido, deberiamos utiliziar mas las herramientas de comunicación interna fiables.
+Necesitamos más comunicación interna que nos faltó durante el transcurso del período del primer sprint. En ese sentido, deberiamos utilizar mas las herramientas de comunicación interna fiables.
 Tambien, como parte de esa mejora en comunicación interna, asentar las stories o tareas a rezlizar para que el grupo sepa el estado del proyecto. Tdoo esto, seguramente se podrá trabajar mejor con la implementación de trello u otra plataforma. 
+
+
+// Sprint 2
+Volvemos a destacar que seguimos cumpliendo los plazos de entrega del proyecto. Entendemos que es un desafío seguir manteniendo esa dinámica y compromiso.
+Mejoramos también un poco las vías de comunicación interna a trávés del uso del canal de discord, pero necesitamos fortalecer un poco más el día a día. Rescatamos que mejoró ese aspecto pero no debemos conformarnos sino que necesitamos profundizar la interacción. Evaluamos abrir otro canal de díalogo diario.
+Diagramamos con efectividad las distintas historias a realizar dentro de la plataforma trello. El camino será seguir asimilando la forma de trabajar.
+Si bien, durante el lapso del sprint 2 tuvimos ciertas dificultades a la hora de emplear las distintas herramientas de CSS, estamos conformes con el resultado que se logró en el plazo de entrega, sabiendo que necesita mejoras pero con el tiempo que contamos y el conocimiento y experiencia en el uso de las herramientas, el resulatdo fue bastante positivo. Sobretodo fuimos comprendiendo la lógica del mobile first desde lo empírico más allá de la teoría.

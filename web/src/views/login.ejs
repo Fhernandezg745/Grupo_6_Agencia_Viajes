@@ -1,0 +1,172 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Harbortrip</title>
+    <link rel="preconnect" href="https://fonts.googleapis.com">
+    <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
+    <link href="https://fonts.googleapis.com/css2?family=Varela+Round&display=swap" rel="stylesheet">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.1.1/css/all.min.css">
+    <link rel="stylesheet" href="./css/header-mobile.css">
+    <link rel="stylesheet" href="./css/header-tablet.css">
+    <link rel="stylesheet" href="./css/header-desktop.css">
+    <link rel="stylesheet" href="./css/footer-mobile.css">
+    <link rel="stylesheet" href="./css/footer-tablet.css">
+    <link rel="stylesheet" href="./css/footer-desktop.css">
+    <link rel="stylesheet" href="./css/login-mobile.css">
+    <link rel="stylesheet" href="./css/login-tablet.css">
+</head>
+
+<body>
+    <section class="RRSS">
+        <section class="RRSSCointainer">
+            <div class="RRSSItems">
+                <a href="https://www.youtube.com/">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+            </div>
+            <div class="RRSSItems">
+                <a href="https://twitter.com/">
+                    <i class="fa-brands fa-twitter"></i>
+                </a>
+            </div>
+            <div class="RRSSItems">
+                <a href="https://ar.linkedin.com/">
+                    <i class="fa-brands fa-linkedin"></i>
+                </a>
+            </div>
+            <div class="RRSSItems">
+                <a href="https://www.instagram.com/harbortrip/">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+            </div>
+            <div class="RRSSItems">
+                <a href="https://www.facebook.com/HarborTrip">
+                    <i class="fa-brands fa-facebook"></i>
+                </a>
+            </div>
+        </section>
+    </section>
+    <header class="main-header">
+        <section class="top-header">
+            <nav class="nav-logo">
+                <a href="/">
+                    <figure>
+                        <img src="./assets/PERFIL-01.jpeg" alt="" class="logoHB">
+                    </figure>
+                </a>
+            </nav>
+            <nav class="site">
+                <a href="" class="buttonNavSite">
+                    <p>Información Útil</p>
+                </a>
+                <a href="" class="buttonNavSite">
+                    <p>Destinos</p>
+                </a>
+                <a href="" class="buttonNavSite">
+                    <p>Destacados</p>
+                </a>
+                <a href="" class="buttonNavSite">
+                    <p>Experiencias</p>
+                </a>
+                <a href="" class="buttonNavSite">
+                    <p>Quienes somos</p>
+                </a>
+                <a href="/login" class="iconMobile" value="Login"><i class="fa-solid fa-arrow-right-to-bracket"></i> Ingresá</a>
+                <a href="/register" class="iconMobile" value="Register"><i class="fa-solid fa-id-card" ></i> Registrate</a></nav>
+        </section>
+        <section class="mobileHeader">
+            <nav id="burgerMenu">
+                <a href="">
+                    <i class="fas fa-bars burger-menu burgerIcon"></i>
+                </a>
+            </nav>
+        </section>
+    </header>
+
+
+    <main>
+        <section class="imageLogin">
+            <form action="/" method="post" class="formAreaRegister">
+                <fieldset class="labelFieldset">
+                    <label for="usuario"><i class="fa-solid fa-user registerIcon"></i> Usuario</label>
+                    <input type="text" name="usuario" placeholder="Ingrese nombre de usuario" class="inputTextFieldRegister" required>
+                </fieldset>
+                <fieldset class="labelFieldset">
+                    <label for="password"><i class="fa-solid fa-lock registerIcon"></i> Contraseña</label>
+                    <input type="password" name="password" id="password" placeholder="Ingresa tu contraseña" class="inputTextFieldRegister" required>
+
+                </fieldset>
+                <fieldset class="bottomCheck2">
+                    <label for="recordaruser" class="recordarPass">Recordar usuario</label>
+                    <input type="checkbox">
+                    <label for="recordarpass" class="recordarPass">Recordar contraseña</label>
+                    <input type="checkbox">
+                </fieldset>
+
+                <fieldset class="buttonField">
+                    <a href="/"><input type="submit" value="Enviar" name="enviar" class="sendButton"></a>
+                    <a href="/"><input type="reset" value="Borrar" name="borrar" class="sendButton"></a>
+                </fieldset>
+                <fieldset class="olvidePass">
+                    <a href="">Olvide mi contraseña</a>
+                </fieldset>
+            </form>
+        </section>
+    </main>
+
+
+    <footer class="footer">
+        <section class="footerMain">
+            <figure>
+                <img src="./assets/PERFIL-04.jpeg" alt="perfil" class="footerPerfil">
+            </figure>
+            <h2>Dirección</h2>
+            <address>
+                    <i class="fa-solid fa-location-dot foot-icon"></i> Calle XX numero XXXX La Plata</a>
+          </address>
+        </section>
+
+        <section class="footerNav">
+            <section class="navItems">
+
+                <h2 class="navTitle">Web</h2>
+                <div class="navList">
+                    <a class="footerA" href=""><i class="fa-solid fa-house foot-icon"></i>Home</a>
+                    <a class="footerA" href=""><i class="fa-regular fa-compass foot-icon"></i>Exoticos</a>
+                    <a class="footerA" href=""> <i class="fa-solid fa-tags foot-icon"></i>Promociones</a>
+                    <a class="footerA" href=""> <i class="fa-solid fa-fire foot-icon"></i>Mas Vendidos</a>
+                </div>
+            </section>
+            <section class="navItems">
+                <h2 class="navTitle">Links Utiles</h2>
+                <div class="navList">
+                    <a class="footerA" href=""><i class="fa-solid fa-list foot-icon"></i> Requisitos de Viaje</a>
+                    <a class="footerA" href=""><i class="fa-solid fa-people-roof foot-icon"></i> Administracion</a>
+                    <a class="footerA" href=""><i class="fa-regular fa-address-book foot-icon"></i> Contacto</a>
+                    <a class="footerA" href=""><i class="fa-solid fa-handshake-simple foot-icon"></i>Quienes Somos</a>
+                </div>
+            </section>
+
+            <section class="navItems">
+                <h2 class="navTitle">Vias de contacto</h2>
+                <div class="navList">
+                    <a class="footerA" href=""><i class="fa-solid fa-phone foot-icon"></i>Telefono de contacto</a>
+                    <a class="footerA" href=""><i class="fa-solid fa-clock foot-icon"></i> Lunes a Viernes de 10:00 a 19:00. Sabados hasta medio dia</a>
+                    <a class="footerA" href=""><i class="fa-solid fa-envelope foot-icon"></i> email ventas: reservas@harbortrip.com </a>
+                </div>
+
+
+            </section>
+        </section>
+        <div class="legal">
+            <p>&copy; 2022 Harbor Trip. All rights reserved.</p>
+            >>>>>>> 3b30d36828202811624c365a64b973ad15f21a9a
+    </footer>
+
+</body>
+
+</html>

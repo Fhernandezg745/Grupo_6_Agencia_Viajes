@@ -3,16 +3,16 @@ const controller = {
         return res.render("home");
     },
     register: (req, res) => {
-        return res.render("register");
+        return res.render("users/register");
     },
     login: (req, res) => {
-        return  res.render("login");
+        return  res.render("users/login");
     },
     details: (req, res) => {
-        return res.render("details");
+        return res.render("products/details");
     },
     carrito: (req, res) => {
-        return  res.render("carrito");
+        return  res.render("products/carrito");
     },
 
 }

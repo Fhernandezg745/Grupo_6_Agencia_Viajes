@@ -3,7 +3,7 @@ const express = require("express");
 const server = express();
 const public = path.resolve(__dirname, "./public");
 const port = process.env.PORT || 3002;
-const mainRoutes = require("./routes/mainRoutes");
+const mainRoutes = require("./src/routes/mainRoutes");
 
 server.use(express.static(public));
 

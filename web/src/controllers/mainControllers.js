@@ -14,7 +14,9 @@ const controller = {
     carrito: (req, res) => {
         return  res.render("products/carrito");
     },
-
+    createProducts: (req, res) => {
+        return res.render("products/createProducts");
+    },
 }
 
 module.exports = controller;

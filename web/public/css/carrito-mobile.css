@@ -270,7 +270,7 @@
     max-height: 320px;
 }
 
-.reservaConsulta .boxReservaConsulta input {
+.reservaConsulta .boxReservaConsulta textarea {
     border: 1px solid black;
     border-radius: 4px;
     box-sizing: border-box;

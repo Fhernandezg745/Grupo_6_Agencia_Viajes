@@ -26,7 +26,8 @@ main {
 
 .editProductLink {
     font-size: 10px;
-    color: #128f76;
+    color: rgba(255, 255, 255, 0.834);
+    font-weight: 400;
 }
 
 .imageCreateProducts {

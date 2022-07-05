@@ -23,6 +23,16 @@ main {
     margin-bottom: 10px
 }
 
+.divCreateProduct a{
+    color: rgba(255, 255, 255, 0.834);
+    font-weight: 400;
+}
+
+.labelFieldset .buscarId {
+    color: aliceblue;
+    background-color: #128f76;
+}
+
 .headerCreateProduct {
     font-size: 1.3rem;
     color: rgba(255, 255, 255, 0.834);

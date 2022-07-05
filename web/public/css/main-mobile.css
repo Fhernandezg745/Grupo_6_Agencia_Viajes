@@ -311,6 +311,10 @@ main {
     padding: 20px;
 }
 
+.articleMainContainer .articleDetails ul {
+    padding-left: 15px;
+}
+
 .articleMainContainer .articleDetails li {
     margin-top: 5px;
 }

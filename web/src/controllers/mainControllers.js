@@ -6,17 +6,20 @@ const controller = {
         return res.render("users/register");
     },
     login: (req, res) => {
-        return  res.render("users/login");
+        return res.render("users/login");
     },
     details: (req, res) => {
         return res.render("products/details");
     },
     carrito: (req, res) => {
-        return  res.render("products/carrito");
+        return res.render("products/carrito");
     },
     createProducts: (req, res) => {
         return res.render("products/createProducts");
     },
-}
+    editProduct: (req, res) => {
+        return res.render("products/editProduct");
+    },
+};
 
 module.exports = controller;

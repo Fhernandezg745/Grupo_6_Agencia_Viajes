@@ -1,3 +1,7 @@
+.editFields {
+    display: none;
+}
+
 main {
     margin: 0px;
     padding-left: 8%;

@@ -7,7 +7,7 @@ router.get("/productList", productsController.productList);
 
 router.get("/createProducts", productsController.createProducts);
 
-router.get("/products/details", productsController.details);
+router.get("/details", productsController.details);
 
 router.get("/editProduct", productsController.editProduct);
 

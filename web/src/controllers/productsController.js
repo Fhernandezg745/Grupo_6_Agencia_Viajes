@@ -51,5 +51,8 @@ const productController = {
   details: (req, res) => {
     return res.render("products/details");
   },
+  carrito: (req, res) => {
+    return res.render("products/carrito");
+  },
 };
 module.exports = productController;

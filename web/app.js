@@ -1,20 +1,22 @@
 const { path, resolve } = require("path");
 const express = require("express");
-const server = express();
-const { port } = require("./src/modules/port");
+const app = express();
+const { port, callback } = require("./src/modules/port");
 
 const public = resolve(__dirname, "./public");
-server.use(express.static(public));
+app.use(express.static(public));
 
-server.set("view engine", "ejs");
-server.set("views", resolve(__dirname, "./src/views"));
+app.set("view engine", "ejs");
+app.set("views", resolve(__dirname, "./src/views"));
 
 const mainRoutes = require("./src/routes/mainRoutes");
 const productRoutes = require("./src/routes/productRoutes");
+const usersRoutes = require("./src/routes/usersRoutes");
 
-server.use("/", mainRoutes);
-server.use("/products", productRoutes);
+app.use("/user", usersRoutes);
+app.use("/", mainRoutes);
+app.use("/products", productRoutes);
 
-server.listen(port, () =>
+app.listen(port, () =>
   console.log(`Abriendo el servidor http://localhost:${port}`)
 );

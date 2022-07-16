@@ -23,9 +23,6 @@ app.use("/", mainRoutes);
 app.use("/products", productRoutes);
 
 //
-app.use(express.urlencoded({ extended: false }));
-app.use(express.json)
-app.use(method('m')); //poner en URL ?m=<<método-DELETE_PUT>>
 
 //levanto servidor
 app.listen(port, () =>

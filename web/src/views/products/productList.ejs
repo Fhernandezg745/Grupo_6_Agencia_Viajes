@@ -1,28 +1,26 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <%- include("../includes/head") %>
-    <link rel="stylesheet" href="/css/productList-mobile.css" />
-    <link rel="stylesheet" href="/css/productList-tablet.css" />
-    <link rel="stylesheet" href="/css/productList-desktop.css" />
-  </head>
 
-  <body>
+<head>
+    <%- include("../includes/head") %>
+        <link rel="stylesheet" href="/css/productList-mobile.css" />
+        <link rel="stylesheet" href="/css/productList-tablet.css" />
+        <link rel="stylesheet" href="/css/productList-desktop.css" />
+</head>
+
+<body>
     <%- include("../includes/header") %>
-    <main>
-      <aside class="sideBar">
-        <nav>
-          <p>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi sed
-            explicabo unde, veniam impedit libero quibusdam. Quia laboriosam
-            pariatur cupiditate molestias odit voluptatum blanditiis accusantium
-            tempore asperiores, rem illum unde?
-          </p>
-          <div>
-            <h2>Filtros</h2>
-            <form action="">
-              <label for="Region"> Region<input type="checkbox" /></label>
-              <label for="baseSingle">
+        <main>
+            <aside class="sideBar">
+                <nav>
+                    <p>
+                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi sed explicabo unde, veniam impedit libero quibusdam. Quia laboriosam pariatur cupiditate molestias odit voluptatum blanditiis accusantium tempore asperiores, rem illum unde?
+                    </p>
+                    <div>
+                        <h2>Filtros</h2>
+                        <form action="">
+                            <label for="Region"> Region<input type="checkbox" /></label>
+                            <label for="baseSingle">
                 Base sinlge
                 <input
                   type="checkbox"
@@ -30,7 +28,7 @@
                   placeholder="2"
                   class=""
               /></label>
-              <label for="baseDoble">
+                            <label for="baseDoble">
                 Base doble
                 <input
                   type="checkbox"
@@ -38,7 +36,7 @@
                   placeholder="2"
                   class=""
               /></label>
-              <label for="familyplan">
+                            <label for="familyplan">
                 Family plan
                 <input
                   type="checkbox"
@@ -46,57 +44,63 @@
                   placeholder="2"
                   class=""
               /></label>
-            </form>
-          </div>
-        </nav>
-      </aside>
-      <article class="articleContainer">
-        <% products.forEach(element => {%>
-        <div class="productoBox">
-          <figure class="articleFigure">
-            <a href="/products/details/<%= element.id %>"
-              ><img src="<%= element.image %>" alt=""
+                        </form>
+                    </div>
+                </nav>
+            </aside>
+            <article class="articleContainer">
+                <% products.forEach(element => {%>
+                    <div class="productoBox">
+                        <figure class="articleFigure">
+                            <a href="/products/details/<%= element.id %>"><img src="<%= element.image %>" alt=""
             /></a>
-          </figure>
-          <section class="detalle">
-            <header class="tituloPaquete">
-              <h2>
-                <%= element.tittle %> - (<%= element.days %> dias/ <%=
+                        </figure>
+                        <section class="detalle">
+                            <header class="tituloPaquete">
+                                <h2>
+                                    <%= element.tittle %> - (
+                                        <%= element.days %> dias/
+                                            <%=
                 element.nights %> noches)
-              </h2>
+                                </h2>
+                                <span> <%= element.shortDescription %> </span>
+                            </header>
+                            <section class="condicionesPaquete">
+                                <div class="condicionesPaquete"></div>
+                                <div class="resumenPaquete">
+                                    <li>
+                                        <i class="fa-solid fa-globe"></i>
+                                        <%= element.region %>
+                                    </li>
+                                    <li><i class="fa-solid fa-hotel"></i> Alojamiento
+                                        <%= element.stars %> estrellas</li>
+                                    <li><i class="fa-solid fa-moon"></i> Cantidad de noches:
+                                        <%= element.nights %>
+                                    </li>
+                                    <li>
+                                        <i class="fa-solid fa-plane-departure"></i> Incluye aereos/traslados
+                                    </li>
+                                </div>
+                            </section>
 
-              <span> <%= element.shortDescription %> </span>
-            </header>
-            <section class="condicionesPaquete">
-              <div class="condicionesPaquete"></div>
-              <div class="resumenPaquete">
-                <li>Alojamiento <%= element.stars %> estrellas</li>
-                <li>Cantidad de noches: <%= element.nights %></li>
-                <li>
-                  <i class="fa-solid fa-plane-departure"></i> Incluye
-                  aereos/traslados
-                </li>
-              </div>
-            </section>
-            <section class="productPrice">
-              <i class="fa-solid fa-money-check-dollar"></i>
-              <p>Desde $<%= element.price %> USD*</p>
-              <nav>
-                <a href="/products/details/<%= element.id %>"
-                  ><input
-                    type="submit"
-                    value="Mas info"
-                    name="detalleProducto"
-                    class="buttonDetailProduct"
-                /></a>
-              </nav>
-            </section>
-          </section>
-        </div>
-        <% }) %>
-      </article>
-    </main>
+                        </section>
+                        <section class="productPrice">
+                            <i class="fa-solid fa-money-check-dollar"></i>
+                            <p> Precio final por persona, en base
+                                <%= element.base %>, desde :
+                            </p>
+                            <p class="price"> $
+                                <%= element.price %> USD</p>
+                            <nav>
+                                <a href="/products/details/<%= element.id %>"><input type="submit" value="Mas info" name="detalleProducto" class="buttonDetailProduct" /></a>
+                            </nav>
+                        </section>
+                    </div>
+                    <% }) %>
+            </article>
+        </main>
 
-    <%- include("../includes/footer") %>
-  </body>
+        <%- include("../includes/footer") %>
+</body>
+
 </html>

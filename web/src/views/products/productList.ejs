@@ -1,56 +1,102 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <%- include("../includes/head") %>
-    <link rel="stylesheet" href="/css/details-mobile.css">
-    <link rel="stylesheet" href="/css/details-tablet.css">
-    <link rel="stylesheet" href="/css/details-desktop.css">
-</head>
+    <link rel="stylesheet" href="/css/productList-mobile.css" />
+    <link rel="stylesheet" href="/css/productList-tablet.css" />
+    <link rel="stylesheet" href="/css/productList-desktop.css" />
+  </head>
 
-<body>
+  <body>
+    <%- include("../includes/header") %>
     <main>
-        <article>
-            <section class="imagenPaquete">
-                <figure>
-                    <img src="" alt="">
-                </figure>
+      <aside class="sideBar">
+        <nav>
+          <p>
+            Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi sed
+            explicabo unde, veniam impedit libero quibusdam. Quia laboriosam
+            pariatur cupiditate molestias odit voluptatum blanditiis accusantium
+            tempore asperiores, rem illum unde?
+          </p>
+          <div>
+            <h2>Filtros</h2>
+            <form action="">
+              <label for="Region"> Region<input type="checkbox" /></label>
+              <label for="baseSingle">
+                Base sinlge
+                <input
+                  type="checkbox"
+                  name="baseSingle"
+                  placeholder="2"
+                  class=""
+              /></label>
+              <label for="baseDoble">
+                Base doble
+                <input
+                  type="checkbox"
+                  name="baseDoble"
+                  placeholder="2"
+                  class=""
+              /></label>
+              <label for="familyplan">
+                Family plan
+                <input
+                  type="checkbox"
+                  name="familyplan"
+                  placeholder="2"
+                  class=""
+              /></label>
+            </form>
+          </div>
+        </nav>
+      </aside>
+      <article class="articleContainer">
+        <% products.forEach(element => {%>
+        <div class="productoBox">
+          <figure class="articleFigure">
+            <a href="/products/details/<%= element.id %>"
+              ><img src="<%= element.image %>" alt=""
+            /></a>
+          </figure>
+          <section class="detalle">
+            <header class="tituloPaquete">
+              <h2>
+                <%= element.tittle %> - (<%= element.days %> dias/ <%=
+                element.nights %> noches)
+              </h2>
+
+              <span> <%= element.shortDescription %> </span>
+            </header>
+            <section class="condicionesPaquete">
+              <div class="condicionesPaquete"></div>
+              <div class="resumenPaquete">
+                <li>Alojamiento <%= element.stars %> estrellas</li>
+                <li>Cantidad de noches: <%= element.nights %></li>
+                <li>
+                  <i class="fa-solid fa-plane-departure"></i> Incluye
+                  aereos/traslados
+                </li>
+              </div>
             </section>
-            <section class="detallePaquete">
-                <div class="tituloPaquete"></div>
-                <div class="precioPaquete"></div>
-                <div class="condicionesPaquete"></div>
-                <div class="resumenPaquete">
-                    <li>Alojamiento</li>
-                    <li>Cantidad de noches/dias</li>
-                    <li>Incluye aereos/traslados</li>
-                    <li>Itinerario:</li>
-                </div>
+            <section class="productPrice">
+              <i class="fa-solid fa-money-check-dollar"></i>
+              <p>Desde $<%= element.price %> USD*</p>
+              <nav>
+                <a href="/products/details/<%= element.id %>"
+                  ><input
+                    type="submit"
+                    value="Mas info"
+                    name="detalleProducto"
+                    class="buttonDetailProduct"
+                /></a>
+              </nav>
             </section>
-        </article>
-        <article>
-            <section class="imagenPaquete">
-                <figure>
-                    <img src="" alt="">
-                </figure>
-            </section>
-            <section class="detallePaquete">
-                <div class="tituloPaquete"></div>
-                <div class="precioPaquete"></div>
-                <div class="condicionesPaquete"></div>
-                <div class="resumenPaquete">
-                    <li>Alojamiento</li>
-                    <li>Cantidad de noches/dias</li>
-                    <li>Incluye aereos/traslados</li>
-                    <li>Itinerario:</li>
-                </div>
-            </section>
-        </article>
+          </section>
+        </div>
+        <% }) %>
+      </article>
     </main>
 
-
     <%- include("../includes/footer") %>
-    
-</body>
-
+  </body>
 </html>

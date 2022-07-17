@@ -1,0 +1,116 @@
+main {
+  display: flex;
+  flex-direction: row;
+  background-color: #fff;
+  justify-content: center;
+  background-color: #eee;
+}
+.sideBar {
+  display: flex;
+  flex-wrap: nowrap;
+  flex-direction: row;
+  width: 200px;
+  height: 100vh;
+  background-color: #fdfd;
+  border: 1px solid #000;
+  margin-left: 10px;
+  margin-right: 10px;
+}
+
+.productoBox {
+  background-color: #fff;
+  margin-bottom: 10px;
+  box-sizing: border-box;
+  border: 1px solid #ccc;
+  display: flex;
+  flex-wrap: wrap;
+  width: 100%;
+  height: 40vh;
+  border-radius: 15px;
+  overflow: hidden;
+  position: relative;
+}
+.productoBox .detalle {
+  flex-grow: 1;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+}
+.productoBox .detalle .tituloPaquete {
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: column;
+  width: 100%;
+}
+.tituloPaquete h2 {
+  flex-grow: 1;
+  font-size: 1.5rem;
+  font-weight: bold;
+}
+.tituloPaquete span {
+  font-size: 0.9rem;
+  font-style: oblique;
+}
+
+.productoBox .detalle {
+  width: 40%;
+  margin-left: 10px;
+  gap: 30px;
+}
+
+.articleContainer {
+  box-sizing: border-box;
+  padding-right: 10px;
+  display: flex;
+  flex-wrap: wrap;
+  flex-direction: row;
+  width: 100%;
+  height: 100%;
+}
+
+article .articleFigure {
+  overflow: hidden;
+  position: relative;
+  flex-grow: 0.6;
+  width: 20%;
+}
+article .articleFigure img {
+  position: absolute;
+  z-index: 2;
+  top: 0;
+  object-fit: cover;
+  width: 100%;
+  height: 100%;
+}
+
+.tituloPaquete {
+  font-size: 1.5rem;
+  font-weight: bold;
+  margin-bottom: 10px;
+  width: 20px;
+  height: auto;
+}
+
+.buttonDetailProduct {
+  display: block;
+  padding: 4px 8px;
+  color: rgba(255, 255, 255, 0.834);
+  border: 0;
+  border-radius: 4px;
+  font-size: 14px;
+  font-weight: bold;
+  background: #128f76;
+}
+
+.productPrice a {
+  text-decoration: none;
+}
+.productPrice p {
+  font-size: 24px;
+  margin-bottom: 10px;
+}
+
+.buttonDetailProduct:hover {
+  background: #007aff;
+  color: #ccc;
+}

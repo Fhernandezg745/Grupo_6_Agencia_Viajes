@@ -1,8 +1,11 @@
-const productData = [];
+const { index } = require("../models/product.model");
 
 const productController = {
   productList: (req, res) => {
-    return res.render("products/productList");
+    return res.render("products/productList", {
+      title: "Product List",
+      products: index(),
+    });
   },
   createProducts: (req, res) => {
     return res.render("products/createProducts");

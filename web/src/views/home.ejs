@@ -3,7 +3,7 @@
   <%- include("./includes/head") %>
 
   <body>
-    <%- include("/includes/header") %>
+    <%- include("./includes/header") %>
 
     <main class="mainClass">
       <section class="topClassMain">
@@ -174,8 +174,12 @@
                 </div>
                 <p>*Precio por persona en base doble</p>
                 <a href="/products/details/<%= element.id %>"
-                  >+Mas info <i class="fa-solid fa-arrow-right masInfo"></i
-                ></a>
+                  ><input
+                    type="submit"
+                    value="Mas info"
+                    name="detalleProducto"
+                    class="buttonDetailProduct"
+                /></a>
               </div>
             </article>
           </div>

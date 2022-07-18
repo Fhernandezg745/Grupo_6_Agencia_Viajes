@@ -1,106 +1,142 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <%- include("../includes/head") %>
-        <link rel="stylesheet" href="/css/productList-mobile.css" />
-        <link rel="stylesheet" href="/css/productList-tablet.css" />
-        <link rel="stylesheet" href="/css/productList-desktop.css" />
-</head>
+    <link rel="stylesheet" href="/css/productList-mobile.css" />
+    <link rel="stylesheet" href="/css/productList-tablet.css" />
+    <link rel="stylesheet" href="/css/productList-desktop.css" />
+  </head>
 
-<body>
+  <body>
     <%- include("../includes/header") %>
-        <main>
-            <aside class="sideBar">
-                <nav>
-                    <p>
-                        Lorem ipsum dolor sit amet consectetur adipisicing elit. Commodi sed explicabo unde, veniam impedit libero quibusdam. Quia laboriosam pariatur cupiditate molestias odit voluptatum blanditiis accusantium tempore asperiores, rem illum unde?
-                    </p>
-                    <div>
-                        <h2>Filtros</h2>
-                        <form action="">
-                            <label for="Region"> Region<input type="checkbox" /></label>
-                            <label for="baseSingle">
-                Base sinlge
-                <input
-                  type="checkbox"
-                  name="baseSingle"
-                  placeholder="2"
-                  class=""
-              /></label>
-                            <label for="baseDoble">
-                Base doble
-                <input
-                  type="checkbox"
-                  name="baseDoble"
-                  placeholder="2"
-                  class=""
-              /></label>
-                            <label for="familyplan">
-                Family plan
-                <input
-                  type="checkbox"
-                  name="familyplan"
-                  placeholder="2"
-                  class=""
-              /></label>
-                        </form>
-                    </div>
-                </nav>
-            </aside>
-            <article class="articleContainer">
-                <% products.forEach(element => {%>
-                    <div class="productoBox">
-                        <figure class="articleFigure">
-                            <a href="/products/details/<%= element.id %>"><img src="<%= element.image %>" alt=""
+    <main>
+      <aside class="sideBar">
+        <h2>FILTROS</h2>
+        <div class="filterRegiones">
+          <h3 class="">Regiones</h3>
+          <ul>
+            <li><a href="#">Europa</a></li>
+            <li><a href="#">Africa</a></li>
+            <li><a href="#">Islas del Indico</a></li>
+            <li><a href="#">Lejano Oriente</a></li>
+            <li><a href="#">Medio Oriente</a></li>
+            <li><a href="#">Sudeste Asiatico</a></li>
+            <li><a href="#">Oceania e Islas del Pacifico Sur</a></li>
+            <li><a href="#">Caucaso</a></li>
+          </ul>
+        </div>
+        <div class="filterTipoDestino">
+          <h3 class="">Tipo de destino</h3>
+          <ul class="list-group">
+            <li class="">
+              <a href="#">
+                <span class="fa pr-1" id="red"></span
+                ><i class="fa-solid fa-gopuram"></i> Exotico
+              </a>
+            </li>
+            <li class="">
+              <a href="#">
+                <span class="fa pr-1" id="blue"></span
+                ><i class="fa-regular fa-compass"></i> Aventura
+              </a>
+            </li>
+            <li class="">
+              <a href="#">
+                <span class="fa pr-1" id="blue"></span
+                ><i class="fa-solid fa-map-location"></i> Clasicos
+              </a>
+            </li>
+            <li class="">
+              <a href="#">
+                <span class="fa pr-1" id="teal"></span>
+                <i class="fa-solid fa-umbrella-beach"></i> Playas</a
+              >
+            </li>
+          </ul>
+        </div>
+        <div class="filterOfertas">
+          <form class="">
+            <div class="">
+              <input type="radio" name="filteroferta" id="promociones" />
+              <label for="promociones" class="">Promociones</label>
+            </div>
+            <div class="">
+              <input type="radio" name="filteroferta" id="masvendidos" />
+              <label for="masvendidos" class="">Mas Vendidos</label>
+            </div>
+            <div class="">
+              <input type="radio" name="filteroferta" id="destacados" />
+              <label for="destacados" class="">Destacados</label>
+            </div>
+          </form>
+        </div>
+        <div class="filterTags">
+          <h3>TAGS</h3>
+          <% products.forEach(element=> {%>
+          <p><%= element.tags %></p>
+          <% }) %>
+        </div>
+      </aside>
+
+      <article class="articleContainer">
+        <% products.forEach(element=> {%>
+        <div class="productoBox">
+          <figure class="articleFigure">
+            <a href="/products/details/<%= element.id %>"
+              ><img src="<%= element.image %>" alt=""
             /></a>
-                        </figure>
-                        <section class="detalle">
-                            <header class="tituloPaquete">
-                                <h2>
-                                    <%= element.tittle %> - (
-                                        <%= element.days %> dias/
-                                            <%=
+          </figure>
+          <section class="detalle">
+            <header class="tituloPaquete">
+              <h2>
+                <%= element.tittle %> - ( <%= element.days %> dias/ <%=
                 element.nights %> noches)
-                                </h2>
-                                <span> <%= element.shortDescription %> </span>
-                            </header>
-                            <section class="condicionesPaquete">
-                                <div class="condicionesPaquete"></div>
-                                <div class="resumenPaquete">
-                                    <li>
-                                        <i class="fa-solid fa-globe"></i>
-                                        <%= element.region %>
-                                    </li>
-                                    <li><i class="fa-solid fa-hotel"></i> Alojamiento
-                                        <%= element.stars %> estrellas</li>
-                                    <li><i class="fa-solid fa-moon"></i> Cantidad de noches:
-                                        <%= element.nights %>
-                                    </li>
-                                    <li>
-                                        <i class="fa-solid fa-plane-departure"></i> Incluye aereos/traslados
-                                    </li>
-                                </div>
-                            </section>
+              </h2>
+              <span> <%= element.shortDescription %> </span>
+            </header>
+            <section class="condicionesPaquete">
+              <div class="condicionesPaquete"></div>
+              <div class="resumenPaquete">
+                <li>
+                  <i class="fa-solid fa-globe"></i>
+                  <%= element.region %>
+                </li>
+                <li>
+                  <i class="fa-solid fa-hotel"></i> Alojamiento <%=
+                  element.stars %> estrellas
+                </li>
+                <li>
+                  <i class="fa-solid fa-moon"></i> Cantidad de noches: <%=
+                  element.nights %>
+                </li>
+                <li>
+                  <i class="fa-solid fa-plane-departure"></i> Incluye
+                  aereos/traslados
+                </li>
+              </div>
+            </section>
+          </section>
+          <section class="productPrice">
+            <i class="fa-solid fa-money-check-dollar"></i>
+            <p>
+              Precio final por persona, en base <%= element.base %>, desde :
+            </p>
+            <p class="price">$ <%= element.price %> USD</p>
+            <nav>
+              <a href="/products/details/<%= element.id %>"
+                ><input
+                  type="submit"
+                  value="Mas info"
+                  name="detalleProducto"
+                  class="buttonDetailProduct"
+              /></a>
+            </nav>
+          </section>
+        </div>
+        <% }) %>
+      </article>
+    </main>
 
-                        </section>
-                        <section class="productPrice">
-                            <i class="fa-solid fa-money-check-dollar"></i>
-                            <p> Precio final por persona, en base
-                                <%= element.base %>, desde :
-                            </p>
-                            <p class="price"> $
-                                <%= element.price %> USD</p>
-                            <nav>
-                                <a href="/products/details/<%= element.id %>"><input type="submit" value="Mas info" name="detalleProducto" class="buttonDetailProduct" /></a>
-                            </nav>
-                        </section>
-                    </div>
-                    <% }) %>
-            </article>
-        </main>
-
-        <%- include("../includes/footer") %>
-</body>
-
+    <%- include("../includes/footer") %>
+  </body>
 </html>

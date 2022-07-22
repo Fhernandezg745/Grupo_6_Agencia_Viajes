@@ -9,3 +9,8 @@ Volvemos a destacar que seguimos cumpliendo los plazos de entrega del proyecto. 
 Mejoramos también un poco las vías de comunicación interna a trávés del uso del canal de discord, pero necesitamos fortalecer un poco más el día a día. Rescatamos que mejoró ese aspecto pero no debemos conformarnos sino que necesitamos profundizar la interacción. Evaluamos abrir otro canal de díalogo diario.
 Diagramamos con efectividad las distintas historias a realizar dentro de la plataforma trello. El camino será seguir asimilando la forma de trabajar.
 Si bien, durante el lapso del sprint 2 tuvimos ciertas dificultades a la hora de emplear las distintas herramientas de CSS, estamos conformes con el resultado que se logró en el plazo de entrega, sabiendo que necesita mejoras pero con el tiempo que contamos y el conocimiento y experiencia en el uso de las herramientas, el resulatdo fue bastante positivo. Sobretodo fuimos comprendiendo la lógica del mobile first desde lo empírico más allá de la teoría.
+
+
+// Sprint 3
+Empezamos a reconocer como fortaleza el cumplimiento de los plazos de entrega establecidos. De todas formas, la dinámica de incorporación de tantos nuevos contenidos al proyecto mantiene el desafío.
+Finalmente abrimos un diálogo mas cotidiano a través de whatsapp que permitió un dialogo mas fluido. Pero, entendemos que tenemos que fortalecer la comunicación a través de daily y weekly donde podamos profundizar y poner en común el estado del proyecto y los compromisos a asumir por parte de los integrantes. Para así, lograr un óptimo seguimiento de plazos, estado del proyecto y necesidades, que permitan una evaluación y resolución mas profesional y eficaz.

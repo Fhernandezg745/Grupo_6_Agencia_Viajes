@@ -12,7 +12,8 @@
         "address": "085 Reindahl Alley",
         "gender": "Male",
         "date": "10/24/1989",
-        "position": "CEO"
+        "position": "CEO",
+        "image": null
     },
     {
         "id": 2,
@@ -27,7 +28,8 @@
         "address": "01873 Oxford Point",
         "gender": "Agender",
         "date": "4/7/2000",
-        "position": "Travel Guide"
+        "position": "Travel Guide",
+        "image": null
     },
     {
         "id": 3,
@@ -42,7 +44,8 @@
         "address": "5672 Waubesa Court",
         "gender": "Male",
         "date": "10/19/1979",
-        "position": "Travel Agent"
+        "position": "Travel Agent",
+        "image": null
     },
     {
         "id": 4,
@@ -57,7 +60,8 @@
         "address": "9580 Heath Crossing",
         "gender": "Male",
         "date": "12/31/1989",
-        "position": "Junior Executive"
+        "position": "Junior Executive",
+        "image": null
     },
     {
         "id": 5,
@@ -72,7 +76,8 @@
         "address": "571 Loftsgordon Point",
         "gender": "Male",
         "date": "8/30/1989",
-        "position": "treasury"
+        "position": "treasury",
+        "image": null
     },
     {
         "id": 6,
@@ -87,7 +92,8 @@
         "address": "86 Donald Terrace",
         "gender": "Agender",
         "date": "1/26/1990",
-        "position": "Management"
+        "position": "Management",
+        "image": null
     },
     {
         "id": 7,
@@ -102,6 +108,7 @@
         "address": "31 Vidon Road",
         "gender": "Female",
         "date": "7/5/1999",
-        "position": "Travel Agent"
+        "position": "Travel Agent",
+        "image": null
     }
 ]

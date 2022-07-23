@@ -7,8 +7,8 @@ const { port, callback } = require("./src/modules/port");
 const method = require("method-override");
 
 //seteo carpeta public como static
-const public = resolve(__dirname, "./public");
-app.use(express.static(public));
+app.use(require("./src/modules/public"));
+app.use(require("./src/modules/uploads"));
 
 // seteo de EJS
 app.set("view engine", "ejs");
@@ -22,7 +22,7 @@ app.use("/products", require("./src/routes/productRoutes"));
 // seteo de CRUD
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
-app.use(method("m"));
+app.use(method("_method"));
 
 //levanto servidor
 app.listen(port, () =>

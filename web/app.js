@@ -4,6 +4,7 @@ const { path, resolve } = require("path");
 const express = require("express");
 const app = express();
 const { port, callback } = require("./src/modules/port");
+const method = require("method-override");
 
 //seteo carpeta public como static
 const public = resolve(__dirname, "./public");
@@ -18,7 +19,10 @@ app.use(require("./src/routes/mainRoutes"));
 app.use("/user", require("./src/routes/usersRoutes"));
 app.use("/products", require("./src/routes/productRoutes"));
 
-//
+// seteo de CRUD
+app.use(express.urlencoded({ extended: false }));
+app.use(express.json());
+app.use(method("m"));
 
 //levanto servidor
 app.listen(port, () =>

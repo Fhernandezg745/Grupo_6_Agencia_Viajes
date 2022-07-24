@@ -8,10 +8,10 @@ const productController = {
     });
   },
   detail: (req, res) => {
-    let product = one(parseInt(req.params.id));
+    let product = one(parseInt(req.params.productId));
 
     if (!product) {
-      return res.redirect("/");
+      return res.redirect("/products/productList");
     }
     return res.render("products/details", {
       title: "Product Details",

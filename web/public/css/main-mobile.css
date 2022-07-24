@@ -374,10 +374,6 @@ main {
   flex: 1 100%;
 }
 
-.buttonDetailProduct:hover {
-  background: #007aff;
-}
-
 .articleDetails .buttonDetailProduct {
   margin: 0 auto;
   width: 10vw;
@@ -390,7 +386,9 @@ main {
   font-weight: bold;
   background: #128f76;
 }
-
+.buttonDetailProduct:hover {
+  background: #007aff;
+}
 .articleDetails a {
   text-decoration: none;
 }

@@ -6,10 +6,10 @@ const mainController = {
       title: "Home",
       products: index(),
       highlightedSection: index().filter(
-        (product) => product.highlighted == "true"
+        (product) => product.highlighted == "on"
       ),
       bestSellerSection: index().filter(
-        (product) => product.bestSeller == "true"
+        (product) => product.bestSeller == "on"
       ),
     });
   },

@@ -25,9 +25,9 @@
                             maxlength="250" value="" placeholder="Ingresa un titulo para el paquete" required />
                     </fieldset>
                     <fieldset class="labelFieldset">
-                        <label for="precioProducto"><i class="fa-solid fa-money-check-dollar"></i> Precio por persona
+                        <label for="price"><i class="fa-solid fa-money-check-dollar"></i> Precio por persona
                         </label>
-                        <input type="number" id="precioProducto" name="precioProducto" placeholder="$10000"
+                        <input type="number" id="price" name="price" placeholder="$10000"
                             class="inputTextFieldCreateProducts" />
                         <label for="baseSingle">
                             Base sinlge
@@ -55,13 +55,25 @@
                         </select>
                     </fieldset>
                     <fieldset class="labelFieldset">
+                        <label for="regionProducto"><i class="fa-solid fa-location-dot registerIcon"></i>
+                            Region</label>
+                        <select name="region" id="region" placeholder="Region" class="inputTextFieldCreateProducts">
+                            <option value="Africa">Africa</option>
+                            <option value="Sudeste Asiatico">Sudeste Asiatico</option>
+                            <option value="Oceania">Oceania</option>
+                            <option value="Medio Oriente">Medio Oriente</option>
+                            <option value="Lejano Oriente">Lejano Oriente</option>
+                            <option value="Islas del Indico">Islas del Indico</option>
+                            <option value="Islas del Pacifico Sur">Islas del Pacifico Sur</option>
+                        </select>
+                    </fieldset>
+                    <fieldset class="labelFieldset">
                         <label for="cantidadNoches"><i class="fa-solid fa-bed"></i> Cantidad de noches de alojamiento
-                            <input type="number" name="cantidadNoches" id="cantidadNoches" max="99" min="1"
+                            <input type="number" name="nights" id="nights" max="99" min="1"
                                 class="cantNoches" /></label>
 
                         <label for="cantidadDias"><i class="fa-solid fa-sun"></i> Cantidad de dias de viaje
-                            <input type="number" name="cantidadDias" id="cantidadDias" max="99" min="1"
-                                class="cantDias" /></label>
+                            <input type="number" name="days" id="days" max="99" min="1" class="cantDias" /></label>
                     </fieldset>
                     <fieldset class="labelFieldset">
                         <label for=""><i class="fa-solid fa-star"></i>Categoria de Hoteles:
@@ -89,27 +101,34 @@
                     </fieldset>
                     <fieldset class="labelFieldset">
                         <label for="itinerario">
-                            <i class="fa-solid fa-van-shuttle"></i> Itinenrario/excursiones:
+                            <i class="fa-solid fa-van-shuttle"></i> Itinerario/excursiones:
                         </label>
-                        <input class="text_area k2TitleBox" type="text" name="itinerario" maxlength="250" value=""
-                            placeholder="Pittensberg Bay, Johannesburgo, ..." />
+                        <input class="text_area k2TitleBox" type="text" name="shortDescription" id="shortDescription"
+                            maxlength="250" value="" placeholder="Pittensberg Bay, Johannesburgo, ..." />
                     </fieldset>
                     <fieldset class="labelFieldset">
-                        <input type="checkbox" name="aereos" /><label for="aereos">
-                            aereos incluidos <i class="fa-solid fa-plane-departure"></i></label>
-                        <input type="checkbox" name="traslados" /><label for="traslados">
-                            traslados in/out y entre hoteles <i class="fa-solid fa-bus"></i></label>
+                        <input type="checkbox" name="flights" id="flights" /><label for="aereos">
+                            <i class="fa-solid fa-plane-departure"></i> aereos incluidos</label>
+                        <input type="checkbox" name="transfers" id="transfers" /><label for="traslados">
+                            <i class="fa-solid fa-bus"></i> traslados in/out y entre hoteles </label>
+                    </fieldset>
+                    <fieldset class="labelFieldset">
+                        <input type="checkbox" name="highLighted" id="highLighted" /><label for="aereos">
+                            <i class="fa-solid fa-award"></i> Destacado</label>
+                        <input type="checkbox" name="bestSeller" id="bestSeller" /><label for="traslados">
+                            <i class="fa-solid fa-tags"></i> Mas Vendido</label>
                     </fieldset>
                     <fieldset class="labelFieldset">
                         <label for="tags"><i class="fa-solid fa-hashtag"></i> Tags</label>
-                        <input class="text_area k2TitleBox" type="text" name="tags" maxlength="250" value=""
+                        <input class="text_area k2TitleBox" type="text" name="tags" id="tags" maxlength="250" value=""
                             placeholder="#exoticos #paraiso" />
                     </fieldset>
                     <fieldset class="labelFieldset">
                         <label for="descripcionProducto"><i class="fa-solid fa-list"></i> Descripcion del itinerario
                         </label>
-                        <textarea class="productDescriptionField" type="textarea" name="descripcionProducto" value=""
-                            placeholder="DIA 01: .., DIA 02:.. " maxlength="100000"></textarea>
+                        <textarea class="productDescriptionField" type="textarea" name="longDescription"
+                            id="longDescription" value="" placeholder="DIA 01: .., DIA 02:.. "
+                            maxlength="100000"></textarea>
                     </fieldset>
                     <fieldset class="buttonField">
                         <button type="submit" value="Crear Producto" name="crearProducto"

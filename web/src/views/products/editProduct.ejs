@@ -15,24 +15,21 @@
 
         <main>
             <section class="imageCreateProducts">
-                <form action="/" method="post" class="formAreaCreateProducts">
+                <form action="/products/editProduct/<%= product.productId %>?_method=PUT" method="put" enctype="multipart/form-data" class="formAreaCreateProducts">
                     <div class="divCreateProduct">
-                        <h2 class="headerCreateProduct">EDITA TU PRODUCTO</h2>
+                        <h2 class="headerCreateProduct">EDITANDO EL PRODUCTO ID:
+                            <%= product.productId %>
+                        </h2>
                         <a href="/createProducts" class="createProductLink">Quiero crear un producto nuevo</a>
                     </div>
-
-                    <fieldset class="labelFieldset">
-                        <label for="idProducto">Ingresá el id del producto que queres editar <input type="number" ></label>
-                        <label for=""><input type="submit" name="idProducto" value="Buscar" class="buscarId" href="/editProduct"></label>
-                    </fieldset>
                     <div class="editFields">
                         <fieldset class="labelFieldset">
                             <label for="nombreProducto"> Titulo del producto </label>
-                            <input class="text_area k2TitleBox" type="text" name="title" maxlength="250" value="" placeholder="Ingresa un titulo para el paquete" required>
+                            <input class="text_area k2TitleBox" type="text" name="title" maxlength="250" value=" <%= product.tittle %> ">
                         </fieldset>
                         <fieldset class="labelFieldset">
                             <label for="precioProducto"><i class="fa-solid fa-money-check-dollar"></i>  Precio por persona </label>
-                            <input type="number" name="precioProducto" placeholder="$10000" class="inputTextFieldCreateProducts">
+                            <input type="number" name="precioProducto" class="inputTextFieldCreateProducts" value=" <%= product.price %>">
                             <label for="baseSingle"> Base sinlge <input type="checkbox" name="baseSingle" placeholder="2" class=""></label>
                             <label for="baseDoble"> Base doble <input type="checkbox" name="baseDoble" placeholder="2" class=""></label>
                             <label for="familyplan"> Family plan <input type="checkbox" name="familyplan" placeholder="2" class=""></label>
@@ -62,7 +59,7 @@
                         </fieldset>
                         <fieldset class="labelFieldset">
                             <label for="itinerario"> <i class="fa-solid fa-van-shuttle"></i> Itinenrario/excursiones: </label>
-                            <input class="text_area k2TitleBox" type="text" name="itinerario" maxlength="250" value="" placeholder="Pittensberg Bay, Johannesburgo, ...">
+                            <input class="text_area k2TitleBox" type="text" name="itinerario" maxlength="250" value=" <%= product.shortDescription %>" placeholder="Pittensberg Bay, Johannesburgo, ...">
                         </fieldset>
                         <fieldset class="labelFieldset">
                             <input type="checkbox" name="aereos"><label for="aereos"> aereos incluidos <i class="fa-solid fa-plane-departure"></i></label>

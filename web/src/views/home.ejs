@@ -2,22 +2,22 @@
 <html lang="en">
 <%- include("./includes/head") %>
 
-  <body>
-    <%- include("./includes/header") %>
+    <body>
+        <%- include("./includes/header") %>
 
-      <main class="mainClass">
-        <section class="topClassMain">
-          <div class="mainImage">
-            <p class="header"></p>
-          </div>
-        </section>
-        <h2 class="headerExperiencias">
-          ¡Elegi tu proxima experiencia Harbor Trip!
-        </h2>
-        <section class="sectionSearch">
-          <form action="/">
-            <fieldset class="mainSelectorContainer">
-              <select>
+            <main class="mainClass">
+                <section class="topClassMain">
+                    <div class="mainImage">
+                        <p class="header"></p>
+                    </div>
+                </section>
+                <h2 class="headerExperiencias">
+                    ¡Elegi tu proxima experiencia Harbor Trip!
+                </h2>
+                <section class="sectionSearch">
+                    <form action="/">
+                        <fieldset class="mainSelectorContainer">
+                            <select>
                 <option value="none" class="none">Destino</option>
                 <option value="product1">Africa</option>
                 <option value="product2">Medio Oriente</option>
@@ -27,179 +27,182 @@
                 <option value="product3">Islas del Indico</option>
                 <option value="product3">Oceania</option>
               </select>
-            </fieldset>
-            <fieldset class="mainSelectorContainer">
-              <select>
+                        </fieldset>
+                        <fieldset class="mainSelectorContainer">
+                            <select>
                 <option value="none" class="none">Categoria</option>
                 <option value="product1">Categoria A</option>
                 <option value="product2">Categoria B</option>
                 <option value="product3">Categoria C</option>
               </select>
-            </fieldset>
-            <fieldset class="mainSelectorContainer">
-              <select>
+                        </fieldset>
+                        <fieldset class="mainSelectorContainer">
+                            <select>
                 <option value="none" class="none">Cant de noches</option>
                 <option value="product1">8 noches</option>
                 <option value="product2">10 noches</option>
                 <option value="product3">12 noches</option>
               </select>
-            </fieldset>
-            <button type="submit" class="btn">Buscar</button>
-          </form>
-        </section>
-        <section class="middleClassMain" id="destinations">
-          <div class="">
-            <a class="tituloExperiencias"> Africa </a>
-            <article class="articleExperiencias">
-              <a>
-                <img src="./assets/Africa_Jirafas_Atardecer(400x300).jpeg" alt="" />
-              </a>
-            </article>
-          </div>
-          <div class="">
-            <a class="tituloExperiencias"> Medio Oriente </a>
-            <article class="articleExperiencias">
-              <a href="/products/productsList/:region">
-                <img src="./assets/dubai-400x300.jpeg" alt="" />
-              </a>
-            </article>
-          </div>
-          <div class="">
-            <a class="tituloExperiencias"> Islas del Pacifico Sur </a>
-            <article class="articleExperiencias">
-              <a>
-                <img src="./assets/EasterIsland_Moai_small-400x300.jpg" alt="" />
-              </a>
-            </article>
-          </div>
-          <div class="">
-            <a class="tituloExperiencias"> Sudeste Asiatico </a>
-            <article class="articleExperiencias">
-              <a>
-                <img src="./assets/Sudeste-Asiatico-400x300.jpg" alt="" />
-              </a>
-            </article>
-          </div>
-          <div class="">
-            <a class="tituloExperiencias"> Lejano Oriente </a>
-            <article class="articleExperiencias">
-              <a>
-                <img src="./assets/japan-400x300.jpg" alt="" />
-              </a>
-            </article>
-          </div>
-          <div class="">
-            <a class="tituloExperiencias"> Islas del Indico </a>
-            <article class="articleExperiencias">
-              <a>
-                <img src="./assets/maldives-400x300.jpg" alt="" />
-              </a>
-            </article>
-          </div>
-          <div class="">
-            <a class="tituloExperiencias"> Oceania </a>
-            <article class="articleExperiencias">
-              <a>
-                <img src="./assets/Sydney_Opera(400x300).jpeg" alt="" />
-              </a>
-            </article>
-          </div>
-        </section>
-
-        <section class="bottomClassMain" id="highlighted">
-          <div class="fancyHeader">
-            <h2>Paquetes Destacados</h2>
-          </div>
-          <section class="firstSection">
-            <% highlightedSection.forEach(element=> {%>
-              <div class="articleBox">
-                <article class="articleMainContainer">
-                  <figure class="articleFigure">
-                    <a href="/products/details/<%= element.id %>"><img src="<%= element.image %>" alt="" /></a>
-                  </figure>
-                  <div class="articleDetails">
-                    <ul>
-                      <li>
-                        <i class="fa-solid fa-bed"></i>
-                        <%= element.nights %> noches
-                          de alojamiento en hoteleria <%= element.stars %> estrellas
-                      </li>
-                      <li>
-                        <i class="fa-solid fa-bus"></i> traslados in/out y entre
-                        hoteles
-                      </li>
-                      <li>
-                        <i class="fa-solid fa-van-shuttle"></i>
-                        Itinerario/excursiones: <%= element.shortDescription %>
-                      </li>
-                      <li>
-                        <i class="fa-solid fa-plane-departure"></i> aereos incluidos
-                      </li>
-                    </ul>
-                    <h3 class="articleTitle">
-                      <%= element.tittle %> - (<%= element.days %> dias/ <%= element.nights %> noches)
-                    </h3>
-                    <div class="precioArticuloMain">
-                      <p>Desde $<%= element.price %> USD*</p>
+                        </fieldset>
+                        <button type="submit" class="btn">Buscar</button>
+                    </form>
+                </section>
+                <section class="middleClassMain" id="destinations">
+                    <div class="">
+                        <a class="tituloExperiencias"> Africa </a>
+                        <article class="articleExperiencias">
+                            <a>
+                                <img src="./assets/Africa_Jirafas_Atardecer(400x300).jpeg" alt="" />
+                            </a>
+                        </article>
                     </div>
-                    <p>*Precio por persona en base <%= element.base %>
-                    </p>
-                    <a href="/products/details/<%= element.productId %>"><input type="submit" value="Mas info"
-                        name="detalleProducto" class="buttonDetailProduct" /></a>
-                  </div>
-                </article>
-              </div>
-              <% }) %>
-          </section>
-        </section>
-        <section class="bottomClassMain" id="bestSeller">
-          <div class="fancyHeader">
-            <h2>Paquetes mas Vendidos</h2>
-          </div>
-          <section class="lastSection">
-            <% bestSellerSection.forEach(element=> {%>
-              <div class="articleBox">
-                <article class="articleMainContainer">
-                  <figure class="articleFigure">
-                    <a href="/products/details/<%= element.id %>"><img src="<%= element.image %>" alt="" /></a>
-                  </figure>
-                  <div class="articleDetails">
-                    <ul>
-                      <li>
-                        <i class="fa-solid fa-bed"></i>
-                        <%= element.nights %> noches
-                          de alojamiento en hoteleria <%= element.stars %> estrellas
-                      </li>
-                      <li>
-                        <i class="fa-solid fa-bus"></i> traslados in/out y entre
-                        hoteles
-                      </li>
-                      <li>
-                        <i class="fa-solid fa-van-shuttle"></i>
-                        Itinerario/excursiones: <%= element.shortDescription %>
-                      </li>
-                      <li>
-                        <i class="fa-solid fa-plane-departure"></i> aereos incluidos
-                      </li>
-                    </ul>
-                    <h3 class="articleTitle">
-                      <%= element.tittle %> - (<%= element.days %> dias/ <%= element.nights %> noches)
-                    </h3>
-                    <div class="precioArticuloMain">
-                      <p>Desde $<%= element.price %> USD*</p>
+                    <div class="">
+                        <a class="tituloExperiencias"> Medio Oriente </a>
+                        <article class="articleExperiencias">
+                            <a href="/products/productsList/:region">
+                                <img src="./assets/dubai-400x300.jpeg" alt="" />
+                            </a>
+                        </article>
                     </div>
-                    <p>*Precio por persona en base doble</p>
-                    <a href="/products/details/<%= element.productId %>"><input type="submit" value="Mas info"
-                        name="detalleProducto" class="buttonDetailProduct" /></a>
-                  </div>
-                </article>
-              </div>
-              <% }) %>
-          </section>
-        </section>
-      </main>
+                    <div class="">
+                        <a class="tituloExperiencias"> Islas del Pacifico Sur </a>
+                        <article class="articleExperiencias">
+                            <a>
+                                <img src="./assets/EasterIsland_Moai_small-400x300.jpg" alt="" />
+                            </a>
+                        </article>
+                    </div>
+                    <div class="">
+                        <a class="tituloExperiencias"> Sudeste Asiatico </a>
+                        <article class="articleExperiencias">
+                            <a>
+                                <img src="./assets/Sudeste-Asiatico-400x300.jpg" alt="" />
+                            </a>
+                        </article>
+                    </div>
+                    <div class="">
+                        <a class="tituloExperiencias"> Lejano Oriente </a>
+                        <article class="articleExperiencias">
+                            <a>
+                                <img src="./assets/japan-400x300.jpg" alt="" />
+                            </a>
+                        </article>
+                    </div>
+                    <div class="">
+                        <a class="tituloExperiencias"> Islas del Indico </a>
+                        <article class="articleExperiencias">
+                            <a>
+                                <img src="./assets/maldives-400x300.jpg" alt="" />
+                            </a>
+                        </article>
+                    </div>
+                    <div class="">
+                        <a class="tituloExperiencias"> Oceania </a>
+                        <article class="articleExperiencias">
+                            <a>
+                                <img src="./assets/Sydney_Opera(400x300).jpeg" alt="" />
+                            </a>
+                        </article>
+                    </div>
+                </section>
 
-      <%- include("./includes/footer") %>
-  </body>
+                <section class="bottomClassMain" id="highlighted">
+                    <div class="fancyHeader">
+                        <h2>Paquetes Destacados</h2>
+                    </div>
+                    <section class="firstSection">
+                        <% highlightedSection.forEach(element=> {%>
+                            <div class="articleBox">
+                                <article class="articleMainContainer">
+                                    <figure class="articleFigure">
+                                        <a href="/products/details/<%= element.productId %>"><img src="<%= element.image %>" alt="" /></a>
+                                    </figure>
+                                    <div class="articleDetails">
+                                        <ul>
+                                            <li>
+                                                <i class="fa-solid fa-bed"></i>
+                                                <%= element.nights %> noches de alojamiento en hoteleria
+                                                    <%= element.stars %> estrellas
+                                            </li>
+                                            <li>
+                                                <i class="fa-solid fa-bus"></i> traslados in/out y entre hoteles
+                                            </li>
+                                            <li>
+                                                <i class="fa-solid fa-van-shuttle"></i> Itinerario/excursiones:
+                                                <%= element.shortDescription %>
+                                            </li>
+                                            <li>
+                                                <i class="fa-solid fa-plane-departure"></i> aereos incluidos
+                                            </li>
+                                        </ul>
+                                        <h3 class="articleTitle">
+                                            <%= element.tittle %> - (
+                                                <%= element.days %> dias/
+                                                    <%= element.nights %> noches)
+                                        </h3>
+                                        <div class="precioArticuloMain">
+                                            <p>Desde $
+                                                <%= element.price %> USD*</p>
+                                        </div>
+                                        <p>*Precio por persona en base
+                                            <%= element.base %>
+                                        </p>
+                                        <a href="/products/details/<%= element.productId %>"><input type="submit" value="Mas info" name="detalleProducto" class="buttonDetailProduct" /></a>
+                                    </div>
+                                </article>
+                            </div>
+                            <% }) %>
+                    </section>
+                </section>
+                <section class="bottomClassMain" id="bestSeller">
+                    <div class="fancyHeader">
+                        <h2>Paquetes mas Vendidos</h2>
+                    </div>
+                    <section class="lastSection">
+                        <% bestSellerSection.forEach(element=> {%>
+                            <div class="articleBox">
+                                <article class="articleMainContainer">
+                                    <figure class="articleFigure">
+                                        <a href="/products/details/<%= element.productId %>"><img src="<%= element.image %>" alt="" /></a>
+                                    </figure>
+                                    <div class="articleDetails">
+                                        <ul>
+                                            <li>
+                                                <i class="fa-solid fa-bed"></i>
+                                                <%= element.nights %> noches de alojamiento en hoteleria
+                                                    <%= element.stars %> estrellas
+                                            </li>
+                                            <li>
+                                                <i class="fa-solid fa-bus"></i> traslados in/out y entre hoteles
+                                            </li>
+                                            <li>
+                                                <i class="fa-solid fa-van-shuttle"></i> Itinerario/excursiones:
+                                                <%= element.shortDescription %>
+                                            </li>
+                                            <li>
+                                                <i class="fa-solid fa-plane-departure"></i> aereos incluidos
+                                            </li>
+                                        </ul>
+                                        <h3 class="articleTitle">
+                                            <%= element.tittle %> - (
+                                                <%= element.days %> dias/
+                                                    <%= element.nights %> noches)
+                                        </h3>
+                                        <div class="precioArticuloMain">
+                                            <p>Desde $
+                                                <%= element.price %> USD*</p>
+                                        </div>
+                                        <p>*Precio por persona en base doble</p>
+                                        <a href="/products/details/<%= element.productId %>"><input type="submit" value="Mas info" name="detalleProducto" class="buttonDetailProduct" /></a>
+                                    </div>
+                                </article>
+                            </div>
+                            <% }) %>
+                    </section>
+                </section>
+            </main>
+
+            <%- include("./includes/footer") %>
+    </body>
 
 </html>

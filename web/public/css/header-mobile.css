@@ -38,7 +38,7 @@
 
 /*===============================MAIN HEADER =================================*/
 
-#burgerMenu a {
+#burgerMenu div {
     background: hsl(159, 7%, 62%);
     width: 24px;
     height: 24px;

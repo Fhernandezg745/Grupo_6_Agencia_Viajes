@@ -1,14 +1,15 @@
 <!DOCTYPE html>
 <html lang="en">
-  <head>
-    <%- include("../includes/head") %>
+
+<head>
+  <%- include("../includes/head") %>
     <link rel="stylesheet" href="/css/productList-mobile.css" />
     <link rel="stylesheet" href="/css/productList-tablet.css" />
     <link rel="stylesheet" href="/css/productList-desktop.css" />
-  </head>
+</head>
 
-  <body>
-    <%- include("../includes/header") %>
+<body>
+  <%- include("../includes/header") %>
     <main>
       <aside class="sideBar">
         <h2>FILTROS</h2>
@@ -30,27 +31,23 @@
           <ul class="list-group">
             <li class="">
               <a href="#">
-                <span class="fa pr-1" id="red"></span
-                ><i class="fa-solid fa-gopuram"></i> Exotico
+                <span class="fa pr-1" id="red"></span><i class="fa-solid fa-gopuram"></i> Exotico
               </a>
             </li>
             <li class="">
               <a href="#">
-                <span class="fa pr-1" id="blue"></span
-                ><i class="fa-regular fa-compass"></i> Aventura
+                <span class="fa pr-1" id="blue"></span><i class="fa-regular fa-compass"></i> Aventura
               </a>
             </li>
             <li class="">
               <a href="#">
-                <span class="fa pr-1" id="blue"></span
-                ><i class="fa-solid fa-map-location"></i> Clasicos
+                <span class="fa pr-1" id="blue"></span><i class="fa-solid fa-map-location"></i> Clasicos
               </a>
             </li>
             <li class="">
               <a href="#">
                 <span class="fa pr-1" id="teal"></span>
-                <i class="fa-solid fa-umbrella-beach"></i> Playas</a
-              >
+                <i class="fa-solid fa-umbrella-beach"></i> Playas</a>
             </li>
           </ul>
         </div>
@@ -73,70 +70,65 @@
         <div class="filterTags">
           <h3>TAGS</h3>
           <% products.forEach(element=> {%>
-          <p><%= element.tags %></p>
-          <% }) %>
+            <p>
+              <%= element.tags %>
+            </p>
+            <% }) %>
         </div>
       </aside>
 
       <article class="articleContainer">
         <% products.forEach(element=> {%>
-        <div class="productoBox">
-          <figure class="articleFigure">
-            <a href="/products/details/<%= element.id %>"
-              ><img src="<%= element.image %>" alt=""
-            /></a>
-          </figure>
-          <section class="detalle">
-            <header class="tituloPaquete">
-              <h2>
-                <%= element.tittle %> - ( <%= element.days %> dias/ <%=
-                element.nights %> noches)
-              </h2>
-              <span> <%= element.shortDescription %> </span>
-            </header>
-            <section class="condicionesPaquete">
-              <div class="condicionesPaquete"></div>
-              <div class="resumenPaquete">
-                <li>
-                  <i class="fa-solid fa-globe"></i>
-                  <%= element.region %>
-                </li>
-                <li>
-                  <i class="fa-solid fa-hotel"></i> Alojamiento <%=
-                  element.stars %> estrellas
-                </li>
-                <li>
-                  <i class="fa-solid fa-moon"></i> Cantidad de noches: <%=
-                  element.nights %>
-                </li>
-                <li>
-                  <i class="fa-solid fa-plane-departure"></i> Incluye
-                  aereos/traslados
-                </li>
-              </div>
+          <div class="productoBox">
+            <figure class="articleFigure">
+              <a href="/products/details/<%= element.productId %>"><img src="<%= element.image %>" alt="" /></a>
+            </figure>
+            <section class="detalle">
+              <header class="tituloPaquete">
+                <h2>
+                  <%= element.tittle %> - ( <%= element.days %> dias/ <%= element.nights %> noches)
+                </h2>
+                <span>
+                  <%= element.shortDescription %>
+                </span>
+              </header>
+              <section class="condicionesPaquete">
+                <div class="condicionesPaquete"></div>
+                <div class="resumenPaquete">
+                  <li>
+                    <i class="fa-solid fa-globe"></i>
+                    <%= element.region %>
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-hotel"></i> Alojamiento <%= element.stars %> estrellas
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-moon"></i> Cantidad de noches: <%= element.nights %>
+                  </li>
+                  <li>
+                    <i class="fa-solid fa-plane-departure"></i> Incluye
+                    aereos/traslados
+                  </li>
+                </div>
+              </section>
             </section>
-          </section>
-          <section class="productPrice">
-            <i class="fa-solid fa-money-check-dollar"></i>
-            <p>
-              Precio final por persona, en base <%= element.base %>, desde :
-            </p>
-            <p class="price">$ <%= element.price %> USD</p>
-            <nav>
-              <a href="/products/details/<%= element.id %>"
-                ><input
-                  type="submit"
-                  value="Mas info"
-                  name="detalleProducto"
-                  class="buttonDetailProduct"
-              /></a>
-            </nav>
-          </section>
-        </div>
-        <% }) %>
+            <section class="productPrice">
+              <i class="fa-solid fa-money-check-dollar"></i>
+              <p>
+                Precio final por persona, en base <%= element.base %>, desde :
+              </p>
+              <p class="price">$ <%= element.price %> USD</p>
+              <nav>
+                <a href="/products/details/<%= element.productId %>"><input type="submit" value="Mas info"
+                    name="detalleProducto" class="buttonDetailProduct" /></a>
+              </nav>
+            </section>
+          </div>
+          <% }) %>
       </article>
     </main>
 
     <%- include("../includes/footer") %>
-  </body>
+</body>
+
 </html>

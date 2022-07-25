@@ -7,6 +7,15 @@ module.exports = {
     let data = readFileSync(file, "utf8");
     return JSON.parse(data);
   },
+  // search: function (category, param) {
+  //   let file = resolve(__dirname, "../data", "products.json");
+  //   let data = readFileSync(file, "utf8");
+  //   let products = JSON.parse(data);
+  //   let result = products.forEach((product) => {
+  //     if (product.category.toLowerCase().includes(param.toLowerCase()))
+  //       return product;
+  //   });
+  // },
   one: function (id) {
     let file = resolve(__dirname, "../data", "products.json");
     let data = readFileSync(file, "utf8");
@@ -19,7 +28,7 @@ module.exports = {
     let products = JSON.parse(info);
     let lastProduct = products[products.length - 1];
     return Object({
-      productId: products.length == 0 ? 1 : lastProduct.id + 1,
+      productId: products.length == 0 ? 1 : lastProduct.productId + 1,
       tittle: data.tittle,
       shortDescription: data.shortDescription,
       longDescription: data.longDescription,

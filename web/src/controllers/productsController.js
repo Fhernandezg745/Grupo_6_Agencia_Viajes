@@ -1,4 +1,10 @@
-const { index, one, create, write } = require("../models/product.model");
+const {
+  index,
+  one,
+  create,
+  write,
+  search,
+} = require("../models/product.model");
 
 const productController = {
   index: (req, res) => {
@@ -7,9 +13,17 @@ const productController = {
       products: index(),
     });
   },
+  // filtro: (req, res) => {
+  //   let category = req.params.category;
+  //   let param = req.params.param;
+  //   let product = search(category, param);
+  //   return res.render("products/productList", {
+  //     title: "Product Filter",
+  //     product: product,
+  //   });
+  // },
   detail: (req, res) => {
-    let product = one(parseInt(req.params.productId));
-
+    let product = one(parseInt(req.params.id));
     if (!product) {
       return res.redirect("/products/productList");
     }

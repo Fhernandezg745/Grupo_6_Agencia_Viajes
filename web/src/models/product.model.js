@@ -11,7 +11,7 @@ module.exports = {
   //   let file = resolve(__dirname, "../data", "products.json");
   //   let data = readFileSync(file, "utf8");
   //   let products = JSON.parse(data);
-  //   let result = products.forEach((product) => {
+  //   let result = products.map((product) => {
   //     if (product.category.toLowerCase().includes(param.toLowerCase()))
   //       return product;
   //   });

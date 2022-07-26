@@ -3,7 +3,7 @@
     padding: 0px;
     box-sizing: border-box;
     border: none;
-    font-family: 'Roboto', sans-serif;
+    font-family: 'Varela Round', sans-serif;
     font-size: 12px;
 }
 
@@ -29,11 +29,11 @@
 .main-top-details .description-product1 {
     display: flex;
     flex-direction: column;
+    width: 100%;
 }
 
 .main-top-details .description-product1 h1 {
     font-size: 1.5em;
-    width: 70vw;
     margin-top: 5vw;
     margin-left: 15vw;
     margin-right: 15vw;

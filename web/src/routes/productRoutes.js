@@ -20,4 +20,6 @@ router.put("/editProduct/:id", [upload.any()], productsController.modify);
 
 router.get("/cart", productsController.cart);
 
+router.delete("/delete/:id", productsController.deleteProduct);
+
 module.exports = router;

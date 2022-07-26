@@ -13,14 +13,14 @@
 
     <main>
         <section class="imageRegister">
-            <form action="/users/save" method="post" class="formAreaRegister">
+            <form action="/users/save" method="post" class="formAreaRegister" enctype="multipart/form-data">
                 <fieldset class="labelFieldset">
                     <label for="nombre"><i class="fa-solid fa-id-card registerIcon"></i> Nombre completo</label>
-                    <input type="text" name="nombre" placeholder="Ingresa tu nombre" class="inputTextFieldRegister" required>
+                    <input type="text" name="fullName" placeholder="Ingresa tu nombre" class="inputTextFieldRegister" required>
                 </fieldset>
                 <fieldset class="labelFieldset">
                     <label for="usuario"><i class="fa-solid fa-user registerIcon"></i> Usuario</label>
-                    <input type="text" name="usuario" placeholder="Ingrese nombre de usuario" class="inputTextFieldRegister" required>
+                    <input type="text" name="userName" placeholder="Ingrese nombre de usuario" class="inputTextFieldRegister" required>
                 </fieldset>
                 <fieldset class="labelFieldset">
                     <label for="nacimiento"><i class="fa-solid fa-calendar-days registerIcon"></i> Fecha de nacimiento</label>
@@ -28,11 +28,11 @@
                 </fieldset>
                 <fieldset class="labelFieldset">
                     <label for="codPostal"><i class="fa-solid fa-envelope foot-icon registerIcon"></i> Código postal</label>
-                    <input type="number" name="codPostal" placeholder="1900" class="inputTextFieldRegister">
+                    <input type="number" name="postalCode" placeholder="1900" class="inputTextFieldRegister">
                 </fieldset>
                 <fieldset class="labelFieldset">
                     <label for="direccion"><i class="fa-solid fa-location-dot registerIcon"></i> Dirección</label>
-                    <input type="text" name="direccion" placeholder="Calle 7 n° 1307" class="inputTextFieldRegister">
+                    <input type="text" name="address" placeholder="Calle 7 n° 1307" class="inputTextFieldRegister">
                 </fieldset>
                 <fieldset class="labelFieldset">
                     <label for="email"><i class="fa-solid fa-envelope-open-text registerIcon"></i> E-mail</label>

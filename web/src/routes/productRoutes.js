@@ -20,6 +20,10 @@ router.put("/editProduct/:id", [upload.any()], productsController.modify);
 
 router.get("/cart", productsController.cart);
 
-router.delete("/delete/:id", productsController.deleteProduct);
+router.delete("/products/delete/:id", function(req, res,) {
+    res.send("test");
+}); 
+
+//router.delete("/delete/:id", productsController.deleteProduct);
 
 module.exports = router;

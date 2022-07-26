@@ -15,7 +15,7 @@
 
         <main>
             <section class="imageCreateProducts">
-                <form action="/products/editProduct/<%= product.productId %>?_method=PUT" method="post"
+                <form action="/products/editProduct/<%= product.productId %>?_method=PUT" method="POST"
                     enctype="multipart/form-data" class="formAreaCreateProducts">
                     <div class="divCreateProduct">
                         <h2 class="headerCreateProduct">EDITANDO EL PRODUCTO ID:
@@ -129,13 +129,18 @@
                             <a href="/products/productList"><input type="reset" value="Cancelar" name="cancelar"
                                     class="buttonClose"></a>
                         </fieldset>
-                        <a href="" class="checkEdit"><input
+                        <a  class="checkEdit"><input
                             type="checkbox" name="eliminar" value="" required> Estoy seguro de realizar estos cambios</a>
                     </div>
                 </form>
+<<<<<<< HEAD
                 <form action="/products/delete/<%= product.productId %>?_method=DELETE" method= "post" class="formAreaCreateProducts"
                 enctype="multipart/form-data">
                 <a href="" class="checkDelete"><button><i class="fa-solid fa-trash-can"></i>Quiero eliminar este Producto</button><input
+=======
+                <form action="" class="formAreaCreateProducts">
+                <a  class="checkDelete"><button>Quiero eliminar este Producto</button><input
+>>>>>>> 013534dc938af2112b2cb4d70d5961bb775b9ebc
                     type="checkbox" name="eliminar" value="" required> Estoy seguro de elminar el
                 producto</a>
             </form>

@@ -15,27 +15,25 @@
 
         <main>
             <section class="imageCreateProducts">
-                <form action="/products/editProduct/<%= product.productId %>?_method=PUT" method="put"
-                    enctype="multipart/form-data" class="formAreaCreateProducts">
+                <form action="/products/editProduct/<%= product.productId %>?_method=PUT" method="put" enctype="multipart/form-data" class="formAreaCreateProducts">
                     <div class="divCreateProduct">
                         <h2 class="headerCreateProduct">EDITANDO EL PRODUCTO ID:
                             <%= product.productId %>
                         </h2>
-                        <a href="/createProducts" class="createProductLink">Quiero crear un producto nuevo</a>
+                        <a href="/products/createProducts" class="createProductLink">Quiero crear un producto nuevo</a>
+                        <a href="" class="checkDelete"><button>Quiero eliminar este Producto</button><input type="checkbox" name="eliminar" value="" required> Estoy seguro de elminar el producto</a>
                     </div>
                     <div class="editFields">
                         <fieldset class="labelFieldset">
                             <label for="nombreProducto"> Titulo del producto </label>
-                            <input class="text_area k2TitleBox" type="text" name="title" maxlength="250"
-                                value=" <%= product.tittle %> ">
+                            <input class="text_area k2TitleBox" type="text" name="title" maxlength="250" value=" <%= product.tittle %> ">
                         </fieldset>
                         <fieldset class="labelFieldset">
                             <label for="precioProducto"><i class="fa-solid fa-money-check-dollar"></i> Precio por
                                 persona </label>
-                            <input type="number" name="precioProducto" class="inputTextFieldCreateProducts"
-                                value="<%= product.price %>">
+                            <input type="number" name="precioProducto" class="inputTextFieldCreateProducts" value="<%= product.price %>">
                             <label for="baseSingle"> Base sinlge <input type="checkbox" name="baseSingle"
-                                    placeholder="2" class=""></label>
+                                    placeholder="2" class="" ></label>
                             <label for="baseDoble"> Base doble <input type="checkbox" name="baseDoble" placeholder="2"
                                     class=""></label>
                             <label for="familyplan"> Family plan <input type="checkbox" name="familyplan"
@@ -43,14 +41,12 @@
                         </fieldset>
                         <fieldset class="labelFieldset">
                             <label for="imagenProducto"><i class="fa-solid fa-image"></i> - Imagen ilustrativa -</label>
-                            <input type="file" name="imagenProducto" id="date"
-                                accept="image/png, .jpeg, .jpg, image/gif" class=>
+                            <input type="file" name="imagenProducto" id="date" accept="image/png, .jpeg, .jpg, image/gif" class=>
                         </fieldset>
                         <fieldset class="labelFieldset">
                             <label for="categoriaProducto"><i class="fa-solid fa-location-dot registerIcon"></i>
                                 Categoría</label>
-                            <select name="categoriaProducto" placeholder="Categoria A"
-                                class="inputTextFieldCreateProducts">
+                            <select name="categoriaProducto" placeholder="Categoria A" class="inputTextFieldCreateProducts">
                                 <option value="Categoria A">Categoria A</option>
                                 <option value="Categoria B">Categoria B</option>
                                 <option value="Categoria C">Categoria C</option>
@@ -83,9 +79,7 @@
                         <fieldset class="labelFieldset">
                             <label for="itinerario"> <i class="fa-solid fa-van-shuttle"></i> Itinenrario/excursiones:
                             </label>
-                            <input class="text_area k2TitleBox" type="text" name="itinerario" maxlength="250"
-                                value=" <%= product.shortDescription %>"
-                                placeholder="Pittensberg Bay, Johannesburgo, ...">
+                            <input class="text_area k2TitleBox" type="text" name="itinerario" maxlength="250" value=" <%= product.shortDescription %>" placeholder="Pittensberg Bay, Johannesburgo, ...">
                         </fieldset>
                         <fieldset class="labelFieldset">
                             <input type="checkbox" name="aereos"><label for="aereos"> aereos incluidos <i
@@ -95,22 +89,16 @@
                         </fieldset>
                         <fieldset class="labelFieldset">
                             <label for="tags"><i class="fa-solid fa-hashtag"></i> Tags</label>
-                            <input class="text_area k2TitleBox" type="text" name="tags" maxlength="250"
-                                value="<%=product.tags%>" placeholder="#exoticos #paraiso">
+                            <input class="text_area k2TitleBox" type="text" name="tags" maxlength="250" value="<%=product.tags%>" placeholder="#exoticos #paraiso">
                         </fieldset>
                         <fieldset class="labelFieldset">
                             <label for="descripcionProducto"><i class="fa-solid fa-list"></i> Descripcion del itinerario
                             </label>
-                            <textarea class="productDescriptionField" type="textarea" name="descripcionProducto"
-                                value="" placeholder="DIA 01: .., DIA 02:.. " maxlength="100000"
-                                value="<%=product.longDescription%>"></textarea>
+                            <textarea class="productDescriptionField" type="textarea" name="descripcionProducto" value="" placeholder="DIA 01: .., DIA 02:.. " maxlength="100000" value="<%=product.longDescription%>"></textarea>
                         </fieldset>
-
                         <fieldset class="buttonField">
-                            <a href="/"><input type="submit" value="Confirmar Cambios" name="confirmarCambios"
-                                    class="buttonCreateProduct"></a>
-                            <a href="/products/productList"><input type="reset" value="Cancelar" name="cancelar"
-                                    class="buttonClose"></a>
+                            <a href="/"><input type="submit" value="Confirmar Cambios" name="confirmarCambios" class="buttonCreateProduct"></a>
+                            <a href="/products/productList"><input type="reset" value="Cancelar" name="cancelar" class="buttonClose"></a>
                         </fieldset>
                     </div>
                 </form>

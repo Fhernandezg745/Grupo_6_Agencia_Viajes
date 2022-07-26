@@ -1,160 +1,162 @@
 main {
-  margin: 0px;
-  padding-left: 8%;
-  padding-right: 8%;
-  border: none;
-  background-image: url(/assets/pexels-photo-297755.jpeg);
-  background-repeat: no-repeat;
-  background-size: cover;
-  background-position: center;
-  box-sizing: border-box;
+    margin: 0px;
+    padding-left: 8%;
+    padding-right: 8%;
+    border: none;
+    background-image: url(/assets/pexels-photo-297755.jpeg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    box-sizing: border-box;
 }
 
 .divCreateProduct {
-  display: flex;
-  flex-wrap: wrap;
-  flex-direction: column;
-  justify-content: center;
-  align-items: center;
-  margin-bottom: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+    margin-bottom: 10px;
 }
 
 .headerCreateProduct {
-  font-size: 1.3rem;
-  color: rgba(255, 255, 255, 0.834);
+    font-size: 1.3rem;
+    color: rgba(255, 255, 255, 0.834);
 }
 
 .editProductLink {
-  font-size: 10px;
-  color: rgba(255, 255, 255, 0.834);
-  font-weight: 400;
+    font-size: 10px;
+    color: rgba(255, 255, 255, 0.834);
+    font-weight: 400;
 }
 
 .imageCreateProducts {
-  padding: 8px;
-  width: 100%;
-  height: 100%;
-  background-size: cover;
-  background-position: center;
-  background-repeat: no-repeat;
+    padding: 8px;
+    width: 100%;
+    height: 100%;
+    background-size: cover;
+    background-position: center;
+    background-repeat: no-repeat;
 }
 
 .formAreaCreateProducts {
-  display: flex;
-  flex-wrap: wrap;
-  justify-content: center;
-  height: 100%;
-  background-color: rgba(0, 0, 0, 0.534);
-  border-radius: 5px;
-  box-shadow: 0px 0px 5px #000;
-  padding: 20px;
-  margin-top: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: center;
+    height: 100%;
+    background-color: rgba(0, 0, 0, 0.534);
+    border-radius: 5px;
+    box-shadow: 0px 0px 5px #000;
+    padding: 20px;
+    margin-top: 10px;
 }
 
 .formAreaCreateProducts .labelFieldset {
-  padding: 10px;
-  display: flex;
-  flex-wrap: wrap;
-  width: 100%;
+    padding: 10px;
+    display: flex;
+    flex-wrap: wrap;
+    width: 100%;
 }
 
 .labelFieldset {
-  display: flex;
-  flex-wrap: wrap;
-  gap: 5px;
-  border-top: 1px solid #fff;
+    display: flex;
+    flex-wrap: wrap;
+    gap: 5px;
+    border-top: 1px solid #fff;
 }
 
 .labelFieldset label {
-  margin-bottom: 5px;
-  padding-left: 10px;
-  font-size: 1.3rem;
-  color: rgba(255, 255, 255, 0.834);
+    margin-bottom: 5px;
+    padding-left: 10px;
+    font-size: 1.3rem;
+    color: rgba(255, 255, 255, 0.834);
 }
 
 .cantNoches {
-  text-align: center;
-  width: 40px;
-  height: 20px;
+    text-align: center;
+    width: 40px;
+    height: 20px;
 }
 
 .cantDias {
-  text-align: center;
-  width: 40px;
-  height: 20px;
+    text-align: center;
+    width: 40px;
+    height: 20px;
 }
 
 .labelFieldset i {
-  font-size: 1.5rem;
-  margin-right: 5px;
+    font-size: 1.5rem;
+    margin-right: 5px;
 }
 
 .buttonClose {
-  display: block;
-  padding: 4px 8px;
-  color: rgba(255, 255, 255, 0.834);
-  border: 0;
-  border-radius: 4px;
-  font-size: 14px;
-  font-weight: bold;
-  background: #e74c3c;
+    display: block;
+    padding: 4px 8px;
+    color: rgba(255, 255, 255, 0.834);
+    border: 0;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: bold;
+    background: #e74c3c;
 }
 
 .buttonCreateProduct {
-  display: block;
-  padding: 4px 8px;
-  color: rgba(255, 255, 255, 0.834);
-  border: 0;
-  border-radius: 4px;
-  font-size: 14px;
-  font-weight: bold;
-  background: #128f76;
+    display: block;
+    padding: 4px 8px;
+    color: rgba(255, 255, 255, 0.834);
+    border: 0;
+    border-radius: 4px;
+    font-size: 14px;
+    font-weight: bold;
+    background: #128f76;
 }
 
 .buttonField {
-  width: 50%;
-  display: flex;
-  justify-content: center;
-  gap: 1rem;
-  margin-top: 20px;
+    width: 50%;
+    display: flex;
+    justify-content: center;
+    gap: 1rem;
+    margin-top: 20px;
 }
+
 .buttonField button {
-  width: 100%;
-  height: 100%;
+    width: 100%;
+    height: 100%;
 }
 
 .k2TitleBox {
-  font-size: 15px;
-  height: 25px;
-  padding: 5px 6px;
-  width: 100%;
-  box-sizing: border-box;
+    font-size: 15px;
+    height: 25px;
+    padding: 5px 6px;
+    width: 100%;
+    box-sizing: border-box;
 }
 
 .productDescriptionField {
-  font-size: 15px;
-  height: 10rem;
-  padding: 5px 6px;
-  width: 100%;
-  border: 1px solid green;
-  box-sizing: border-box;
+    font-size: 15px;
+    height: 10rem;
+    padding: 5px 6px;
+    width: 100%;
+    border: 1px solid green;
+    box-sizing: border-box;
 }
 
 .labelFieldset input {
-  background-color: rgba(255, 255, 255, 0.834);
+    background-color: rgba(255, 255, 255, 0.834);
 }
 
 .labelFieldset select {
-  background-color: rgba(255, 255, 255, 0.834);
+    background-color: rgba(255, 255, 255, 0.834);
 }
 
 .labelFieldset textarea {
-  background-color: rgba(255, 255, 255, 0.834);
+    white-space: pre-wrap;
+    background-color: rgba(255, 255, 255, 0.834);
 }
 
 .productDescriptionField input {
-  background-color: rgba(255, 255, 255, 0.834);
-  display: wrap;
-  flex-wrap: wrap;
-  text-align: start;
+    background-color: rgba(255, 255, 255, 0.834);
+    display: wrap;
+    flex-wrap: wrap;
+    text-align: start;
 }

@@ -74,7 +74,7 @@ const productController = {
                     prod.image = req.files && req.files.length > 0 ? req.files[0].filename : prod.image,
                     prod.published = req.body.published,
                     prod.region = req.body.region,
-                    prod.highlighted = req.body.highlighted,
+                    prod.highLighted = req.body.highLighted,
                     prod.bestSeller = req.body.bestSeller,
                     prod.tags = req.body.tags;
             }

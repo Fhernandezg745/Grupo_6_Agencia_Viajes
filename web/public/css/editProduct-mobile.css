@@ -19,9 +19,30 @@ main {
     margin-bottom: 10px
 }
 
+.divCreateProduct a {
+    color: dodgerblue;
+}
+
 .headerCreateProduct {
     font-size: 1.3rem;
     color: rgba(255, 255, 255, 0.834);
+}
+
+.divCreateProduct .checkDelete {
+    font-size: 10px;
+    color: rgba(255, 255, 255, 0.834);
+    text-decoration: none;
+}
+
+.divCreateProduct .checkDelete input {
+    margin-left: 10px;
+}
+
+.divCreateProduct .checkDelete button {
+    font-size: 10px;
+    border-radius: 4px;
+    color: rgba(255, 255, 255, 0.778);
+    background-color: rgba(184, 97, 97, 0.834);
 }
 
 .editProductLink {

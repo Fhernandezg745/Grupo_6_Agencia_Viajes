@@ -1,10 +1,13 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <%- include("./includes/head") %>
+    <link rel="stylesheet" href="/css/main-mobile.css" />
+    <link rel="stylesheet" href="/css/main-tablet.css" />
+    <link rel="stylesheet" href="/css/main-desktop.css" />
 
     <body>
         <%- include("./includes/header") %>
-
             <main class="mainClass">
                 <section class="topClassMain">
                     <div class="mainImage">
@@ -31,9 +34,11 @@
                         <fieldset class="mainSelectorContainer">
                             <select>
                 <option value="none" class="none">Categoria</option>
-                <option value="product1">Categoria A</option>
-                <option value="product2">Categoria B</option>
-                <option value="product3">Categoria C</option>
+                <option value="Exotico">Exotico</option>
+                <option value="Aventura">Aventura</option>
+                <option value="Culturas Milenarias">Culturas Milenarias</option>
+                <option value="Playas">Playas</option>
+                <option value="Clasicos">Clasicos</option>
               </select>
                         </fieldset>
                         <fieldset class="mainSelectorContainer">
@@ -106,7 +111,7 @@
                     </div>
                 </section>
 
-                <section class="bottomClassMain" id="highlighted">
+                <section class="bottomClassMain" id="highLighted">
                     <div class="fancyHeader">
                         <h2>Paquetes Destacados</h2>
                     </div>

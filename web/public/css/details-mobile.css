@@ -49,6 +49,7 @@
     margin-right: 15vw;
     height: auto;
 }
+
 .main-top-details .description-product1 .idProducto {
     font-size: 0.7em;
     color: black;
@@ -57,7 +58,6 @@
     margin-right: 15vw;
     height: auto;
 }
-
 
 .description-product1 .articleDetails {
     text-decoration: none;
@@ -122,11 +122,12 @@
     bottom: 10px;
     position: relative;
     display: inline-block;
-   
 }
 
-
-.details-header, .details-title-description, .details-body-description {
+.details-header,
+.details-title-description,
+.details-body-description {
+    white-space: pre-wrap;
     text-decoration: none;
     font-size: 1.2rem;
     width: 70vw;

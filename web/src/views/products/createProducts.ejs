@@ -13,45 +13,41 @@
 
         <main>
             <section class="imageCreateProducts">
-                <form action="/products/save" method="post" class="formAreaCreateProducts"
-                    enctype="multipart/form-data">
+                <form action="/products/save" method="post" class="formAreaCreateProducts" enctype="multipart/form-data">
                     <div class="divCreateProduct">
                         <h2 class="headerCreateProduct">CARGA UN NUEVO PRODUCTO</h2>
                         <a href="/editProduct" class="editProductLink">Quiero editar un producto existente</a>
                     </div>
                     <fieldset class="labelFieldset">
                         <label for="nombreProducto"> Titulo del producto </label>
-                        <input class="text_area k2TitleBox" type="text" id="tittle" name="title" autocomplete="off"
-                            maxlength="250" value="" placeholder="Ingresa un titulo para el paquete" required />
+                        <input class="text_area k2TitleBox" type="text" id="tittle" name="tittle" autocomplete="off" maxlength="250" placeholder="Ingresa un titulo para el paquete" required />
                     </fieldset>
                     <fieldset class="labelFieldset">
-                        <label for="price"><i class="fa-solid fa-money-check-dollar"></i> Precio por persona
+                        <label for="precioProducto"><i class="fa-solid fa-money-check-dollar"></i> Precio por
+                            persona en U$s </label>
+                        <input type="number" name="price" id="price" class="inputTextFieldCreateProducts" placeholder="10000">
                         </label>
-                        <input type="number" id="price" name="price" placeholder="$10000"
-                            class="inputTextFieldCreateProducts" />
-                        <label for="baseSingle">
-                            Base sinlge
-                            <input type="checkbox" id="baseSingle" name="baseSingle" placeholder="2" class="" /></label>
-                        <label for="baseDoble">
-                            Base doble
-                            <input type="checkbox" id="baseDoble" name="baseDoble" placeholder="2" class="" /></label>
-                        <label for="familyplan">
-                            Family plan
-                            <input type="checkbox" id="familyplan" name="familyplan" placeholder="2" class="" /></label>
+                        <label for="basePrecio"><i class="fa-solid fa-location-dot registerIcon"></i>
+                            Base : </label>
+                        <select name="base" id="base" placeholder="Base" class="inputTextFieldCreateProducts">
+                            <option value="Doble"> Doble</option>
+                            <option value="Single"> Single</option>
+                            <option value="Family Plan"> Family Plan</option>  
+                        </select>
                     </fieldset>
                     <fieldset class="labelFieldset">
-                        <label for="imagenProducto"><i class="fa-solid fa-image"></i> - Imagen ilustrativa -</label>
-                        <input type="file" name="imagenProducto" id="imagenProducto"
-                            accept="image/png, .jpeg, .jpg, image/gif" class=>
+                        <label for="imagenProducto"><i class="fa-solid fa-image"></i> - Imagen ilustrativa - recomendado 400x300</label>
+                        <input type="file" name="image" id="image" accept="image/png, .jpeg, .jpg, image/gif" class="">
                     </fieldset>
                     <fieldset class="labelFieldset">
                         <label for="categoriaProducto"><i class="fa-solid fa-location-dot registerIcon"></i>
                             Categoría</label>
-                        <select name="categoriaProducto" id="categoriaProducto" placeholder="Categoria A"
-                            class="inputTextFieldCreateProducts">
-                            <option value="Categoria A">Categoria A</option>
-                            <option value="Categoria B">Categoria B</option>
-                            <option value="Categoria C">Categoria C</option>
+                        <select name="categoriaProducto" id="categoriaProducto" placeholder="Categoria A" class="inputTextFieldCreateProducts">
+                            <option value="Exotico">Exotico</option>
+                            <option value="Aventura">Aventura</option>
+                            <option value="Culturas Milenarias">Culturas Milenarias</option>
+                            <option value="Playas">Playas</option>
+                            <option value="Clasicos">Clasicos</option>
                         </select>
                     </fieldset>
                     <fieldset class="labelFieldset">
@@ -79,22 +75,22 @@
                         <label for=""><i class="fa-solid fa-star"></i>Categoria de Hoteles:
                         </label>
                         <label for="5estrellasHotel">
-                            <input type="checkbox" name="estrellasHotel" id="5estrellasHotel" placeholder="2"
+                            <input type="checkbox" name="stars" id="stars" placeholder="2" value="5"
                                 class="" /><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i
                                 class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i
                                 class="fa-regular fa-star"></i>
                         </label>
                         <label for="4estrellasHotel">
-                            <input type="checkbox" name="estrellasHotel" id="4estrellasHotel" placeholder="2"
+                            <input type="checkbox" name="stars" id="stars" placeholder="2" value="4"
                                 class="" /><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i
                                 class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i>
                         </label>
                         <label for="3estrellasHotel">
-                            <input type="checkbox" name="estrellasHotel" id="3estrellasHotel" placeholder="2"
+                            <input type="checkbox" name="stars" id="stars" placeholder="2" value="3"
                                 class="" /><i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i><i
                                 class="fa-regular fa-star"></i>
                         </label>
-                        <label for="2estrellasHotel"><input type="checkbox" name="estrellasHotel" id="2estrellasHotel"
+                        <label for="2estrellasHotel"><input type="checkbox" name="stars" id="stars" value="2"
                                 placeholder="2" class="" />
                             <i class="fa-regular fa-star"></i><i class="fa-regular fa-star"></i>
                         </label>
@@ -103,36 +99,31 @@
                         <label for="itinerario">
                             <i class="fa-solid fa-van-shuttle"></i> Itinerario/excursiones:
                         </label>
-                        <input class="text_area k2TitleBox" type="text" name="shortDescription" id="shortDescription"
-                            maxlength="250" value="" placeholder="Pittensberg Bay, Johannesburgo, ..." />
+                        <input class="text_area k2TitleBox" type="text" name="shortDescription" id="shortDescription" maxlength="250" value="" placeholder="Pittensberg Bay, Johannesburgo, ..." />
                     </fieldset>
                     <fieldset class="labelFieldset">
-                        <input type="checkbox" name="flights" id="flights" /><label for="aereos">
+                        <input type="checkbox" name="flights" id="flights" value="true" /><label for="aereos">
                             <i class="fa-solid fa-plane-departure"></i> aereos incluidos</label>
-                        <input type="checkbox" name="transfers" id="transfers" /><label for="traslados">
+                        <input type="checkbox" name="transfers" id="transfers" value="true" /><label for="traslados">
                             <i class="fa-solid fa-bus"></i> traslados in/out y entre hoteles </label>
                     </fieldset>
                     <fieldset class="labelFieldset">
-                        <input type="checkbox" name="highLighted" id="highLighted" /><label for="aereos">
+                        <input type="checkbox" name="highLighted" id="highLighted" value="true" /><label for="aereos">
                             <i class="fa-solid fa-award"></i> Destacado</label>
-                        <input type="checkbox" name="bestSeller" id="bestSeller" /><label for="traslados">
+                        <input type="checkbox" name="bestSeller" id="bestSeller" value="true" /><label for="traslados">
                             <i class="fa-solid fa-tags"></i> Mas Vendido</label>
                     </fieldset>
                     <fieldset class="labelFieldset">
                         <label for="tags"><i class="fa-solid fa-hashtag"></i> Tags</label>
-                        <input class="text_area k2TitleBox" type="text" name="tags" id="tags" maxlength="250" value=""
-                            placeholder="#exoticos #paraiso" />
+                        <input class="text_area k2TitleBox" type="text" name="tags" id="tags" maxlength="250" value="" placeholder="#exoticos #paraiso" />
                     </fieldset>
                     <fieldset class="labelFieldset">
                         <label for="descripcionProducto"><i class="fa-solid fa-list"></i> Descripcion del itinerario
                         </label>
-                        <textarea class="productDescriptionField" type="textarea" name="longDescription"
-                            id="longDescription" value="" placeholder="DIA 01: .., DIA 02:.. "
-                            maxlength="100000"></textarea>
+                        <textarea class="productDescriptionField" type="textarea" name="longDescription" id="longDescription" placeholder="DIA 01: .., DIA 02:.. " maxlength="100000"></textarea>
                     </fieldset>
                     <fieldset class="buttonField">
-                        <button type="submit" value="Crear Producto" name="crearProducto"
-                            class="buttonCreateProduct">Crear Producto</button>
+                        <button type="submit" value="Crear Producto" name="crearProducto" class="buttonCreateProduct">Crear Producto</button>
                         <button type="reset" value="Cancelar" name="cancelar" class="buttonClose">Cancelar</button>
                     </fieldset>
                 </form>

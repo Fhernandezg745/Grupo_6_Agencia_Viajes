@@ -85,9 +85,9 @@
 }
 
 .reserva-seleccionada .precioArticuloMain p {
-    font-size: 1.2rem;
     color:#1bac94;
     font-weight: bold;
+    font-size: 1.2rem;
 }
 
 .pax-container {
@@ -209,13 +209,16 @@
     max-width: 250px;
 }
 
-.precioArticuloMain {
-    padding: none;
+.pagar:hover {
+    background-color:#1bac94;
 }
 
-.precioArticuloMain p {
-    font-size: 0.8rem;
+.precioArticuloMain {
+    padding: none;
+    display: flex;
+    float: right;
 }
+
 
 .textArea {
     background-color: rgba(255, 255, 255, 0.734);
@@ -339,6 +342,8 @@
 
 .masPax p {
     font-size: 12rpx;
+    color: #fff;
+    text-align: center;
 }
 
 .pax-form form {
@@ -365,7 +370,7 @@
     display: flex;
     border-bottom: 2px solid #D1D1D4;
     background-color: #fff;
-    width: 100%;
+    width: 90%;
     border: 1px solid #474747;
     height: 2.5rem;
     border-radius: 4px;
@@ -373,6 +378,10 @@
     justify-content: space-between;
     justify-content: center;
     margin-bottom: 25px;
+}
+
+.fieldset-box-pax .input-group input {
+    width: 100%;
 }
 
 .fieldset-box-pax .input-group i {

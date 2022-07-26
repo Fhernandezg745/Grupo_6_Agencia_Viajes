@@ -22,7 +22,7 @@ app.use("/products", require("./src/routes/productRoutes"));
 // seteo de CRUD
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
-app.use(method("©"));
+app.use(method("_method"));
 
 //levanto servidor
 app.listen(port, () =>

@@ -29,24 +29,30 @@
                         <%= product.productId %>
                     </h3>
                     <div class="articleDetails">
-                        <span>
+                        <div>
                             <ul class="listDetails">
                                 <li><i class="fa-solid fa-bed"></i>
-                                    <%= product.nights %> noches de alojamiento en hoteleria <%= product.stars %>
+                                    <%= product.nights %> noches de alojamiento en hoteleria
+                                        <%= product.stars %>
                                             estrellas
                                 </li>
                                 <li><i class="fa-solid fa-bus"></i> traslados in/out y entre hoteles</li>
-                                <li><i class="fa-solid fa-van-shuttle"></i> Itinerario/excursiones: <%=
+                                <li><i class="fa-solid fa-van-shuttle"></i> Itinerario/excursiones:
+                                    <%=
                                         product.shortDescription %>
                                 </li>
                                 <li><i class="fa-solid fa-plane-departure"></i> aereos incluidos</li>
-                                <h3 class="articleTitle">Petra - Jordania (<%= product.days %> dias/ <%= product.nights
+                                <h3 class="articleTitle">Petra - Jordania (
+                                    <%= product.days %> dias/
+                                        <%= product.nights
                                             %> noches)</h3>
                             </ul>
-                            <div class="precioArticuloMain">
-                                <p>Desde <%= product.price %> USD*</p>
-                                <p class="condition">*Precio por persona en base doble</p>
-                            </div>
+                        </div>
+                        <div class="precioArticuloMain">
+                            <p>Desde
+                                <%= product.price %> USD*</p>
+                            <p class="condition">*Precio por persona en base doble</p>
+                        </div>
                     </div>
                 </div>
 
@@ -61,10 +67,10 @@
                             SALIDAS TODOS LOS JUEVES
                         </strong>
                     </span>
-                    </div>
-                    <div class="details-body-description">
-                        <%= product.longDescription %>
-                    </div>
+                </div>
+                <div class="details-body-description">
+                    <%= product.longDescription %>
+                </div>
             </section>
             <section class="section-book">
                 <nav class="nav-to-book">

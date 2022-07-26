@@ -59,8 +59,8 @@ const productController = {
         let product = one(parseInt(req.params.id));
         let products = index();
         let productsModified = products.map((prod) => {
-            if (product.productId = prod.productId) {
-                prod.title = req.body.title,
+            if ( prod.productId == product.id ) {
+                prod.tittle = req.body.tittle,
                     prod.shortDescription = req.body.shortDescription,
                     prod.longDescription = req.body.longDescription,
                     prod.nights = req.body.nights,
@@ -81,7 +81,7 @@ const productController = {
             return prod;
         });
         write(productsModified);
-        return res.redirect("products/details" + products.productId);
+        return res.redirect("products/details/" + product.productId);
     },
     cart: (req, res) => {
         return res.render("products/cart");

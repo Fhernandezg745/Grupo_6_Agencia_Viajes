@@ -83,8 +83,8 @@ const productController = {
         write(productsModified);
         return res.redirect("products/details" + products.productId);
     },
-    carrito: (req, res) => {
-        return res.render("products/carrito");
+    cart: (req, res) => {
+        return res.render("products/cart");
     },
 };
 module.exports = productController;

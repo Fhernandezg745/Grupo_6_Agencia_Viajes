@@ -18,6 +18,6 @@ router.get("/editProduct/:id", productsController.editProduct);
 
 router.put("/editProduct/:id", [upload.any()], productsController.modify);
 
-router.get("/carrito", productsController.carrito);
+router.get("/cart", productsController.cart);
 
 module.exports = router;

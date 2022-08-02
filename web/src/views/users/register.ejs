@@ -15,8 +15,12 @@
         <section class="imageRegister">
             <form action="/users/save" method="post" class="formAreaRegister" enctype="multipart/form-data">
                 <fieldset class="labelFieldset">
-                    <label for="nombre"><i class="fa-solid fa-id-card registerIcon"></i> Nombre completo</label>
-                    <input type="text" name="fullName" placeholder="Ingresa tu nombre" class="inputTextFieldRegister" required>
+                    <label for="nombre"><i class="fa-solid fa-id-card registerIcon"></i> Nombre</label>
+                    <input type="text" name="firstName" placeholder="Ingresa tu nombre" class="inputTextFieldRegister" required>
+                </fieldset>
+                <fieldset class="labelFieldset">
+                    <label for="nombre"><i class="fa-solid fa-id-card registerIcon"></i> Apellido</label>
+                    <input type="text" name="lastName" placeholder="Ingresa tu apellido" class="inputTextFieldRegister" required>
                 </fieldset>
                 <fieldset class="labelFieldset">
                     <label for="usuario"><i class="fa-solid fa-user registerIcon"></i> Usuario</label>
@@ -28,11 +32,19 @@
                 </fieldset>
                 <fieldset class="labelFieldset">
                     <label for="codPostal"><i class="fa-solid fa-envelope foot-icon registerIcon"></i> Código postal</label>
-                    <input type="number" name="postalCode" placeholder="1900" class="inputTextFieldRegister">
+                    <input type="text" name="zipCode" placeholder="1900" class="inputTextFieldRegister">
                 </fieldset>
                 <fieldset class="labelFieldset">
                     <label for="direccion"><i class="fa-solid fa-location-dot registerIcon"></i> Dirección</label>
                     <input type="text" name="address" placeholder="Calle 7 n° 1307" class="inputTextFieldRegister">
+                </fieldset>
+                <fieldset class="labelFieldset">
+                    <label for="ciudad"><i class="fa-solid fa-city"></i> Ciudad</label>
+                    <input type="text" name="city" placeholder="La Plata" class="inputTextFieldRegister">
+                </fieldset>
+                <fieldset class="labelFieldset">
+                    <label for="país"><i class="fa-solid fa-earth-africa"></i></i> País</label>
+                    <input type="text" name="country" placeholder="Argentina" class="inputTextFieldRegister">
                 </fieldset>
                 <fieldset class="labelFieldset">
                     <label for="email"><i class="fa-solid fa-envelope-open-text registerIcon"></i> E-mail</label>
@@ -43,9 +55,30 @@
                     <input type="password" name="password" id="password" placeholder="Ingresa una contraseña" class="inputTextFieldRegister" required>
                 </fieldset>
                 <fieldset class="labelFieldset">
-                    <label for="password"></label>
-                    <input type="password" name="password" id="passwordCheked" placeholder="Confirmar contraseña" class="inputTextFieldRegister registration" required>
+                    <label for="phoneNumber"><i class="fa-solid fa-mobile-screen-button"></i> Teléfono</label>
+                    <input type="number" name="phoneNumber" id="phoneNumber" placeholder="Ingresa un teléfono" class="inputTextFieldRegister" required>
                 </fieldset>
+                <fieldset class="labelFieldset">
+                    <label for="cargo"><i class="fa-solid fa-briefcase"></i> Cargo/Posición</label>
+                    <input type="text" name="position" id="position" placeholder="Admin" class="inputTextFieldRegister" required>
+                </fieldset>
+                <fieldset class="labelFieldset">
+                    <label for="gender"><i class="fa-solid fa-genderless"></i>
+                        Género</label>
+                    <select name="gender" id="gender"
+                        class="inputTextFieldRegister">
+                        <option>Masculino</option>
+                        <option>Femenino</option>
+                        <option>Otros</option>
+                        <option>Prefiero no decirlo</option>
+                    </select>
+                </fieldset>
+                <fieldset class="labelFieldset">
+                    <label for="imagenUsuario"><i class="fa-solid fa-image"></i> - Foto de perfil</label>
+                    <input type="file" name="image" id="image" accept="image/png, .jpeg, .jpg, image/gif"
+                    class="inputTextFieldRegister">
+                </fieldset>
+
                 <fieldset class="bottomCheck">
                     <label for="condiciones">Acepto los terminos y condiciones</label>
                     <input type="checkbox" required>

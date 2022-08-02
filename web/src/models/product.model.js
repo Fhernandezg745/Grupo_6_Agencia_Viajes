@@ -43,7 +43,7 @@ module.exports = {
       image: data.image,
       published: data.published,
       region: data.region,
-      highlighted: data.highlighted,
+      highLighted: data.highLighted,
       bestSeller: data.bestSeller,
       tags: data.tags,
     });

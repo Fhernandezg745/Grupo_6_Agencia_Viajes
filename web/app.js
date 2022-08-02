@@ -15,7 +15,7 @@ app.set("view engine", "ejs");
 app.set("views", resolve(__dirname, "./src/views"));
 
 // rutas
-app.use(require("./src/routes/mainRoutes"));
+app.use("/",require("./src/routes/mainRoutes"));
 app.use("/user", require("./src/routes/usersRoutes"));
 app.use("/products", require("./src/routes/productRoutes"));
 

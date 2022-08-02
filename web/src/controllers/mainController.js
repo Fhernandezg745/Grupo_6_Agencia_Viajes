@@ -1,4 +1,7 @@
 const { index } = require("../models/product.model");
+const storage = require("../modules/storage");
+const multer = require("multer");
+const upload = multer({ storage: storage("products") });
 
 const mainController = {
     home: (req, res) => {

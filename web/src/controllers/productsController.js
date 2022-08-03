@@ -89,8 +89,11 @@ const productController = {
     deleteProduct: (req, res) => {
         let productToDelete = one(parseInt(req.params.id));
         let products = index();
-        productoDeleted = products.find(product => productToDelete.id === product.id);
-        return res.redirect("products/productList");
+        let productDeleted = products.filter(function(product) {
+            return product.id !== productToDelete.id;
+        });
+            write(productDeleted);
+            return res.redirect("products/productList");
     },
 };
 module.exports = productController;

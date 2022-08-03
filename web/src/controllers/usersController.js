@@ -19,7 +19,7 @@ const usersController =  {
         let user = index();
         user.push(newUser);
         write(user);
-        return res.redirect("/users/logged");
+        return res.redirect("/");
     },
     login: (req, res) => {
       return res.render("users/login");

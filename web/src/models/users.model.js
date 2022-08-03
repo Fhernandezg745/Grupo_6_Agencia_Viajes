@@ -11,7 +11,7 @@ module.exports = {
     let file = resolve(__dirname, "../data", "users.json");
     let data = readFileSync(file, "utf8");
     let products = JSON.parse(data);
-    return products.find((user) => product.productId === id);
+    return products.find((user) => user.userId === id);
   },
   create: function (data) {
     let file = resolve(__dirname, "../data", "users.json");

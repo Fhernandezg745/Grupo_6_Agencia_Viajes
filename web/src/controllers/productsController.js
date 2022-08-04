@@ -59,7 +59,7 @@ const productController = {
         let product = one(parseInt(req.params.id));
         let products = index();
         let productsModified = products.map((prod) => {
-            if ( prod.productId == product.id ) {
+            if (prod.productId == product.id) {
                 prod.tittle = req.body.tittle,
                     prod.shortDescription = req.body.shortDescription,
                     prod.longDescription = req.body.longDescription,
@@ -92,8 +92,8 @@ const productController = {
         let productDeleted = products.filter(function(product) {
             return product.id !== productToDelete.id;
         });
-            write(productDeleted);
-            return res.redirect("products/productList");
+        write(productDeleted);
+        return res.redirect("products/productList");
     },
 };
 module.exports = productController;

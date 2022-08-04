@@ -3,46 +3,56 @@
 
 <head>
     <%- include("../includes/head") %>
-    <link rel="stylesheet" href="/css/login-mobile.css">
-    <link rel="stylesheet" href="/css/login-tablet.css">
+        <link rel="stylesheet" href="/css/login-mobile.css">
+        <link rel="stylesheet" href="/css/login-tablet.css">
 </head>
+
 <body>
 
     <%- include("../includes/header") %>
 
 
-    <main>
-        <section class="imageLogin">
-            <form action="/" method="post" class="formAreaRegister">
-                <fieldset class="labelFieldset">
-                    <label for="usuario"><i class="fa-solid fa-user registerIcon"></i> Usuario</label>
-                    <input type="text" name="usuario" placeholder="Ingrese nombre de usuario" class="inputTextFieldRegister" required>
-                </fieldset>
-                <fieldset class="labelFieldset">
-                    <label for="password"><i class="fa-solid fa-lock registerIcon"></i> Contraseña</label>
-                    <input type="password" name="password" id="password" placeholder="Ingresa tu contraseña" class="inputTextFieldRegister" required>
+        <main>
+            <section class="imageLogin">
+                <form action="/" method="post" class="formAreaRegister">
+                    <fieldset class="labelFieldset">
+                        <label for="usuario"><i class="fa-solid fa-user registerIcon"></i> Usuario</label>
+                        <input type="text" name="usuario" placeholder="Ingrese nombre de usuario" class="inputTextFieldRegister" required value="<%= locals.oldData ? oldData.email : null %>">
+                        <% if (locals.errors && errors.email) { %>
+                            <p class="msg-error">
+                                <%= errors.email.msg %>
+                            </p>
+                            <% } %>
+                    </fieldset>
+                    <fieldset class="labelFieldset">
+                        <label for="password"><i class="fa-solid fa-lock registerIcon"></i> Contraseña</label>
+                        <input type="password" name="password" id="password" placeholder="Ingresa tu contraseña" class="inputTextFieldRegister" required value="<%= locals.oldData ? oldData.password : null %>">
+                        <% if (locals.errors && errors.password) { %>
+                            <p class="msg-error">
+                                <%= errors.password.msg %>
+                            </p>
+                            <% } %>
+                    </fieldset>
+                    <fieldset class="bottomCheck2">
+                        <label for="recordaruser" class="recordarPass">Recordar usuario</label>
+                        <input type="checkbox">
+                        <label for="recordarpass" class="recordarPass">Recordar contraseña</label>
+                        <input type="checkbox">
+                    </fieldset>
 
-                </fieldset>
-                <fieldset class="bottomCheck2">
-                    <label for="recordaruser" class="recordarPass">Recordar usuario</label>
-                    <input type="checkbox">
-                    <label for="recordarpass" class="recordarPass">Recordar contraseña</label>
-                    <input type="checkbox">
-                </fieldset>
-
-                <fieldset class="buttonField">
-                    <a href="/"><input type="submit" value="Enviar" name="enviar" class="sendButton"></a>
-                    <a href="/"><input type="reset" value="Borrar" name="borrar" class="sendButton"></a>
-                </fieldset>
-                <fieldset class="olvidePass">
-                    <a href="">Olvide mi contraseña</a>
-                </fieldset>
-            </form>
-        </section>
-    </main>
+                    <fieldset class="buttonField">
+                        <a href="/"><input type="submit" value="Enviar" name="enviar" class="sendButton"></a>
+                        <a href="/"><input type="reset" value="Borrar" name="borrar" class="sendButton"></a>
+                    </fieldset>
+                    <fieldset class="olvidePass">
+                        <a href="">Olvide mi contraseña</a>
+                    </fieldset>
+                </form>
+            </section>
+        </main>
 
 
-    <%- include("../includes/footer") %>
+        <%- include("../includes/footer") %>
 
 </body>
 

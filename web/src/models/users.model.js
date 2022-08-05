@@ -21,19 +21,20 @@ module.exports = {
         let lastUser = users[users.length - 1];
         return Object({
             userId: users.length == 0 ? 1 : lastUser.userId + 1,
-            fullName: data.fullName,
+            firstName: data.firstName,
+            lastName: data.lastName,
             userName: data.userName,
             email: data.email,
             password: hashSync(data.password, 10),
             phoneNumber: data.phoneNumber,
             city: data.city,
-            postalCode: data.postalCode,
+            zipCode: data.zipCode,
             country: data.country,
             address: data.addres,
             gender: data.gender,
             date: data.date,
             position: data.position,
-            avatar: data.avatar,
+            avatar: data.avatar
         });
     },
     write: function(data) {

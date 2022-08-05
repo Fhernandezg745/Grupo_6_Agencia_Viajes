@@ -16,7 +16,7 @@
                 <form action="/users/save" method="post" class="formAreaRegister" enctype="multipart/form-data">
                     <fieldset class="labelFieldset">
                         <label for="nombre"><i class="fa-solid fa-id-card registerIcon"></i> Nombre</label>
-                        <input type="text" name="firstName" placeholder="Ingresa tu nombre" class="inputTextFieldRegister" required value="<%= locals.oldData ? oldData.firstName : null %>">
+                        <input type="text" name="firstName" placeholder="Ingresa tu nombre" class="inputTextFieldRegister"  value="<%= locals.oldData ? oldData.firstName : null %>">
                         <% if (locals.errors && errors.firstName) { %>
                             <p class="msg-error">
                                 <%= errors.firstName.msg %>
@@ -26,7 +26,7 @@
                     </fieldset>
                     <fieldset class="labelFieldset">
                         <label for="nombre"><i class="fa-solid fa-id-card registerIcon"></i> Apellido</label>
-                        <input type="text" name="lastName" placeholder="Ingresa tu apellido" class="inputTextFieldRegister" required value="<%= locals.oldData ? oldData.lastName : null %>">
+                        <input type="text" name="lastName" placeholder="Ingresa tu apellido" class="inputTextFieldRegister"  value="<%= locals.oldData ? oldData.lastName : null %>">
                         <% if (locals.errors && errors.lastName) { %>
                             <p class="msg-error">
                                 <%= errors.lastName.msg %>
@@ -36,11 +36,11 @@
                     </fieldset>
                     <fieldset class="labelFieldset">
                         <label for="usuario"><i class="fa-solid fa-user registerIcon"></i> Usuario</label>
-                        <input type="text" name="userName" placeholder="Ingrese nombre de usuario" class="inputTextFieldRegister" required>
+                        <input type="text" name="userName" placeholder="Ingrese nombre de usuario" class="inputTextFieldRegister" >
                     </fieldset>
                     <fieldset class="labelFieldset">
                         <label for="nacimiento"><i class="fa-solid fa-calendar-days registerIcon"></i> Fecha de nacimiento</label>
-                        <input type="date" name="nacimiento" id="date" placeholder="Fecha de nacimiento" class="inputTextFieldRegister">
+                        <input type="date" name="date" id="date" placeholder="Fecha de nacimiento" class="inputTextFieldRegister">
                     </fieldset>
                     <fieldset class="labelFieldset">
                         <label for="codPostal"><i class="fa-solid fa-envelope foot-icon registerIcon"></i> Código postal</label>
@@ -70,7 +70,7 @@
                     </fieldset>
                     <fieldset class="labelFieldset">
                         <label for="password"><i class="fa-solid fa-lock registerIcon"></i> Crear contraseña</label>
-                        <input type="password" name="password" id="password" placeholder="Ingresa una contraseña" class="inputTextFieldRegister" requiredvalue="<%= locals.oldData ? oldData.password : null %>">
+                        <input type="password" name="password" id="password" placeholder="Ingresa una contraseña" class="inputTextFieldRegister" value="<%= locals.oldData ? oldData.password : null %>">
                         <% if (locals.errors && errors.password) { %>
                             <p class="msg-error">
                                 <%= errors.password.msg %>
@@ -80,11 +80,11 @@
                     </fieldset>
                     <fieldset class="labelFieldset">
                         <label for="phoneNumber"><i class="fa-solid fa-mobile-screen-button"></i> Teléfono</label>
-                        <input type="number" name="phoneNumber" id="phoneNumber" placeholder="Ingresa un teléfono" class="inputTextFieldRegister" required>
+                        <input type="number" name="phoneNumber" id="phoneNumber" placeholder="Ingresa un teléfono" class="inputTextFieldRegister" >
                     </fieldset>
                     <fieldset class="labelFieldset">
                         <label for="cargo"><i class="fa-solid fa-briefcase"></i> Cargo/Posición</label>
-                        <input type="text" name="position" id="position" placeholder="Admin" class="inputTextFieldRegister" required>
+                        <input type="text" name="position" id="position" placeholder="Admin" class="inputTextFieldRegister" >
                     </fieldset>
                     <fieldset class="labelFieldset">
                         <label for="gender"><i class="fa-solid fa-genderless"></i>
@@ -115,7 +115,7 @@
                         <input type="checkbox">
                     </fieldset>
                     <fieldset class="buttonField">
-                        <button type="submit" value="Enviar" name="enviar" class="sendButton">Crear Producto</button>
+                        <button type="submit" value="Enviar" name="enviar" class="sendButton">Crear Usuario</button>
                         <button type="reset" value="Borrar" name="borrar" class="sendButton">Cancelar</button>
                     </fieldset>
 

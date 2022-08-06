@@ -60,5 +60,20 @@
     "date": "1992-12-12",
     "position": "finance",
     "avatar": "avatar-1659805933321-687537089.jpg"
+  },
+  {
+    "userId": 7,
+    "firstName": "John",
+    "lastName": "Doe",
+    "email": "JohnDoe@gmail.com",
+    "password": "$2a$10$rEa/5JjB3/pMhAD74q6fXeVgGNcp0s9J4VMy1nZWiQWxqy9C5WUIu",
+    "phoneNumber": "22323221312",
+    "city": "La Pu La Ta",
+    "zipCode": "0977",
+    "country": "ChongQuo",
+    "gender": "Prefiero no decirlo",
+    "date": "2022-08-02",
+    "position": "Admin",
+    "avatar": "avatar-1659815560849-612222469.jpeg"
   }
 ]

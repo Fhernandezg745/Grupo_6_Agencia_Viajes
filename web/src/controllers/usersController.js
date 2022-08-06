@@ -1,9 +1,7 @@
 const {
     index,
-    one,
     create,
     write,
-    search,
 } = require("../models/users.model");
 
 const { validationResult } = require("express-validator")
@@ -31,12 +29,29 @@ const usersController = {
         write(users)
         return res.redirect("./login")
     },
-    login: (req, res) => {
-        return res.render("users/login");
+    login: function(req, res) {
+        return res.render('users/login', {
+            styles: ['forms']
+        });
     },
-    logged: (req, res) => {
-        return res.render("users/logged");
+    access: function(req, res) {
+        let validaciones = validationResult(req)
+        let { errors } = validaciones
+        if (errors && errors.length > 0) {
+            return res.render('users/login', {
+                oldData: req.body,
+                errors: validaciones.mapped()
+            });
+        }
+        let users = index();
+        let user = users.find(u => u.email === req.body.email)
+        req.session.user = user
+        return res.redirect('/')
     },
+    logout: function(req, res) {
+        delete req.session.user
+        return res.redirect('/')
+    }
 };
 
 module.exports = usersController;

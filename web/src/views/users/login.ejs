@@ -14,7 +14,7 @@
 
         <main>
             <section class="imageLogin">
-                <form action="/" method="post" class="formAreaRegister">
+                <form action="/users/access" method="POST" class="formAreaRegister">
                     <fieldset class="labelFieldset">
                         <label for="email"><i class="fa-solid fa-envelope-open-text registerIcon"></i> Email</label>
                         <input type="email" name="email" id="email" placeholder="Ingresa tu email" class="inputTextFieldRegister" required value="<%= locals.oldData ? oldData.email : null %>">

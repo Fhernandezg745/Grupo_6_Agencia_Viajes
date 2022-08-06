@@ -9,10 +9,10 @@ module.exports = {
         return JSON.parse(data);
     },
     one: function(id) {
-        let file = resolve(__dirname, "../data", "users.json");
-        let data = readFileSync(file, "utf8");
-        let products = JSON.parse(data);
-        return products.find((user) => user.userId === id);
+        let file = resolve(__dirname, '../data', 'users.json');
+        let data = readFileSync(file);
+        let users = JSON.parse(data);
+        return users.find(user => user.userId === id)
     },
     create: function(data) {
         let file = resolve(__dirname, "../data", "users.json");

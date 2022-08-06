@@ -1,5 +1,5 @@
 const { body } = require("express-validator");
-const { index } = require("../model/users.model");
+const { index } = require("../models/users.model");
 const { compareSync } = require("bcryptjs");
 
 const login = [
@@ -38,3 +38,6 @@ const login = [
         }
     }),
 ];
+
+
+module.exports = login

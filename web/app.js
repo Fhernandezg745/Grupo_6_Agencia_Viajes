@@ -5,6 +5,7 @@ const express = require("express");
 const app = express();
 const { port, callback } = require("./src/modules/port");
 const method = require('method-override');
+const session = require('express-session')
 
 //seteo carpeta public como static
 app.use(require("./src/modules/public"));
@@ -15,7 +16,7 @@ app.set("view engine", "ejs");
 app.set("views", resolve(__dirname, "./src/views"));
 
 // rutas
-app.use("/",require("./src/routes/mainRoutes"));
+app.use("/", require("./src/routes/mainRoutes"));
 app.use("/users", require("./src/routes/usersRoutes"));
 app.use("/products", require("./src/routes/productRoutes"));
 
@@ -23,6 +24,14 @@ app.use("/products", require("./src/routes/productRoutes"));
 app.use(express.urlencoded({ extended: false }));
 app.use(express.json());
 app.use(method('_method'));
+app.use(session({
+        secret: 'nodejs',
+        saveUninitialized: true,
+        resave: true
+    })) // req.session
+
+
+app.use(require('./src/middlewares/user'))
 
 //levanto servidor
 app.listen(port, () =>

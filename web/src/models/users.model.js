@@ -23,7 +23,6 @@ module.exports = {
             userId: users.length == 0 ? 1 : lastUser.userId + 1,
             firstName: data.firstName,
             lastName: data.lastName,
-            userName: data.userName,
             email: data.email,
             password: hashSync(data.password, 10),
             phoneNumber: data.phoneNumber,

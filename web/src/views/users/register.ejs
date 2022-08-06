@@ -35,10 +35,6 @@
                             <% } %>
                     </fieldset>
                     <fieldset class="labelFieldset">
-                        <label for="usuario"><i class="fa-solid fa-user registerIcon"></i> Usuario</label>
-                        <input type="text" name="userName" placeholder="Ingrese nombre de usuario" class="inputTextFieldRegister" >
-                    </fieldset>
-                    <fieldset class="labelFieldset">
                         <label for="nacimiento"><i class="fa-solid fa-calendar-days registerIcon"></i> Fecha de nacimiento</label>
                         <input type="date" name="date" id="date" placeholder="Fecha de nacimiento" class="inputTextFieldRegister">
                     </fieldset>
@@ -83,9 +79,13 @@
                         <input type="number" name="phoneNumber" id="phoneNumber" placeholder="Ingresa un teléfono" class="inputTextFieldRegister" >
                     </fieldset>
                     <fieldset class="labelFieldset">
-                        <label for="cargo"><i class="fa-solid fa-briefcase"></i> Cargo/Posición</label>
-                        <input type="text" name="position" id="position" placeholder="Admin" class="inputTextFieldRegister" >
-                    </fieldset>
+                        <label for="cargo"><i class="fa-solid fa-briefcase"></i>
+                        Cargo/posición</label>
+                        <select name="position" id="position" class="inputTextFieldRegister">
+                        <option>Sales</option>
+                        <option>Admin</option>
+                        <option>Finance</option>
+                    </select>
                     <fieldset class="labelFieldset">
                         <label for="gender"><i class="fa-solid fa-genderless"></i>
                         Género</label>

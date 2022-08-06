@@ -3,7 +3,6 @@
     "userId": 1,
     "firstName": "Juan",
     "lastName": "Cordoba",
-    "userName": "jcordoba",
     "email": "jcordoba@harbortrip.com",
     "password": "AAl8fOhZ",
     "phoneNumber": "6386969519",
@@ -13,14 +12,13 @@
     "address": "085 Reindahl Alley",
     "gender": "Male",
     "date": "10/24/1989",
-    "position": "CEO",
+    "position": "admin",
     "avatar": null
   },
   {
     "userId": 4,
     "firstName": "Damian",
     "lastName": "Piscitelli",
-    "userName": "dpiscitelli",
     "email": "dpiscitelli@harbortrip.com",
     "password": "rUBzHTWyGW",
     "phoneNumber": "7814498634",
@@ -30,14 +28,13 @@
     "address": "9580 Heath Crossing",
     "gender": "Male",
     "date": "12/31/1989",
-    "position": "Junior Executive",
+    "position": "sales",
     "avatar": null
   },
   {
     "userId": 5,
     "firstName": "Alberto",
     "lastName": "Fernandez",
-    "userName": "Alferdes",
     "email": "alferdes@twiter.com",
     "password": "$2a$10$oz1Be1RuW4wxHS70gVNuge7tnEvRBQD94kQ9gqOzX2WMWRzppvHIC",
     "phoneNumber": "123457890",
@@ -46,7 +43,22 @@
     "country": "Arg",
     "gender": "Prefiero no decirlo",
     "date": "1954-09-23",
-    "position": "Presidenta",
+    "position": "finance",
     "avatar": "avatar-1659736033678-417553849.jpg"
+  },
+  {
+    "userId": 6,
+    "firstName": "Leonardo",
+    "lastName": "Cositorto",
+    "email": "ganadinero@zoe.com",
+    "password": "$2a$10$QZX2Mr3ng25EXMioey6gB.7Dw6mRh46coJrYR4txp96v.iA6qcH2y",
+    "phoneNumber": "223456982920",
+    "city": "Cordoba",
+    "zipCode": "1900",
+    "country": "Argenzuela",
+    "gender": "Otros",
+    "date": "1992-12-12",
+    "position": "finance",
+    "avatar": "avatar-1659805933321-687537089.jpg"
   }
 ]

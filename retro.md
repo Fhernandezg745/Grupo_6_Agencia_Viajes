@@ -14,3 +14,7 @@ Si bien, durante el lapso del sprint 2 tuvimos ciertas dificultades a la hora de
 // Sprint 3
 Empezamos a reconocer como fortaleza el cumplimiento de los plazos de entrega establecidos. De todas formas, la dinámica de incorporación de tantos nuevos contenidos al proyecto mantiene el desafío.
 Finalmente abrimos un diálogo mas cotidiano a través de whatsapp que permitió un dialogo mas fluido. Pero, entendemos que tenemos que fortalecer la comunicación a través de daily y weekly donde podamos profundizar y poner en común el estado del proyecto y los compromisos a asumir por parte de los integrantes. Para así, lograr un óptimo seguimiento de plazos, estado del proyecto y necesidades, que permitan una evaluación y resolución mas profesional y eficaz.
+
+// Sprint 4
+Lamentablemente no pudimos sostener el pilar de nuestro equipo de trabajo que es cumplir con las consignas en tiempo y forma. Por un lado deberiamos individualmente enmendar y racionalizar el uso de las plataformas de comunicación tales como Trello, para que el trabajo colectivo sea mas eficaz. Ya que si alguno de los integrantes asume compromisos y no los puede resolver en tiempo y forma y no comunica el estado de situación, afecta el rendimiento conlectivo. En ese aspecto, la responsabilidad de la comunicación a mejorar recae de manera individual al margen del compromiso colectivo.
+Por otro lado, no pudimos resolver los metodos put y delete y nos queda ese trabajo pendiente que nos exige redoblar la energía en el próximo sprint.

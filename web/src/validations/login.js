@@ -12,11 +12,11 @@ const login = [
     .withMessage("El formato de email no es válido.")
     .bail()
     .custom((value) => {
-        let users = index();
-        users = users.map((u) => u.email);
+        let users = index()
+        users = users.map(u => u.email)
         if (!users.includes(value)) {
-            throw new Error("El email no está registrado");
-        }
+            throw new Error("El email no está registrado")
+        };
         return true;
     }),
     //Pass
@@ -27,14 +27,14 @@ const login = [
     .isLength({ min: 4 })
     .bail()
     .custom((value, { req }) => {
-        let { email } = req.body;
-        let users = index();
-        let user = users.find((u) => u.email === email);
+        let { email } = req.body
+        let users = index()
+        let user = users.find(u => u.email === email);
         if (!user) {
-            throw new Error("Usuario no encontrado");
+            throw new Error("Usuario no encontrado")
         }
         if (!compareSync(value, user.password)) {
-            throw new Error("la contraseña no coincide");
+            throw new Error("la contraseña no coincide")
         }
     }),
 ];

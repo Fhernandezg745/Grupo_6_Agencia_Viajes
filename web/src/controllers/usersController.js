@@ -39,6 +39,7 @@ const usersController = {
         let { errors } = validaciones
         if (errors && errors.length > 0) {
             return res.render('users/login', {
+                styles: ['forms'],
                 oldData: req.body,
                 errors: validaciones.mapped()
             });
@@ -46,7 +47,7 @@ const usersController = {
         let users = index();
         let user = users.find(u => u.email === req.body.email)
         req.session.user = user
-        return res.redirect('/')
+        return res.redirect('/');
     },
     logout: function(req, res) {
         delete req.session.user

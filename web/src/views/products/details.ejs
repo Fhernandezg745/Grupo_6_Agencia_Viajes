@@ -28,7 +28,9 @@
                     <h3 class="idProducto">Id Producto:
                         <%= product.productId %>
                     </h3>
+                    <%  if(user){ %>
                     <a href="/products/editProduct/<%= product.productId %>"><button>Editar Producto</button></a>
+                    <%  } %>
                     <div class="articleDetails">
                         <div>
                             <ul class="listDetails">

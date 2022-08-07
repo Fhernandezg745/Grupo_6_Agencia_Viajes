@@ -52,12 +52,16 @@
       <a href="#rrss" class="buttonNavSite">
         <p>Quienes somos</p>
       </a>
+      <%  if(!user){ %>
       <a href="/users/login" class="iconMobile"
         ><i class="fa-solid fa-arrow-right-to-bracket"></i> Ingresá</a
       >
       <a href="/users/register" class="iconMobile"
         ><i class="fa-solid fa-id-card"></i> Registrate</a
       >
+      <% } else { %>
+<!--logica para logueado-->
+      <%  } %>
     </nav>
   </section>
   <section class="mobileHeader">

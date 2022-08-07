@@ -36,6 +36,7 @@ const login = [
         if (!compareSync(value, user.password)) {
             throw new Error("la contraseña no coincide")
         }
+        return true
     }),
 ];
 

@@ -14,7 +14,7 @@
 
         <main>
             <section class="imageLogin">
-                <form action="/users/access" method="POST" class="formAreaRegister">
+                <form action="/users/access" method="post" class="formAreaRegister">
                     <fieldset class="labelFieldset">
                         <label for="email"><i class="fa-solid fa-envelope-open-text registerIcon"></i> Email</label>
                         <input type="email" name="email" id="email" placeholder="Ingresa tu email" class="inputTextFieldRegister" required value="<%= locals.oldData ? oldData.email : null %>">
@@ -41,8 +41,8 @@
                     </fieldset>
 
                     <fieldset class="buttonField">
-                        <a href="/"><input type="submit" value="Enviar" name="enviar" class="sendButton"></a>
-                        <a href="/"><input type="reset" value="Borrar" name="borrar" class="sendButton"></a>
+                        <button type="submit" class="sendButton">Enviar</button>
+                        <button type="reset" class="sendButton">Borrar</button>
                     </fieldset>
                     <fieldset class="olvidePass">
                         <a href="">Olvide mi contraseña</a>

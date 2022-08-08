@@ -4,6 +4,7 @@ const router = express.Router();
 const usersController = require("../controllers/usersController");
 const middlewaresUser = require('../middlewares/register');
 const middlewareLogin = require('../middlewares/login');
+const isLogged = require("../middlewares/isLogged");
 
 const storage = require("../modules/storage");
 const multer = require("multer");
@@ -15,6 +16,7 @@ router.get("/register", usersController.register);
 router.post("/save", middlewaresUser, usersController.process);
 router.get("/login", usersController.login);
 router.post("/access", middlewareLogin, usersController.access);
+router.get("/logout", isLogged, usersController.logout);
 
 
 

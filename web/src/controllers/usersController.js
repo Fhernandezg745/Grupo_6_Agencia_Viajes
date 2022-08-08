@@ -52,7 +52,22 @@ const usersController = {
     logout: function(req, res) {
         delete req.session.user
         return res.redirect('/')
-    }
+    },
+    logged: function(req, res) {
+        return res.render('users/logged', {
+            title: "Mi cuenta",
+        });
+    },
+    createProduct: function(req, res) {
+        return res.render('products/createProducts', {
+            title: "Crear producto",
+        });
+    },
+    editProduct: function(req, res) {
+        return res.render('products/editProducts', {
+            title: "Editar producto",
+        });
+    },
 };
 
 module.exports = usersController;

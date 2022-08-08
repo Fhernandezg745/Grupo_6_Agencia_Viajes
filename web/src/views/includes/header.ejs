@@ -58,8 +58,11 @@
       >
       <a href="/users/register" class="iconMobile"
         ><i class="fa-solid fa-id-card"></i> Registrate</a>
-      <% } else { %>
+      <% } else if (user && user.position == "admin") { %>
+      <a href="/users/logged" class="iconMobile">Mi cuenta</a>
       <a href="/users/logout" class="iconMobile">Cerrar sesión <% user.firstName %></a>
+      <% } else { %>
+        <a href="/users/logout" class="iconMobile">Cerrar sesión <% user.firstName %></a>
       <%  } %>
     </nav>
   </section>

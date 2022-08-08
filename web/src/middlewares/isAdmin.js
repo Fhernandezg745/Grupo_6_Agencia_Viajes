@@ -1,5 +1,5 @@
 const isAdmin = (req, res, next) => {
-    if (!req.session.user.position == 'Admin') {
+    if (!req.session.user.position == 'admin') {
         return res.redirect('/')
     }
     return next()

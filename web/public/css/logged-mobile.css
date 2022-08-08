@@ -7,6 +7,19 @@
     font-size: 12px;
 }
 
+.main-top {
+    display: flex;
+    justify-content: flex-end;
+    background-color: #8cccb4;
+    width: 100%;
+    padding: 0.8rem;
+}
+
+.main-top span {
+   margin-right: 1.2rem;
+   font-size: 1.2rem;
+}
+
 .imageLogged {
     display: flex;
     flex-direction: column;

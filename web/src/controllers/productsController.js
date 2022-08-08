@@ -84,7 +84,14 @@ const productController = {
         return res.redirect("products/details/" + product.productId);
     },
     cart: (req, res) => {
-        return res.render("products/cart");
+        let product = one(parseInt(req.params.id));
+        if (!product) {
+            return res.redirect("/products/productList");
+        }
+        return res.render("products/cart", {
+            title: "Cart Checkout",
+            product: product,
+        });
     },
     deleteProduct: (req, res) => {
         let productToDelete = one(parseInt(req.params.id));

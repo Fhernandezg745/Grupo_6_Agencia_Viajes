@@ -39,7 +39,7 @@
     display: inline-flex;
     flex-direction: column;
     justify-content: center;
-    background-color: rgba(27, 148, 103, 0.734);
+    background-color: rgba(140, 139, 139, 0.734);
     width: 60vw;
     margin-top: 5vw;
     margin-left: 20vw;
@@ -116,17 +116,18 @@
 }
 
 .sendButton {
-    width: 100%;
-    max-width: 200px;
-    height: 30px;
-    text-align: center;
-    background-color: #4c4c4a;
-    color: #c7c7c7;
-    border-radius: 5px;
-    font-weight: 300px;
-}
+    width: 10vw;
+    display: block;
+    padding: 4px 8px;
+    color: rgba(255, 255, 255, 0.834);
+    border: 0;
+    border-radius: 8px;
+    font-size: 14px;
+    font-weight: bold;
+    background: #128f76;
+  }
 
 .sendButton:hover {
-    background-color: rgba(255, 255, 255, 0.734);
-    color: #4c4c4a;
-}
+    background: #007aff;
+  }
+  

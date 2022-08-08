@@ -121,3 +121,14 @@ footer {
     margin-top: 10px;
     font-size: 0.8rem;
 }
+
+.navListInfo {
+    margin-top: 10px;
+    font-size: 0.8rem;
+    text-decoration: none;
+    color: #999;
+}
+
+.navListInfo p{
+    margin-bottom: 10px;
+}

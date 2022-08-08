@@ -22,7 +22,7 @@ router.put("/editProduct", function(req, res){res.send("fui por puto")});
 
 
 //[upload.any()], productsController.modify
-router.get("/cart", productsController.cart);
+router.get("/cart/:id", productsController.cart);
 
 router.delete("/products/delete/:id", function(req, res,) {
     res.send("test");

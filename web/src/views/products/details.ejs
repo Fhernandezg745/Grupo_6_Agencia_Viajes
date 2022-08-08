@@ -41,8 +41,7 @@
                                 </li>
                                 <li><i class="fa-solid fa-bus"></i> traslados in/out y entre hoteles</li>
                                 <li><i class="fa-solid fa-van-shuttle"></i> Itinerario/excursiones:
-                                    <%=
-                                        product.shortDescription %>
+                                    <%= product.shortDescription %>
                                 </li>
                                 <li><i class="fa-solid fa-plane-departure"></i> aereos incluidos</li>
                                 <h3 class="articleTitle">Petra - Jordania (
@@ -87,7 +86,7 @@
             </section>
             <section class="section-book">
                 <nav class="nav-to-book">
-                    <a href="/products/cart"><i class="fa-solid fa-cart-shopping"></i>Hacé tu reserva</a>
+                    <a href="/products/cart/<%= product.productId %>"><i class="fa-solid fa-cart-shopping"></i>Hacé tu reserva</a>
                 </nav>
             </section>
 

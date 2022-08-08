@@ -13,32 +13,35 @@
 
     <main class="cartMain">
         <section class="main-top">
-            <nav class="navReturn"><a href="/products/productList"><i class="fa-solid fa-circle-arrow-left"></i>Volver atrás</a></nav>
+            <nav class="navReturn"><a href="/products/productList"><i class="fa-solid fa-circle-arrow-left"></i>Ir al listado de productos</a></nav>
             <h2>Detalles de la cotización actual</h2>
             <i class="fa-solid fa-cart-shopping"></i>
         </section>
         <section class="reserva-seleccionada">
             <div class="articleDetails">
                 <div class="categoria-estrellas">
-                    <i class="fa-solid fa-star estrellas"></i>
-                    <i class="fa-solid fa-star estrellas"></i>
-                    <i class="fa-solid fa-star estrellas"></i>
-                    <i class="fa-solid fa-star estrellas"></i>
-                    <i class="fa-solid fa-star estrellasEmpty"></i>
+                    <% for(let i = 0; i < product.stars; i++){ %>
+                    <i class="fa-solid fa-star estrellas"></i>   
+                    <% } %>
                 </div>
                 <span> <ul class="listDetails">
-                <li><i class="fa-solid fa-bed"></i> 8 noches de alojamiento en el hotel hoteleria 4 estrellas</li>
+                <li><i class="fa-solid fa-bed"></i> <%= product.nights %> noches de alojamiento en el hotel hoteleria <%= product.stars %> estrellas</li>
                 <li><i class="fa-solid fa-bus"></i> traslados in/out y entre hoteles</li>
-                <li><i class="fa-solid fa-van-shuttle"></i> Itinenrario/excursiones: Amman, Petra, Wadi Rum, Mar muerto</li>
+                <li><i class="fa-solid fa-van-shuttle"></i> Itinenrario/excursiones: <%= product.shortDescription %></li>
                 <li><i class="fa-solid fa-plane-departure"></i> aereos incluidos</li>
-                <h3 class="articleTitle">Petra - Jordania (09 dias/ 08 noches)</h3>
+                <h3 class="articleTitle"><%= product.tittle %> (<%= product.days %> dias/
+                    <%= product.nights %> noches)</h3>
             </ul>
             <div class="precioArticuloMain">
-                <p>$1987 USD*</p>
+                <p><%= product.price %> USD*</p>
                 <p class="condition">*Precio por persona en base doble</p>
             </div>
         </div>
         </section>
+        <div class="cantPax">
+            <p>Cantidad de pasajero/s en base <%= product.base %> </p>
+        </div> 
+        <% if (product.base == "Single") { %> 
         <section class="pax-container">
             <div class="boxtitle"><h2>Datos de los pasajeros</h2>
             </div>
@@ -50,37 +53,281 @@
                     <fieldset class="fieldset-box-pax">
                         <label for="">*Nombre</label>
                         <div class="input-group">
-                            <input type="text" name="nombre" class="" required>
                             <i class="fa-solid fa-user"></i>
+                            <input type="text" name="nombre" class="" required>
+                            
                         </div>
                     </fieldset>
                     <fieldset class="fieldset-box-pax">
                         <label for="">*Apellido</label>
                         <div class="input-group">
-                            <input type="text" name="apellido" class="" required>
                             <i class="fa-solid fa-user"></i>
+                            <input type="text" name="apellido" class="" required>
+                            
                         </div>          
                     </fieldset>
                     <fieldset class="fieldset-box-pax">
                         <label for="">*DNI o Pasaporte</label>
                         <div class="input-group">
-                            <input type="text" name="dni" class="" required>
                             <i class="fa-solid fa-passport"></i>
+                            <input type="text" name="dni" class="" required>
                         </div>
                     </fieldset>
                     <fieldset class="fieldset-box-pax">
                         <label for="nacimiento">*Fecha de nacimiento</label>
                         <div class="input-group">
-                            <input type="text" name="nacimiento" id="date" class="" required>
                             <i class="fa-solid fa-calendar-days"></i>
+                            <input type="date" name="nacimiento" id="date" class="" required>
                     </fieldset>   
                 </form>     
             </div>
-        </section>
-                <div class="masPax">
-                    <p>Deseo agregar otro/s pasajero/s <input type="checkbox" name="agregarPax"> </p>
-                </div>     
-            </div>    
+        </section>   
+        <% } else if (product.base == "Doble") { %>
+            <section class="pax-container">
+                <div class="boxtitle"><h2>Datos de los pasajeros</h2>
+                </div>
+                <div class="pax-title">
+                    <h3>Pasajero 1 (Adulto + 18 años)<i class="fa-solid fa-circle-check"></i></h3>
+                </div>
+                <div class="pax-form">
+                    <form action="/" method="get" class="">
+                        <fieldset class="fieldset-box-pax">
+                            <label for="">*Nombre</label>
+                            <div class="input-group">
+                                <i class="fa-solid fa-user"></i>
+                                <input type="text" name="nombre" class="" required>
+                                
+                            </div>
+                        </fieldset>
+                        <fieldset class="fieldset-box-pax">
+                            <label for="">*Apellido</label>
+                            <div class="input-group">
+                                <i class="fa-solid fa-user"></i>
+                                <input type="text" name="apellido" class="" required>
+                                
+                            </div>          
+                        </fieldset>
+                        <fieldset class="fieldset-box-pax">
+                            <label for="">*DNI o Pasaporte</label>
+                            <div class="input-group">
+                                <i class="fa-solid fa-passport"></i>
+                                <input type="text" name="dni" class="" required>
+                            </div>
+                        </fieldset>
+                        <fieldset class="fieldset-box-pax">
+                            <label for="nacimiento">*Fecha de nacimiento</label>
+                            <div class="input-group">
+                                <i class="fa-solid fa-calendar-days"></i>
+                                <input type="date" name="nacimiento" id="date" class="" required>
+                        </fieldset>   
+                    </form>     
+                </div>
+            </section> 
+            <section class="pax-container">
+                <div class="boxtitle"><h2>Datos de los pasajeros</h2>
+                </div>
+                <div class="pax-title">
+                    <h3>Pasajero 2 (Adulto + 18 años)<i class="fa-solid fa-circle-check"></i></h3>
+                </div>
+                <div class="pax-form">
+                    <form action="/" method="get" class="">
+                        <fieldset class="fieldset-box-pax">
+                            <label for="">*Nombre</label>
+                            <div class="input-group">
+                                <i class="fa-solid fa-user"></i>
+                                <input type="text" name="nombre" class="" required>
+                                
+                            </div>
+                        </fieldset>
+                        <fieldset class="fieldset-box-pax">
+                            <label for="">*Apellido</label>
+                            <div class="input-group">
+                                <i class="fa-solid fa-user"></i>
+                                <input type="text" name="apellido" class="" required>
+                                
+                            </div>          
+                        </fieldset>
+                        <fieldset class="fieldset-box-pax">
+                            <label for="">*DNI o Pasaporte</label>
+                            <div class="input-group">
+                                <i class="fa-solid fa-passport"></i>
+                                <input type="text" name="dni" class="" required>
+                            </div>
+                        </fieldset>
+                        <fieldset class="fieldset-box-pax">
+                            <label for="nacimiento">*Fecha de nacimiento</label>
+                            <div class="input-group">
+                                <i class="fa-solid fa-calendar-days"></i>
+                                <input type="date" name="nacimiento" id="date" class="" required>
+                        </fieldset>   
+                    </form>     
+                </div>
+            </section> 
+            <% } else { %>
+            <section class="pax-container">
+                <div class="boxtitle"><h2>Datos de los pasajeros</h2>
+                </div>
+                <div class="pax-title">
+                    <h3>Pasajero 1 (Adulto + 18 años)<i class="fa-solid fa-circle-check"></i></h3>
+                </div>
+                <div class="pax-form">
+                    <form action="/" method="get" class="">
+                        <fieldset class="fieldset-box-pax">
+                            <label for="">*Nombre</label>
+                            <div class="input-group">
+                                <i class="fa-solid fa-user"></i>
+                                <input type="text" name="nombre" class="" required>
+                                
+                            </div>
+                        </fieldset>
+                        <fieldset class="fieldset-box-pax">
+                            <label for="">*Apellido</label>
+                            <div class="input-group">
+                                <i class="fa-solid fa-user"></i>
+                                <input type="text" name="apellido" class="" required>
+                                
+                            </div>          
+                        </fieldset>
+                        <fieldset class="fieldset-box-pax">
+                            <label for="">*DNI o Pasaporte</label>
+                            <div class="input-group">
+                                <i class="fa-solid fa-passport"></i>
+                                <input type="text" name="dni" class="" required>
+                            </div>
+                        </fieldset>
+                        <fieldset class="fieldset-box-pax">
+                            <label for="nacimiento">*Fecha de nacimiento</label>
+                            <div class="input-group">
+                                <i class="fa-solid fa-calendar-days"></i>
+                                <input type="date" name="nacimiento" id="date" class="" required>
+                        </fieldset>   
+                    </form>     
+                </div>
+            </section> 
+            <section class="pax-container">
+                <div class="boxtitle"><h2>Datos de los pasajeros</h2>
+                </div>
+                <div class="pax-title">
+                    <h3>Pasajero 2 (Adulto + 18 años)<i class="fa-solid fa-circle-check"></i></h3>
+                </div>
+                <div class="pax-form">
+                    <form action="/" method="get" class="">
+                        <fieldset class="fieldset-box-pax">
+                            <label for="">*Nombre</label>
+                            <div class="input-group">
+                                <i class="fa-solid fa-user"></i>
+                                <input type="text" name="nombre" class="" required>
+                                
+                            </div>
+                        </fieldset>
+                        <fieldset class="fieldset-box-pax">
+                            <label for="">*Apellido</label>
+                            <div class="input-group">
+                                <i class="fa-solid fa-user"></i>
+                                <input type="text" name="apellido" class="" required>
+                                
+                            </div>          
+                        </fieldset>
+                        <fieldset class="fieldset-box-pax">
+                            <label for="">*DNI o Pasaporte</label>
+                            <div class="input-group">
+                                <i class="fa-solid fa-passport"></i>
+                                <input type="text" name="dni" class="" required>
+                            </div>
+                        </fieldset>
+                        <fieldset class="fieldset-box-pax">
+                            <label for="nacimiento">*Fecha de nacimiento</label>
+                            <div class="input-group">
+                                <i class="fa-solid fa-calendar-days"></i>
+                                <input type="date" name="nacimiento" id="date" class="" required>
+                        </fieldset>   
+                    </form>     
+                </div>
+            </section> 
+            <section class="pax-container">
+                <div class="boxtitle"><h2>Datos de los pasajeros</h2>
+                </div>
+                <div class="pax-title">
+                    <h3>Pasajero 3 (Menor - 18 años)<i class="fa-solid fa-circle-check"></i></h3>
+                </div>
+                <div class="pax-form">
+                    <form action="/" method="get" class="">
+                        <fieldset class="fieldset-box-pax">
+                            <label for="">*Nombre</label>
+                            <div class="input-group">
+                                <i class="fa-solid fa-user"></i>
+                                <input type="text" name="nombre" class="" required>
+                                
+                            </div>
+                        </fieldset>
+                        <fieldset class="fieldset-box-pax">
+                            <label for="">*Apellido</label>
+                            <div class="input-group">
+                                <i class="fa-solid fa-user"></i>
+                                <input type="text" name="apellido" class="" required>
+                                
+                            </div>          
+                        </fieldset>
+                        <fieldset class="fieldset-box-pax">
+                            <label for="">*DNI o Pasaporte</label>
+                            <div class="input-group">
+                                <i class="fa-solid fa-passport"></i>
+                                <input type="text" name="dni" class="" required>
+                            </div>
+                        </fieldset>
+                        <fieldset class="fieldset-box-pax">
+                            <label for="nacimiento">*Fecha de nacimiento</label>
+                            <div class="input-group">
+                                <i class="fa-solid fa-calendar-days"></i>
+                                <input type="date" name="nacimiento" id="date" class="" required>
+                        </fieldset>   
+                    </form>     
+                </div>
+            </section> 
+            <section class="pax-container">
+                <div class="boxtitle"><h2>Datos de los pasajeros</h2>
+                </div>
+                <div class="pax-title">
+                    <h3>Pasajero 4 (Menor - 18 años)<i class="fa-solid fa-circle-check"></i></h3>
+                </div>
+                <div class="pax-form">
+                    <form action="/" method="get" class="">
+                        <fieldset class="fieldset-box-pax">
+                            <label for="">*Nombre</label>
+                            <div class="input-group">
+                                <i class="fa-solid fa-user"></i>
+                                <input type="text" name="nombre" class="" required>
+                                
+                            </div>
+                        </fieldset>
+                        <fieldset class="fieldset-box-pax">
+                            <label for="">*Apellido</label>
+                            <div class="input-group">
+                                <i class="fa-solid fa-user"></i>
+                                <input type="text" name="apellido" class="" required>
+                                
+                            </div>          
+                        </fieldset>
+                        <fieldset class="fieldset-box-pax">
+                            <label for="">*DNI o Pasaporte</label>
+                            <div class="input-group">
+                                <i class="fa-solid fa-passport"></i>
+                                <input type="text" name="dni" class="" required>
+                            </div>
+                        </fieldset>
+                        <fieldset class="fieldset-box-pax">
+                            <label for="nacimiento">*Fecha de nacimiento</label>
+                            <div class="input-group">
+                                <i class="fa-solid fa-calendar-days"></i>
+                                <input type="date" name="nacimiento" id="date" class="" required>
+                        </fieldset>   
+                    </form>     
+                </div>
+            </section> 
+            <% } %>
+            <div class="masPax">
+                <p>Deseo agregar otro/s pasajero/s <input type="checkbox" name="agregarPax"> </p>
+            </div>  
         <section class="reservaConsulta">
             <h3>Observaciones o consultas de su reserva :</h3>
             <fieldset class="boxReservaConsulta">

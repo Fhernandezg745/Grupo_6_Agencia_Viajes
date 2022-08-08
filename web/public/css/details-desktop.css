@@ -1,80 +1,53 @@
 @media screen and (min-width: 780px) {
-    .mainDetails {
-        display: flex;
-        flex-direction: row;
-        background-color: #fff;
-    }
-    .mainFigureDetails img {
-        width: 35vw;
-        margin-top: 2.5vw;
-        margin-left: 7.5vw;
-        margin-right: 7.5vw;
-        height: auto;
-    }
-    .mainImageDetails {
-        width: 20vw;
-        height: auto;
-    }
+  .mainDetails {
+    display: flex;
+    flex-direction: row;
+    background-color: #fff;
+    padding: 20px;
+  }
 
-    .description-product1 a button{
-        display: block;
-        border-radius: 6px;
-        background-color: #049473;
-        margin-top: 0.5rem;
-        margin-left: 9rem;
-        padding: 0.4rem;
-        color: #fff;
-    }
-    .main-top-details .description-product1 {
-        display: flex;
-        flex-direction: column;
-        width: 20vw;
-    }
-    .main-top-details .description-product1 h1 {
-        font-size: 1.5em;
-        width: 35vw;
-        margin-top: 2.5vw;
-        margin-left: 7.5vw;
-        margin-right: 7.5vw;
-        height: auto;
-        color: goldenrod;
-    }
-    .main-top-details .description-product1 h2 {
-        font-size: 1em;
-        color: goldenrod;
-        width: 35vw;
-        margin-left: 7.5vw;
-        margin-right: 7.5vw;
-        height: auto;
-    }
-    .listDetails {
-        width: 30vw;
-    }
-    
-    .description-product1 .articleDetails {
-        display: flex;
-        flex-wrap: wrap;
-        flex-direction: column;
-        text-decoration: none;
-        font-size: 1.4rem;
-        width: 50%;
-        margin-top: 2.5vw;
-        margin-left: 7.5vw;
-        margin-right: 7.5vw;
-        height: auto;
-    }
-    .description-product1 .articleDetails .precioArticuloMain {
-        align-items: center;
-        width: 100%;
-        height: auto;
-        background-color: #c7c7c7;
-        border-radius: 2px;
-        border: 1px solid grey;
-        margin-left: auto;
-        margin-right: 0;
-        box-shadow: 0px 0px 10px rgb(100, 100, 100);
-    }
-    .description-product1 .articleDetails .precioArticuloMain span {
-        width: 20%;
-    }
+  .mainFigureDetails {
+    width: 40%;
+    margin-bottom: 0;
+    display: flex;
+    align-items: center;
+  }
+
+  .mainImageDetails {
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+  }
+
+  .description-product1 {
+    display: flex;
+    flex-direction: column;
+    flex-grow: 1;
+  }
+
+  .description-product1 h1 {
+    font-size: 2.5em;
+    color: goldenrod;
+  }
+
+  .description-product1 h2 {
+    font-size: 2em;
+    color: goldenrod;
+  }
+
+  .idProducto {
+    font-size: 1.2em;
+  }
+
+  .articleDetails {
+    text-decoration: none;
+    font-size: 1.8rem;
+  }
+
+  .precioArticuloMain {
+    align-items: center;
+    width: 45%;
+    background-color: #c7c7c7;
+    border-radius: 2px;
+    border: 1px solid grey;
+    box-shadow: 0px 0px 10px rgb(100, 100, 100);
+  }
 }

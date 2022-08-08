@@ -1,91 +1,105 @@
 <!DOCTYPE html>
 <html lang="en">
-
-<head>
+  <head>
     <%- include("../includes/head") %>
-        <link rel="stylesheet" href="/css/details-mobile.css">
-        <link rel="stylesheet" href="/css/details-tablet.css">
-        <link rel="stylesheet" href="/css/details-desktop.css">
-</head>
+    <link rel="stylesheet" href="/css/details-mobile.css" />
+    <link rel="stylesheet" href="/css/details-tablet.css" />
+    <link rel="stylesheet" href="/css/details-desktop.css" />
+  </head>
 
-<body>
-
+  <body>
     <%- include("../includes/header") %>
 
-        <main class="main-top-details">
-            <section class="mainDetails">
-                <figure class="mainFigureDetails">
-                    <img src="/products/<%= product.image %>" alt="" class="mainImageDetails">
-                </figure>
-                <div class="description-product1">
-                    <h1>
-                        <%= product.tittle %>
-                    </h1>
-                    <h2>
-                        <%= product.days %> dias/
-                            <%= product.nights %> noches
-                    </h2>
-                    <h3 class="idProducto">Id Producto:
-                        <%= product.productId %>
-                    </h3>
-                    <%  if(user){ %>
-                    <a href="/products/editProduct/<%= product.productId %>"><button>Editar Producto</button></a>
-                    <%  } %>
-                    <div class="articleDetails">
-                        <div>
-                            <ul class="listDetails">
-                                <li><i class="fa-solid fa-bed"></i>
-                                    <%= product.nights %> noches de alojamiento en hoteleria
-                                        <%= product.stars %>
-                                            estrellas
-                                </li>
-                                <li><i class="fa-solid fa-bus"></i> traslados in/out y entre hoteles</li>
-                                <li><i class="fa-solid fa-van-shuttle"></i> Itinerario/excursiones:
-                                    <%=
-                                        product.shortDescription %>
-                                </li>
-                                <li><i class="fa-solid fa-plane-departure"></i> aereos incluidos</li>
-                                <h3 class="articleTitle">Petra - Jordania (
-                                    <%= product.days %> dias/
-                                        <%= product.nights
-                                            %> noches)</h3>
-                            </ul>
-                        </div>
-                        <div class="precioArticuloMain">
-                            <p>Desde
-                                <%= product.price %> USD*</p>
-                            <p class="condition">*Precio por persona en base doble</p>
-                        </div>
-                    </div>
-                </div>
+    <main class="main-top-details">
+      <section class="mainDetails">
+        <figure class="mainFigureDetails">
+          <img
+            src="/products/<%= product.image %>"
+            alt=""
+            class="mainImageDetails"
+          />
+        </figure>
+        <div class="description-product1">
+          <h1><%= product.tittle %></h1>
+          <h2><%= product.days %> dias/ <%= product.nights %> noches</h2>
+          <h3 class="idProducto">Id Producto: <%= product.productId %></h3>
+          <% if(user){ %>
+          <a href="/products/editProduct/<%= product.productId %>">
+            <button>Editar Producto</button>
+          </a>
+          <% } %>
+          <div class="articleDetails">
+            <ul class="listDetails">
+              <li>
+                <i class="fa-solid fa-bed"></i>
+                <%= product.nights %> noches de alojamiento en hoteleria <%=
+                product.stars %> estrellas
+              </li>
+              <li>
+                <i class="fa-solid fa-bus"></i> traslados in/out y entre hoteles
+              </li>
+              <li>
+                <i class="fa-solid fa-van-shuttle"></i> Itinerario/excursiones:
+                <%= product.shortDescription %>
+              </li>
+              <li>
+                <i class="fa-solid fa-plane-departure"></i> aereos incluidos
+              </li>
+              <h3 class="articleTitle">
+                Petra - Jordania ( <%= product.days %> dias/ <%= product.nights
+                %> noches)
+              </h3>
+            </ul>
+            <div class="precioArticuloMain">
+              <p>Desde <%= product.price %> USD*</p>
+              <p class="condition">*Precio por persona en base doble</p>
+            </div>
+          </div>
+        </div>
+      </section>
+      <section class="bottomClassMain">
+        <div class="fancyHeader">
+          <h2>Itinerario</h2>
+        </div>
+        <div class="details-header">
+          <p>GUÍAS LOCALES DE HABLA HISPANA</p>
+          <p>SALIDAS TODOS LOS JUEVES</p>
+        </div>
+        <% product.longDescription.forEach(element=> {%>
+        <div class="details-title-description">
+          <span><%= element.title %></span>
+        </div>
+        <div class="details-body-description">
+          <p><%= element.description %></p>
+        </div>
+        <% }) %>
+        <section class="section-book">
+          <nav class="nav-to-book">
+            <a href="/products/cart">
+              <i class="fa-solid fa-cart-shopping"></i>Hacé tu reserva
+            </a>
+          </nav>
+        </section>
+      </section>
+    </main>
 
-            </section>
-            <section class="bottomClassMain">
-                <div class="fancyHeader">
-                    <h2> Itinerario </h2>
-                </div>
-                <div class="details-header">
-                    <span> <strong>GUÍAS LOCALES DE HABLA HISPANA
-                            <br>
-                            SALIDAS TODOS LOS JUEVES
-                        </strong>
-                    </span>
-                </div>
-                <div class="details-body-description">
-                    <%= product.longDescription %>
-                </div>
-            </section>
-            <section class="section-book">
-                <nav class="nav-to-book">
-                    <a href="/products/cart"><i class="fa-solid fa-cart-shopping"></i>Hacé tu reserva</a>
-                </nav>
-            </section>
-
-        </main>
-
-
-        <%- include("../includes/footer") %>
-
-</body>
-
+    <%- include("../includes/footer") %>
+    <script>
+      const titleList = document.querySelectorAll(".details-title-description");
+      const descriptionList = document.querySelectorAll(
+        ".details-body-description"
+      );
+      for (let i = 0; i < titleList.length; i++) {
+        titleList[i].addEventListener("click", () => {
+          if (descriptionList[i].style.display === "block") {
+            descriptionList[i].style.display = "none";
+            titleList[i].style.fontWeight = "normal";
+          } else {
+            descriptionList[i].style.display = "block";
+            titleList[i].style.fontWeight = "bold";
+          }
+        });
+      }
+    </script>
+  </body>
 </html>

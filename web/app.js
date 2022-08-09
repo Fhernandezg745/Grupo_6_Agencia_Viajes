@@ -29,7 +29,9 @@ app.use(session({
     secret: 'nodejs',
     saveUninitialized: true,
     resave: true
-})) // req.session
+})) 
+app.use(require('./src/middlewares/user'))
+// req.session
 
 // rutas
 app.use("/", require("./src/routes/mainRoutes"));

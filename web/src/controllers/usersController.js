@@ -47,7 +47,7 @@ const usersController = {
         let users = index();
         let user = users.find(u => u.email === req.body.email)
         req.session.user = user
-        return res.redirect('/')
+        return res.redirect('/users/logged')
     },
     logout: function(req, res) {
         delete req.session.user
@@ -64,7 +64,7 @@ const usersController = {
         });
     },
     editProduct: function(req, res) {
-        return res.render('products/editProducts', {
+        return res.render('products/editProduct', {
             title: "Editar producto",
         });
     },

@@ -27,13 +27,13 @@ app.use(session({
 })) // req.session
 
 
-app.use(require('./src/middlewares/user'))
 
 //levanto servidor
 app.listen(port, () =>
 console.log(`Abriendo el servidor http://localhost:${port}`)
 );
 
+app.use(require('./src/middlewares/user'));
 // rutas
 app.use("/", require("./src/routes/mainRoutes"));
 app.use("/users", require("./src/routes/usersRoutes"));

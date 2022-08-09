@@ -12,15 +12,12 @@ const multer = require("multer");
 const upload = multer({ storage: storage("users") });
 
 
-
 router.get("/register", usersController.register);
 router.post("/save", middlewaresUser, usersController.process);
 router.get("/login", usersController.login);
 router.post("/access", middlewareLogin, usersController.access);
 router.get("/logout", isLogged, usersController.logout);
 router.get("/logged", isLogged, usersController.logged);
-router.get("/createProduct", [isLogged, isAdmin], usersController.createProduct);
-router.get("/editProduct", [isLogged, isAdmin], usersController.editProduct);
 
 
 

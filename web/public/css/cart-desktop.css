@@ -24,8 +24,25 @@
     color: #000000;
     display: flex;
     flex-direction: column;
-    width: 100%;
+    width: 80%;
     margin-right: 2rem;
+}
+.longDescprition{
+    display: inline;
+    background-color: #fff;
+    margin-top: 2rem;
+    color: #000000;
+    width: 70%;
+    padding: 15px;
+    box-sizing: border-box;
+    margin-bottom: 2rem;
+    }
+
+
+.longDescprition span{
+    font-size: 1.2rem;
+    white-space: pre-wrap;
+    
 }
 
 }

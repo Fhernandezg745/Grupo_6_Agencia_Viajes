@@ -31,13 +31,6 @@ app.use(session({
     resave: true
 })) // req.session
 
-
-
-//levanto servidor
-app.listen(port, () =>
-console.log(`Abriendo el servidor http://localhost:${port}`)
-);
-
 // rutas
 app.use("/", require("./src/routes/mainRoutes"));
 app.use("/users", require("./src/routes/usersRoutes"));

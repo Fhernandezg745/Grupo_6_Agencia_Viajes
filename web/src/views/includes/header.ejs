@@ -54,13 +54,13 @@
       </a>
       <%  if(!user){ %>
       <a href="/users/login" class="iconMobile"
-        ><i class="fa-solid fa-arrow-right-to-bracket"></i> Ingresá</a
+        ><i class="fa-solid fa-arrow-right-to-bracket"></i> Iniciar sesión</a
       >
       <a href="/users/register" class="iconMobile"
-        ><i class="fa-solid fa-id-card"></i> Registrate</a
-      >
+        ><i class="fa-solid fa-id-card"></i> Registrate</a>
       <% } else { %>
-<!--logica para logueado-->
+      <a href="/users/logged" class="iconMobile">Mi cuenta</a>
+      <a href="/users/logout" class="iconMobile">Cerrar sesión <% user.firstName %></a>
       <%  } %>
     </nav>
   </section>

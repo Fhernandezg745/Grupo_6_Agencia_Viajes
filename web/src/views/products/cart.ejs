@@ -3,28 +3,28 @@
 
 <head>
     <%- include("../includes/head") %>
-    <link rel="stylesheet" href="/css/cart-mobile.css">
-    <link rel="stylesheet" href="/css/cart-tablet.css">
-    <link rel="stylesheet" href="/css/cart-desktop.css">
+        <link rel="stylesheet" href="/css/cart-mobile.css">
+        <link rel="stylesheet" href="/css/cart-tablet.css">
+        <link rel="stylesheet" href="/css/cart-desktop.css">
 </head>
 
 <body>
     <%- include("../includes/header") %>
 
-    <main class="cartMain">
-        <section class="main-top">
-            <nav class="navReturn"><a href="/products/productList"><i class="fa-solid fa-circle-arrow-left"></i>Ir al listado de productos</a></nav>
+        <main class="cartMain">
+            <section class="main-top">
+                <nav class="navReturn"><a href="/products/details/<%= product.productId %>"><i class="fa-solid fa-circle-arrow-left"></i> Volver al detalle de producto</a></nav>
 
-            <i class="fa-solid fa-cart-shopping"></i>
-        </section>
-        <section class="reserva-seleccionada">
-            <div class="articleDetails">
-                <div class="categoria-estrellas">
-                    <% for(let i = 0; i < product.stars; i++){ %>
-                    <i class="fa-solid fa-star estrellas"></i>   
-                    <% } %>
-                </div>
-                <span> <ul class="listDetails">
+                <nav class="navReturn"><a href="/products/productList">Ir al listado de productos </a><i class="fa-solid fa-circle-arrow-right"></i></nav>
+            </section>
+            <section class="reserva-seleccionada">
+                <div class="articleDetails">
+                    <div class="categoria-estrellas">
+                        <% for(let i = 0; i < product.stars; i++){ %>
+                            <i class="fa-solid fa-star estrellas"></i>
+                            <% } %>
+                    </div>
+                    <span> <ul class="listDetails">
                 <li><i class="fa-solid fa-bed"></i> <%= product.nights %> noches de alojamiento en el hotel hoteleria <%= product.stars %> estrellas</li>
                 <li><i class="fa-solid fa-bus"></i> traslados in/out y entre hoteles</li>
                 <li><i class="fa-solid fa-van-shuttle"></i> Itinenrario/excursiones: <%= product.shortDescription %></li>
@@ -42,9 +42,7 @@
             <p class="articleTitle"><%= product.tittle %> (<%= product.days %> dias/
                 <%= product.nights %> noches) en base <%= product.base %> </p> 
         </div> 
-        <div class="longDescprition">
-            <span><%= product.longDescription %></span>
-        </div>
+
         <% if (product.base == "Single") { %> 
         <section class="pax-container">
             <div class="boxtitle"><h2>Datos de los pasajeros</h2>

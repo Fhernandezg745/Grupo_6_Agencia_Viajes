@@ -21,7 +21,7 @@
     display: flex;
     flex-direction: row;
     justify-content: space-between;
-    background-color:  #8cccb4;
+    background-color: #8cccb4;
     width: 100%;
     padding: 0.8rem;
 }
@@ -38,6 +38,10 @@
 
 .main-top nav {
     padding: 0.6rem;
+}
+
+.main-top nav p {
+    font-size: 16px;
 }
 
 .main-top nav a {
@@ -62,19 +66,19 @@
 .reserva-seleccionada .articleDetails {
     border-radius: 3px;
     background-color: #fff;
-    color:#000000;
+    color: #000000;
     width: 100%;
     border: 1px solid #474747;
     margin-bottom: 0.8em;
 }
-.reserva-seleccionada .articleDetails .categoria-estrellas{
+
+.reserva-seleccionada .articleDetails .categoria-estrellas {
     margin-bottom: 10px;
 }
 
 .reserva-seleccionada .articleDetails .listDetails {
     list-style: none;
     font-size: 0.7rem;
-
 }
 
 .reserva-seleccionada .articleDetails .listDetails li {
@@ -91,7 +95,7 @@
 }
 
 .reserva-seleccionada .precioArticuloMain p {
-    color:#1bac94;
+    color: #1bac94;
     font-weight: bold;
     font-size: 1.2rem;
 }
@@ -124,11 +128,12 @@
     flex-direction: row;
     width: 74vw;
     padding: 0.8rem;
-    border:#474747 1px solid;
+    border: #474747 1px solid;
     background-color: #8cccb4;
 }
 
-.pax-title h3, .pax-title i{
+.pax-title h3,
+.pax-title i {
     margin-left: 0.5rem;
     font-size: 1.2rem;
 }
@@ -140,8 +145,7 @@
     margin-left: 0.5rem;
 }
 
-
- .caja1 {
+.caja1 {
     margin: 20px;
     border-radius: 22px;
     background-color: rgba(27, 148, 103, 0.734);
@@ -228,7 +232,6 @@
     float: right;
 }
 
-
 .textArea {
     background-color: rgba(255, 255, 255, 0.734);
     color: #4c4c4a;
@@ -240,6 +243,7 @@
     margin-bottom: 20px;
     padding: 10px;
 }
+
 
 /*.top-section-header-carrito {
     display: flex;
@@ -271,9 +275,10 @@
     color: #000000;
 }
 */
+
 .reserva-seleccionada .articleDetails {
     border-radius: 3px;
-    background-color:#fff;
+    background-color: #fff;
     width: 100%;
     border: 1px solid #474747;
 }
@@ -409,8 +414,7 @@
 
 .fieldset-box-pax .input-group input {
     width: 100%;
-    margin-left:4px;
-    
+    margin-left: 4px;
 }
 
 .fieldset-box-pax .input-group i {
@@ -448,6 +452,6 @@
     height: 100%;
 }
 
-.longDescprition{
-display: none;
-    }
+.longDescprition {
+    display: none;
+}

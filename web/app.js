@@ -7,6 +7,11 @@ const { port, callback } = require("./src/modules/port");
 const method = require('method-override');
 const session = require('express-session')
 
+//levanto servidor
+app.listen(port, () =>
+console.log(`Abriendo el servidor http://localhost:${port}`)
+);
+
 //seteo carpeta public como static
 app.use(require("./src/modules/public"));
 app.use(require("./src/modules/uploads"));
@@ -28,11 +33,6 @@ app.use(session({
 
 
 app.use(require('./src/middlewares/user'))
-
-//levanto servidor
-app.listen(port, () =>
-console.log(`Abriendo el servidor http://localhost:${port}`)
-);
 
 // rutas
 app.use("/", require("./src/routes/mainRoutes"));

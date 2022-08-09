@@ -18,10 +18,8 @@ router.get("/details/:id", productsController.detail);
 
 router.get("/editProduct/:id", productsController.editProduct);
 
-router.put("/editProduct", function(req, res){res.send("fui por puto")});
+router.put("/editProduct", [upload.any()], productsController.modify);
 
-
-//[upload.any()], productsController.modify
 router.get("/cart/:id", productsController.cart);
 
 router.delete("/products/delete/:id", function(req, res,) {

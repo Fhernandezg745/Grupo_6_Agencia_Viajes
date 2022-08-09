@@ -7,5 +7,6 @@ const upload = multer({ storage: storage("products") });
 const mainController = require("../controllers/mainController");
 
 router.get("/", mainController.home);
+router.get("/info", mainController.info);
 
 module.exports = router;

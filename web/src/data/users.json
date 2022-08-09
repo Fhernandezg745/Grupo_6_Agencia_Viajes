@@ -90,5 +90,20 @@
     "date": "1992-12-03",
     "position": "Sales",
     "avatar": "avatar-1659820703681-688384746.png"
+  },
+  {
+    "userId": 9,
+    "firstName": "Marcelo",
+    "lastName": "Preguntame",
+    "email": "marcelo@gmail.com",
+    "password": "$2a$10$.KIDO4HBuRMhlySVQtDpWu45O7KIUB1pqSpM54wvj7lIpWuUKuqTe",
+    "phoneNumber": "654321",
+    "city": "Maputo",
+    "zipCode": "as",
+    "country": "Mozambique",
+    "gender": "Masculino",
+    "date": "2022-08-02",
+    "position": "Sales",
+    "avatar": "avatar-1659974877967-423846209.png"
   }
 ]

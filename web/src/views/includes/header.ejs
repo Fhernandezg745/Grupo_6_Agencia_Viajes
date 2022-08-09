@@ -37,19 +37,19 @@
       </a>
     </nav>
     <nav class="site">
-      <a href="#rrss" class="buttonNavSite">
+      <a href="/info" class="buttonNavSite">
         <p>Información Útil</p>
       </a>
-      <a href="#destinations" class="buttonNavSite">
+      <a href="/#destinations" class="buttonNavSite">
         <p>Destinos</p>
       </a>
-      <a href="#highlighted" class="buttonNavSite">
+      <a href="/#highlighted" class="buttonNavSite">
         <p>Destacados</p>
       </a>
-      <a href="#bestSeller" class="buttonNavSite">
+      <a href="/#bestSeller" class="buttonNavSite">
         <p>Experiencias</p>
       </a>
-      <a href="#rrss" class="buttonNavSite">
+      <a href="/#rrss" class="buttonNavSite">
         <p>Quienes somos</p>
       </a>
       <%  if(!user){ %>
@@ -59,6 +59,7 @@
       <a href="/users/register" class="iconMobile"
         ><i class="fa-solid fa-id-card"></i> Registrate</a>
       <% } else { %>
+      <a href="/users/logged" class="iconMobile">Mi cuenta</a>
       <a href="/users/logout" class="iconMobile">Cerrar sesión <% user.firstName %></a>
       <%  } %>
     </nav>

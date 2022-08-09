@@ -8,82 +8,19 @@
 </head>
 <body>
 
-    <section class="RRSS">
-        <section class="RRSSCointainer">
-          <div class="RRSSItems">
-            <a href="https://www.youtube.com/">
-              <i class="fa-brands fa-youtube"></i>
-            </a>
-          </div>
-          <div class="RRSSItems">
-            <a href="https://twitter.com/">
-              <i class="fa-brands fa-twitter"></i>
-            </a>
-          </div>
-          <div class="RRSSItems">
-            <a href="https://ar.linkedin.com/">
-              <i class="fa-brands fa-linkedin"></i>
-            </a>
-          </div>
-          <div class="RRSSItems">
-            <a href="https://www.instagram.com/harbortrip/">
-              <i class="fa-brands fa-instagram"></i>
-            </a>
-          </div>
-          <div class="RRSSItems">
-            <a href="https://www.facebook.com/HarborTrip">
-              <i class="fa-brands fa-facebook"></i>
-            </a>
-          </div>
-        </section>
-      </section>
-      <header class="main-header">
-        <section class="top-header">
-          <nav class="nav-logo">
-            <a href="/">
-              <figure>
-                <img src="/assets/PERFIL-01.jpeg" alt="" class="logoHB" />
-              </figure>
-            </a>
-          </nav>
-          <nav class="site">
-            <a href="" class="buttonNavSite">
-              <p>Información Útil</p>
-            </a>
-            <a href="" class="buttonNavSite">
-              <p>Destinos</p>
-            </a>
-            <a href="" class="buttonNavSite">
-              <p>Destacados</p>
-            </a>
-            <a href="" class="buttonNavSite">
-              <p>Experiencias</p>
-            </a>
-            <a href="" class="buttonNavSite">
-              <p>Quienes somos</p>
-            </a>
-            <span class="iconMobile"
-              ><i class="fa-solid fa-user"></i><span class="user-name"> ¡Hola, <%= "user" %> !</span>
-              </span>
-              <a href="/" class="iconMobile"><i class="fa-solid fa-user-xmark"></i> Cerrar sesión</a
-            >
-          </nav>
-        </section>
-        <section class="mobileHeader">
-          <nav id="burgerMenu">
-            <a href="">
-              <i class="fas fa-bars burger-menu burgerIcon"></i>
-            </a>
-          </nav>
-        </section>
-      </header>
-      
+  <%- include("../includes/header") %>
+  <section class="main-top">
+      <span class="iconMobile"><i class="fa-solid fa-user"></i>¡Hola <%= user.firstName %> !</span>
+</section>
+
 
     <main>
         <section class="imageLogged">
             <div class="userOptions">
               <a href="/"><i class="fa-solid fa-address-card"></i><p class="options">Editar mi perfil</p></a>
-              <a href="/products/createProducts"><i class="fa-solid fa-plus"></i><p class="options">Crear producto</p></a>
+       <% if (user.position == "admin") {  %>
+        <a href="/products/createProducts"><i class="fa-solid fa-plus"></i><p class="options">Crear producto</p></a>
+        <% }  %>
               <a href="/products/productList"><i class="fa-solid fa-pen-to-square"></i><p class="options">Ver listado de mis productos</p></a>
               <a href="/"><i class="fa-solid fa-chart-line"></i><p class="options">Mis cotizaciones</p></a>
               <a href="/"><i class="fa-solid fa-receipt"></i><p class="options">Mis ventas</p></a>

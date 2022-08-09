@@ -5,23 +5,23 @@ const productsController = require("../controllers/productsController");
 const storage = require("../modules/storage");
 const multer = require("multer");
 const upload = multer({ storage: storage("products") });
+const isAdmin = require("../middlewares/isAdmin");
+const isLogged = require("../middlewares/isLogged");
 
 
 
 router.get("/productList", productsController.index);
 // router.get("/productList/:category?/:param?", productsController.filtro);
 
-router.get("/createProducts", productsController.createProducts);
+router.get("/createProducts", isLogged, productsController.createProducts);
 router.post("/save", [upload.any()], productsController.save);
 
 router.get("/details/:id", productsController.detail);
 
-router.get("/editProduct/:id", productsController.editProduct);
+router.get("/editProduct/:id", isLogged, productsController.editProduct);
 
-router.put("/editProduct", function(req, res){res.send("fui por puto")});
+router.put("/editProduct", [upload.any()], productsController.modify);
 
-
-//[upload.any()], productsController.modify
 router.get("/cart/:id", productsController.cart);
 
 router.delete("/products/delete/:id", function(req, res,) {

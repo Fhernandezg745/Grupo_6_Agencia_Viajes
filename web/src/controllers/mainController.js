@@ -16,6 +16,11 @@ const mainController = {
             ),
         });
     },
+    info: (req, res) => {
+        return res.render("info", {
+            title: "Info",
+        });
+    }
 };
 
 module.exports = mainController;

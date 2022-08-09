@@ -56,9 +56,9 @@ const productController = {
         });
     },
     modify: (req, res) => {
-        let product = one(parseInt(req.params.id));
         let products = index();
-        let productsModified = products.map((prod) => {
+        let product = one(parseInt(req.params.id));
+        let productsModified = products.map(prod => {
             if (prod.productId == product.id) {
                 prod.tittle = req.body.tittle;
                     prod.shortDescription = req.body.shortDescription;

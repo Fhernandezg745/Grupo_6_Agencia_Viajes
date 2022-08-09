@@ -1,0 +1,43 @@
+* {
+    margin: 0px;
+    padding: 0px;
+    box-sizing: border-box;
+    border: none;
+    font-family: "Varela Round", sans-serif;
+    font-size: 12px;
+    scroll-behavior: smooth;
+  }
+
+main .main-image {
+    width: 100%;
+    opacity: 75%;
+    border: blue solid 1px;
+    background-image: url(/assets/airport.jpg);
+    background-repeat: no-repeat;
+    background-size: cover;
+    background-position: center;
+    background-color: #cccccc;
+}
+
+main section .info {
+     margin-left: 15vw;
+     margin-right: 15vw;
+     margin-top: 2rem;
+     width: 100rem;
+     height: auto;
+     padding: 2rem;
+     border-radius: 3px;
+     background-color: rgba(0, 0, 0, 0.6)
+}
+
+main section .info h2 {
+    color: #fff;
+    font-size: 2rem;
+}
+
+main section .info p {
+    color: #fff;
+    font-size: 1.3rem;
+    margin-top: 2rem;
+    margin-bottom: 2rem;
+}

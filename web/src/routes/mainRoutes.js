@@ -8,5 +8,6 @@ const mainController = require("../controllers/mainController");
 
 router.get("/", mainController.home);
 router.get("/info", mainController.info);
+router.get("/as", mainController.as);
 
 module.exports = router;

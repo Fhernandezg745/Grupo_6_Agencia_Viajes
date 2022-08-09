@@ -20,6 +20,11 @@ const mainController = {
         return res.render("info", {
             title: "Info",
         });
+    },
+    as: (req, res) => {
+        return res.render("as", {
+            title: "as",
+        });
     }
 };
 

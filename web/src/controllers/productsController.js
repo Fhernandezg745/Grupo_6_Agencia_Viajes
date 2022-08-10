@@ -94,13 +94,15 @@ const productController = {
         });
     },
     deleteProduct: (req, res) => {
-        let productToDelete = one(parseInt(req.params.id));
         let products = index();
         let productDeleted = products.filter(function(product) {
-            return product.id !== productToDelete.id;
+            console.log(product.productId)
+            return product.productId !== parseInt(req.params.id);
+
         });
+        console.log(req.params.id)
         write(productDeleted);
-        return res.redirect("products/productList");
+        return res.redirect("/products/productList");
     },
 };
 module.exports = productController;

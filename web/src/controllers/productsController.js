@@ -59,29 +59,29 @@ const productController = {
         let products = index();
         let product = one(parseInt(req.params.id));
         let productsModified = products.map(prod => {
-            if (prod.productId == product.id) {
+            if (prod.productId == req.params.id) {
                 prod.tittle = req.body.tittle;
-                    prod.shortDescription = req.body.shortDescription;
-                    prod.longDescription = req.body.longDescription;
-                    prod.nights = req.body.nights;
-                    prod.days = req.body.days;
-                    prod.stars = req.body.stars;
-                    prod.flights = req.body.flights;
-                    prod.transfers = req.body.transfers;
-                    prod.price = parseInt(req.body.price);
-                    prod.base = req.body.base;
-                    prod.category = req.body.category;
-                    prod.image = req.files && req.files.length > 0 ? req.files[0].filename : prod.image;
-                    prod.published = req.body.published;
-                    prod.region = req.body.region;
-                    prod.highLighted = req.body.highLighted;
-                    prod.bestSeller = req.body.bestSeller;
-                    prod.tags = req.body.tags;
+                prod.shortDescription = req.body.shortDescription;
+                prod.longDescription = req.body.longDescription;
+                prod.nights = req.body.nights;
+                prod.days = req.body.days;
+                prod.stars = req.body.stars;
+                prod.flights = req.body.flights;
+                prod.transfers = req.body.transfers;
+                prod.price = parseInt(req.body.price);
+                prod.base = req.body.base;
+                prod.category = req.body.category;
+                prod.image = req.files && req.files.length > 0 ? req.files[0].filename : prod.image;
+                prod.published = req.body.published;
+                prod.region = req.body.region;
+                prod.highLighted = req.body.highLighted;
+                prod.bestSeller = req.body.bestSeller;
+                prod.tags = req.body.tags;
             }
             return prod;
         });
         write(productsModified);
-        return res.redirect("products/details/" + product.productId);
+        return res.redirect("/products/details/" + req.params.id);
     },
     cart: (req, res) => {
         let product = one(parseInt(req.params.id));

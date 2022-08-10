@@ -24,9 +24,9 @@ router.put("/editProduct", [upload.any()], productsController.modify);
 
 router.get("/cart/:id", productsController.cart);
 
-router.delete("/products/delete/:id", function(req, res,) {
+router.delete("/delete/:id", function(req, res, ) {
     res.send("test");
-}); 
+});
 
 //router.delete("/delete/:id", productsController.deleteProduct);
 

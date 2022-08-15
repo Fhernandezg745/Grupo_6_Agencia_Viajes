@@ -5,7 +5,9 @@
     "scripts": {
         "test": "nodemon app.js -e json,js,mjs,ejs",
         "start": "node app.js",
-        "sq-i": "sequelize init"
+        "sq-i": "sequelize init",
+        "sq-ms": "sequelize init:migrations && sequelize init:seeders",
+        "sq-mg": "sequelize migration:generate --name tags"
     },
     "author": "",
     "license": "ISC",

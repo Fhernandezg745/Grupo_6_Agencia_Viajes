@@ -18,3 +18,8 @@ Finalmente abrimos un diálogo mas cotidiano a través de whatsapp que permitió
 // Sprint 4
 Lamentablemente no pudimos sostener el pilar de nuestro equipo de trabajo que es cumplir con las consignas en tiempo y forma. Por un lado deberiamos individualmente enmendar y racionalizar el uso de las plataformas de comunicación tales como Trello, para que el trabajo colectivo sea mas eficaz. Ya que si alguno de los integrantes asume compromisos y no los puede resolver en tiempo y forma y no comunica el estado de situación, afecta el rendimiento conlectivo. En ese aspecto, la responsabilidad de la comunicación a mejorar recae de manera individual al margen del compromiso colectivo.
 Por otro lado, no pudimos resolver los metodos put y delete y nos queda ese trabajo pendiente que nos exige redoblar la energía en el próximo sprint.
+
+// Sprint 5
+Volvimos a cumplir con los plazos de entrega, lo cuál nos satisface pero entendemos que necesitamos acelerar los tiempos para poder tener un margen necesario para correcciones y resolusión de dudas. Como por ejemplo, la implementación del isAdmin, que si bien parecía estar bien lograda, a la hora de testear encontramos deficiciencias que hicieron que no se utilice finalmente la función.
+Recibimos un integrante nuevo sobre el final del sprint5. Durante ese lapso pudo estar en la etapa de familiarización con el proyecto y esperamos pueda acoplarse bien al próximo sprint.
+En tanto, seguimos apostando a los canales de comunicación internas del equipo pero también, a la comunicación asidua con el equipo de profesores para agilizar dudas que nos puedan trabar muchos días.

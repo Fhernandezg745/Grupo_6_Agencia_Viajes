@@ -20,16 +20,16 @@ module.exports = {
         type: Sequelize.STRING
       },
       days: {
-        type: Sequelize.INT
+        type: Sequelize.INTEGER
       },
       nights: {
-        type: Sequelize.INT
+        type: Sequelize.INTEGER
       },
       stars: {
-        type: Sequelize.INT
+        type: Sequelize.INTEGER
       },
       base: {
-        type: Sequelize.INT
+        type: Sequelize.INTEGER
       },
       excursion: {
         type: Sequelize.BOOLEAN
@@ -41,13 +41,13 @@ module.exports = {
         type: Sequelize.BOOLEAN
       },
       image: {
-        type: Sequelize.VARCHAR
-      },
-      region: {
         type: Sequelize.STRING
       },
+      regionId: {
+        type: Sequelize.INTEGER,
+      },
       salesPrice: {
-        type: Sequelize.DECIMAL
+        type: Sequelize.FLOAT
       }
     });
   },

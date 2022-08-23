@@ -2,7 +2,7 @@
 
 module.exports = {
   async up (queryInterface, Sequelize) {
-    await queryInterface.createTable('tags', 
+    await queryInterface.createTable('tagsProducts', 
     {
       id: {
         allowNull: false,
@@ -10,13 +10,16 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      tags: {
-        type: Sequelize.STRING
+      tagId: {
+        type: Sequelize.INTEGER
+      },
+      productId: {
+        type: Sequelize.INTEGER
       }
     });
   },
 
   async down (queryInterface, Sequelize) {
-    await queryInterface.dropTable('position');
+    await queryInterface.dropTable('tagsProducts');
   }
 };

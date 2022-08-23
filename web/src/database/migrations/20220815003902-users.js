@@ -17,7 +17,7 @@ module.exports = {
         type: Sequelize.STRING
       },
       nationalID: {
-        type: Sequelize.VARCHAR
+        type: Sequelize.STRING
       },
       birthDate: {
         type: Sequelize.DATE
@@ -26,34 +26,34 @@ module.exports = {
         type: Sequelize.STRING
       },
       phoneNumber: {
-        type: Sequelize.VARCHAR
+        type: Sequelize.STRING
       },
       address: {
-        type: Sequelize.VARCHAR
+        type: Sequelize.STRING
       },
       email: {
-        type: Sequelize.VARCHAR
+        type: Sequelize.STRING
       },
       city: {
         type: Sequelize.STRING
       },
       country: {
-        type: Sequelize.VARCHAR
+        type: Sequelize.STRING
       },
       zipCode: {
-        type: Sequelize.VARCHAR
+        type: Sequelize.STRING
       },
       city: {
         type: Sequelize.STRING
       },
       password: {
-        type: Sequelize.VARCHAR
+        type: Sequelize.STRING
       },
       avatar: {
-        type: Sequelize.VARCHAR
-      },
-      position: {
         type: Sequelize.STRING
+      },
+      positionId: {
+        type: Sequelize.INTEGER,
       },
     });
   },

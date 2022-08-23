@@ -7,7 +7,8 @@
         "start": "node app.js",
         "sq-i": "sequelize init",
         "sq-ms": "sequelize init:migrations && sequelize init:seeders",
-        "sq-mg": "sequelize migration:generate --name tags"
+        "sq-mg": "sequelize migration:generate --name tagsProducts",
+        "sq-db": "sequelize db:drop && sequelize db:create && sequelize db:migrate && sequelize db:seed:all"
     },
     "author": "",
     "license": "ISC",

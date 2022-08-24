@@ -105,5 +105,35 @@
     "date": "2022-08-02",
     "position": "Sales",
     "avatar": "avatar-1659974877967-423846209.png"
+  },
+  {
+    "userId": 10,
+    "firstName": "Benito",
+    "lastName": "Camelas",
+    "email": "benito.camelas@posteo.de",
+    "password": "$2a$10$SFssKt29HszxP5BbVjuYYemAaUmEs1ySTcj0scRnjNNuu2ORvh8v.",
+    "phoneNumber": "49233423421",
+    "city": "Munich",
+    "zipCode": "43242",
+    "country": "Alemani",
+    "gender": "Masculino",
+    "date": "2005-08-22",
+    "position": "sales",
+    "avatar": "avatar-1661185774439-338604183.png"
+  },
+  {
+    "userId": 11,
+    "firstName": "Rosa",
+    "lastName": "Melano",
+    "email": "rosamelchiquito@aol.es",
+    "password": "$2a$10$TauxJbuW91zkB/FGnK2KyeUReB.nsklwSnSQpfmkppdVSICU/QsWq",
+    "phoneNumber": "345231231",
+    "city": "Madrid",
+    "zipCode": "43231",
+    "country": "España",
+    "gender": "Femenino",
+    "date": "1999-12-30",
+    "position": "admin",
+    "avatar": "avatar-1661186373832-308392162.jpg"
   }
 ]

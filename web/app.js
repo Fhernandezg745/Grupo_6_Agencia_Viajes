@@ -1,9 +1,9 @@
 //Require de librerias, frameworks, etc.
 
-const { path, resolve } = require("path");
+const { resolve } = require("path");
 const express = require("express");
 const app = express();
-const { port, callback } = require("./src/modules/port");
+const { port} = require("./src/modules/port");
 const method = require('method-override');
 const session = require('express-session')
 
@@ -35,5 +35,5 @@ app.use(require('./src/middlewares/user'))
 
 // rutas
 app.use("/", require("./src/routes/mainRoutes"));
-app.use("/users", require("./src/routes/usersRoutes"));
 app.use("/products", require("./src/routes/productRoutes"));
+app.use("/users", require("./src/routes/usersRoutes"));

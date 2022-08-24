@@ -21,9 +21,9 @@ const mainController = {
             title: "Info",
         });
     },
-    as: (req, res) => {
-        return res.render("as", {
-            title: "as",
+    us: (req, res) => {
+        return res.render("us", {
+            title: "us",
         });
     }
 };

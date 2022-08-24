@@ -1,24 +1,16 @@
-const express = require("express");
-const router = express.Router();
+const {Router} = require("express");
+const router = Router();
 
-const usersController = require("../controllers/usersController");
+const {register, process, login, access, logged, logout} = require("../controllers/usersController");
 const middlewaresUser = require('../middlewares/register');
 const middlewareLogin = require('../middlewares/login');
 const isLogged = require("../middlewares/isLogged");
-const isAdmin = require("../middlewares/isAdmin");
 
-const storage = require("../modules/storage");
-const multer = require("multer");
-const upload = multer({ storage: storage("users") });
-
-
-router.get("/register", usersController.register);
-router.post("/save", middlewaresUser, usersController.process);
-router.get("/login", usersController.login);
-router.post("/access", middlewareLogin, usersController.access);
-router.get("/logout", isLogged, usersController.logout);
-router.get("/logged", isLogged, usersController.logged);
-
-
+router.get("/register", register);
+router.get("/login", login);
+router.get("/logout", isLogged, logout);
+router.get("/logged", isLogged, logged);
+router.post("/save", middlewaresUser, process);
+router.post("/access", middlewareLogin, access);
 
 module.exports = router;

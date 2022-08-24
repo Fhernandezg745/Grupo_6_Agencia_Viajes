@@ -13,7 +13,7 @@ const productController = {
             products: index(),
         });
     },
-    // filtro: (req, res) => {
+    // filter: (req, res) => {
     //   let category = req.params.category;
     //   let param = req.params.param;
     //   let product = search(category, param);
@@ -59,7 +59,7 @@ const productController = {
         let products = index();
         let product = one(parseInt(req.params.id));
         let productsModified = products.map(prod => {
-            if (prod.productId == req.params.id) {
+            if (prod.productId == product) {
                 prod.tittle = req.body.tittle;
                 prod.shortDescription = req.body.shortDescription;
                 prod.longDescription = req.body.longDescription;

@@ -1,4 +1,4 @@
-const middleware = (req,res,next) => {
+module.exports = (req,res,next) => {
 
   let user = null;
 
@@ -10,5 +10,3 @@ const middleware = (req,res,next) => {
 
   return next()
 }
-
-module.exports = middleware

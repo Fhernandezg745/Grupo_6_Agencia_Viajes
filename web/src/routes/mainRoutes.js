@@ -4,10 +4,10 @@ const storage = require("../modules/storage");
 const multer = require("multer");
 const upload = multer({ storage: storage("products") });
 
-const mainController = require("../controllers/mainController");
+const {home, info, us} = require("../controllers/mainController");
 
-router.get("/", mainController.home);
-router.get("/info", mainController.info);
-router.get("/as", mainController.as);
+router.get("/", home);
+router.get("/info", info);
+router.get("/us", us);
 
 module.exports = router;

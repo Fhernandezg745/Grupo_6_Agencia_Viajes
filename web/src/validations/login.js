@@ -16,7 +16,7 @@ const login = [
         users = users.map(u => u.email)
         if (!users.includes(value)) {
             throw new Error("El email no está registrado")
-        };
+        }
         return true;
     }),
     //Pass

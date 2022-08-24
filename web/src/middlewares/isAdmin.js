@@ -1,8 +1,6 @@
-const logged = require("./isLogged")
-const isAdmin = (req, res, next) => {
+module.exports = (req, res, next) => {
     if (!req.session.user.position == 'admin') {
         return res.redirect('/')
     }
     return next()
 }
-module.exports = [isAdmin, logged]

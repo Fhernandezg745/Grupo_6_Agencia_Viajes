@@ -42,6 +42,7 @@ module.exports = {
             zipCode: {
                 type: Sequelize.STRING
             },
+<<<<<<< HEAD
             password: {
                 type: Sequelize.STRING
             },
@@ -50,6 +51,19 @@ module.exports = {
             },
             positionId: {
                 type: Sequelize.INTEGER,
+=======
+            city: {
+                type: Sequelize.STRING
+            },
+            password: {
+                type: Sequelize.TEXT
+            },
+            avatar: {
+                type: Sequelize.TEXT
+            },
+            position: {
+                type: Sequelize.STRING
+>>>>>>> 84ea404 (algo)
             },
         });
     },

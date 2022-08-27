@@ -1,54 +1,57 @@
 const { DataTypes } = require("sequelize/types");
 const { sequelize } = require(".");
 
-module.exports = (sequelize,DataTypes) =>
-{
+module.exports = (sequelize, DataTypes) => {
     let alias = "products";
     let cols = {
-        id:{
-            allowNull:false,
+        id: {
+            allowNull: false,
             autoIncrement: true,
             primarykey: true,
             type: DataTypes.INTEGER
         },
-        tittle:{
-            type:DataTypes.STRING
+        tittle: {
+            type: DataTypes.STRING
         },
-        shortDescription:{
-            type:DataTypes.TEXT
+        shortDescription: {
+            type: DataTypes.TEXT
         },
-        longtDescription:{
-            type:DataTypes.TEXT,
+        longtDescription: {
+            type: DataTypes.TEXT,
         },
-        days:{
-            type:DataTypes.INTEGER
+        days: {
+            type: DataTypes.INTEGER
         },
-        nights:{
-            type:DataTypes.INTEGER
+        nights: {
+            type: DataTypes.INTEGER
         },
-        stars:{
-            type:DataTypes.INTEGER
+        stars: {
+            type: DataTypes.INTEGER
         },
-        base:{
-            type:DataTypes.INTEGER
+        base: {
+            type: DataTypes.INTEGER
         },
-        excursion:{
-            type:DataTypes.BOOLEAN
+        excursion: {
+            type: DataTypes.BOOLEAN,
+            defaultValue: true
         },
-        transfer:{
-            type:DataTypes.BOOLEAN
+        transfer: {
+            type: DataTypes.BOOLEAN,
+            defaultValue: true
         },
-        flights:{
-            type:DataTypes.BOOLEAN
+        flights: {
+            type: DataTypes.BOOLEAN,
+            defaultValue: true
         },
-        image:{
-            type:DataTypes.STRING
+        image: {
+            type: DataTypes.INTEGER,
+            allowNull: true
         },
-        region_id:{
-            type:DataTypes.INTEGER
+        region_id: {
+            type: DataTypes.INTEGER
         },
-        price:{
-            type:DataTypes.FLOAT
+        salesPrice: {
+            type: DataTypes.FLOAT
         }
     }
     let config = {
@@ -56,6 +59,6 @@ module.exports = (sequelize,DataTypes) =>
         deletedAt: false
     };
 
-    const Products = sequelize.define(alias,cols,config);
+    const Products = sequelize.define(alias, cols, config);
     return Products
 }

@@ -6,8 +6,14 @@
         "test": "nodemon app.js -e json,js,mjs,ejs",
         "start": "node app.js",
         "sq-i": "sequelize init",
+<<<<<<< HEAD
         "sq-ms": "sequelize init:migrations && sequelize init:seeders",
         "sq-mg": "sequelize migration:generate --name images",
+=======
+        "sq-s": "sequelize init:seeders",
+        "sq-mg": "sequelize migration:generate --name ",
+        "sq-sg": "sequelize seed:generate --name ",
+>>>>>>> 3bb3ea0 (Fer/ migrations actualizadas)
         "sq-db": "sequelize db:drop && sequelize db:create && sequelize db:migrate && sequelize db:seed:all"
     },
     "author": "",

@@ -2,27 +2,20 @@
 
 module.exports = {
     async up(queryInterface, Sequelize) {
-        await queryInterface.createTable('tags', {
+        await queryInterface.createTable('images', {
             id: {
                 allowNull: false,
                 autoIncrement: true,
                 primaryKey: true,
                 type: Sequelize.INTEGER
             },
-            tags: {
+            images: {
                 type: Sequelize.STRING
             }
         });
     },
 
-<<<<<<< HEAD
-  async down (queryInterface, Sequelize) {
-    await queryInterface.dropTable('tags');
-  }
-};
-=======
     async down(queryInterface, Sequelize) {
-        await queryInterface.dropTable('tags');
+        await queryInterface.dropTable('images');
     }
 };
->>>>>>> refs/remotes/origin/sprint6

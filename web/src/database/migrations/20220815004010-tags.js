@@ -15,14 +15,7 @@ module.exports = {
         });
     },
 
-<<<<<<< HEAD
-  async down (queryInterface, Sequelize) {
-    await queryInterface.dropTable('tags');
-  }
-};
-=======
     async down(queryInterface, Sequelize) {
         await queryInterface.dropTable('tags');
     }
 };
->>>>>>> refs/remotes/origin/sprint6

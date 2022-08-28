@@ -29,16 +29,19 @@ module.exports = {
         type: Sequelize.INTEGER
       },
       base: {
-        type: Sequelize.INTEGER
+        type: Sequelize.STRING
       },
       excursion: {
-        type: Sequelize.BOOLEAN
+        type: Sequelize.BOOLEAN,
+        defaultValue: true
       },
       transfer: {
-        type: Sequelize.BOOLEAN
+        type: Sequelize.BOOLEAN,
+        defaultValue: true
       },
       flights: {
-        type: Sequelize.BOOLEAN
+        type: Sequelize.BOOLEAN,
+        defaultValue: true
       },
       image: {
         type: Sequelize.STRING
@@ -46,8 +49,14 @@ module.exports = {
       regionId: {
         type: Sequelize.INTEGER,
       },
+      status: {
+        type: Sequelize.STRING
+      },
       salesPrice: {
         type: Sequelize.FLOAT
+      },
+      tags: {
+        type: Sequelize.STRING
       }
     });
   },

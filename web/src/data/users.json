@@ -1,6 +1,6 @@
 [
   {
-    "userId": 1,
+    "id": 1,
     "firstName": "Juan",
     "lastName": "Cordoba",
     "email": "jcordoba@harbortrip.com",
@@ -11,12 +11,12 @@
     "country": "Argentina",
     "address": "085 Reindahl Alley",
     "gender": "Male",
-    "date": "10/24/1989",
-    "position": "admin",
+    "birthDate": "10/24/1989",
+    "positionId": null,
     "avatar": null
   },
   {
-    "userId": 4,
+    "id": 4,
     "firstName": "Damian",
     "lastName": "Piscitelli",
     "email": "dpiscitelli@harbortrip.com",
@@ -27,12 +27,12 @@
     "country": "Argentina",
     "address": "9580 Heath Crossing",
     "gender": "Male",
-    "date": "12/31/1989",
-    "position": "sales",
+    "birthDate": "12/31/1989",
+    "positionId": null,
     "avatar": null
   },
   {
-    "userId": 5,
+    "id": 5,
     "firstName": "Alberto",
     "lastName": "Fernandez",
     "email": "alferdes@twiter.com",
@@ -42,12 +42,12 @@
     "zipCode": "654",
     "country": "Arg",
     "gender": "Prefiero no decirlo",
-    "date": "1954-09-23",
-    "position": "sales",
-    "avatar": "avatar-1659736033678-417553849.jpg"
+    "birthDate": "1954-09-23",
+    "positionId": null,
+    "avatar": null
   },
   {
-    "userId": 6,
+    "id": 6,
     "firstName": "Leonardo",
     "lastName": "Cositorto",
     "email": "ganadinero@zoe.com",
@@ -57,12 +57,12 @@
     "zipCode": "1900",
     "country": "Argenzuela",
     "gender": "Otros",
-    "date": "1992-12-12",
-    "position": "sales",
-    "avatar": "avatar-1659805933321-687537089.jpg"
+    "birthDate": "1992-12-12",
+    "positionId": null,
+    "avatar": null
   },
   {
-    "userId": 7,
+    "id": 7,
     "firstName": "John",
     "lastName": "Doe",
     "email": "JohnDoe@gmail.com",
@@ -72,12 +72,12 @@
     "zipCode": "0977",
     "country": "ChongQuo",
     "gender": "Prefiero no decirlo",
-    "date": "2022-08-02",
-    "position": "admin",
-    "avatar": "avatar-1659815560849-612222469.jpeg"
+    "birthDate": "2022-08-02",
+    "positionId": null,
+    "avatar": null
   },
   {
-    "userId": 8,
+    "id": 8,
     "firstName": "Juan",
     "lastName": "Perezoso",
     "email": "juan@gmail.com",
@@ -87,12 +87,12 @@
     "zipCode": "1900",
     "country": "argentina",
     "gender": "Masculino",
-    "date": "1992-12-03",
-    "position": "admin",
-    "avatar": "avatar-1659820703681-688384746.png"
+    "birthDate": "1992-12-03",
+    "positionId": null,
+    "avatar": null
   },
   {
-    "userId": 9,
+    "id": 9,
     "firstName": "Marcelo",
     "lastName": "Preguntame",
     "email": "marcelo@gmail.com",
@@ -102,12 +102,12 @@
     "zipCode": "as",
     "country": "Mozambique",
     "gender": "Masculino",
-    "date": "2022-08-02",
-    "position": "Sales",
-    "avatar": "avatar-1659974877967-423846209.png"
+    "birthDate": "2022-08-02",
+    "positionId": null,
+    "avatar": null
   },
   {
-    "userId": 10,
+    "id": 10,
     "firstName": "Benito",
     "lastName": "Camelas",
     "email": "benito.camelas@posteo.de",
@@ -117,12 +117,12 @@
     "zipCode": "43242",
     "country": "Alemani",
     "gender": "Masculino",
-    "date": "2005-08-22",
-    "position": "sales",
-    "avatar": "avatar-1661185774439-338604183.png"
+    "birthDate": "2005-08-22",
+    "positionId": null,
+    "avatar": "avatar-1659735258563-670394932.jpeg"
   },
   {
-    "userId": 11,
+    "id": 11,
     "firstName": "Rosa",
     "lastName": "Melano",
     "email": "rosamelchiquito@aol.es",
@@ -132,8 +132,8 @@
     "zipCode": "43231",
     "country": "España",
     "gender": "Femenino",
-    "date": "1999-12-30",
-    "position": "admin",
-    "avatar": "avatar-1661186373832-308392162.jpg"
+    "birthDate": "1999-12-30",
+    "positionId": null,
+    "avatar": "avatar-1659735258563-670394932.jpeg"
   }
 ]

@@ -4,7 +4,8 @@ const { index } = require("../../models/users.model")
 
 module.exports = {
   async up (queryInterface, Sequelize) {
-    await queryInterface.bulkInsert("users", index(), {});
+    let users = index().map(user => Object({... user, avatar: null}))
+    await queryInterface.bulkInsert("users", users, {});
 
   },
 

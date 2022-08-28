@@ -1,20 +1,15 @@
 'use strict';
 
-const { index } = require("../../models/users.model")
+const { index } = require("../../models/product.model")
 
 module.exports = {
   async up (queryInterface, Sequelize) {
-    /**
-     * Add seed commands here.
-     *
-     * Example:
-     * await queryInterface.bulkInsert('People', [{
-     *   name: 'John Doe',
-     *   isBetaMember: false
-     * }], {});
-    */
+    let tagsproducts = index().map(product =>{
+      return Object({...product.id})
+    })
+    await queryInterface.bulkInsert("tagsProducts", tagsproducts, {});
+    
   },
-
   async down (queryInterface, Sequelize) {
     /**
      * Add commands to revert seed here.

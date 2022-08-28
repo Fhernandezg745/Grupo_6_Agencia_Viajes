@@ -2,7 +2,7 @@
 
 module.exports = {
   async up (queryInterface, Sequelize) {
-    await queryInterface.createTable('tags', 
+    await queryInterface.createTable('images', 
     {
       id: {
         allowNull: false,
@@ -10,13 +10,13 @@ module.exports = {
         primaryKey: true,
         type: Sequelize.INTEGER
       },
-      tags: {
+      images: {
         type: Sequelize.STRING
       }
     });
   },
 
   async down (queryInterface, Sequelize) {
-    await queryInterface.dropTable('tags');
+    await queryInterface.dropTable('iamges');
   }
 };

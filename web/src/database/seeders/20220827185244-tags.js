@@ -2,13 +2,20 @@
 
 const { index } = require("../../models/product.model")
 
-module.exports = {
+ module.exports = {
   async up (queryInterface, Sequelize) {
-    let tags = index().map(product => {
-      return Object({tags: product.tags})
+    let tag = index().map(product => {
+    let oneTag = product.tags.split(" ");
+      return oneTag
     })
-//    let Onetag = tags.split("", 1);
-    await queryInterface.bulkInsert("tags", tags, {});
+
+    let merged = [].concat.apply([],tag)
+    let tagArray = merged.map(element => {
+      return Object({tags: element})
+    })
+    
+
+   await queryInterface.bulkInsert("tags", tagArray, {});
   },
 
   async down (queryInterface, Sequelize) {

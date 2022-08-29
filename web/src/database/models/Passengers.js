@@ -1,5 +1,5 @@
 module.exports = (sequelize, DataTypes) => {
-    let alias = "user";
+    let alias = "passengers";
     let cols = {
         id: {
             allowNull: false,
@@ -13,13 +13,28 @@ module.exports = (sequelize, DataTypes) => {
         lastName: {
             type: DataTypes.STRING
         },
+        nationalID: {
+            type: DataTypes.STRING
+        },
         birthDate: {
             type: DataTypes.DATE
+        },
+        gender: {
+            type: DataTypes.STRING
+        },
+        phoneNumber: {
+            type: DataTypes.STRING
         },
         address: {
             type: DataTypes.STRING
         },
-        password: {
+        city: {
+            type: DataTypes.STRING
+        },
+        country: {
+            type: DataTypes.STRING
+        },
+        zipCode: {
             type: DataTypes.STRING
         },
         email: {
@@ -36,6 +51,6 @@ module.exports = (sequelize, DataTypes) => {
         deletedAt: false
     };
 
-    const User = sequelize.define(alias, cols, config);
-    return User
+    const Passengers = sequelize.define(alias, cols, config);
+    return Passengers
 }

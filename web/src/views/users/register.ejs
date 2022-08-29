@@ -39,22 +39,6 @@
                         <input type="date" name="date" id="date" placeholder="Fecha de nacimiento" class="inputTextFieldRegister">
                     </fieldset>
                     <fieldset class="labelFieldset">
-                        <label for="codPostal"><i class="fa-solid fa-envelope foot-icon registerIcon"></i> Código postal</label>
-                        <input type="text" name="zipCode" placeholder="1900" class="inputTextFieldRegister">
-                    </fieldset>
-                    <fieldset class="labelFieldset">
-                        <label for="direccion"><i class="fa-solid fa-location-dot registerIcon"></i> Dirección</label>
-                        <input type="text" name="address" placeholder="Calle 7 n° 1307" class="inputTextFieldRegister">
-                    </fieldset>
-                    <fieldset class="labelFieldset">
-                        <label for="ciudad"><i class="fa-solid fa-city"></i> Ciudad</label>
-                        <input type="text" name="city" placeholder="La Plata" class="inputTextFieldRegister">
-                    </fieldset>
-                    <fieldset class="labelFieldset">
-                        <label for="país"><i class="fa-solid fa-earth-africa"></i></i> País</label>
-                        <input type="text" name="country" placeholder="Argentina" class="inputTextFieldRegister">
-                    </fieldset>
-                    <fieldset class="labelFieldset">
                         <label for="email"><i class="fa-solid fa-envelope-open-text registerIcon"></i> E-mail</label>
                         <input type="email" name="email" id="email" placeholder="Ingresa tu email" class="inputTextFieldRegister" value="<%= locals.oldData ? oldData.email : null %>">
                         <% if (locals.errors && errors.email) { %>
@@ -74,26 +58,6 @@
 
                             <% } %>
                     </fieldset>
-                    <fieldset class="labelFieldset">
-                        <label for="phoneNumber"><i class="fa-solid fa-mobile-screen-button"></i> Teléfono</label>
-                        <input type="number" name="phoneNumber" id="phoneNumber" placeholder="Ingresa un teléfono" class="inputTextFieldRegister">
-                    </fieldset>
-                    <fieldset class="labelFieldset">
-                        <label for="cargo"><i class="fa-solid fa-briefcase"></i>
-                        Cargo/posición</label>
-                        <select name="position" id="position" class="inputTextFieldRegister">
-                        <option>sales</option>
-                        <option>admin</option>
-                    </select>
-                        <fieldset class="labelFieldset">
-                            <label for="gender"><i class="fa-solid fa-genderless"></i>
-                        Género</label>
-                            <select name="gender" id="gender" class="inputTextFieldRegister">
-                        <option>Masculino</option>
-                        <option>Femenino</option>
-                        <option>Otros</option>
-                        <option>Prefiero no decirlo</option>
-                    </select>
                         </fieldset>
                         <fieldset class="labelFieldset">
                             <label for="imagenUsuario"><i class="fa-solid fa-image"></i> - Foto de perfil</label>
@@ -104,7 +68,6 @@
                                 </p>
                                 <% } %>>
                         </fieldset>
-
                         <fieldset class="bottomCheck">
                             <label for="condiciones">Acepto los terminos y condiciones</label>
                             <input type="checkbox" required>

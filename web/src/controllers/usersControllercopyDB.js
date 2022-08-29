@@ -1,5 +1,5 @@
 const {
-    User
+    user
 } = require("../database/models/index");
 
 const { validationResult } = require("express-validator")
@@ -47,7 +47,7 @@ const usersController = {
                 errors: validaciones.mapped()
             });
         }
-        let users = await User.findAll();
+        let users = await user.findAll();
         let user = users.find(u => u.email === req.body.email)
         req.session.user = user
         return res.redirect('/users/logged')

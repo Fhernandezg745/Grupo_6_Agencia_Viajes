@@ -1,6 +1,3 @@
-const { DataTypes } = require("sequelize/types");
-const { sequelize } = require(".");
-
 module.exports = (sequelize, DataTypes) => {
     let alias = "user";
     let cols = {
@@ -14,10 +11,10 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING
         },
         lastName: {
-            type: DataTypes.TEXT
+            type: DataTypes.STRING
         },
         nationalID: {
-            type: DataTypes.INTEGER,
+            type: DataTypes.STRING
         },
         birthDate: {
             type: DataTypes.DATE

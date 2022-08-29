@@ -1,6 +1,3 @@
-const { DataTypes } = require("sequelize/types");
-const { sequelize } = require(".");
-
 module.exports = (sequelize, DataTypes) => {
     let alias = "products";
     let cols = {
@@ -14,10 +11,10 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING
         },
         shortDescription: {
-            type: DataTypes.TEXT
+            type: DataTypes.STRING
         },
         longtDescription: {
-            type: DataTypes.TEXT,
+            type: DataTypes.TEXT
         },
         days: {
             type: DataTypes.INTEGER
@@ -29,7 +26,7 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.INTEGER
         },
         base: {
-            type: DataTypes.INTEGER
+            type: DataTypes.STRING
         },
         excursion: {
             type: DataTypes.BOOLEAN,
@@ -47,11 +44,17 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.INTEGER,
             allowNull: true
         },
-        region_id: {
+        regionId: {
             type: DataTypes.INTEGER
+        },
+        status: {
+            type: DataTypes.STRING
         },
         salesPrice: {
             type: DataTypes.FLOAT
+        },
+        tags: {
+            type: DataTypes.STRING
         }
     }
     let config = {

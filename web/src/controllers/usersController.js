@@ -1,18 +1,16 @@
 const {
-    index,
-    create,
-    write,
-} = require("../models/users.model");
+    user
+} = require("../database/models/index");
 
 const { validationResult } = require("express-validator")
 
 const usersController = {
-    register: (req, res) => {
+    register: async(req, res) => {
         return res.render("users/register", {
             title: "Register",
         });
     },
-    process: function(req, res) {
+    process: async(req, res) => {
         let validaciones = validationResult(req)
         let { errors } = validaciones
         if (errors && errors.length > 0) {
@@ -22,6 +20,11 @@ const usersController = {
                 errors: validaciones.mapped()
             });
         }
+        req.body.password = hashSync(req.body.password, 10)
+        req.body.position = String(req.body.position).toLocaleLowerCase().includes('admin');
+
+        await User.create(req.body);
+
         req.body.avatar = req.files[0].filename;
         let newUser = create(req.body)
         let users = index();
@@ -29,12 +32,12 @@ const usersController = {
         write(users)
         return res.redirect("./login")
     },
-    login: function(req, res) {
+    login: async(req, res) => {
         return res.render('users/login', {
             styles: ['forms']
         });
     },
-    access: function(req, res) {
+    access: async(req, res) => {
         let validaciones = validationResult(req)
         let { errors } = validaciones
         if (errors && errors.length > 0) {
@@ -44,7 +47,7 @@ const usersController = {
                 errors: validaciones.mapped()
             });
         }
-        let users = index();
+        let users = await user.findAll();
         let user = users.find(u => u.email === req.body.email)
         req.session.user = user
         return res.redirect('/users/logged')

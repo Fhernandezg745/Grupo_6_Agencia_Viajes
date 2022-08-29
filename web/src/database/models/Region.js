@@ -1,21 +1,17 @@
-const { DataTypes } = require("sequelize/types");
-const { sequelize } = require(".");
-
-module.exports = (sequelize,DataTypes) =>
-{
+module.exports = (sequelize, DataTypes) => {
     let alias = "region";
     let cols = {
-        id:{
-            allowNull:false,
+        id: {
+            allowNull: false,
             autoIncrement: true,
             primarykey: true,
             type: DataTypes.INTEGER
         },
-        region:{
-            type:DataTypes.STRING
+        region: {
+            type: DataTypes.STRING
         },
-        countries:{
-            type:DataTypes.STRING
+        countries: {
+            type: DataTypes.STRING
         }
     }
     let config = {
@@ -23,6 +19,6 @@ module.exports = (sequelize,DataTypes) =>
         deletedAt: false
     };
 
-    const Region = sequelize.define(alias,cols,config);
+    const Region = sequelize.define(alias, cols, config);
     return Region
 }

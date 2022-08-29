@@ -9,10 +9,10 @@ const mainController = {
             title: "Home",
             products: index(),
             highlightedSection: index().filter(
-                (product) => product.highLighted == "true"
+                (product) => product.status == "highLighted"
             ),
             bestSellerSection: index().filter(
-                (product) => product.bestSeller == "true"
+                (product) => product.status == "bestSeller"
             ),
         });
     },

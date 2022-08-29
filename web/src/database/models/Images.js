@@ -2,10 +2,10 @@ module.exports = (sequelize, DataTypes) => {
     let alias = "images";
     let cols = {
         id: {
+            type: DataTypes.INTEGER,
             allowNull: false,
-            autoIncrement: true,
-            primarykey: true,
-            type: DataTypes.INTEGER
+            primaryKey: true,
+            autoIncrement: true
         },
         images: {
             type: DataTypes.STRING

@@ -29,11 +29,11 @@ const login = [
     .custom(async(value, { req }) => {
         let { email } = req.body
         let users = await user.findAll()
-        let user = users.find(u => u.email === email);
-        if (!user) {
+        let userDB = users.find(u => u.email === email);
+        if (!userDB) {
             throw new Error("Usuario no encontrado")
         }
-        if (!compareSync(value, user.password)) {
+        if (!compareSync(value, userDB.password)) {
             throw new Error("la contraseña no coincide")
         }
         return true

@@ -1,17 +1,18 @@
-const { index } = require("../models/product.model");
+const { products } = require("../database/models/index");
 const storage = require("../modules/storage");
 const multer = require("multer");
 const upload = multer({ storage: storage("products") });
 
 const mainController = {
-    home: (req, res) => {
+    home: async(req, res) => {
+        let productos = await products.findAll()
         return res.render("home", {
             title: "Home",
-            products: index(),
-            highlightedSection: index().filter(
+            products: productos,
+            highlightedSection: productos.filter(
                 (product) => product.status == "highLighted"
             ),
-            bestSellerSection: index().filter(
+            bestSellerSection: productos.filter(
                 (product) => product.status == "bestSeller"
             ),
         });

@@ -62,6 +62,6 @@ module.exports = (sequelize, DataTypes) => {
         deletedAt: false
     };
 
-    const Products = sequelize.define(alias, cols, config);
-    return Products
+    const products = sequelize.define(alias, cols, config);
+    return products
 }

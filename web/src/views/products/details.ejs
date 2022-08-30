@@ -26,10 +26,10 @@
                             <%= product.nights %> noches
                     </h2>
                     <h3 class="idProducto">Id Producto:
-                        <%= product.productId %>
+                        <%= product.id %>
                     </h3>
                     <%  if(user && user.position == "admin"){ %>
-                        <a href="/products/editProduct/<%= product.productId %>"><button>Editar Producto</button></a>
+                        <a href="/products/editProduct/<%= product.id %>"><button>Editar Producto</button></a>
                         <%  } %>
                             <div class="articleDetails">
                                 <div>
@@ -52,7 +52,7 @@
                                 </div>
                                 <div class="precioArticuloMain">
                                     <p>Desde
-                                        <%= product.price %> USD*</p>
+                                        <%= product.salesPrice %> USD*</p>
                                     <p class="condition">*Precio por persona en base doble</p>
                                 </div>
                             </div>
@@ -76,7 +76,7 @@
             </section>
             <section class="section-book">
                 <nav class="nav-to-book">
-                    <a href="/products/cart/<%= product.productId %>"><i class="fa-solid fa-cart-shopping"></i>Hacé tu reserva</a>
+                    <a href="/products/cart/<%= product.id %>"><i class="fa-solid fa-cart-shopping"></i>Hacé tu reserva</a>
                 </nav>
             </section>
 

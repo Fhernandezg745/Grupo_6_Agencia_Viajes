@@ -82,7 +82,7 @@
                 <% products.forEach(element=> {%>
                     <div class="productoBox">
                         <figure class="articleFigure">
-                            <a href="/products/details/<%= element.productId %>"><img src="<%= element.image %>" alt="" /></a>
+                            <a href="/products/details/<%= element.id %>"><img src="<%= element.image %>" alt="" /></a>
                         </figure>
                         <section class="detalle">
                             <header class="tituloPaquete">
@@ -123,9 +123,9 @@
                                 <%= element.base %>, desde :
                             </p>
                             <p class="price">$
-                                <%= element.price %> USD</p>
+                                <%= element.salesPrice %> USD</p>
                             <nav>
-                                <a href="/products/details/<%= element.productId %>"><input type="submit" value="Mas info" name="detalleProducto" class="buttonDetailProduct" /></a>
+                                <a href="/products/details/<%= element.id %>"><input type="submit" value="Mas info" name="detalleProducto" class="buttonDetailProduct" /></a>
                             </nav>
                         </section>
                     </div>

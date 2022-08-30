@@ -1,107 +1,90 @@
 const {
-    index,
-    one,
-    create,
-    write,
-    search,
-} = require("../models/product.model");
+    products
+} = require("../database/models/index");
 
 const productController = {
-    index: (req, res) => {
+    index: async(req, res) => {
+        let productos = await products.findAll()
         return res.render("products/productList", {
             title: "Product List",
-            products: index(),
+            products: productos,
         });
     },
-    // filter: (req, res) => {
-    //   let category = req.params.category;
-    //   let param = req.params.param;
-    //   let product = search(category, param);
-    //   return res.render("products/productList", {
-    //     title: "Product Filter",
-    //     product: product,
-    //   });
-    // },
-    detail: (req, res) => {
-        let product = one(parseInt(req.params.id));
-        if (!product) {
+    detail: async(req, res) => {
+        let productDB = await products.findByPk(req.params.id);
+        if (!productDB) {
             return res.redirect("/products/productList");
         }
         return res.render("products/details", {
             title: "Product Details",
-            product: product,
+            product: productDB,
         });
     },
-    createProducts: (req, res) => {
+    createProducts: async(req, res) => {
         return res.render("products/createProducts", {
             title: "Create Products",
         });
     },
-    save: (req, res) => {
-        req.body.image = req.files[0].filename;
-        let newProduct = create(req.body);
-        let product = index();
-        product.push(newProduct);
-        write(product);
+    save: async(req, res) => {
+        // req.body.image = req.files[0].filename;
+        await products.create(req.body)
         return res.redirect("/products/productList");
     },
-    editProduct: (req, res) => {
-        let product = one(parseInt(req.params.id));
-        if (!product) {
+    editProduct: async(req, res) => {
+        let productDB = await products.findByPk(req.params.id);
+        if (!productDB) {
             return res.redirect("/products/productList");
         }
         return res.render("products/editProduct", {
             title: "Edit Product",
-            product: product,
+            product: productDB,
         });
     },
-    modify: (req, res) => {
-        let products = index();
-        let product = one(parseInt(req.params.id));
-        let productsModified = products.map(prod => {
-            if (prod.productId == product) {
-                prod.tittle = req.body.tittle;
-                prod.shortDescription = req.body.shortDescription;
-                prod.longDescription = req.body.longDescription;
-                prod.nights = req.body.nights;
-                prod.days = req.body.days;
-                prod.stars = req.body.stars;
-                prod.flights = req.body.flights;
-                prod.transfers = req.body.transfers;
-                prod.price = parseInt(req.body.price);
-                prod.base = req.body.base;
-                prod.category = req.body.category;
-                prod.image = req.files && req.files.length > 0 ? req.files[0].filename : prod.image;
-                prod.published = req.body.published;
-                prod.region = req.body.region;
-                prod.highLighted = req.body.highLighted;
-                prod.bestSeller = req.body.bestSeller;
-                prod.tags = req.body.tags;
+    modify: async(req, res) => {
+
+        await products.update({
+            tittle: req.body.tittle,
+            shortDescription: req.body.shortDescription,
+            longDescription: req.body.longDescription,
+            days: req.body.days,
+            nights: req.body.nights,
+            stars: req.body.stars,
+            base: req.body.base,
+            excursion: req.body.excursion,
+            transfers: req.body.transfers,
+            flights: req.body.flights,
+            region: req.body.region,
+            status: req.body.status,
+            salesPrice: parseFloat(req.body.salesPrice),
+            tags: req.body.tags,
+        }, {
+            where: {
+                id: req.params.id
             }
-            return prod;
-        });
-        write(productsModified);
+        })
+
         return res.redirect("/products/details/" + req.params.id);
     },
-    cart: (req, res) => {
-        let product = one(parseInt(req.params.id));
-        if (!product) {
+    cart: async(req, res) => {
+        let productDB = await products.findByPk(req.params.id);
+        if (!productDB) {
             return res.redirect("/products/productList");
         }
         return res.render("products/cart", {
             title: "Cart Checkout",
-            product: product,
+            product: productDB,
         });
     },
-    deleteProduct: (req, res) => {
-        let products = index();
-        let productDeleted = products.filter(function(product) {
-            console.log(product.productId)
-            return product.productId !== parseInt(req.params.id);
-
-        });
-        console.log(req.params.id)
-        write(productDeleted);
+    deleteProduct: async(req, res) => {
+        let productDB = await products.findByPk(req.params.id);
+        if (!productDB) {
+            return res.redirect('/products/productList')
+        }
+        await products.destroy({
+            where: {
+                id: productDB.id
+            }
+        })
         return res.redirect("/products/productList");
     },
 };

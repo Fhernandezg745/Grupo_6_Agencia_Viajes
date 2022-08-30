@@ -13,7 +13,7 @@
 
         <main class="cartMain">
             <section class="main-top">
-                <nav class="navReturn"><a href="/products/details/<%= product.productId %>"><i class="fa-solid fa-circle-arrow-left"></i> Volver al detalle de producto</a></nav>
+                <nav class="navReturn"><a href="/products/details/<%= product.id %>"><i class="fa-solid fa-circle-arrow-left"></i> Volver al detalle de producto</a></nav>
 
                 <nav class="navReturn"><a href="/products/productList">Ir al listado de productos </a><i class="fa-solid fa-circle-arrow-right"></i></nav>
             </section>
@@ -32,7 +32,7 @@
 
             </ul>
             <div class="precioArticuloMain">
-                <p><%= product.price %> USD*</p>
+                <p><%= product.salesPrice %> USD*</p>
                 <p class="condition">*Precio por persona en base doble</p>
             </div>
         </div>
@@ -56,41 +56,41 @@
                         <label for="">*Nombre</label>
                         <div class="input-group">
                             <i class="fa-solid fa-user"></i>
-                            <input type="text" name="nombre" class="" required>
+                            <input type="text" name="firstName" class="" required>
                         </div>
                     </fieldset>
                     <fieldset class="fieldset-box-pax">
                         <label for="">*Apellido</label>
                         <div class="input-group">
                             <i class="fa-solid fa-user"></i>
-                            <input type="text" name="apellido" class="" required>
+                            <input type="text" name="lastName" class="" required>
                         </div>          
                     </fieldset>
                     <fieldset class="fieldset-box-pax">
                         <label for="">*DNI o Pasaporte</label>
                         <div class="input-group">
                             <i class="fa-solid fa-passport"></i>
-                            <input type="text" name="dni" class="" required>
+                            <input type="text" name="nationalID" class="" required>
                         </div>
                     </fieldset>
                     <fieldset class="fieldset-box-pax">
                         <label for="">*Nacionalidad</label>
                         <div class="input-group">
                             <i class="fa-solid fa-passport"></i>
-                            <input type="text" name="dni" class="" required>
+                            <input type="text" name="country" class="" required>
                         </div>
                     </fieldset>
                     <fieldset class="fieldset-box-pax">
                         <label for="nacimiento">*Fecha de nacimiento</label>
                         <div class="input-group">
                             <i class="fa-solid fa-calendar-days"></i>
-                            <input type="date" name="nacimiento" id="date" class="" required>
+                            <input type="date" name="birthDate" id="date" class="" required>
                     </fieldset>   
                     <fieldset class="fieldset-box-pax">
                         <label for="">telefono de contacto</label>
                         <div class="input-group">
                             <i class="fa-solid fa-email"></i>
-                            <input type="number" name="nombre" class="" required>
+                            <input type="number" name="phoneNumber" class="" required>
                         </div>
                     </fieldset>
                 </form>     
@@ -109,41 +109,41 @@
                             <label for="">*Nombre</label>
                             <div class="input-group">
                                 <i class="fa-solid fa-user"></i>
-                                <input type="text" name="nombre" class="" required>
+                                <input type="text" name="firstName" class="" required>
                             </div>
                         </fieldset>
                         <fieldset class="fieldset-box-pax">
                             <label for="">*Apellido</label>
                             <div class="input-group">
                                 <i class="fa-solid fa-user"></i>
-                                <input type="text" name="apellido" class="" required>
+                                <input type="text" name="lastName" class="" required>
                             </div>          
                         </fieldset>
                         <fieldset class="fieldset-box-pax">
                             <label for="">*DNI o Pasaporte</label>
                             <div class="input-group">
                                 <i class="fa-solid fa-passport"></i>
-                                <input type="text" name="dni" class="" required>
+                                <input type="text" name="nationalID" class="" required>
                             </div>
                         </fieldset>
                         <fieldset class="fieldset-box-pax">
                             <label for="">*Nacionalidad</label>
                             <div class="input-group">
                                 <i class="fa-solid fa-passport"></i>
-                                <input type="text" name="dni" class="" required>
+                                <input type="text" name="country" class="" required>
                             </div>
                         </fieldset>
                         <fieldset class="fieldset-box-pax">
                             <label for="nacimiento">*Fecha de nacimiento</label>
                             <div class="input-group">
                                 <i class="fa-solid fa-calendar-days"></i>
-                                <input type="date" name="nacimiento" id="date" class="" required>
+                                <input type="date" name="birthDate" id="date" class="" required>
                         </fieldset>   
                         <fieldset class="fieldset-box-pax">
                             <label for="">telefono de contacto</label>
                             <div class="input-group">
                                 <i class="fa-solid fa-email"></i>
-                                <input type="number" name="nombre" class="" required>
+                                <input type="number" name="phoneNumber" id="phoneNumber" class="" required>
                             </div>
                         </fieldset>
                     </form>     
@@ -161,41 +161,41 @@
                         <label for="">*Nombre</label>
                         <div class="input-group">
                             <i class="fa-solid fa-user"></i>
-                            <input type="text" name="nombre" class="" required>
+                            <input type="text" name="firstName" class="" required>
                         </div>
                     </fieldset>
                     <fieldset class="fieldset-box-pax">
                         <label for="">*Apellido</label>
                         <div class="input-group">
                             <i class="fa-solid fa-user"></i>
-                            <input type="text" name="apellido" class="" required>
+                            <input type="text" name="lastName" class="" required>
                         </div>          
                     </fieldset>
                     <fieldset class="fieldset-box-pax">
                         <label for="">*DNI o Pasaporte</label>
                         <div class="input-group">
                             <i class="fa-solid fa-passport"></i>
-                            <input type="text" name="dni" class="" required>
+                            <input type="text" name="nationalID" class="" required>
                         </div>
                     </fieldset>
                     <fieldset class="fieldset-box-pax">
                         <label for="">*Nacionalidad</label>
                         <div class="input-group">
                             <i class="fa-solid fa-passport"></i>
-                            <input type="text" name="dni" class="" required>
+                            <input type="text" name="country" class="" required>
                         </div>
                     </fieldset>
                     <fieldset class="fieldset-box-pax">
                         <label for="nacimiento">*Fecha de nacimiento</label>
                         <div class="input-group">
                             <i class="fa-solid fa-calendar-days"></i>
-                            <input type="date" name="nacimiento" id="date" class="" required>
+                            <input type="date" name="birthDate" id="birthDate" class="" required>
                     </fieldset>   
                     <fieldset class="fieldset-box-pax">
                         <label for="">telefono de contacto</label>
                         <div class="input-group">
                             <i class="fa-solid fa-email"></i>
-                            <input type="number" name="nombre" class="" required>
+                            <input type="number" name="phoneNumber" class="" required>
                         </div>
                     </fieldset>
                 </form>     
@@ -214,41 +214,41 @@
                         <label for="">*Nombre</label>
                         <div class="input-group">
                             <i class="fa-solid fa-user"></i>
-                            <input type="text" name="nombre" class="" required>
+                            <input type="text" name="firstName" class="" required>
                         </div>
                     </fieldset>
                     <fieldset class="fieldset-box-pax">
                         <label for="">*Apellido</label>
                         <div class="input-group">
                             <i class="fa-solid fa-user"></i>
-                            <input type="text" name="apellido" class="" required>
+                            <input type="text" name="lastName" class="" required>
                         </div>          
                     </fieldset>
                     <fieldset class="fieldset-box-pax">
                         <label for="">*DNI o Pasaporte</label>
                         <div class="input-group">
                             <i class="fa-solid fa-passport"></i>
-                            <input type="text" name="dni" class="" required>
+                            <input type="text" name="nationalID" class="" required>
                         </div>
                     </fieldset>
                     <fieldset class="fieldset-box-pax">
                         <label for="">*Nacionalidad</label>
                         <div class="input-group">
                             <i class="fa-solid fa-passport"></i>
-                            <input type="text" name="dni" class="" required>
+                            <input type="text" name="country" class="" required>
                         </div>
                     </fieldset>
                     <fieldset class="fieldset-box-pax">
                         <label for="nacimiento">*Fecha de nacimiento</label>
                         <div class="input-group">
                             <i class="fa-solid fa-calendar-days"></i>
-                            <input type="date" name="nacimiento" id="date" class="" required>
+                            <input type="date" name="birthDate" id="date" class="" required>
                     </fieldset>   
                     <fieldset class="fieldset-box-pax">
                         <label for="">telefono de contacto</label>
                         <div class="input-group">
                             <i class="fa-solid fa-email"></i>
-                            <input type="number" name="nombre" class="" required>
+                            <input type="number" name="phoneNumber" class="" required>
                         </div>
                     </fieldset>
                 </form>     
@@ -266,41 +266,41 @@
                         <label for="">*Nombre</label>
                         <div class="input-group">
                             <i class="fa-solid fa-user"></i>
-                            <input type="text" name="nombre" class="" required>
+                            <input type="text" name="firstName" class="" required>
                         </div>
                     </fieldset>
                     <fieldset class="fieldset-box-pax">
                         <label for="">*Apellido</label>
                         <div class="input-group">
                             <i class="fa-solid fa-user"></i>
-                            <input type="text" name="apellido" class="" required>
+                            <input type="text" name="lastName" class="" required>
                         </div>          
                     </fieldset>
                     <fieldset class="fieldset-box-pax">
                         <label for="">*DNI o Pasaporte</label>
                         <div class="input-group">
                             <i class="fa-solid fa-passport"></i>
-                            <input type="text" name="dni" class="" required>
+                            <input type="text" name="nationalID" class="" required>
                         </div>
                     </fieldset>
                     <fieldset class="fieldset-box-pax">
                         <label for="">*Nacionalidad</label>
                         <div class="input-group">
                             <i class="fa-solid fa-passport"></i>
-                            <input type="text" name="dni" class="" required>
+                            <input type="text" name="country" class="" required>
                         </div>
                     </fieldset>
                     <fieldset class="fieldset-box-pax">
                         <label for="nacimiento">*Fecha de nacimiento</label>
                         <div class="input-group">
                             <i class="fa-solid fa-calendar-days"></i>
-                            <input type="date" name="nacimiento" id="date" class="" required>
+                            <input type="date" name="birthDate" id="date" class="" required>
                     </fieldset>   
                     <fieldset class="fieldset-box-pax">
                         <label for="">telefono de contacto</label>
                         <div class="input-group">
                             <i class="fa-solid fa-email"></i>
-                            <input type="number" name="nombre" class="" required>
+                            <input type="number" name="phoneNumber" class="" required>
                         </div>
                     </fieldset>
                 </form>     
@@ -318,41 +318,41 @@
                         <label for="">*Nombre</label>
                         <div class="input-group">
                             <i class="fa-solid fa-user"></i>
-                            <input type="text" name="nombre" class="" required>
+                            <input type="text" name="firstName" class="" required>
                         </div>
                     </fieldset>
                     <fieldset class="fieldset-box-pax">
                         <label for="">*Apellido</label>
                         <div class="input-group">
                             <i class="fa-solid fa-user"></i>
-                            <input type="text" name="apellido" class="" required>
+                            <input type="text" name="lastName" class="" required>
                         </div>          
                     </fieldset>
                     <fieldset class="fieldset-box-pax">
                         <label for="">*DNI o Pasaporte</label>
                         <div class="input-group">
                             <i class="fa-solid fa-passport"></i>
-                            <input type="text" name="dni" class="" required>
+                            <input type="text" name="nationalID" class="" required>
                         </div>
                     </fieldset>
                     <fieldset class="fieldset-box-pax">
                         <label for="">*Nacionalidad</label>
                         <div class="input-group">
                             <i class="fa-solid fa-passport"></i>
-                            <input type="text" name="dni" class="" required>
+                            <input type="text" name="country" class="" required>
                         </div>
                     </fieldset>
                     <fieldset class="fieldset-box-pax">
                         <label for="nacimiento">*Fecha de nacimiento</label>
                         <div class="input-group">
                             <i class="fa-solid fa-calendar-days"></i>
-                            <input type="date" name="nacimiento" id="date" class="" required>
+                            <input type="date" name="birthDate" id="date" class="" required>
                     </fieldset>   
                     <fieldset class="fieldset-box-pax">
                         <label for="">telefono de contacto</label>
                         <div class="input-group">
                             <i class="fa-solid fa-email"></i>
-                            <input type="number" name="nombre" class="" required>
+                            <input type="number" name="phoneNumber" class="" required>
                         </div>
                     </fieldset>
                 </form>     
@@ -370,41 +370,41 @@
                         <label for="">*Nombre</label>
                         <div class="input-group">
                             <i class="fa-solid fa-user"></i>
-                            <input type="text" name="nombre" class="" required>
+                            <input type="text" name="firstName" class="" required>
                         </div>
                     </fieldset>
                     <fieldset class="fieldset-box-pax">
                         <label for="">*Apellido</label>
                         <div class="input-group">
                             <i class="fa-solid fa-user"></i>
-                            <input type="text" name="apellido" class="" required>
+                            <input type="text" name="lastName" class="" required>
                         </div>          
                     </fieldset>
                     <fieldset class="fieldset-box-pax">
                         <label for="">*DNI o Pasaporte</label>
                         <div class="input-group">
                             <i class="fa-solid fa-passport"></i>
-                            <input type="text" name="dni" class="" required>
+                            <input type="text" name="nationalID" class="" required>
                         </div>
                     </fieldset>
                     <fieldset class="fieldset-box-pax">
                         <label for="">*Nacionalidad</label>
                         <div class="input-group">
                             <i class="fa-solid fa-passport"></i>
-                            <input type="text" name="dni" class="" required>
+                            <input type="text" name="country" class="" required>
                         </div>
                     </fieldset>
                     <fieldset class="fieldset-box-pax">
                         <label for="nacimiento">*Fecha de nacimiento</label>
                         <div class="input-group">
                             <i class="fa-solid fa-calendar-days"></i>
-                            <input type="date" name="nacimiento" id="date" class="" required>
+                            <input type="date" name="birthDate" id="date" class="" required>
                     </fieldset>   
                     <fieldset class="fieldset-box-pax">
                         <label for="">telefono de contacto</label>
                         <div class="input-group">
                             <i class="fa-solid fa-email"></i>
-                            <input type="number" name="nombre" class="" required>
+                            <input type="number" name="phoneNumber" class="" required>
                         </div>
                     </fieldset>
                 </form>     

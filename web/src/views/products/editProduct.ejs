@@ -18,7 +18,7 @@
                 <form action="/products/editProduct?_method=PUT" method="POST" enctype="multipart/form-data" class="formAreaCreateProducts">
                     <div class="divCreateProduct">
                         <h2 class="headerCreateProduct">EDITANDO EL PRODUCTO ID:
-                            <%= product.productId %>
+                            <%= product.id %>
                         </h2>
                         <a href="/products/createProducts" class="createProductLink">Quiero crear un producto nuevo</a>
                     </div>
@@ -30,7 +30,7 @@
                         <fieldset class="labelFieldset">
                             <label for="precioProducto"><i class="fa-solid fa-money-check-dollar"></i> Precio por
                                 persona </label>
-                            <input type="number" name="price" id="price" class="inputTextFieldCreateProducts" value="<%= product.price %>">
+                            <input type="number" name="salesPrice" id="salesPrice" class="inputTextFieldCreateProducts" value="<%= product.salesPrice %>">
                             <label for="basePrecio"><i class="fa-solid fa-location-dot registerIcon"></i>
                                 Base : </label>
                             <select name="base" id="base" placeholder="Base" class="inputTextFieldCreateProducts" value="<%= product.base %>">
@@ -94,9 +94,9 @@
                                 hoteles <i class="fa-solid fa-bus"></i></label>
                         </fieldset>
                         <fieldset class="labelFieldset">
-                            <input type="checkbox" name="highLighted" id="highLighted" value="<%= product.highLighted %>" /><label for="aereos">
+                            <input type="checkbox" name="highLighted" id="highLighted" value="<%= product.status %>" /><label for="aereos">
                                 <i class="fa-solid fa-award"></i> Destacado</label>
-                            <input type="checkbox" name="bestSeller" id="bestSeller" value="<%= product.bestSeller %>" /><label for="traslados">
+                            <input type="checkbox" name="bestSeller" id="bestSeller" value="<%= product.status %>" /><label for="traslados">
                                 <i class="fa-solid fa-tags"></i> Mas Vendido</label>
                         </fieldset>
                         <fieldset class="labelFieldset">
@@ -115,7 +115,7 @@
                         <a class="checkEdit"><input type="checkbox" name="eliminar" value="" required> Estoy seguro de realizar estos cambios</a>
                     </div>
                 </form>
-                <form method="POST" action="/products/delete/<%= product.productId %>?_method=DELETE" class="formAreaCreateProducts">
+                <form method="POST" action="/products/delete/<%= product.id %>?_method=DELETE" class="formAreaCreateProducts">
                     <a href="" class="checkDelete"><button><i class="fa-solid fa-trash-can"></i>Quiero eliminar este Producto</button><input
                     type="checkbox" name="eliminar" value="" required> Estoy seguro de elminar el
                 producto</a>

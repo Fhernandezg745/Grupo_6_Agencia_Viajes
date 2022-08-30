@@ -24,7 +24,7 @@
                     <fieldset class="labelFieldset">
                         <label for="precioProducto"><i class="fa-solid fa-money-check-dollar"></i> Precio por
                             persona en U$s </label>
-                        <input type="number" name="price" id="price" class="inputTextFieldCreateProducts" placeholder="10000">
+                        <input type="number" name="salesPrice" id="salesPrice" class="inputTextFieldCreateProducts" placeholder="10000">
                         </label>
                         <label for="basePrecio"><i class="fa-solid fa-location-dot registerIcon"></i>
                             Base : </label>
@@ -66,7 +66,6 @@
                         <label for="cantidadNoches"><i class="fa-solid fa-bed"></i> Cantidad de noches de alojamiento
                             <input type="number" name="nights" id="nights" max="99" min="1"
                                 class="cantNoches" /></label>
-
                         <label for="cantidadDias"><i class="fa-solid fa-sun"></i> Cantidad de dias de viaje
                             <input type="number" name="days" id="days" max="99" min="1" class="cantDias" /></label>
                     </fieldset>
@@ -104,13 +103,16 @@
                         <input type="checkbox" name="flights" id="flights" value="true" /><label for="aereos">
                             <i class="fa-solid fa-plane-departure"></i> aereos incluidos</label>
                         <input type="checkbox" name="transfers" id="transfers" value="true" /><label for="traslados">
-                            <i class="fa-solid fa-bus"></i> traslados in/out y entre hoteles </label>
+                            <i class="fa-solid fa-bus"></i> Incluye traslados in/out y entre hoteles </label>
+                        <input type="checkbox" name="excursion" id="excursion" value="true" /><label for="excursion">
+                            <i class="fa-solid fa-bus"></i> Incluye Excursiones </label>
                     </fieldset>
                     <fieldset class="labelFieldset">
-                        <input type="checkbox" name="highLighted" id="highLighted" value="true" /><label for="aereos">
-                            <i class="fa-solid fa-award"></i> Destacado</label>
-                        <input type="checkbox" name="bestSeller" id="bestSeller" value="true" /><label for="traslados">
-                            <i class="fa-solid fa-tags"></i> Mas Vendido</label>
+                        <label for="regionProducto"><i class="fa-solid fa-award"></i> Status</label></label>
+                        <select name="status" id="status" placeholder="Status" class="inputTextFieldCreateProducts">
+                        <option value="highLighted">highLighted</option>
+                        <option value="bestSeller">bestSeller</option>
+                    </select>
                     </fieldset>
                     <fieldset class="labelFieldset">
                         <label for="tags"><i class="fa-solid fa-hashtag"></i> Tags</label>

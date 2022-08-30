@@ -120,7 +120,7 @@
                             <div class="articleBox">
                                 <article class="articleMainContainer">
                                     <figure class="articleFigure">
-                                        <a href="/products/details/<%= element.productId %>"><img src="products/<%= element.image %>" alt="" /></a>
+                                        <a href="/products/details/<%= element.id %>"><img src="products/<%= element.image %>" alt="" /></a>
                                     </figure>
                                     <div class="articleDetails">
                                         <ul>
@@ -147,12 +147,12 @@
                                         </h3>
                                         <div class="precioArticuloMain">
                                             <p>Desde $
-                                                <%= element.price %> USD*</p>
+                                                <%= element.salesPrice %> USD*</p>
                                         </div>
                                         <p>*Precio por persona en base
                                             <%= element.base %>
                                         </p>
-                                        <a href="/products/details/<%= element.productId %>"><input type="submit" value="Mas info" name="detalleProducto" class="buttonDetailProduct" /></a>
+                                        <a href="/products/details/<%= element.id %>"><input type="submit" value="Mas info" name="detalleProducto" class="buttonDetailProduct" /></a>
                                     </div>
                                 </article>
                             </div>
@@ -168,7 +168,7 @@
                             <div class="articleBox">
                                 <article class="articleMainContainer">
                                     <figure class="articleFigure">
-                                        <a href="/products/details/<%= element.productId %>"><img src="products/<%= element.image %>" alt="" /></a>
+                                        <a href="/products/details/<%= element.id %>"><img src="products/<%= element.image %>" alt="" /></a>
                                     </figure>
                                     <div class="articleDetails">
                                         <ul>
@@ -195,10 +195,10 @@
                                         </h3>
                                         <div class="precioArticuloMain">
                                             <p>Desde $
-                                                <%= element.price %> USD*</p>
+                                                <%= element.salesPrice %> USD*</p>
                                         </div>
                                         <p>*Precio por persona en base doble</p>
-                                        <a href="/products/details/<%= element.productId %>"><input type="submit" value="Mas info" name="detalleProducto" class="buttonDetailProduct" /></a>
+                                        <a href="/products/details/<%= element.id %>"><input type="submit" value="Mas info" name="detalleProducto" class="buttonDetailProduct" /></a>
                                     </div>
                                 </article>
                             </div>

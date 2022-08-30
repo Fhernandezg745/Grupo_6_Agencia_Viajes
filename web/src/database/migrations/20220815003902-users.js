@@ -1,6 +1,5 @@
 'use strict';
 
-const Images = require("../models/Images");
 
 module.exports = {
     async up(queryInterface, Sequelize) {

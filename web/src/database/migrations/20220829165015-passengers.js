@@ -41,9 +41,6 @@ module.exports = {
             },
             zipCode: {
                 type: Sequelize.STRING
-            },
-            avatar: {
-                type: Sequelize.STRING
             }
         });
     },

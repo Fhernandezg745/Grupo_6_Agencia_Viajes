@@ -1,5 +1,7 @@
 'use strict';
 
+const Images = require("../models/Images");
+
 module.exports = {
     async up(queryInterface, Sequelize) {
         await queryInterface.createTable('users', {
@@ -15,42 +17,22 @@ module.exports = {
             lastName: {
                 type: Sequelize.STRING
             },
-            nationalID: {
-                type: Sequelize.STRING
-            },
             birthDate: {
                 type: Sequelize.DATE
             },
-            gender: {
-                type: Sequelize.STRING
-            },
-            phoneNumber: {
-                type: Sequelize.STRING
-            },
-            address: {
-                type: Sequelize.STRING
-            },
             email: {
-                type: Sequelize.STRING
-            },
-            city: {
-                type: Sequelize.STRING
-            },
-            country: {
-                type: Sequelize.STRING
-            },
-            zipCode: {
                 type: Sequelize.STRING
             },
             password: {
                 type: Sequelize.STRING
             },
             avatar: {
-                type: Sequelize.STRING
-            },
-            positionId: {
-                type: Sequelize.INTEGER,
-            },
+                type: Sequelize.STRING,
+                references: {
+                    model: images,
+                    key: 'id'
+                }
+            }
         });
     },
 

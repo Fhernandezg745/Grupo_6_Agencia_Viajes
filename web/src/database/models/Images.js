@@ -17,5 +17,13 @@ module.exports = (sequelize, DataTypes) => {
     };
 
     const Images = sequelize.define(alias, cols, config);
+
+    Images.associate = function(models) {
+        Images.hasMany(models.user, {
+            as: 'users',
+            foreignKey: 'avatar'
+        })
+    }
+
     return Images
 }

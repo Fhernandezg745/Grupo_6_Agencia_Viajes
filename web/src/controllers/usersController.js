@@ -23,7 +23,7 @@ const usersController = {
         req.body.password = hashSync(req.body.password, 10)
         req.body.position = String(req.body.position).toLocaleLowerCase().includes('admin');
 
-        await User.create(req.body);
+        await user.create(req.body);
 
         req.body.avatar = req.files[0].filename;
         let newUser = create(req.body)
@@ -47,9 +47,14 @@ const usersController = {
                 errors: validaciones.mapped()
             });
         }
-        let users = await user.findAll();
-        let user = users.find(u => u.email === req.body.email)
-        req.session.user = user
+        let users = await user.findAll({
+            includes: {
+                all: true
+            }
+        });
+
+        let userDB = users.find(u => u.email === req.body.email)
+        req.session.user = userDB
         return res.redirect('/users/logged')
     },
     logout: function(req, res) {

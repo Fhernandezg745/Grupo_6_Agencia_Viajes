@@ -4,21 +4,30 @@ module.exports = {
     async up(queryInterface, Sequelize) {
         await queryInterface.createTable('usersProducts', {
             id: {
-                allowNull: false,
+                type: Sequelize.INTEGER,
                 autoIncrement: true,
-                primaryKey: true,
-                type: Sequelize.INTEGER
+                primaryKey: true
             },
-            productId: {
-                type: Sequelize.INTEGER
+            product: {
+                type: Sequelize.INTEGER,
+                references: {
+                    model: products,
+                    key: 'id'
+                }
             },
-            userId: {
-                type: Sequelize.INTEGER
-            }
+            user: {
+                type: Sequelize.INTEGER,
+                references: {
+                    model: user,
+                    key: 'id'
+                }
+            },
         });
+
     },
 
     async down(queryInterface, Sequelize) {
         await queryInterface.dropTable('usersProducts');
+
     }
 };

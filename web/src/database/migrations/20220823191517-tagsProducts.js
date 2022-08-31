@@ -8,14 +8,14 @@ module.exports = {
                 autoIncrement: true,
                 primaryKey: true
             },
-            product: {
+            productId: {
                 type: Sequelize.INTEGER,
                 references: {
                     model: 'products',
                     key: 'id'
                 }
             },
-            tags: {
+            tagId: {
                 type: Sequelize.INTEGER,
                 references: {
                     model: 'tags',

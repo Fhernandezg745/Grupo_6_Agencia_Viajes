@@ -4,7 +4,8 @@ const { index } = require("../../models/product.model")
 
 module.exports = {
   async up (queryInterface, Sequelize) {
-    await queryInterface.bulkInsert("products", index(), {});
+    let productos = index().map(products => Object({... products, tags: null}))
+    await queryInterface.bulkInsert("products", productos, {});
   },
 
   async down (queryInterface, Sequelize) {

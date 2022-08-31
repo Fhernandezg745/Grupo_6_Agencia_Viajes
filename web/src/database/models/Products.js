@@ -13,7 +13,7 @@ module.exports = (sequelize, DataTypes) => {
         shortDescription: {
             type: DataTypes.STRING
         },
-        longtDescription: {
+        longDescription: {
             type: DataTypes.TEXT
         },
         days: {
@@ -65,16 +65,17 @@ module.exports = (sequelize, DataTypes) => {
     const products = sequelize.define(alias, cols, config);
 
     products.associate = function(models) {
-        products.belongsToMany(images, {
+        products.belongsToMany(models.images, {
             through: 'ImagesProducts'
         })
-        products.belongsToMany(Tags, {
+        products.belongsToMany(models.tags, {
+            as:"tagID",
             through: 'tagsProducts'
         })
-        products.belongsTo(User, {
+        products.belongsTo(models.user, {
             through: 'usersProducts'
         })
-        products.hasMany(region, {
+        products.hasOne(models.region, {
             foreignKey: 'regionId'
         })
     }

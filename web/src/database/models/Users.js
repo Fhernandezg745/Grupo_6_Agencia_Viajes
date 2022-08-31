@@ -45,7 +45,7 @@ module.exports = (sequelize, DataTypes) => {
         User.belongsTo(models.images, {
             foreignKey: 'avatar'
         })
-        User.hasMany(products, {
+        User.belongsToMany(models.products, {
             through: 'usersProducts'
         })
     }

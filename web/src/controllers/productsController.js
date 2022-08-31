@@ -1,5 +1,5 @@
 const {
-    products
+    products, image, imagesProducts
 } = require("../database/models/index");
 
 const productController = {
@@ -26,8 +26,26 @@ const productController = {
         });
     },
     save: async(req, res) => {
-        // req.body.image = req.files[0].filename;
-        await products.create(req.body)
+        let newProduct = await products.create(req.body)
+        
+        if(req.files && req.files.length > 0) {
+            
+            let images = await Promise.all(req.files.map(file => {
+                return image.create({
+                    images: file.filename
+                })
+            }))
+            
+            let addProductImages = await Promise.all(images.map(image => {
+                return imagesproducts.create({
+                    product: newProduct.id,
+                    image: image.id
+                })
+            })) 
+
+  //          return res.send(images)
+        }
+        
         return res.redirect("/products/productList");
     },
     editProduct: async(req, res) => {

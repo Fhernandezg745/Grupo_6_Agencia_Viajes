@@ -67,6 +67,7 @@ module.exports = (sequelize, DataTypes) => {
   products.associate = function (models) {
     products.belongsToMany(models.images, {
       through: "ImagesProducts",
+      foreignKey: "products",
     });
     products.belongsToMany(models.tags, {
       foreignKey: "tags",

@@ -1,5 +1,5 @@
 const {
-    user
+    user, image
 } = require("../database/models/index");
 
 const { validationResult } = require("express-validator")
@@ -23,13 +23,22 @@ const usersController = {
         req.body.password = hashSync(req.body.password, 10)
         req.body.position = String(req.body.position).toLocaleLowerCase().includes('admin');
 
+        if(req.files && req.files.length > 0) {
+            let avatar = await image.create({
+                images: req.files[0].filename
+            })
+            req.body.avatar = avatar.id;
+        }
+
         await user.create(req.body);
 
-        req.body.avatar = req.files[0].filename;
+
+//        codigo anterior
+/*        req.body.avatar = req.files[0].filename;
         let newUser = create(req.body)
         let users = index();
         users.push(newUser)
-        write(users)
+        write(users)*/
         return res.redirect("./login")
     },
     login: async(req, res) => {

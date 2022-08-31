@@ -60,7 +60,8 @@ const productController = {
     },
     modify: async(req, res) => {
 
-        await products.update({
+        let productsDB = await products.findByPk(req.params.id,{include:{all: true}})
+        await productsDB.update({
             tittle: req.body.tittle,
             shortDescription: req.body.shortDescription,
             longDescription: req.body.longDescription,

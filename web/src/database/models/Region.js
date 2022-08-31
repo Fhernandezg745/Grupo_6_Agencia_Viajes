@@ -20,5 +20,10 @@ module.exports = (sequelize, DataTypes) => {
     };
 
     const Region = sequelize.define(alias, cols, config);
+    Region.associate = function(models) {
+        Region.belongsTo(images, {
+            foreignKey: 'id'
+        })
+    }
     return Region
 }

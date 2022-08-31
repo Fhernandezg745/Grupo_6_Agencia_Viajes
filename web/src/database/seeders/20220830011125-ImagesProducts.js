@@ -3,35 +3,35 @@
 module.exports = {
     async up(queryInterface, Sequelize) {
         await queryInterface.bulkInsert('ImagesProducts', [{
-                products: 1,
+                product: 1,
                 image: 1
             },
             {
-                products: 2,
+                product: 2,
                 image: 2
             },
             {
-                products: 3,
+                product: 3,
                 image: 3
             },
             {
-                products: 4,
+                product: 4,
                 image: 4
             },
             {
-                products: 5,
+                product: 5,
                 image: 5
             },
             {
-                products: 6,
+                product: 6,
                 image: 6
             },
             {
-                products: 7,
+                product: 7,
                 image: 7
             },
             {
-                products: 8,
+                product: 8,
                 image: 8
             },
         ], {});

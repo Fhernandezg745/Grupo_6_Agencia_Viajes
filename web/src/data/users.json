@@ -4,14 +4,8 @@
         "lastName": "Cordoba",
         "email": "jcordoba@harbortrip.com",
         "password": "AAl8fOhZ",
-        "phoneNumber": "6386969519",
-        "city": "La Plata",
-        "zipCode": "1900",
-        "country": "Argentina",
-        "address": "085 Reindahl Alley",
-        "gender": "Male",
+        "isAdmin": true,
         "birthDate": "1954-09-23",
-        "positionId": null,
         "avatar": null
     },
     {
@@ -20,14 +14,8 @@
         "lastName": "Piscitelli",
         "email": "dpiscitelli@harbortrip.com",
         "password": "rUBzHTWyGW",
-        "phoneNumber": "7814498634",
-        "city": "La Plata",
-        "zipCode": 1900,
-        "country": "Argentina",
-        "address": "9580 Heath Crossing",
-        "gender": "Male",
+        "isAdmin": true,
         "birthDate": "1954-09-23",
-        "positionId": null,
         "avatar": null
     },
     {
@@ -36,13 +24,8 @@
         "lastName": "Fernandez",
         "email": "alferdes@twiter.com",
         "password": "$2a$10$oz1Be1RuW4wxHS70gVNuge7tnEvRBQD94kQ9gqOzX2WMWRzppvHIC",
-        "phoneNumber": "123457890",
-        "city": "La Pu La Ta",
-        "zipCode": "654",
-        "country": "Arg",
-        "gender": "Prefiero no decirlo",
+        "isAdmin": true,
         "birthDate": "1954-09-23",
-        "positionId": null,
         "avatar": null
     },
     {
@@ -51,13 +34,8 @@
         "lastName": "Cositorto",
         "email": "ganadinero@zoe.com",
         "password": "$2a$10$QZX2Mr3ng25EXMioey6gB.7Dw6mRh46coJrYR4txp96v.iA6qcH2y",
-        "phoneNumber": "223456982920",
-        "city": "Cordoba",
-        "zipCode": "1900",
-        "country": "Argenzuela",
-        "gender": "Otros",
+        "isAdmin": true,
         "birthDate": "1992-12-12",
-        "positionId": null,
         "avatar": null
     },
     {
@@ -66,13 +44,8 @@
         "lastName": "Doe",
         "email": "JohnDoe@gmail.com",
         "password": "$2a$10$rEa/5JjB3/pMhAD74q6fXeVgGNcp0s9J4VMy1nZWiQWxqy9C5WUIu",
-        "phoneNumber": "22323221312",
-        "city": "La Pu La Ta",
-        "zipCode": "0977",
-        "country": "ChongQuo",
-        "gender": "Prefiero no decirlo",
+        "isAdmin": true,
         "birthDate": "2022-08-02",
-        "positionId": null,
         "avatar": null
     },
     {
@@ -81,13 +54,8 @@
         "lastName": "Perezoso",
         "email": "juan@gmail.com",
         "password": "$2a$10$t8czM32MCnrWY.7ddFsPN.eJ0b4uVlzFWuSWiIYmrd36oCdh1ka6a",
-        "phoneNumber": "918928373",
-        "city": "la plata",
-        "zipCode": "1900",
-        "country": "argentina",
-        "gender": "Masculino",
+        "isAdmin": true,
         "birthDate": "1992-12-03",
-        "positionId": null,
         "avatar": null
     },
     {
@@ -96,13 +64,8 @@
         "lastName": "Preguntame",
         "email": "marcelo@gmail.com",
         "password": "$2a$10$.KIDO4HBuRMhlySVQtDpWu45O7KIUB1pqSpM54wvj7lIpWuUKuqTe",
-        "phoneNumber": "654321",
-        "city": "Maputo",
-        "zipCode": "as",
-        "country": "Mozambique",
-        "gender": "Masculino",
+        "isAdmin": true,
         "birthDate": "2022-08-02",
-        "positionId": null,
         "avatar": null
     },
     {
@@ -111,13 +74,8 @@
         "lastName": "Camelas",
         "email": "benito.camelas@posteo.de",
         "password": "$2a$10$SFssKt29HszxP5BbVjuYYemAaUmEs1ySTcj0scRnjNNuu2ORvh8v.",
-        "phoneNumber": "49233423421",
-        "city": "Munich",
-        "zipCode": "43242",
-        "country": "Alemani",
-        "gender": "Masculino",
+        "isAdmin": true,
         "birthDate": "2005-08-22",
-        "positionId": null,
         "avatar": "avatar-1659735258563-670394932.jpeg"
     },
     {
@@ -126,13 +84,8 @@
         "lastName": "Melano",
         "email": "rosamelchiquito@aol.es",
         "password": "$2a$10$TauxJbuW91zkB/FGnK2KyeUReB.nsklwSnSQpfmkppdVSICU/QsWq",
-        "phoneNumber": "345231231",
-        "city": "Madrid",
-        "zipCode": "43231",
-        "country": "España",
-        "gender": "Femenino",
+        "isAdmin": true,
         "birthDate": "1999-12-30",
-        "positionId": null,
         "avatar": "avatar-1659735258563-670394932.jpeg"
     }
 ]

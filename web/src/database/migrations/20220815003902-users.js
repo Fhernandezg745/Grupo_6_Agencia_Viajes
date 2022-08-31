@@ -25,12 +25,11 @@ module.exports = {
             password: {
                 type: Sequelize.STRING
             },
+            isAdmin: {
+                type: Sequelize.BOOLEAN
+            },
             avatar: {
-                type: Sequelize.STRING,
-                references: {
-                    model: images,
-                    key: 'id'
-                }
+                type: Sequelize.INTEGER,
             }
         });
     },

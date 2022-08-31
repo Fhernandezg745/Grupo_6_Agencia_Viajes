@@ -25,6 +25,9 @@ module.exports = (sequelize, DataTypes) => {
         email: {
             type: DataTypes.STRING
         },
+        isAdmin: {
+            type: DataTypes.BOOLEAN
+        },
         avatar: {
             type: DataTypes.INTEGER,
             allowNull: true
@@ -41,6 +44,9 @@ module.exports = (sequelize, DataTypes) => {
     User.associate = function(models) {
         User.belongsTo(models.images, {
             foreignKey: 'avatar'
+        })
+        User.hasMany(products, {
+            through: 'usersProducts'
         })
     }
 

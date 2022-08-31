@@ -48,7 +48,7 @@ const usersController = {
             });
         }
         let users = await user.findAll({
-            includes: {
+            include: {
                 all: true
             }
         });

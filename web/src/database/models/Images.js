@@ -19,11 +19,10 @@ module.exports = (sequelize, DataTypes) => {
     const Images = sequelize.define(alias, cols, config);
 
     Images.associate = function(models) {
-        Images.hasMany(models.user, {
-            as: 'users',
-            foreignKey: 'avatar'
-        })
-        Images.belongsToMany(models.products, {
+        Images.hasOne(models.user, {
+            foreignKey: 'id'
+        });
+        Images.hasMany(models.products, {
             through: 'ImagesProducts'
         })
     }

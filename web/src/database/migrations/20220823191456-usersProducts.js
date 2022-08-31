@@ -8,20 +8,20 @@ module.exports = {
                 autoIncrement: true,
                 primaryKey: true
             },
-            product: {
-                type: Sequelize.INTEGER,
-                references: {
-                    model: products,
-                    key: 'id'
-                }
-            },
-            user: {
-                type: Sequelize.INTEGER,
-                references: {
-                    model: user,
-                    key: 'id'
-                }
-            },
+            // product: {
+            //     type: Sequelize.INTEGER,
+            //     references: {
+            //         model: 'products',
+            //         key: 'id'
+            //     }
+            // },
+            // user: {
+            //     type: Sequelize.INTEGER,
+            //     references: {
+            //         model: 'user',
+            //         key: 'id'
+            //     }
+            // },
         });
 
     },

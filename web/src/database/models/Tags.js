@@ -17,5 +17,13 @@ module.exports = (sequelize, DataTypes) => {
     };
 
     const Tags = sequelize.define(alias, cols, config);
+
+    Tags.associate = function(models) {
+        Tags.hasMany(models.products, {
+            foreignKey: 'id',
+            through: 'tagsProducts'
+        })
+    }
+
     return Tags
 }

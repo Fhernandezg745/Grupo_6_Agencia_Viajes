@@ -23,11 +23,11 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.STRING
         },
         isAdmin: {
-            type: DataTypes.BOOLEAN
+            type: DataTypes.BOOLEAN,
+            defaultValue: false
         },
         avatar: {
             type: DataTypes.INTEGER,
-            allowNull: true
         }
 
     }
@@ -39,8 +39,8 @@ module.exports = (sequelize, DataTypes) => {
     const User = sequelize.define(alias, cols, config);
 
     User.associate = function(models) {
-        User.belongsTo(models.images, {
-            foreignKey: 'avatar'
+        User.hasOne(models.images, {
+            foreignKey: 'id'
         })
         User.belongsToMany(models.products, {
             through: 'usersProducts',

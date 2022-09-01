@@ -1,6 +1,7 @@
 const {
-    user, image
+    user, images
 } = require("../database/models/index");
+const {hashSync} = require('bcryptjs');
 
 const { validationResult } = require("express-validator")
 
@@ -20,13 +21,14 @@ const usersController = {
                 errors: validaciones.mapped()
             });
         }
-//        req.body.password = hashSync(req.body.password, 10)
-        req.body.position = String(req.body.position).toLocaleLowerCase().includes('admin');
-
+       req.body.password = hashSync(req.body.password, 10);
+       req.body.position = String(req.body.position).toLocaleLowerCase().includes('admin');
+        
         if(req.files && req.files.length > 0) {
-            let avatar = await image.create({
+            let avatar = await images.create({
                 images: req.files[0].filename
             })
+            
             req.body.avatar = avatar.id;
         }
 
@@ -56,11 +58,7 @@ const usersController = {
                 errors: validaciones.mapped()
             });
         }
-        let users = await user.findAll({
-            include: {
-                all: true
-            }
-        });
+        let users = await user.findAll();
 
         let userDB = users.find(u => u.email === req.body.email)
         req.session.user = userDB
@@ -74,17 +72,7 @@ const usersController = {
         return res.render('users/logged', {
             title: "Mi cuenta",
         });
-    },
-    createProduct: function(req, res) {
-        return res.render('products/createProducts', {
-            title: "Crear producto",
-        });
-    },
-    editProduct: function(req, res) {
-        return res.render('products/editProduct', {
-            title: "Editar producto",
-        });
-    },
+    }
 };
 
 module.exports = usersController;

@@ -5,6 +5,7 @@ const {register, process, login, access, logged, logout} = require("../controlle
 const middlewaresUser = require('../middlewares/register');
 const middlewareLogin = require('../middlewares/login');
 const isLogged = require("../middlewares/isLogged");
+const isAdmin = require("../middlewares/isAdmin");
 
 router.get("/register", register);
 router.get("/login", login);

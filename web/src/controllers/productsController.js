@@ -2,7 +2,8 @@ const {
     products,
     images,
     imagesProducts,
-    tagsProducts
+    tagsProducts,
+    tags,
 } = require("../database/models/index");
 
 const productController = {
@@ -75,18 +76,50 @@ const productController = {
             stars: req.body.stars,
             base: req.body.base,
             excursion: req.body.excursion,
+            category: req.body.category,
             transfers: req.body.transfers,
             flights: req.body.flights,
             region: req.body.region,
             status: req.body.status,
             salesPrice: parseFloat(req.body.salesPrice),
-            tags: req.body.tags,
         }, {
             where: {
                 id: req.params.id,
             },
         });
 
+        await images.update({
+            images: req.body.images,
+        }, {
+            where: {
+                images: productsDB.image
+            }
+        });
+
+        // await imagesProducts.update({
+        //     image: a,
+        // },{
+        //     where: {
+        //     product: productsDB.id
+        // }});
+
+        await tags.update({
+            tags: req.body.tags
+        }, {
+            where: {
+                id: productsDB.tags
+            }
+        });
+
+        // await tagsProducts.update( {
+        //     TagId: tags.id,
+        // },
+        //     {
+        //     where: {
+        //         productId: productsDB.id
+        //     }
+        //}
+        //);
         return res.redirect("/products/details/" + req.params.id);
     },
     cart: async(req, res) => {

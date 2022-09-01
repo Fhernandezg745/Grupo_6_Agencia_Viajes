@@ -32,7 +32,7 @@ module.exports = {
             address: data.addres,
             gender: data.gender,
             date: data.date,
-            position: data.position,
+            isAdmin: data.isAdmin,
             avatar: data.avatar
         });
     },

@@ -1,7 +1,7 @@
-const {Router} = require("express");
+const { Router } = require("express");
 const router = Router();
 
-const {index, createProducts, save, detail, editProduct, modify, cart,  deleteProduct} = require("../controllers/productsController");
+const { index, createProducts, save, detail, editProduct, modify, cart, deleteProduct } = require("../controllers/productsController");
 const storage = require("../modules/storage");
 const multer = require("multer");
 const upload = multer({ storage: storage("products") });
@@ -20,7 +20,7 @@ router.get("/details/:id", detail);
 
 router.get("/editProduct/:id", [isLogged, isAdmin], editProduct);
 
-router.put("/editProduct", [upload.any()], modify);
+router.put("/editProduct/:id", [upload.any()], modify);
 
 router.get("/cart/:id", cart);
 

@@ -15,7 +15,7 @@
 
         <main>
             <section class="imageCreateProducts">
-                <form action="/products/editProduct?_method=PUT" method="POST" enctype="multipart/form-data" class="formAreaCreateProducts">
+                <form action="/products/editProduct/<%= product.id %>?_method=PUT" method="POST" enctype="multipart/form-data" class="formAreaCreateProducts">
                     <div class="divCreateProduct">
                         <h2 class="headerCreateProduct">EDITANDO EL PRODUCTO ID:
                             <%= product.id %>
@@ -94,10 +94,12 @@
                                 hoteles <i class="fa-solid fa-bus"></i></label>
                         </fieldset>
                         <fieldset class="labelFieldset">
-                            <input type="checkbox" name="highLighted" id="highLighted" value="<%= product.status %>" /><label for="aereos">
-                                <i class="fa-solid fa-award"></i> Destacado</label>
-                            <input type="checkbox" name="bestSeller" id="bestSeller" value="<%= product.status %>" /><label for="traslados">
-                                <i class="fa-solid fa-tags"></i> Mas Vendido</label>
+                            <label for="regionProducto"><i class="fa-solid fa-award"></i> Status</label></label>
+                            <select name="status" id="status" placeholder="Status" class="inputTextFieldCreateProducts" value="<%= product.status %>">
+                            <option value="none">-----</option>
+                            <option value="highLighted">highLighted</option>
+                            <option value="bestSeller">bestSeller</option>
+                        </select>
                         </fieldset>
                         <fieldset class="labelFieldset">
                             <label for="tags"><i class="fa-solid fa-hashtag"></i> Tags</label>

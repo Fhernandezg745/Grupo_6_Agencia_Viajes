@@ -38,6 +38,9 @@ module.exports = {
                 type: Sequelize.BOOLEAN,
                 defaultValue: true
             },
+            category: {
+                type: Sequelize.STRING
+            },
             flights: {
                 type: Sequelize.BOOLEAN,
                 defaultValue: true

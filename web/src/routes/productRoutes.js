@@ -11,7 +11,6 @@ const isAdmin = require("../middlewares/isAdmin");
 
 
 router.get("/productList", index);
-// router.get("/productList/:category?/:param?", productsController.filtro);
 
 router.get("/createProducts", [isLogged, isAdmin], createProducts);
 router.post("/save", [upload.any()], save);
@@ -26,6 +25,5 @@ router.get("/cart/:id", cart);
 
 router.delete("/delete/:id", deleteProduct);
 
-//router.delete("/delete/:id", productsController.deleteProduct);
 
 module.exports = router;

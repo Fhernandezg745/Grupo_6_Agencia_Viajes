@@ -1,7 +1,7 @@
 const {
   products,
   images,
-  imagesProducts,
+  imagesProducts, tagsProducts
 } = require("../database/models/index");
 
 const productController = {
@@ -64,9 +64,7 @@ const productController = {
     });
   },
   modify: async (req, res) => {
-    let productsDB = await products.findByPk(req.params.id, {
-      include: { all: true },
-    });
+    let productsDB = await products.findByPk(req.params.id);
     await productsDB.update(
       {
         tittle: req.body.tittle,
@@ -108,6 +106,24 @@ const productController = {
     if (!productDB) {
       return res.redirect("/products/productList");
     }
+    await imagesProducts.destroy({
+      where: {
+        product: productDB.id
+      }
+    });
+
+    await images.destroy({
+      where: {
+        images: productDB.image
+      }
+    });
+
+    await tagsProducts.destroy({
+      where: {
+        productID: productDB.id
+      }
+    });
+
     await products.destroy({
       where: {
         id: productDB.id,

@@ -20,7 +20,7 @@ const usersController = {
                 errors: validaciones.mapped()
             });
         }
-        req.body.password = hashSync(req.body.password, 10)
+//        req.body.password = hashSync(req.body.password, 10)
         req.body.position = String(req.body.position).toLocaleLowerCase().includes('admin');
 
         if(req.files && req.files.length > 0) {

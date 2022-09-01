@@ -50,7 +50,7 @@ const productController = {
                 })
             );
 
-            //          return res.send(images)
+            
         }
 
         return res.redirect("/products/productList");
@@ -69,6 +69,7 @@ const productController = {
         let productsDB = await products.findByPk(req.params.id);
         await productsDB.update({
             tittle: req.body.tittle,
+            image: req.body.image,
             shortDescription: req.body.shortDescription,
             longDescription: req.body.longDescription,
             days: req.body.days,
@@ -88,21 +89,44 @@ const productController = {
             },
         });
 
-        await images.update({
-            images: req.body.images,
-        }, {
+        if (req.files && req.files.length > 0) {
+          let imagenes = await Promise.all(
+              req.files.map((file) => {
+                  return images.update({
+                      images: file.filename,
+                  },
+                  {
+                    where: {
+                        images: productsDB.image
+                    }
+                });
+              })
+          );
+
+          let addProductImages = await Promise.all(
+              imagenes.map((image) => {
+                  return imagesProducts.update({
+                      image: image.id,
+                  },
+                  {
+                    where: {
+                    product: productsDB.id
+                }});
+              })
+          );
+
+      }
+
+        await tagsProducts.update( {
+            tagId: tags.id,
+        },
+            {
             where: {
-                images: productsDB.image
+                productId: productsDB.id
             }
-        });
-
-        // await imagesProducts.update({
-        //     image: a,
-        // },{
-        //     where: {
-        //     product: productsDB.id
-        // }});
-
+        }
+        );
+        
         await tags.update({
             tags: req.body.tags
         }, {
@@ -111,15 +135,6 @@ const productController = {
             }
         });
 
-        // await tagsProducts.update( {
-        //     TagId: tags.id,
-        // },
-        //     {
-        //     where: {
-        //         productId: productsDB.id
-        //     }
-        //}
-        //);
         return res.redirect("/products/details/" + req.params.id);
     },
     cart: async(req, res) => {

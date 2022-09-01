@@ -74,11 +74,11 @@ module.exports = (sequelize, DataTypes) => {
       as: "productId",
       through: "tagsProducts",
     });
-    products.belongsTo(models.user, {
+    products.belongsToMany(models.user, {
       through: "usersProducts",
     });
     products.hasOne(models.region, {
-      foreignKey: "regionId",
+      otherKey: "regionId",
     });
   };
   return products;

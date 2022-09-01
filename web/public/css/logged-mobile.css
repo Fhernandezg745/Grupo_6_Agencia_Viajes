@@ -20,13 +20,16 @@
    font-size: 1.2rem;
 }
 
+
 .imageLogged {
+    background-image: url(/assets/planisferio_b&w.jpg);
     display: flex;
     flex-direction: column;
     background-repeat: no-repeat;
     background-size: cover;
     background-position: center;
     background-color: #cccccc;
+    opacity: 80%;
     width: 100%;
     height: 100%;
 }
@@ -36,7 +39,7 @@
     display: inline-flex;
     align-items: center;
     flex-direction: column;
-    background-color: rgba(27, 148, 103, 0.734);
+    background-color: rgba(140, 139, 139, 0.734);
     width: 60vw;
     margin-top: 5vw;
     margin-left: 8vw;
@@ -54,15 +57,15 @@
     text-align: center;
     text-decoration: none;
     margin-bottom: 20px;
-    background-color: #4c4c4a;
-    color: #c7c7c7;
+    background: #128f76;
+    color: rgba(255, 255, 255, 0.834);
     border-radius: 5px;
     font-weight: 300px;
 }
 
 .userOptions a:hover {
-    background-color: rgba(255, 255, 255, 0.734);
-    color: #4c4c4a;
+    background: #007aff;
+    color: rgba(255, 255, 255, 0.834);
 }
 
 .userOptions a p {

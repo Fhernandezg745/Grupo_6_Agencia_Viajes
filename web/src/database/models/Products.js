@@ -44,8 +44,12 @@ module.exports = (sequelize, DataTypes) => {
             defaultValue: true,
         },
         image: {
-            type: DataTypes.INTEGER,
+            type: DataTypes.STRING,
             allowNull: true,
+            references:{
+                model: 'images',
+                key: 'images',
+            }
         },
         regionId: {
             type: DataTypes.INTEGER,
@@ -70,7 +74,8 @@ module.exports = (sequelize, DataTypes) => {
     products.associate = function(models) {
         products.belongsToMany(models.images, {
             through: "ImagesProducts",
-            foreignKey: "products",
+            foreignKey: "id",
+            otherKey: "imageId",
         });
         products.belongsToMany(models.tags, {
             foreignKey: "tags",

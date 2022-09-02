@@ -23,6 +23,7 @@ module.exports = (sequelize, DataTypes) => {
   Region.associate = function (models) {
     Region.belongsTo(models.products, {
       as: "regionId",
+      foreignKey: "id",
     });
   };
   return Region;

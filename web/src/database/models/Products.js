@@ -18,12 +18,18 @@ module.exports = (sequelize, DataTypes) => {
         },
         days: {
             type: DataTypes.INTEGER,
+            allowNull: true,
+            defaultValue: 7,
         },
         nights: {
             type: DataTypes.INTEGER,
+            allowNull: true,
+            defaultValue: 7,
         },
         stars: {
             type: DataTypes.INTEGER,
+            allowNull: true,
+            defaultValue: 4,
         },
         base: {
             type: DataTypes.STRING,
@@ -43,26 +49,22 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.BOOLEAN,
             defaultValue: true,
         },
-        image: {
-            type: DataTypes.STRING,
-            allowNull: true,
-            references:{
-                model: 'images',
-                key: 'images',
-            }
-        },
         regionId: {
             type: DataTypes.INTEGER,
+            allowNull: true,
         },
         status: {
             type: DataTypes.STRING,
         },
         salesPrice: {
             type: DataTypes.FLOAT,
+            allowNull: true,
+            defaultValue: 0,
         },
-        tags: {
+        creatorId: {
             type: DataTypes.INTEGER,
-        },
+            allowNull: true,
+        }
     };
     let config = {
         timestamps: false,

@@ -19,13 +19,19 @@ module.exports = {
                 type: Sequelize.TEXT
             },
             days: {
-                type: Sequelize.INTEGER
+                type: Sequelize.INTEGER,
+                allowNull: true,
+                defaultValue: 7,
             },
             nights: {
-                type: Sequelize.INTEGER
+                type: Sequelize.INTEGER,
+                allowNull: true,
+                defaultValue: 7,
             },
             stars: {
-                type: Sequelize.INTEGER
+                type: Sequelize.INTEGER,
+                allowNull: true,
+                defaultValue: 3,
             },
             base: {
                 type: Sequelize.STRING
@@ -45,21 +51,21 @@ module.exports = {
                 type: Sequelize.BOOLEAN,
                 defaultValue: true
             },
-            image: {
-                type: Sequelize.STRING
-            },
             regionId: {
                 type: Sequelize.INTEGER,
-                defaultValue: null
+                allowNull: true
             },
             status: {
                 type: Sequelize.STRING
             },
             salesPrice: {
-                type: Sequelize.FLOAT
+                type: Sequelize.FLOAT,
+                allowNull: true,
+                defaultValue: 0,
             },
-            tags: {
-                type: Sequelize.INTEGER
+            creatorId: {
+                type: Sequelize.INTEGER,
+                allowNull: true
             }
         });
     },

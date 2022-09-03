@@ -30,7 +30,40 @@ const productController = {
         });
     },
     save: async(req, res) => {
-        let newProduct = await products.create(req.body);
+        let newProduct = await products.create({
+            tittle: req.body.tittle,
+            shortDescription: req.body.shortDescription,
+            longDescription: req.body.longDescription,
+            days: req.body.days != '' ? parseInt(req.body.days) : null,
+            nights: req.body.nights != '' ? parseInt(req.body.nights) : null,
+            stars: req.body.stars != '' ? parseInt(req.body.stars) : null,
+            base: req.body.base,
+            excursion: req.body.excursion,
+            category: req.body.category,
+            transfers: req.body.transfers,
+            regionId: req.body.regionId != '' ? parseInt(req.body.regionId) : null,
+            flights: req.body.flights,
+            status: req.body.status,
+            salesPrice: req.body.salesPrice != '' ? parseInt(req.body.salesPrice) : null,
+        });
+
+        if (req.tags && req.tags.length > 0) {
+            let newTags = await Promise.all(
+                req.tags.split(" ").map((tag) => {
+                    return tags.create({
+                        tags: tag
+                    });
+                })
+            );
+            let addTagsProducts = await Promise.all(
+                newTags.map((tagProduct) => {
+                    return imagesProducts.create({
+                        product: newProduct.id,
+                        image: tagProduct.id,
+                    });
+                })
+            )
+        }
 
         if (req.files && req.files.length > 0) {
             let imagenes = await Promise.all(
@@ -50,7 +83,7 @@ const productController = {
                 })
             );
 
-            
+
         }
 
         return res.redirect("/products/productList");
@@ -90,43 +123,40 @@ const productController = {
         });
 
         if (req.files && req.files.length > 0) {
-          let imagenes = await Promise.all(
-              req.files.map((file) => {
-                  return images.update({
-                      images: file.filename,
-                  },
-                  {
-                    where: {
-                        images: productsDB.image
-                    }
-                });
-              })
-          );
+            let imagenes = await Promise.all(
+                req.files.map((file) => {
+                    return images.update({
+                        images: file.filename,
+                    }, {
+                        where: {
+                            images: productsDB.image
+                        }
+                    });
+                })
+            );
 
-          let addProductImages = await Promise.all(
-              imagenes.map((image) => {
-                  return imagesProducts.update({
-                      image: image.id,
-                  },
-                  {
-                    where: {
-                    product: productsDB.id
-                }});
-              })
-          );
+            let addProductImages = await Promise.all(
+                imagenes.map((image) => {
+                    return imagesProducts.update({
+                        image: image.id,
+                    }, {
+                        where: {
+                            product: productsDB.id
+                        }
+                    });
+                })
+            );
 
-      }
+        }
 
-        await tagsProducts.update( {
+        await tagsProducts.update({
             tagId: tags.id,
-        },
-            {
+        }, {
             where: {
                 productId: productsDB.id
             }
-        }
-        );
-        
+        });
+
         await tags.update({
             tags: req.body.tags
         }, {

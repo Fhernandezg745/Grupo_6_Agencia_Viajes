@@ -51,7 +51,7 @@
                 <h3>Pasajero 1 (Adulto + 18 años)<i class="fa-solid fa-circle-check"></i></h3>
             </div>
             <div class="pax-form">
-                <form action="/" method="get" class="">
+                <form action="/cart/reservation" method="post" class="">
                     <fieldset class="fieldset-box-pax">
                         <label for="">*Nombre</label>
                         <div class="input-group">
@@ -67,17 +67,10 @@
                         </div>          
                     </fieldset>
                     <fieldset class="fieldset-box-pax">
-                        <label for="">*DNI o Pasaporte</label>
+                        <label for="">*DNI</label>
                         <div class="input-group">
                             <i class="fa-solid fa-passport"></i>
                             <input type="text" name="nationalID" class="" required>
-                        </div>
-                    </fieldset>
-                    <fieldset class="fieldset-box-pax">
-                        <label for="">*Nacionalidad</label>
-                        <div class="input-group">
-                            <i class="fa-solid fa-passport"></i>
-                            <input type="text" name="country" class="" required>
                         </div>
                     </fieldset>
                     <fieldset class="fieldset-box-pax">
@@ -87,11 +80,39 @@
                             <input type="date" name="birthDate" id="date" class="" required>
                     </fieldset>   
                     <fieldset class="fieldset-box-pax">
-                        <label for="">telefono de contacto</label>
+                        <label for="">*Genero</label>
+                        <div class="input-group">
+                            <i class="fa-solid fa-gender"></i>
+                            <select name="gender" id="gender" class="inputTextFieldCreateProducts">
+                                <option value="none"> none</option>
+                                <option value="Masculino"> Masculino</option>
+                                <option value="Femenino"> Femenino</option>  
+                                <option value="Otro"> Otro</option>  
+                            </select>
+                            <input type="text" name="gender" class="" required>
+                        </div>
+                    </fieldset>
+                    
+                    <fieldset class="fieldset-box-pax">
+                        <label for="">*Telefono</label>
                         <div class="input-group">
                             <i class="fa-solid fa-email"></i>
                             <input type="number" name="phoneNumber" class="" required>
                         </div>
+                    </fieldset>
+                    <fieldset class="fieldset-box-pax">
+                        <label for="">*Email</label>
+                        <div class="input-group">
+                            <i class="fa-solid fa-email"></i>
+                            <input type="number" name="email" id="email" class="" required>
+                        </div>
+                    </fieldset>
+                    <fieldset class="fieldset-box-pax">
+                            <label for="">*Email</label>
+                            <div class="input-group">
+                                <i class="fa-solid fa-email"></i>
+                                <input type="text" name="email" id="email" class="" required>
+                            </div>
                     </fieldset>
                 </form>     
             </div>
@@ -104,7 +125,7 @@
                     <h3>Pasajero 1 (Adulto + 18 años)<i class="fa-solid fa-circle-check"></i></h3>
                 </div>
                 <div class="pax-form">
-                    <form action="/" method="get" class="">
+                    <form action="/cart/reservation" method="post" class="">
                         <fieldset class="fieldset-box-pax">
                             <label for="">*Nombre</label>
                             <div class="input-group">
@@ -120,7 +141,7 @@
                             </div>          
                         </fieldset>
                         <fieldset class="fieldset-box-pax">
-                            <label for="">*DNI o Pasaporte</label>
+                            <label for="">*DNI</label>
                             <div class="input-group">
                                 <i class="fa-solid fa-passport"></i>
                                 <input type="text" name="nationalID" class="" required>
@@ -138,12 +159,32 @@
                             <div class="input-group">
                                 <i class="fa-solid fa-calendar-days"></i>
                                 <input type="date" name="birthDate" id="date" class="" required>
-                        </fieldset>   
+                        </fieldset> 
                         <fieldset class="fieldset-box-pax">
-                            <label for="">telefono de contacto</label>
+                            <label for="">*Genero</label>
+                            <div class="input-group">
+                                <i class="fa-solid fa-gender"></i>
+                                <select name="gender" id="gender" class="inputTextFieldCreateProducts">
+                                    <option value="none"> none</option>
+                                    <option value="Masculino"> Masculino</option>
+                                    <option value="Femenino"> Femenino</option>  
+                                    <option value="Otro"> Otro</option>  
+                                </select>
+                                <input type="text" name="gender" class="" required>
+                            </div>
+                        </fieldset>  
+                        <fieldset class="fieldset-box-pax">
+                            <label for="">*Telefono</label>
+                            <div class="input-group">
+                                <i class="fa-solid fa-phone"></i>
+                                <input type="number" name="phoneNumber" id="phoneNumber" class="" required>
+                            </div>
+                        </fieldset>
+                        <fieldset class="fieldset-box-pax">
+                            <label for="">*Email</label>
                             <div class="input-group">
                                 <i class="fa-solid fa-email"></i>
-                                <input type="number" name="phoneNumber" id="phoneNumber" class="" required>
+                                <input type="text" name="email" id="email" class="" required>
                             </div>
                         </fieldset>
                     </form>     
@@ -156,7 +197,7 @@
                     <h3>Pasajero 2 (Adulto + 18 años)<i class="fa-solid fa-circle-check"></i></h3>
                 </div>
                 <div class="pax-form">
-                <form action="/" method="get" class="">
+                <form action="/cart/reservation" method="post" class="">
                     <fieldset class="fieldset-box-pax">
                         <label for="">*Nombre</label>
                         <div class="input-group">
@@ -172,7 +213,7 @@
                         </div>          
                     </fieldset>
                     <fieldset class="fieldset-box-pax">
-                        <label for="">*DNI o Pasaporte</label>
+                        <label for="">*DNI</label>
                         <div class="input-group">
                             <i class="fa-solid fa-passport"></i>
                             <input type="text" name="nationalID" class="" required>
@@ -192,11 +233,31 @@
                             <input type="date" name="birthDate" id="birthDate" class="" required>
                     </fieldset>   
                     <fieldset class="fieldset-box-pax">
-                        <label for="">telefono de contacto</label>
+                        <label for="">*Genero</label>
                         <div class="input-group">
-                            <i class="fa-solid fa-email"></i>
+                            <i class="fa-solid fa-gender"></i>
+                            <select name="gender" id="gender" class="inputTextFieldCreateProducts">
+                                <option value="none"> none</option>
+                                <option value="Masculino"> Masculino</option>
+                                <option value="Femenino"> Femenino</option>  
+                                <option value="Otro"> Otro</option>  
+                            </select>
+                            <input type="text" name="gender" class="" required>
+                        </div>
+                    </fieldset>
+                    <fieldset class="fieldset-box-pax">
+                        <label for="">*Telefono</label>
+                        <div class="input-group">
+                            <i class="fa-solid fa-phone"></i>
                             <input type="number" name="phoneNumber" class="" required>
                         </div>
+                    </fieldset>
+                    <fieldset class="fieldset-box-pax">
+                            <label for="">*Email</label>
+                            <div class="input-group">
+                                <i class="fa-solid fa-email"></i>
+                                <input type="text" name="email" id="email" class="" required>
+                            </div>
                     </fieldset>
                 </form>     
             </div>
@@ -209,7 +270,7 @@
                     <h3>Pasajero 1 (Adulto + 18 años)<i class="fa-solid fa-circle-check"></i></h3>
                 </div>
                 <div class="pax-form">
-                <form action="/" method="get" class="">
+                <form action="/cart/reservation" method="post" class="">
                     <fieldset class="fieldset-box-pax">
                         <label for="">*Nombre</label>
                         <div class="input-group">
@@ -225,7 +286,7 @@
                         </div>          
                     </fieldset>
                     <fieldset class="fieldset-box-pax">
-                        <label for="">*DNI o Pasaporte</label>
+                        <label for="">*DNI</label>
                         <div class="input-group">
                             <i class="fa-solid fa-passport"></i>
                             <input type="text" name="nationalID" class="" required>
@@ -243,13 +304,34 @@
                         <div class="input-group">
                             <i class="fa-solid fa-calendar-days"></i>
                             <input type="date" name="birthDate" id="date" class="" required>
-                    </fieldset>   
+                    </fieldset>  
                     <fieldset class="fieldset-box-pax">
-                        <label for="">telefono de contacto</label>
+                        <label for="">*Genero</label>
                         <div class="input-group">
-                            <i class="fa-solid fa-email"></i>
+                            <i class="fa-solid fa-gender"></i>
+                            <select name="gender" id="gender" class="inputTextFieldCreateProducts">
+                                <option value="none"> none</option>
+                                <option value="Masculino"> Masculino</option>
+                                <option value="Femenino"> Femenino</option>  
+                                <option value="Otro"> Otro</option>  
+                            </select>
+                            <input type="text" name="gender" class="" required>
+                        </div>
+                    </fieldset> 
+                    <fieldset class="fieldset-box-pax">
+                        <label for="">*Telefono</label>
+                        <div class="input-group">
+                            <i class="fa-solid fa-phone"></i>
                             <input type="number" name="phoneNumber" class="" required>
                         </div>
+                    </fieldset>
+                    <fieldset class="fieldset-box-pax">
+                            <label for="">*Email</label>
+                            <div class="input-group">
+                                <i class="fa-solid fa-email"></i>
+                                <input type="text" name="email" id="email" class="" required>
+                            </div>
+                        
                     </fieldset>
                 </form>     
             </div>
@@ -261,7 +343,7 @@
                     <h3>Pasajero 2 (Adulto + 18 años)<i class="fa-solid fa-circle-check"></i></h3>
                 </div>
                 <div class="pax-form">
-                <form action="/" method="get" class="">
+                <form action="/cart/reservation" method="post" class="">
                     <fieldset class="fieldset-box-pax">
                         <label for="">*Nombre</label>
                         <div class="input-group">
@@ -277,7 +359,7 @@
                         </div>          
                     </fieldset>
                     <fieldset class="fieldset-box-pax">
-                        <label for="">*DNI o Pasaporte</label>
+                        <label for="">*DNI</label>
                         <div class="input-group">
                             <i class="fa-solid fa-passport"></i>
                             <input type="text" name="nationalID" class="" required>
@@ -297,11 +379,31 @@
                             <input type="date" name="birthDate" id="date" class="" required>
                     </fieldset>   
                     <fieldset class="fieldset-box-pax">
-                        <label for="">telefono de contacto</label>
+                        <label for="">*Genero</label>
                         <div class="input-group">
-                            <i class="fa-solid fa-email"></i>
+                            <i class="fa-solid fa-gender"></i>
+                            <select name="gender" id="gender" class="inputTextFieldCreateProducts">
+                                <option value="none"> none</option>
+                                <option value="Masculino"> Masculino</option>
+                                <option value="Femenino"> Femenino</option>  
+                                <option value="Otro"> Otro</option>  
+                            </select>
+                            <input type="text" name="gender" class="" required>
+                        </div>
+                    </fieldset>
+                    <fieldset class="fieldset-box-pax">
+                        <label for="">*Telefono</label>
+                        <div class="input-group">
+                            <i class="fa-solid fa-phone"></i>
                             <input type="number" name="phoneNumber" class="" required>
                         </div>
+                    </fieldset>
+                    <fieldset class="fieldset-box-pax">
+                            <label for="">*Email</label>
+                            <div class="input-group">
+                                <i class="fa-solid fa-email"></i>
+                                <input type="text" name="email" id="email" class="" required>
+                            </div>
                     </fieldset>
                 </form>     
             </div>
@@ -313,7 +415,7 @@
                     <h3>Pasajero 3 (Menor - 18 años)<i class="fa-solid fa-circle-check"></i></h3>
                 </div>
                 <div class="pax-form">
-                <form action="/" method="get" class="">
+                <form action="/cart/reservation" method="post" class="">
                     <fieldset class="fieldset-box-pax">
                         <label for="">*Nombre</label>
                         <div class="input-group">
@@ -329,7 +431,7 @@
                         </div>          
                     </fieldset>
                     <fieldset class="fieldset-box-pax">
-                        <label for="">*DNI o Pasaporte</label>
+                        <label for="">*DNI</label>
                         <div class="input-group">
                             <i class="fa-solid fa-passport"></i>
                             <input type="text" name="nationalID" class="" required>
@@ -349,11 +451,31 @@
                             <input type="date" name="birthDate" id="date" class="" required>
                     </fieldset>   
                     <fieldset class="fieldset-box-pax">
-                        <label for="">telefono de contacto</label>
+                        <label for="">*Genero</label>
                         <div class="input-group">
-                            <i class="fa-solid fa-email"></i>
+                            <i class="fa-solid fa-gender"></i>
+                            <select name="gender" id="gender" class="inputTextFieldCreateProducts">
+                                <option value="none"> none</option>
+                                <option value="Masculino"> Masculino</option>
+                                <option value="Femenino"> Femenino</option>  
+                                <option value="Otro"> Otro</option>  
+                            </select>
+                            <input type="text" name="gender" class="" required>
+                        </div>
+                    </fieldset>
+                    <fieldset class="fieldset-box-pax">
+                        <label for="">*Telefono</label>
+                        <div class="input-group">
+                            <i class="fa-solid fa-phone"></i>
                             <input type="number" name="phoneNumber" class="" required>
                         </div>
+                    </fieldset>
+                    <fieldset class="fieldset-box-pax">
+                            <label for="">*Email</label>
+                            <div class="input-group">
+                                <i class="fa-solid fa-email"></i>
+                                <input type="text" name="email" id="email" class="" required>
+                            </div>
                     </fieldset>
                 </form>     
             </div>
@@ -365,7 +487,7 @@
                     <h3>Pasajero 4 (Menor - 18 años)<i class="fa-solid fa-circle-check"></i></h3>
                 </div>
                 <div class="pax-form">
-                <form action="/" method="get" class="">
+                <form action="/cart/reservation" method="post" class="">
                     <fieldset class="fieldset-box-pax">
                         <label for="">*Nombre</label>
                         <div class="input-group">
@@ -381,7 +503,7 @@
                         </div>          
                     </fieldset>
                     <fieldset class="fieldset-box-pax">
-                        <label for="">*DNI o Pasaporte</label>
+                        <label for="">*DNI</label>
                         <div class="input-group">
                             <i class="fa-solid fa-passport"></i>
                             <input type="text" name="nationalID" class="" required>
@@ -401,11 +523,32 @@
                             <input type="date" name="birthDate" id="date" class="" required>
                     </fieldset>   
                     <fieldset class="fieldset-box-pax">
-                        <label for="">telefono de contacto</label>
+                        <label for="">*Genero</label>
                         <div class="input-group">
-                            <i class="fa-solid fa-email"></i>
+                            <i class="fa-solid fa-gender"></i>
+                            <select name="gender" id="gender" class="inputTextFieldCreateProducts">
+                                <option value="none"> none</option>
+                                <option value="Masculino"> Masculino</option>
+                                <option value="Femenino"> Femenino</option>  
+                                <option value="Otro"> Otro</option>  
+                            </select>
+                            <input type="text" name="gender" class="" required>
+                        </div>
+                    </fieldset>
+                    <fieldset class="fieldset-box-pax">
+                        <label for="">*Telefono</label>
+                        <div class="input-group">
+                            <i class="fa-solid fa-phone"></i>
                             <input type="number" name="phoneNumber" class="" required>
                         </div>
+                    </fieldset>    
+                    <fieldset class="fieldset-box-pax">
+                            <label for="">*Email</label>
+                            <div class="input-group">
+                                <i class="fa-solid fa-email"></i>
+                                <input type="text" name="email" id="email" class="" required>
+                            </div>
+                        
                     </fieldset>
                 </form>     
             </div>

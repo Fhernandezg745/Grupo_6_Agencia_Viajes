@@ -19,13 +19,12 @@ module.exports = (sequelize, DataTypes) => {
         deletedAt: false,
     };
 
-    const Region = sequelize.define(alias, cols, config);
-    Region.associate = function(models) {
-        Region.hasMany(models.products, {
+    const region = sequelize.define(alias, cols, config);
+    region.associate = function(models) {
+        region.hasMany(models.products, {
             as: "regionProduct",
-            foreignKey: "regionId",
-            otherKey: "id",
+            foreignKey: "regionId"
         });
     };
-    return Region;
+    return region;
 };

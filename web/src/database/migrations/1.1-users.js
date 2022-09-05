@@ -30,6 +30,10 @@ module.exports = {
             },
             avatar: {
                 type: Sequelize.INTEGER,
+                references:{
+                    model:'images',
+                    key:'id'
+                }
             }
         });
     },

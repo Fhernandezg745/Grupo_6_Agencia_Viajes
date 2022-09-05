@@ -1,9 +1,11 @@
+const { userInfo } = require("os");
 const {
   products,
   images,
   imagesProducts,
   tagsProducts,
   tags,
+  user
 } = require("../database/models/index");
 
 const productController = {
@@ -44,8 +46,8 @@ const productController = {
       regionId: req.body.regionId != "" ? parseInt(req.body.regionId) : null,
       flights: req.body.flights,
       status: req.body.status,
-      salesPrice:
-        req.body.salesPrice != "" ? parseInt(req.body.salesPrice) : null,
+      salesPrice:req.body.salesPrice != "" ? parseInt(req.body.salesPrice) : null,
+      creatorId: user.id
     });
 
     if (req.tags && req.tags.length > 0) {
@@ -58,7 +60,7 @@ const productController = {
       );
       let addTagsProducts = await Promise.all(
         newTags.map((tagProduct) => {
-          return imagesProducts.create({
+          return tagsProducts.create({
             product: newProduct.id,
             image: tagProduct.id,
           });

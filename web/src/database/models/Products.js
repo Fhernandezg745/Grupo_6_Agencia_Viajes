@@ -76,19 +76,17 @@ module.exports = (sequelize, DataTypes) => {
     products.associate = function(models) {
         products.belongsToMany(models.images, {
             through: "ImagesProducts",
-            foreignKey: "id",
-            otherKey: "imageId",
         });
         products.belongsToMany(models.tags, {
-            foreignKey: "tags",
-            as: "productId",
             through: "tagsProducts",
         });
-        products.belongsTo(models.user, {
-            foreignKey: 'creatorId'
-        })
-        products.belongsTo(models.region, {
-            foreignKey: 'regionId'
+        products.belongsTo(models.user,{
+            as: "productoUser",
+            foreignKey: "creatorId"
+        });
+        products.belongsTo(models.region,{
+            as: "productoRegion",
+            foreignKey: "regionId"
         });
     };
     return products;

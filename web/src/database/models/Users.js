@@ -36,16 +36,18 @@ module.exports = (sequelize, DataTypes) => {
         deletedAt: false
     };
 
-    const User = sequelize.define(alias, cols, config);
+    const user = sequelize.define(alias, cols, config);
 
-    User.associate = function(models) {
-        User.hasOne(models.images, {
-            foreignKey: 'id'
+    user.associate = function(models) {
+        user.belongsTo(models.images, {
+            as:'avatarId',
+            foreignKey: 'avatar'
         })
-        User.hasMany(models.products, {
-            foreignKey: 'creatorId'
+        user.hasMany(models.products, {
+            as: "userProduct",
+            foreignKey: "creatorId",
         });
     }
 
-    return User
+    return user
 }

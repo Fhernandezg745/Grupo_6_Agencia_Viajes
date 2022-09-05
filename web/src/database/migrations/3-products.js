@@ -53,7 +53,12 @@ module.exports = {
             },
             regionId: {
                 type: Sequelize.INTEGER,
-                allowNull: true
+                allowNull: true,
+                onDelete:'CASCADE',
+                references:{
+                    model:'region',
+                    key:'id'
+                }
             },
             status: {
                 type: Sequelize.STRING
@@ -65,7 +70,11 @@ module.exports = {
             },
             creatorId: {
                 type: Sequelize.INTEGER,
-                allowNull: true
+                allowNull: true,
+                references:{
+                    model:'users',
+                    key:'id'
+                }
             }
         });
     },

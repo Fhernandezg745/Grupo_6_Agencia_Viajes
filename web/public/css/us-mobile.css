@@ -6,12 +6,15 @@
     font-family: "Varela Round", sans-serif;
     font-size: 12px;
     scroll-behavior: smooth;
-  }
+}
 
 main .main-image {
+    text-align: center;
     width: 100%;
+    height: 80vh;
     opacity: 75%;
-    border: blue solid 1px;
+    box-sizing: border-box;
+    border: 0px;
     background-image: url(/assets/airport.jpg);
     background-repeat: no-repeat;
     background-size: cover;
@@ -20,14 +23,15 @@ main .main-image {
 }
 
 main section .info {
-     margin-left: 15vw;
-     margin-right: 15vw;
-     margin-top: 2rem;
-     width: 100rem;
-     height: auto;
-     padding: 2rem;
-     border-radius: 3px;
-     background-color: rgba(0, 0, 0, 0.6)
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    margin: 0 auto;
+    max-width: 100rem;
+    height: 100%;
+    padding: 2rem;
+    border-radius: 3px;
+    background-color: rgba(0, 0, 0, 0.2)
 }
 
 main section .info h2 {

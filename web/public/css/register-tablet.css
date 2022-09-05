@@ -22,4 +22,10 @@
     .buttonField a {
         width: 20%;
     }
+    .bottomCheck label {
+        font-size: 1rem;
+    }
+    .bottomCheck {
+        text-align: center;
+    }
 }

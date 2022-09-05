@@ -59,28 +59,28 @@
 
                             <% } %>
                     </fieldset>
-                        </fieldset>
-                        <fieldset class="labelFieldset">
-                            <label for="imagenUsuario"><i class="fa-solid fa-image"></i> - Foto de perfil</label>
-                            <input type="file" name="avatar" id="avatar" accept="image/png, .jpeg, .jpg, image/gif" class="inputTextFieldRegister">
-                            <% if (locals.errors && errors.avatar) { %>
-                                <p class="msg-error">
-                                    <%= errors.avatar.msg %>
-                                </p>
-                                <% } %>>
-                        </fieldset>
-                        <fieldset class="bottomCheck">
-                            <label for="condiciones">Acepto los terminos y condiciones</label>
-                            <input type="checkbox" required>
-                        </fieldset>
-                        <fieldset class="bottomCheck">
-                            <label for="mailing">Quiero recibir novedades y ofertas por correo</label>
-                            <input type="checkbox">
-                        </fieldset>
-                        <fieldset class="buttonField">
-                            <button type="submit" value="Enviar" name="enviar" class="sendButton">Crear Usuario</button>
-                            <button type="reset" value="Borrar" name="borrar" class="sendButton">Cancelar</button>
-                        </fieldset>
+                    </fieldset>
+                    <fieldset class="labelFieldset">
+                        <label for="imagenUsuario"><i class="fa-solid fa-image"></i> - Foto de perfil</label>
+                        <input type="file" name="avatar" id="avatar" accept="image/png, .jpeg, .jpg, image/gif" class="inputTextFieldRegister">
+                        <% if (locals.errors && errors.avatar) { %>
+                            <p class="msg-error">
+                                <%= errors.avatar.msg %>
+                            </p>
+                            <% } %>
+                    </fieldset>
+                    <fieldset class="bottomCheck">
+                        <label for="condiciones">Acepto los terminos y condiciones</label>
+                        <input type="checkbox" required>
+                    </fieldset>
+                    <fieldset class="bottomCheck">
+                        <label for="mailing">Quiero recibir novedades y ofertas por correo</label>
+                        <input type="checkbox">
+                    </fieldset>
+                    <fieldset class="buttonField">
+                        <button type="submit" value="Enviar" name="enviar" class="sendButton">Crear Usuario</button>
+                        <button type="reset" value="Borrar" name="borrar" class="sendButton">Cancelar</button>
+                    </fieldset>
                 </form>
             </section>
         </main>

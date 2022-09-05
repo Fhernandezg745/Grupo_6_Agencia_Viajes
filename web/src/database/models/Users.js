@@ -42,13 +42,9 @@ module.exports = (sequelize, DataTypes) => {
         User.hasOne(models.images, {
             foreignKey: 'id'
         })
-        User.belongsToMany(models.products, {
-            through: 'usersProducts',
-            foreignKey: 'id',
-            otherKey: 'id',
-            timestamps: false,
-            createdAt: false
-        })
+        User.hasMany(models.products, {
+            foreignKey: 'creatorId'
+        });
     }
 
     return User

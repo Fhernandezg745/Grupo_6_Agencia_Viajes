@@ -67,6 +67,7 @@
     padding: 1vw;
     display: flex;
     flex-wrap: nowrap;
+    justify-content: center;
 }
 
 .bottomCheck label {
@@ -125,9 +126,8 @@
     font-size: 14px;
     font-weight: bold;
     background: #128f76;
-  }
+}
 
 .sendButton:hover {
     background: #007aff;
-  }
-  
+}

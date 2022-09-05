@@ -3,39 +3,40 @@
 
 <head>
     <%- include("../includes/head") %>
-    <link rel="stylesheet" href="/css/logged-mobile.css">
-    <link rel="stylesheet" href="/css/logged-desktop.css">
+        <link rel="stylesheet" href="/css/logged-mobile.css">
+        <link rel="stylesheet" href="/css/logged-desktop.css">
 </head>
+
 <body>
 
-  <%- include("../includes/header") %>
-  <section class="main-top">
-      <span class="iconMobile"><i class="fa-solid fa-user"></i>¡Hola <%= user.firstName %> !</span>
-</section>
-
-
-    <main>
-        <section class="imageLogged">
-            <div class="userOptions">
-              <a href="/"><i class="fa-solid fa-address-card"></i><p class="options">Editar mi perfil</p></a>
-       <% if (user.isAdmin == true) {  %>
-        <a href="/products/createProducts"><i class="fa-solid fa-plus"></i><p class="options">Crear producto</p></a>
-        <% }  %>
-              <a href="/products/productList"><i class="fa-solid fa-pen-to-square"></i><p class="options">Ver listado de mis productos</p></a>
-              <a href="/"><i class="fa-solid fa-chart-line"></i><p class="options">Mis cotizaciones</p></a>
-              <a href="/"><i class="fa-solid fa-receipt"></i><p class="options">Mis ventas</p></a>
-            </div>
-            <div class="userOptions">
-                <a href="/"><i class="fa-solid fa-comments-dollar"></i><p class="options">Cotización USD</p></a>
-                <a href="/"><i class="fa-solid fa-newspaper"></i><p class="options">Novedades</p></a>
-                <a href="/"><i class="fa-solid fa-circle-info"></i><p class="options">Bases y condiciones</p></a>
-                <a href="/"><i class="fa-solid fa-handshake-angle"></i><p class="options">Ayuda</p></a>
-                <a href="/"><i class="fa-solid fa-file-invoice-dollar"></i><p class="options">Facturación</p></a>
-              </div>
+    <%- include("../includes/header") %>
+        <section class="main-top">
+            <span class="iconMobile"><i class="fa-solid fa-user"></i> ¡ Hola <%= user.firstName %> !</span>
         </section>
-    </main>
 
-    <%- include("../includes/footer") %>
+
+        <main>
+            <section class="imageLogged">
+                <div class="userOptions">
+                    <a href="/"><i class="fa-solid fa-address-card"></i><p class="options">Editar mi perfil</p></a>
+                    <% if (user.isAdmin == true) {  %>
+                        <a href="/products/createProducts"><i class="fa-solid fa-plus"></i><p class="options">Crear producto</p></a>
+                        <% }  %>
+                            <a href="/products/productList"><i class="fa-solid fa-pen-to-square"></i><p class="options">Ver listado de mis productos</p></a>
+                            <a href="/"><i class="fa-solid fa-chart-line"></i><p class="options">Mis cotizaciones</p></a>
+                            <a href="/"><i class="fa-solid fa-receipt"></i><p class="options">Mis ventas</p></a>
+                </div>
+                <div class="userOptions">
+                    <a href="/"><i class="fa-solid fa-comments-dollar"></i><p class="options">Cotización USD</p></a>
+                    <a href="/"><i class="fa-solid fa-newspaper"></i><p class="options">Novedades</p></a>
+                    <a href="/"><i class="fa-solid fa-circle-info"></i><p class="options">Bases y condiciones</p></a>
+                    <a href="/"><i class="fa-solid fa-handshake-angle"></i><p class="options">Ayuda</p></a>
+                    <a href="/"><i class="fa-solid fa-file-invoice-dollar"></i><p class="options">Facturación</p></a>
+                </div>
+            </section>
+        </main>
+
+        <%- include("../includes/footer") %>
 
 </body>
 

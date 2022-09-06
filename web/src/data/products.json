@@ -13,7 +13,7 @@
         "salesPrice": 1650,
         "base": "Doble",
         "image": "image-1658864670674-52222413.jpeg",
-        "regionId": null,
+        "regionId": 3,
         "status": "highLighted",
         "tags": "#petra #medioOriente #Cultura"
     },
@@ -32,7 +32,7 @@
         "salesPrice": 2290,
         "base": "Doble",
         "image": "image-1658864871111-745452364.jpeg",
-        "regionId": null,
+        "regionId": 2,
         "status": "highLighted",
         "tags": "#GreatWall #MurallaChina"
     },
@@ -51,7 +51,7 @@
         "salesPrice": 2770,
         "base": "Doble",
         "image": "image-1658865061216-308969024.jpeg",
-        "regionId": null,
+        "regionId": 1,
         "status": "highLighted",
         "tags": "#paradise #zanzibar #allInclusive #playas"
     },
@@ -70,7 +70,7 @@
         "salesPrice": 2129,
         "base": "Doble",
         "image": "image-1658865231567-790628298.jpeg",
-        "regionId": null,
+        "regionId": 1,
         "status": "highLighted",
         "tags": "#giraffe #safari #kenya"
     },
@@ -89,7 +89,7 @@
         "salesPrice": 1070,
         "base": "Doble",
         "image": "image-1658865424477-470560922.jpg",
-        "regionId": null,
+        "regionId": 1,
         "status": "bestSeller",
         "tags": "#piramides #egipto #cultura #ancestral"
     },
@@ -108,7 +108,7 @@
         "salesPrice": 1350,
         "base": "Doble",
         "image": "image-1658865586284-429073470.jpg",
-        "regionId": null,
+        "regionId": 1,
         "status": "bestSeller",
         "tags": "#safari #lions #wildlive #adventure"
     },
@@ -127,7 +127,7 @@
         "salesPrice": 2790,
         "base": "Doble",
         "image": "image-1658865739747-215969002.jpg",
-        "regionId": null,
+        "regionId": 1,
         "status": "bestSeller",
         "tags": "#safari #lions #wildlive #adventure"
     },
@@ -146,7 +146,7 @@
         "salesPrice": 990,
         "base": "Doble",
         "image": "image-1658865892477-317380915.jpg",
-        "regionId": null,
+        "regionId": 3,
         "status": "bestSeller",
         "tags": "#india #budha #hindu #culture"
     }

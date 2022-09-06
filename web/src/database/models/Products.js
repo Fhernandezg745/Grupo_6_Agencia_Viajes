@@ -36,18 +36,18 @@ module.exports = (sequelize, DataTypes) => {
         },
         excursion: {
             type: DataTypes.BOOLEAN,
-            defaultValue: true,
+            defaultValue: false,
         },
         transfer: {
             type: DataTypes.BOOLEAN,
-            defaultValue: true,
+            defaultValue: false,
         },
         category: {
             type: DataTypes.STRING,
         },
         flights: {
             type: DataTypes.BOOLEAN,
-            defaultValue: true,
+            defaultValue: false,
         },
         regionId: {
             type: DataTypes.INTEGER,
@@ -76,6 +76,8 @@ module.exports = (sequelize, DataTypes) => {
     products.associate = function(models) {
         products.belongsToMany(models.images, {
             through: "ImagesProducts",
+            foreignKey: 'image',
+            otherKey:'product'
         });
         products.belongsToMany(models.tags, {
             through: "tagsProducts",

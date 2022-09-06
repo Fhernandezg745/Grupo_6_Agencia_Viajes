@@ -38,23 +38,22 @@ module.exports = {
             },
             excursion: {
                 type: Sequelize.BOOLEAN,
-                defaultValue: true
+                defaultValue: false
             },
             transfer: {
                 type: Sequelize.BOOLEAN,
-                defaultValue: true
+                defaultValue: false
             },
             category: {
                 type: Sequelize.STRING
             },
             flights: {
                 type: Sequelize.BOOLEAN,
-                defaultValue: true
+                defaultValue: false
             },
             regionId: {
                 type: Sequelize.INTEGER,
                 allowNull: true,
-                onDelete:'CASCADE',
                 references:{
                     model:'region',
                     key:'id'

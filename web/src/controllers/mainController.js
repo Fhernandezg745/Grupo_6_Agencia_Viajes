@@ -1,11 +1,13 @@
-const { products } = require("../database/models/index");
+const { products, images } = require("../database/models/index");
 const storage = require("../modules/storage");
 const multer = require("multer");
 const upload = multer({ storage: storage("products") });
 
 const mainController = {
     home: async(req, res) => {
-        let productos = await products.findAll()
+        let productos = await products.findAll(
+        
+        )
         return res.render("home", {
             title: "Home",
             products: productos,

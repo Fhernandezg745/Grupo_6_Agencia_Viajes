@@ -10,7 +10,9 @@ const {
 
 const productController = {
   index: async (req, res) => {
-    let productos = await products.findAll();
+    let productos = await products.findAll(
+      {includes: {all:true}}
+    );
     return res.render("products/productList", {
       title: "Product List",
       products: productos,

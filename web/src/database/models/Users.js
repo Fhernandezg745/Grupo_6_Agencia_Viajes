@@ -33,14 +33,17 @@ module.exports = (sequelize, DataTypes) => {
     }
     let config = {
         timestamps: false,
-        deletedAt: false
+        deletedAt: false,
+        createdAt: false,
+        updatedAt: false
+
     };
 
     const user = sequelize.define(alias, cols, config);
 
     user.associate = function(models) {
         user.belongsTo(models.images, {
-            as:'avatarId',
+            as: 'avatarId',
             foreignKey: 'avatar'
         })
         user.hasMany(models.products, {

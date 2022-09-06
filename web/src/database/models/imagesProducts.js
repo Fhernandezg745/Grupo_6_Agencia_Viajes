@@ -1,16 +1,18 @@
 module.exports = (sequelize, DataTypes) => {
     let alias = "imagesProducts";
     let cols = {
-        product:{
+        product: {
             type: DataTypes.INTEGER
         },
-        image:{
+        image: {
             type: DataTypes.INTEGER
         }
     }
     let config = {
         timestamps: false,
-        deleteAt: false
+        deleteAt: false,
+        createdAt: false,
+        updatedAt: false
     };
 
     const imagesProducts = sequelize.define(alias, cols, config);

@@ -17,6 +17,8 @@ module.exports = (sequelize, DataTypes) => {
     let config = {
         timestamps: false,
         deletedAt: false,
+        createdAt: false,
+        updatedAt: false
     };
 
     const region = sequelize.define(alias, cols, config);

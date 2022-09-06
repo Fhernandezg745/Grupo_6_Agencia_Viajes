@@ -48,7 +48,9 @@ module.exports = (sequelize, DataTypes) => {
     }
     let config = {
         timestamps: false,
-        deletedAt: false
+        deletedAt: false,
+        createdAt: false,
+        updatedAt: false
     };
 
     const Passengers = sequelize.define(alias, cols, config);

@@ -1,16 +1,18 @@
 module.exports = (sequelize, DataTypes) => {
     let alias = "tagsProducts";
     let cols = {
-        product:{
+        product: {
             type: DataTypes.INTEGER
         },
-        tags:{
+        tags: {
             type: DataTypes.INTEGER
         }
     }
     let config = {
         timestamps: false,
-        deleteAt: false
+        deleteAt: false,
+        createdAt: false,
+        updatedAt: false
     };
 
     const tagsProducts = sequelize.define(alias, cols, config);

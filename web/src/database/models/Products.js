@@ -69,6 +69,8 @@ module.exports = (sequelize, DataTypes) => {
     let config = {
         timestamps: false,
         deletedAt: false,
+        createdAt: false,
+        updatedAt: false
     };
 
     const products = sequelize.define(alias, cols, config);
@@ -77,16 +79,16 @@ module.exports = (sequelize, DataTypes) => {
         products.belongsToMany(models.images, {
             through: "ImagesProducts",
             foreignKey: 'image',
-            otherKey:'product'
+            otherKey: 'product'
         });
         products.belongsToMany(models.tags, {
             through: "tagsProducts",
         });
-        products.belongsTo(models.user,{
+        products.belongsTo(models.user, {
             as: "productoUser",
             foreignKey: "creatorId"
         });
-        products.belongsTo(models.region,{
+        products.belongsTo(models.region, {
             as: "productoRegion",
             foreignKey: "regionId"
         });

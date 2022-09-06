@@ -13,7 +13,9 @@ module.exports = (sequelize, DataTypes) => {
     }
     let config = {
         timestamps: false,
-        deletedAt: false
+        deletedAt: false,
+        createdAt: false,
+        updatedAt: false
     };
 
     const Images = sequelize.define(alias, cols, config);
@@ -25,7 +27,7 @@ module.exports = (sequelize, DataTypes) => {
         Images.belongsToMany(models.products, {
             through: "ImagesProducts",
             foreignKey: 'image',
-            otherKey:'product'
+            otherKey: 'product'
         })
     }
     return Images

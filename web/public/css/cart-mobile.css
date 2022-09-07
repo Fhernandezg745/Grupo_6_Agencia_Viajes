@@ -155,6 +155,10 @@
     flex-wrap: wrap;
 }
 
+input {
+    outline: none;
+}
+
 .usuario {
     flex-basis: 50%;
     display: block;

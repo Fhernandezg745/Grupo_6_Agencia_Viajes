@@ -23,6 +23,8 @@ module.exports = (sequelize, DataTypes) => {
     Tags.associate = function(models) {
         Tags.belongsToMany(models.products, {
             through: "tagsProducts",
+            foreignKey: "tagId",
+            otherKey: 'productId'
         });
     };
 

@@ -5,8 +5,7 @@ const upload = multer({ storage: storage("products") });
 
 const mainController = {
     home: async(req, res) => {
-        let productos = await products.findAll({ include: images })
-
+        let productos = await products.findAll({ include: { all: true } });
         return res.render("home", {
             title: "Home",
             products: productos,

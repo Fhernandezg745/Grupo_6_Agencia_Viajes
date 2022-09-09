@@ -1,10 +1,10 @@
 module.exports = (sequelize, DataTypes) => {
     let alias = "tagsProducts";
     let cols = {
-        product: {
+        productId: {
             type: DataTypes.INTEGER
         },
-        tags: {
+        tagId: {
             type: DataTypes.INTEGER
         }
     }

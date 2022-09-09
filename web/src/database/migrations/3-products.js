@@ -54,9 +54,9 @@ module.exports = {
             regionId: {
                 type: Sequelize.INTEGER,
                 allowNull: true,
-                references:{
-                    model:'region',
-                    key:'id'
+                references: {
+                    model: 'regions',
+                    key: 'id'
                 }
             },
             status: {
@@ -70,9 +70,9 @@ module.exports = {
             creatorId: {
                 type: Sequelize.INTEGER,
                 allowNull: true,
-                references:{
-                    model:'users',
-                    key:'id'
+                references: {
+                    model: 'users',
+                    key: 'id'
                 }
             }
         });

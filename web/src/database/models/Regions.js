@@ -1,5 +1,5 @@
 module.exports = (sequelize, DataTypes) => {
-    let alias = "region";
+    let alias = "regions";
     let cols = {
         id: {
             allowNull: false,
@@ -21,12 +21,12 @@ module.exports = (sequelize, DataTypes) => {
         updatedAt: false
     };
 
-    const region = sequelize.define(alias, cols, config);
-    region.associate = function(models) {
-        region.hasMany(models.products, {
+    const regions = sequelize.define(alias, cols, config);
+    regions.associate = function(models) {
+        regions.hasMany(models.products, {
             as: "regionProduct",
             foreignKey: "regionId"
         });
     };
-    return region;
+    return regions;
 };

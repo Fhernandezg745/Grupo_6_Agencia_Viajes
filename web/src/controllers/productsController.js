@@ -2,7 +2,7 @@ const { userInfo } = require("os");
 const {
     products,
     images,
-    ImagesProducts,
+    imagesProducts,
     tagsProducts,
     tags,
     user
@@ -10,8 +10,7 @@ const {
 
 const productController = {
     index: async(req, res) => {
-        let productos = await products.findAll({ include: images });
-        return res.send(productos)
+        let productos = await products.findAll({ include: { all: true } });
         return res.render("products/productList", {
             title: "Product List",
             products: productos,
@@ -124,15 +123,15 @@ const productController = {
             },
         });
 
-        if (req.files && req.files.length > 0) {
+        if (req.image && req.image.length > 0) {
             let imagenes = await Promise.all(
-                req.files.map((file) => {
+                req.image.map((file) => {
                     return images.update({
                         images: file.filename,
                     }, {
                         where: {
-                            images: productsDB.image,
-                        },
+                            image: productsDB.image,
+                        }
                     });
                 })
             );
@@ -150,21 +149,21 @@ const productController = {
             );
         }
 
-        await tagsProducts.update({
-            tagId: tags.id,
-        }, {
-            where: {
-                productId: productsDB.id,
-            },
-        });
+        // await tagsProducts.update({
+        //     tagId: tags.id,
+        // }, {
+        //     where: {
+        //         productId: productsDB.id,
+        //     },
+        // });
 
-        await tags.update({
-            tags: req.body.tags,
-        }, {
-            where: {
-                id: productsDB.tags,
-            },
-        });
+        // await tags.update({
+        //     tags: req.body.tags,
+        // }, {
+        //     where: {
+        //         id: productsDB.tags,
+        //     },
+        // });
 
         return res.redirect("/products/details/" + req.params.id);
     },

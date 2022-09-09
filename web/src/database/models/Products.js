@@ -83,12 +83,14 @@ module.exports = (sequelize, DataTypes) => {
         });
         products.belongsToMany(models.tags, {
             through: "tagsProducts",
+            foreignKey: "tagId",
+            otherKey: 'productId'
         });
         products.belongsTo(models.user, {
             as: "productoUser",
             foreignKey: "creatorId"
         });
-        products.belongsTo(models.region, {
+        products.belongsTo(models.regions, {
             as: "productoRegion",
             foreignKey: "regionId"
         });

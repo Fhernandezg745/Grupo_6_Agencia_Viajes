@@ -160,3 +160,37 @@ main {
     flex-wrap: wrap;
     text-align: start;
 }
+
+/* validations */
+
+.msg-error {
+    display: none;
+    flex-basis: 100%;
+    padding: 0.1rem;
+    text-align: center;
+    margin-top: .5rem;
+}
+
+.labelFieldset.invalid {
+    background-color:#4c2c2a;
+}
+
+.labelFieldset.invalid .msg-error, .labelFieldset.invalid label {
+    color: #fff;
+}
+
+.labelFieldset.invalid .msg-error {
+    display: block;
+}
+
+.labelFieldset.valid {
+    background-color: #049473;
+}
+
+.labelFieldset.valid .msg-error, .labelFieldset.valid label {
+    color: #fff;
+}
+
+.labelFieldset.valid .msg-error {
+    display: block;
+}

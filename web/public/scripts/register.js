@@ -90,7 +90,7 @@ inputsRegister.password.addEventListener("input", function(e) {
     }
 });
 
-inputsRegister.avatar.addEventListener("change", function(e) {
+/*inputsRegister.avatar.addEventListener("change", function(e) {
     let field = e.target.parentElement
     let files = e.target.files
     let feed = field.querySelector(".msg-error")
@@ -99,7 +99,7 @@ inputsRegister.avatar.addEventListener("change", function(e) {
         msg = "Debes subir un archivo"
     } else if(!validator.isMimeType(file[0].type)){
         msg = "El archivo no tiene un formato válido"
-    } else if(!["jpg", "svg", "png", "jpeg"].includes(files[0].type.split("/")[1])){
+    } else if(!["jpg", "svg", "png", "jpeg", "gif"].includes(files[0].type.split("/")[1])){
         msg = "El archivo no tiene un formato de imagen válido"
     }
 
@@ -111,13 +111,13 @@ inputsRegister.avatar.addEventListener("change", function(e) {
         field.classList.remove("invalid")
         field.classList.add("valid")
     }
-});
+});*/
 
-/*formsRegister.addEventListener("submit", function(e){
+formsRegister.addEventListener("submit", function(e){
     e.preventDefault()
     let isCorrect = false
 
-    if(e.target.querySelectorAll(".feed.valid").length === 4){
+    if(e.target.querySelectorAll(".labelFieldset.valid").length === 4){
         isCorrect = true
     }
     if(isCorrect){
@@ -125,8 +125,8 @@ inputsRegister.avatar.addEventListener("change", function(e) {
     } else{
         Swal.fire({
             title: "Error",
-            text: "No debe quedar ningún campo vacío",
+            text: "Por favor, revisa que todos los campos estén correctos",
             icon: "error"
         })
     }
-}) */
+})

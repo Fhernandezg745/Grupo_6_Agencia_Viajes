@@ -19,13 +19,13 @@
                 <form action="/users/save" method="post" class="formAreaRegister" id="register" enctype="multipart/form-data">
                     <input type="hidden" name="position" value="user">
                     <fieldset class="labelFieldset">
-                        <label for="nombre"><i class="fa-solid fa-id-card registerIcon"></i> Nombre</label>
+                        <label for="nombre"><i class="fa-solid fa-id-card registerIcon"></i> * Nombre</label>
                         <input type="text" name="firstName" placeholder="Ingresa tu nombre" class="inputTextFieldRegister" value="<%= locals.oldData ? oldData.firstName : null %>">
                             <p class="msg-error">
                             </p>
                     </fieldset>
                     <fieldset class="labelFieldset">
-                        <label for="nombre"><i class="fa-solid fa-id-card registerIcon"></i> Apellido</label>
+                        <label for="nombre"><i class="fa-solid fa-id-card registerIcon"></i> * Apellido</label>
                         <input type="text" name="lastName" placeholder="Ingresa tu apellido" class="inputTextFieldRegister" value="<%= locals.oldData ? oldData.lastName : null %>">
                             <p class="msg-error">
                             </p>
@@ -36,14 +36,14 @@
                         <input type="date" name="birthDate" id="date" placeholder="Fecha de nacimiento" class="inputTextFieldRegister">
                     </fieldset>
                     <fieldset class="labelFieldset">
-                        <label for="email"><i class="fa-solid fa-envelope-open-text registerIcon"></i> E-mail</label>
+                        <label for="email"><i class="fa-solid fa-envelope-open-text registerIcon"></i> * E-mail</label>
                         <input type="email" name="email" id="email" placeholder="Ingresa tu email" class="inputTextFieldRegister" value="<%= locals.oldData ? oldData.email : null %>">
                             <p class="msg-error">
                             </p>
 
                     </fieldset>
                     <fieldset class="labelFieldset">
-                        <label for="password"><i class="fa-solid fa-lock registerIcon"></i> Crear contraseña</label>
+                        <label for="password"><i class="fa-solid fa-lock registerIcon"></i> * Crear contraseña</label>
                         <input type="password" name="password" id="password" placeholder="Ingresa una contraseña" class="inputTextFieldRegister" value="<%= locals.oldData ? oldData.password : null %>">
                             <p class="msg-error">
                             </p>

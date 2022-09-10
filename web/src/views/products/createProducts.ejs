@@ -6,6 +6,9 @@
         <link rel="stylesheet" href="/css/createProducts-mobile.css" />
         <link rel="stylesheet" href="/css/createProducts-tablet.css" />
         <link rel="stylesheet" href="/css/createProducts-desktop.css" />
+        <script src="https://unpkg.com/validator@latest/validator.min.js"></script>
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script defer src="/scripts/products.js"></script>
 </head>
 
 <body>
@@ -13,13 +16,15 @@
 
         <main>
             <section class="imageCreateProducts">
-                <form action="/products/save" method="post" class="formAreaCreateProducts" enctype="multipart/form-data">
+                <form action="/products/save" method="post" class="formAreaCreateProducts" id="createPr" enctype="multipart/form-data">
                     <div class="divCreateProduct">
                         <h2 class="headerCreateProduct">CARGA UN NUEVO PRODUCTO</h2>
                     </div>
                     <fieldset class="labelFieldset">
-                        <label for="nombreProducto"> Titulo del producto </label>
+                        <label for="nombreProducto"> * Titulo del producto </label>
                         <input class="text_area k2TitleBox" type="text" id="tittle" name="tittle" autocomplete="off" maxlength="250" placeholder="Ingresa un titulo para el paquete" required />
+                        <p class="msg-error">
+                        </p>
                     </fieldset>
                     <fieldset class="labelFieldset">
                         <label for="precioProducto"><i class="fa-solid fa-money-check-dollar"></i> Precio por
@@ -98,6 +103,8 @@
                             <i class="fa-solid fa-van-shuttle"></i> Itinerario/excursiones:
                         </label>
                         <input class="text_area k2TitleBox" type="text" name="shortDescription" id="shortDescription" maxlength="250" value="" placeholder="Pittensberg Bay, Johannesburgo, ..." />
+                        <p class="msg-error">
+                        </p>
                     </fieldset>
                     <fieldset class="labelFieldset">
                         <input type="checkbox" name="flights" id="flights" value="true" /><label for="aereos">

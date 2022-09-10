@@ -5,6 +5,9 @@
     <%- include("../includes/head") %>
         <link rel="stylesheet" href="/css/login-mobile.css">
         <link rel="stylesheet" href="/css/login-tablet.css">
+        <script src="https://unpkg.com/validator@latest/validator.min.js"></script>
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script defer src="/scripts/login.js"></script>
 </head>
 
 <body>
@@ -14,24 +17,18 @@
 
         <main>
             <section class="imageLogin">
-                <form action="/users/access" method="post" class="formAreaRegister">
+                <form action="/users/access" method="post" class="formAreaRegister" id="login">
                     <fieldset class="labelFieldset">
                         <label for="email"><i class="fa-solid fa-envelope-open-text registerIcon"></i> Email</label>
                         <input type="email" name="email" id="email" placeholder="Ingresa tu email" class="inputTextFieldRegister" required value="<%= locals.oldData ? oldData.email : null %>">
-                        <% if (locals.errors && errors.email) { %>
                             <p class="msg-error">
-                                <%= errors.email.msg %>
                             </p>
-                            <% } %>
                     </fieldset>
                     <fieldset class="labelFieldset">
                         <label for="password"><i class="fa-solid fa-lock registerIcon"></i> Contraseña</label>
                         <input type="password" name="password" id="password" placeholder="Ingresa tu contraseña" class="inputTextFieldRegister" required value="<%= locals.oldData ? oldData.password : null %>">
-                        <% if (locals.errors && errors.password) { %>
                             <p class="msg-error">
-                                <%= errors.password.msg %>
                             </p>
-                            <% } %>
                     </fieldset>
                     <fieldset class="bottomCheck2">
                         <label for="recordaruser" class="recordarPass">Recordar usuario</label>

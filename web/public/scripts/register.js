@@ -112,3 +112,21 @@ inputsRegister.avatar.addEventListener("change", function(e) {
         field.classList.add("valid")
     }
 });
+
+/*formsRegister.addEventListener("submit", function(e){
+    e.preventDefault()
+    let isCorrect = false
+
+    if(e.target.querySelectorAll(".feed.valid").length === 4){
+        isCorrect = true
+    }
+    if(isCorrect){
+        e.target.submit()
+    } else{
+        Swal.fire({
+            title: "Error",
+            text: "No debe quedar ningún campo vacío",
+            icon: "error"
+        })
+    }
+}) */

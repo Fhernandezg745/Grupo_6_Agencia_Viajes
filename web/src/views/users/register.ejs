@@ -13,27 +13,20 @@
 
         <main>
             <section class="imageRegister">
-                <form action="/users/save" method="post" class="formAreaRegister" enctype="multipart/form-data">
+                <form action="/users/save" method="post" class="formAreaRegister" id="register" enctype="multipart/form-data">
                     <input type="hidden" name="position" value="user">
                     <fieldset class="labelFieldset">
                         <label for="nombre"><i class="fa-solid fa-id-card registerIcon"></i> Nombre</label>
                         <input type="text" name="firstName" placeholder="Ingresa tu nombre" class="inputTextFieldRegister" value="<%= locals.oldData ? oldData.firstName : null %>">
-                        <% if (locals.errors && errors.firstName) { %>
                             <p class="msg-error">
-                                <%= errors.firstName.msg %>
                             </p>
-
-                            <% } %>
                     </fieldset>
                     <fieldset class="labelFieldset">
                         <label for="nombre"><i class="fa-solid fa-id-card registerIcon"></i> Apellido</label>
                         <input type="text" name="lastName" placeholder="Ingresa tu apellido" class="inputTextFieldRegister" value="<%= locals.oldData ? oldData.lastName : null %>">
-                        <% if (locals.errors && errors.lastName) { %>
                             <p class="msg-error">
-                                <%= errors.lastName.msg %>
                             </p>
 
-                            <% } %>
                     </fieldset>
                     <fieldset class="labelFieldset">
                         <label for="nacimiento"><i class="fa-solid fa-calendar-days registerIcon"></i> Fecha de nacimiento</label>
@@ -42,32 +35,24 @@
                     <fieldset class="labelFieldset">
                         <label for="email"><i class="fa-solid fa-envelope-open-text registerIcon"></i> E-mail</label>
                         <input type="email" name="email" id="email" placeholder="Ingresa tu email" class="inputTextFieldRegister" value="<%= locals.oldData ? oldData.email : null %>">
-                        <% if (locals.errors && errors.email) { %>
                             <p class="msg-error">
-                                <%= errors.email.msg %>
                             </p>
 
-                            <% } %>
                     </fieldset>
                     <fieldset class="labelFieldset">
                         <label for="password"><i class="fa-solid fa-lock registerIcon"></i> Crear contraseña</label>
                         <input type="password" name="password" id="password" placeholder="Ingresa una contraseña" class="inputTextFieldRegister" value="<%= locals.oldData ? oldData.password : null %>">
-                        <% if (locals.errors && errors.password) { %>
                             <p class="msg-error">
-                                <%= errors.password.msg %>
                             </p>
 
-                            <% } %>
-                    </fieldset>
+                        </fieldset>
                     </fieldset>
                     <fieldset class="labelFieldset">
                         <label for="imagenUsuario"><i class="fa-solid fa-image"></i> - Foto de perfil</label>
                         <input type="file" name="avatar" id="avatar" accept="image/png, .jpeg, .jpg, image/gif" class="inputTextFieldRegister">
-                        <% if (locals.errors && errors.avatar) { %>
                             <p class="msg-error">
-                                <%= errors.avatar.msg %>
                             </p>
-                            <% } %>
+
                     </fieldset>
                     <fieldset class="bottomCheck">
                         <label for="condiciones">Acepto los terminos y condiciones</label>

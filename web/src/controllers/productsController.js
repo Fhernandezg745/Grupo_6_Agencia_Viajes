@@ -100,10 +100,9 @@ const productController = {
         });
     },
     modify: async(req, res) => {
-        let productsDB = await products.findByPk(req.params.id);
+        let productsDB = await products.findByPk(req.params.id,{ include: { all: true } });
         await productsDB.update({
             tittle: req.body.tittle,
-            image: req.body.image,
             shortDescription: req.body.shortDescription,
             longDescription: req.body.longDescription,
             days: req.body.days,
@@ -117,25 +116,21 @@ const productController = {
             region: req.body.region,
             status: req.body.status,
             salesPrice: parseFloat(req.body.salesPrice),
-        }, {
-            where: {
-                id: req.params.id,
-            },
-        });
+        }); 
 
-        if (req.image && req.image.length > 0) {
+
+        if (req.files && req.files.length > 0) {
             let imagenes = await Promise.all(
-                req.image.map((file) => {
+                req.files.map((file) => {
                     return images.update({
                         images: file.filename,
                     }, {
                         where: {
-                            image: productsDB.image,
+                            id: productsDB.images[0].id,
                         }
                     });
                 })
             );
-
             let addProductImages = await Promise.all(
                 imagenes.map((image) => {
                     return imagesProducts.update({
@@ -148,23 +143,32 @@ const productController = {
                 })
             );
         }
+      
+        if (req.body && req.body.tags.lenght > 1){
+            //borro los tags asociados al producto
+            let tagsBorrados = await Promise.all(tags.destroy({
+                where: {
+                    id: productsDB.tags               
+                }}))
+            //traigo los nuevos tags en un array para crearlos y asociarlos al prod    
+            let arrayTags = req.body.tags.split(" ")
+            //creo y asocio
+            let newTags = await Promise.all(
+            arrayTags.map((tag) => {
+                return tags.create({
+                    tag: tag
+                })
+            }))
+            await Promise.all(
+                newTags.map((tags) => {
+                    return imagesProducts.create({
+                        productId: productsDB.id,
+                        tagId: tags.id,
+                    });
+                })
+            );
 
-        // await tagsProducts.update({
-        //     tagId: tags.id,
-        // }, {
-        //     where: {
-        //         productId: productsDB.id,
-        //     },
-        // });
-
-        // await tags.update({
-        //     tags: req.body.tags,
-        // }, {
-        //     where: {
-        //         id: productsDB.tags,
-        //     },
-        // });
-
+        }
         return res.redirect("/products/details/" + req.params.id);
     },
     cart: async(req, res) => {

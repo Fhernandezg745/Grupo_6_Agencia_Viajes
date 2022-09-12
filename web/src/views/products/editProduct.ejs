@@ -60,6 +60,19 @@
                             </select>
                         </fieldset>
                         <fieldset class="labelFieldset">
+                            <label for="regionProducto"><i class="fa-solid fa-location-dot registerIcon"></i>
+                                Region</label>
+                            <select name="regionId" id="region" placeholder="Region" class="inputTextFieldCreateProducts" value="<%=product.regionId%>">
+                                <option value="1">Africa</option>
+                                <option value="2">Lejano Oriente</option>
+                                <option value="3">Medio Oriente</option>
+                                <option value="4">Islas del Pacifico Sur</option>
+                                <option value="5">Islas del Indico</option>
+                                <option value="6">Oceania</option>
+                                <option value="7">Sudeste Asiatico</option>
+                            </select>
+                        </fieldset>
+                        <fieldset class="labelFieldset">
                             <label for="nights"><i class="fa-solid fa-bed"></i> Cantidad de noches de
                                 alojamiento <input type="number" name="nights" id="nights" max="99" min="1"
                                     class="cantNoches" value="<%=product.nights%>"></label>
@@ -94,11 +107,14 @@
                             <p class="msg-error">
                             </p>
                         </fieldset>
+                        
                         <fieldset class="labelFieldset">
-                            <input type="checkbox" name="flights" id="flights" value="<%= product.flights %>"><label for="aereos"> aereos incluidos <i class="fa-solid fa-plane-departure"></i></label>
-                            <input type="checkbox" name="transfers" id="transfers" value="<%= product.transfers %>"><label for="traslados"> traslados
+                            <input type="checkbox" name="flights" id="flights" value="<%= product.flights %>"><label for="aereos"> <i class="fa-solid fa-plane-departure"></i> aereos incluidos </label>
+                            <input type="checkbox" name="transfers" id="transfers" value="<%= product.transfers %>"><label for="traslados"> <i class="fa-solid fa-bus"></i> traslados
                                 in/out y entre
-                                hoteles <i class="fa-solid fa-bus"></i></label>
+                                hoteles </label>
+                            <input type="checkbox" name="excursion" id="excursion" value="true" /><label for="excursion">
+                                    <i class="fa-solid fa-bus"></i> Incluye Excursiones </label>
                         </fieldset>
                         <fieldset class="labelFieldset">
                             <label for="regionProducto"><i class="fa-solid fa-award"></i> Status</label></label>

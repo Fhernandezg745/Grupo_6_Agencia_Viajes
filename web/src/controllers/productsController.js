@@ -5,7 +5,8 @@ const {
     imagesProducts,
     tagsProducts,
     tags,
-    user
+    user,
+    productoUser
 } = require("../database/models/index");
 
 const productController = {
@@ -32,6 +33,7 @@ const productController = {
         });
     },
     save: async(req, res) => {
+        let userCreator = req.session.user
         let newProduct = await products.create({
             tittle: req.body.tittle,
             shortDescription: req.body.shortDescription,
@@ -47,7 +49,7 @@ const productController = {
             flights: req.body.flights,
             status: req.body.status,
             salesPrice: req.body.salesPrice != "" ? parseInt(req.body.salesPrice) : null,
-            creatorId: user.id
+            creatorId: userCreator.id
         });
 
         if (req.tags && req.tags.length > 0) {
@@ -100,7 +102,7 @@ const productController = {
         });
     },
     modify: async(req, res) => {
-        let productsDB = await products.findByPk(req.params.id,{ include: { all: true } });
+        let productsDB = await products.findByPk(req.params.id, { include: { all: true } });
         await productsDB.update({
             tittle: req.body.tittle,
             shortDescription: req.body.shortDescription,
@@ -116,7 +118,7 @@ const productController = {
             region: req.body.region,
             status: req.body.status,
             salesPrice: parseFloat(req.body.salesPrice),
-        }); 
+        });
 
 
         if (req.files && req.files.length > 0) {
@@ -143,22 +145,23 @@ const productController = {
                 })
             );
         }
-      
-        if (req.body && req.body.tags.lenght > 1){
+
+        if (req.body && req.body.tags.lenght > 1) {
             //borro los tags asociados al producto
             let tagsBorrados = await Promise.all(tags.destroy({
-                where: {
-                    id: productsDB.tags               
-                }}))
-            //traigo los nuevos tags en un array para crearlos y asociarlos al prod    
+                    where: {
+                        id: productsDB.tags
+                    }
+                }))
+                //traigo los nuevos tags en un array para crearlos y asociarlos al prod    
             let arrayTags = req.body.tags.split(" ")
-            //creo y asocio
+                //creo y asocio
             let newTags = await Promise.all(
-            arrayTags.map((tag) => {
-                return tags.create({
-                    tag: tag
-                })
-            }))
+                arrayTags.map((tag) => {
+                    return tags.create({
+                        tag: tag
+                    })
+                }))
             await Promise.all(
                 newTags.map((tags) => {
                     return imagesProducts.create({

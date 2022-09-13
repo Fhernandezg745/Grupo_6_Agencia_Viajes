@@ -201,7 +201,7 @@ const productController = {
     });
   },
   deleteProduct: async (req, res) => {
-    let productDB = await products.findByPk(req.params.id);
+    let productDB = await products.findByPk(req.params.id, { include: { all: true }});
     if (!productDB) {
       return res.redirect("/products/productList");
     }
@@ -210,6 +210,12 @@ const productController = {
         product: productDB.id,
       },
     });
+
+    await images.destroy({
+      where : {
+          id: productDB.images[0].id
+      }
+    })
 
     await tagsProducts.destroy({
       where: {

@@ -211,12 +211,6 @@ const productController = {
       },
     });
 
-    await images.destroy({
-      where: {
-        images: productDB.image,
-      },
-    });
-
     await tagsProducts.destroy({
       where: {
         productID: productDB.id,

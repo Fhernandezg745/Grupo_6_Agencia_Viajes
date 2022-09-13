@@ -18,15 +18,15 @@ module.exports = (sequelize, DataTypes) => {
     updatedAt: false,
   };
 
-  const Tags = sequelize.define(alias, cols, config);
+  const tags = sequelize.define(alias, cols, config);
 
-  Tags.associate = function (models) {
-    Tags.belongsToMany(models.products, {
+  tags.associate = function (models) {
+    tags.belongsToMany(models.products, {
       through: "tagsProducts",
       foreignKey: "tagId",
       otherKey: "productId",
     });
   };
 
-  return Tags;
+  return tags;
 };

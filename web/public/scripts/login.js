@@ -25,7 +25,7 @@ inputsRegister.email.addEventListener("blur", function(e) {
     let value = e.target.value
     let feed = field.querySelector(".msg-error")
     let msg = null
-    if(!validator.isLength(value, {min:5})){
+    if(!validator.isEmail(value)){
         msg = "Debes ingresar una dirección de email válida"
     }
 

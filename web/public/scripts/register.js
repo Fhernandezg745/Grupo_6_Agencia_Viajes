@@ -61,6 +61,26 @@ inputsRegister.lastName.addEventListener("input", function(e) {
     }
 });
 
+inputsRegister.lastName.addEventListener("blur", function(e) {
+    let field = e.target.parentElement
+    let value = e.target.value
+    let feed = field.querySelector(".msg-error")
+    let msg = null
+    if(!validator.isLength(value,{min:2})){
+        msg = "Debes colocar al menos 2 caracteres"
+    }
+
+    if(msg){
+        field.classList.remove("valid")
+        field.classList.add("invalid")
+        feed.innerText = msg
+    } else {
+        field.classList.remove("invalid")
+        field.classList.add("valid")
+        feed.innerText = "Correcto"
+    }
+});
+
 inputsRegister.email.addEventListener("input", function(e) {
     let field = e.target.parentElement
     let value = e.target.value
@@ -81,7 +101,56 @@ inputsRegister.email.addEventListener("input", function(e) {
     }
 });
 
+inputsRegister.email.addEventListener("blur", function(e) {
+    let field = e.target.parentElement
+    let value = e.target.value
+    let feed = field.querySelector(".msg-error")
+    let msg = null
+    if(!validator.isEmail(value)){
+        msg = "Debes ingresar una dirección de email válida"
+    }
+
+    if(msg){
+        field.classList.remove("valid")
+        field.classList.add("invalid")
+        feed.innerText = msg
+    } else {
+        field.classList.remove("invalid")
+        field.classList.add("valid")
+        feed.innerText = "Correcto"
+    }
+});
+
 inputsRegister.password.addEventListener("input", function(e) {
+    let field = e.target.parentElement
+    let value = e.target.value
+    let feed = field.querySelector(".msg-error")
+    let msg = null
+    let config = {
+        minLength: 7,
+        minLowercase: 1,
+        minUppercase: 1,
+        minNumbers: 1,
+        minSymbols: 1
+    }
+    if(!validator.isLength(value,{min:8})){
+        msg = "Debes colocar un mínimo de 8 caracteres"
+    } else if(!validator.isStrongPassword(value, config)){
+        msg = "La contraseña debe tener al menos 1 número, 1 mayúscula, 1 minúscula y carácter especial"
+    }
+
+    if(msg){
+        field.classList.remove("valid")
+        field.classList.add("invalid")
+        feed.innerText = msg
+    } else {
+        field.classList.remove("invalid")
+        field.classList.add("valid")
+        feed.innerText = "Correcto"
+    }
+});
+
+inputsRegister.password.addEventListener("blur", function(e) {
     let field = e.target.parentElement
     let value = e.target.value
     let feed = field.querySelector(".msg-error")

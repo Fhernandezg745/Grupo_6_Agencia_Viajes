@@ -21,7 +21,47 @@ inputsCreateUpProd.tittle.addEventListener("input", function(e) {
     }
 });
 
+inputsCreateUpProd.tittle.addEventListener("blur", function(e) {
+    let field = e.target.parentElement
+    let value = e.target.value
+    let feed = field.querySelector(".msg-error")
+    let msg = null
+    if(!validator.isLength(value,{min:5})){
+        msg = "Debes colocar al menos 5 caracteres"
+    }
+
+    if(msg){
+        field.classList.remove("valid")
+        field.classList.add("invalid")
+        feed.innerText = msg
+    } else {
+        field.classList.remove("invalid")
+        field.classList.add("valid")
+        feed.innerText = "Correcto"
+    }
+});
+
 inputsCreateUpProd.shortDescription.addEventListener("input", function(e) {
+    let field = e.target.parentElement
+    let value = e.target.value
+    let feed = field.querySelector(".msg-error")
+    let msg = null
+    if(!validator.isLength(value,{min:20})){
+        msg = "Debes colocar al menos 20 caracteres"
+    }
+
+    if(msg){
+        field.classList.remove("valid")
+        field.classList.add("invalid")
+        feed.innerText = msg
+    } else {
+        field.classList.remove("invalid")
+        field.classList.add("valid")
+        feed.innerText = "Correcto"
+    }
+});
+
+inputsCreateUpProd.shortDescription.addEventListener("blur", function(e) {
     let field = e.target.parentElement
     let value = e.target.value
     let feed = field.querySelector(".msg-error")

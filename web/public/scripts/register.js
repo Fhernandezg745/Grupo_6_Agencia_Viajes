@@ -21,6 +21,26 @@ inputsRegister.firstName.addEventListener("input", function(e) {
     }
 });
 
+inputsRegister.firstName.addEventListener("blur", function(e) {
+    let field = e.target.parentElement
+    let value = e.target.value
+    let feed = field.querySelector(".msg-error")
+    let msg = null
+    if(!validator.isLength(value,{min:2})){
+        msg = "Debes colocar al menos 2 caracteres"
+    }
+
+    if(msg){
+        field.classList.remove("valid")
+        field.classList.add("invalid")
+        feed.innerText = msg
+    } else {
+        field.classList.remove("invalid")
+        field.classList.add("valid")
+        feed.innerText = "Correcto"
+    }
+});
+
 inputsRegister.lastName.addEventListener("input", function(e) {
     let field = e.target.parentElement
     let value = e.target.value

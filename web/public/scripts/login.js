@@ -25,7 +25,7 @@ inputsRegister.email.addEventListener("blur", function(e) {
     let value = e.target.value
     let feed = field.querySelector(".msg-error")
     let msg = null
-    if(value == ""){
+    if(!validator.isLength(value, {min:5})){
         msg = "Debes ingresar una dirección de email válida"
     }
 
@@ -63,7 +63,7 @@ inputsRegister.password.addEventListener("blur", function(e) {
     let value = e.target.value
     let feed = field.querySelector(".msg-error")
     let msg = null
-    if(value == ""){
+    if(!validator.isLength(value,{min:1})){
         msg = "Por favor, colocar una contraseña"
     }
 

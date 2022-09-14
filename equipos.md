@@ -2,3 +2,4 @@
 - Damian Piscitelli: 34 años. Comunicador social. Actualmente aprendiendo programación javaScript y trabajando como community manager.
 - Luciano Gelmi: 29 años, de Corrientes. Soy Lic. en Administracion y trabajo en Cerveceria Quilmes. Haciendo mis primeras armas en programacion, quiero expandir mis conocimientos y experiencias.
 - Amanda López: tengo 28 años, soy comerciante y este es mi primer contacto con la programación y mi idea es seguirlo aplicado a muchos proyectos.
+- Andrés Ibarra: 31 años. Graduado como ingeniero industrial, pero... creería que me equivoqué de carrera. Trabajo como ingeniero de soporte para una empresa de seguridad electrónica española. Me gustan los videojuegos y viajar. Vivo en Bogotá, Colombia y en octubre me mudaré a España. He hecho a medias cursos de desarrollo web y pendientes por empezar unos en android y iOS, entre otros. Actualmente estudio en paralelo desarrollo de aplicaciones móviles y Python.

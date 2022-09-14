@@ -20,7 +20,7 @@ inputsRegister.email.addEventListener("input", function(e) {
     }
 });
 
-inputsRegister.password.addEventListener("blur", function(e) {
+inputsRegister.password.addEventListener("change", function(e) {
     let field = e.target.parentElement
     let value = e.target.value
     let feed = field.querySelector(".msg-error")

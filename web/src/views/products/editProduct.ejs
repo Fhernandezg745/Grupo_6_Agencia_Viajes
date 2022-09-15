@@ -18,7 +18,7 @@
 
         <main>
             <section class="imageCreateProducts">
-                <form action="/products/editProduct/<%= product.id %>?_method=PUT" method="POST" enctype="multipart/form-data" class="formAreaCreateProducts">
+                <form action="/products/editProduct/<%= product.id %>?_method=PUT" method="POST" enctype="multipart/form-data" id="createPr" class="formAreaCreateProducts">
                     <div class="divCreateProduct">
                         <h2 class="headerCreateProduct">EDITANDO EL PRODUCTO ID:
                             <%= product.id %>
@@ -45,8 +45,10 @@
                             </select>
                         </fieldset>
                         <fieldset class="labelFieldset">
-                            <label for="imagenProducto"><i class="fa-solid fa-image"></i> - Imagen ilustrativa -</label>
+                            <label for="imagenProducto"><i class="fa-solid fa-image"></i> * Imagen ilustrativa -</label>
                             <input type="file" name="image" id="image" accept="image/png, .jpeg, .jpg, image/gif" class=>
+                            <p class="msg-error">
+                            </p>
                         </fieldset>
                         <fieldset class="labelFieldset">
                             <label for="categoriaProducto"><i class="fa-solid fa-location-dot registerIcon"></i>

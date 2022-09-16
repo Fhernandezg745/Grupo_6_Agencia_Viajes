@@ -2,15 +2,16 @@ const { Router } = require("express");
 const router = Router();
 
 const {
-  index,
-  createProducts,
-  save,
-  detail,
-  editProduct,
-  modify,
-  cart,
-  deleteProduct,
-  reservation,
+    index,
+    createProducts,
+    save,
+    detail,
+    editProduct,
+    modify,
+    cart,
+    deleteProduct,
+    reservation,
+    filter
 } = require("../controllers/productsController");
 const storage = require("../modules/storage");
 const multer = require("multer");
@@ -19,6 +20,7 @@ const isLogged = require("../middlewares/isLogged");
 const isAdmin = require("../middlewares/isAdmin");
 
 router.get("/productList", index);
+router.get("/productList/regions/:regions", filter);
 
 router.get("/createProducts", [isLogged, isAdmin], createProducts);
 router.post("/save", [upload.any()], save);

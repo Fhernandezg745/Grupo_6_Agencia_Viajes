@@ -11,7 +11,8 @@ const {
     cart,
     deleteProduct,
     reservation,
-    filter
+    filterRegion,
+    filterCategory
 } = require("../controllers/productsController");
 const storage = require("../modules/storage");
 const multer = require("multer");
@@ -20,7 +21,8 @@ const isLogged = require("../middlewares/isLogged");
 const isAdmin = require("../middlewares/isAdmin");
 
 router.get("/productList", index);
-router.get("/productList/regions/:regions", filter);
+router.get("/productList/regions/:regions", filterRegion);
+router.get("/productList/category/:category", filterCategory);
 
 router.get("/createProducts", [isLogged, isAdmin], createProducts);
 router.post("/save", [upload.any()], save);

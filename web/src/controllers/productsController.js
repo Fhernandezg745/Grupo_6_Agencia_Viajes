@@ -18,7 +18,7 @@ const productController = {
         });
     },
     detail: async(req, res) => {
-        let productDB = await products.findByPk(req.params.id, { include: images });
+        let productDB = await products.findByPk( parseInt(req.params.id), { include:{ all: true }  });
         if (!productDB) {
             return res.redirect("/products/productList");
         }
@@ -238,19 +238,35 @@ const productController = {
             email: req.body.email,
         });
     },
-    filter: async(req, res) => {
+    filterRegion: async(req, res) => {
         let productosF = await products.findAll(
 
             {
                 where: {
-                    regionId: parseInt(req.params.regions),
+                    regionId: req.params.regions,
                 },
                 include: { all: true }
             },
         );
-        console.log(productosF);
+       
         return res.render("products/productList", {
-            title: "Product List",
+            title: "Product Lista",
+            products: productosF,
+        });
+    },
+    filterCategory: async(req, res) => {
+        let productosF = await products.findAll(
+
+            {
+                where: {
+                    category: req.params.category,
+                },
+                include: { all: true }
+            },
+        );
+       
+        return res.render("products/productList", {
+            title: "Product Lista",
             products: productosF,
         });
     },

@@ -1,4 +1,3 @@
-const { userInfo } = require("os");
 const {
     products,
     images,
@@ -18,7 +17,7 @@ const productController = {
         });
     },
     detail: async(req, res) => {
-        let productDB = await products.findByPk( parseInt(req.params.id), { include:{ all: true }  });
+        let productDB = await products.findByPk(parseInt(req.params.id), { include: { all: true } });
         if (!productDB) {
             return res.redirect("/products/productList");
         }
@@ -239,16 +238,13 @@ const productController = {
         });
     },
     filterRegion: async(req, res) => {
-        let productosF = await products.findAll(
-
-            {
-                where: {
-                    regionId: req.params.regions,
-                },
-                include: { all: true }
+        let productosF = await products.findAll({
+            where: {
+                regionId: req.params.regions,
             },
-        );
-       
+            include: { all: true }
+        }, );
+
         return res.render("products/productList", {
             title: "Product Lista",
             products: productosF,
@@ -263,8 +259,9 @@ const productController = {
                 },
                 include: { all: true }
             },
+
         );
-       
+
         return res.render("products/productList", {
             title: "Product Lista",
             products: productosF,

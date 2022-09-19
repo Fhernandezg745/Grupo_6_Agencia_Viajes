@@ -17,35 +17,36 @@
                 <div class="filterRegiones">
                     <h3 class="">Regiones</h3>
                     <ul>
-                        <li><a href="productList/regions/1">Africa</a></li>
-                        <li><a href="productList/regions/5">Islas del Indico</a></li>
-                        <li><a href="productList/regions/2">Lejano Oriente</a></li>
-                        <li><a href="productList/regions/3">Medio Oriente</a></li>
-                        <li><a href="productList/regions/7">Sudeste Asiatico</a></li>
-                        <li><a href="productList/regions/4">Islas del Pacifico Sur</a></li>
-                        <li><a href="productList/regions/6">Oceania</a></li>
+                        <li><a href="/products/productList/regions/1">Africa</a></li>
+                        <li><a href="/products/productList/regions/5">Islas del Indico</a></li>
+                        <li><a href="/products/productList/regions/2">Lejano Oriente</a></li>
+                        <li><a href="/products/productList/regions/3">Medio Oriente</a></li>
+                        <li><a href="/products/productList/regions/7">Sudeste Asiatico</a></li>
+                        <li><a href="/products/productList/regions/4">Islas del Pacifico Sur</a></li>
+                        <li><a href="/products/productList/regions/6">Oceania</a></li>
+                        <li><a href="/products/productList">QUITAR FILTROS</a></li>
                     </ul>
                 </div>
                 <div class="filterTipoDestino">
                     <h3 class="">Tipo de destino</h3>
                     <ul class="list-group">
                         <li class="">
-                            <a href="productList/category/Cultura Milenaria">
+                            <a href="/products/productList/category/Cultura Milenaria">
                                 <span class="fa pr-1" id="red"></span><i class="fa-solid fa-gopuram"></i> Cultura Milenaria
                             </a>
                         </li>
                         <li class="">
-                            <a href="productList/category/Aventura">
+                            <a href="/products/productList/category/Aventura">
                                 <span class="fa pr-1" id="blue"></span><i class="fa-regular fa-compass"></i> Aventura
                             </a>
                         </li>
                         <li class="">
-                            <a href="productList/category/Clasicos">
+                            <a href="/products/productList/category/Clasicos">
                                 <span class="fa pr-1" id="blue"></span><i class="fa-solid fa-map-location"></i> Clasicos
                             </a>
                         </li>
                         <li class="">
-                            <a href="productList/category/Playas">
+                            <a href="/products/productList/category/Playas">
                                 <span class="fa pr-1" id="teal"></span>
                                 <i class="fa-solid fa-umbrella-beach"></i> Playas</a>
                         </li>
@@ -81,7 +82,7 @@
                 <% products.forEach(element=> {%>
                     <div class="productoBox">
                         <figure class="articleFigure">
-                            <a href="/products/details/<%= element.id %>"><img src="<%= element.images[0].images %>" alt="" /></a>
+                            <a href="/products/details/<%= element.id %>"><img src="/products/<%= element.images[0].images %>" alt="" /></a>
                         </figure>
                         <section class="detalle">
                             <header class="tituloPaquete">
@@ -99,7 +100,7 @@
                                 <div class="resumenPaquete">
                                     <li>
                                         <i class="fa-solid fa-globe"></i>
-                                        <%= element.region %>
+                                        <%= element.productoRegion.region %>
                                     </li>
                                     <li>
                                         <i class="fa-solid fa-hotel"></i> Alojamiento

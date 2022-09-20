@@ -15,6 +15,7 @@ module.exports = {
           key: "id",
         },
         onDelete: "cascade",
+        onUpdate: "cascade",
       },
       tagId: {
         type: Sequelize.INTEGER,
@@ -23,6 +24,7 @@ module.exports = {
           key: "id",
         },
         onDelete: "cascade",
+        onUpdate: "cascade",
       },
     });
   },

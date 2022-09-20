@@ -8,7 +8,6 @@
         <link rel="stylesheet" href="/css/editProduct-desktop.css">
         <script src="https://unpkg.com/validator@latest/validator.min.js"></script>
         <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
-        <script defer src="/scripts/products.js"></script>
 </head>
 
 <body>
@@ -46,7 +45,7 @@
                         </fieldset>
                         <fieldset class="labelFieldset">
                             <label for="imagenProducto"><i class="fa-solid fa-image"></i> * Imagen ilustrativa -</label>
-                            <input type="file" name="image" id="image" accept="image/png, .jpeg, .jpg, image/gif" class=>
+                            <input type="file" name="image" id="image" accept="image/png, .jpeg, .jpg, image/gif" value="<%= product.images[0].images%>" class=>
                             <p class="msg-error">
                             </p>
                         </fieldset>
@@ -109,7 +108,6 @@
                             <p class="msg-error">
                             </p>
                         </fieldset>
-                        
                         <fieldset class="labelFieldset">
                             <input type="checkbox" name="flights" id="flights" value="<%= product.flights %>"><label for="aereos"> <i class="fa-solid fa-plane-departure"></i> aereos incluidos </label>
                             <input type="checkbox" name="transfers" id="transfers" value="<%= product.transfers %>"><label for="traslados"> <i class="fa-solid fa-bus"></i> traslados
@@ -128,7 +126,8 @@
                         </fieldset>
                         <fieldset class="labelFieldset">
                             <label for="tags"><i class="fa-solid fa-hashtag"></i> Tags</label>
-                            <input class="text_area k2TitleBox" type="text" name="tags" id="tags" maxlength="250" value="<%=product.tags%>" placeholder="#exoticos #paraiso">
+                            <input class="text_area k2TitleBox" type="text" name="tags" id="tags" maxlength="250" value="<% product.tags.forEach(e => {%> <%=e.tags%><%})%>" placeholder="#exoticos #paraiso">
+                           <p> <%= product %> </p>
                         </fieldset>
                         <fieldset class="labelFieldset">
                             <label for="descripcionProducto"><i class="fa-solid fa-list"></i> Descripcion del itinerario

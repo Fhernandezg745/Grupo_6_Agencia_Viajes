@@ -41,7 +41,7 @@
                             </a>
                         </li>
                         <li class="">
-                            <a href="/products/productList/category/Clasicos">
+                            <a href="/products/productList/category/Clasico">
                                 <span class="fa pr-1" id="blue"></span><i class="fa-solid fa-map-location"></i> Clasicos
                             </a>
                         </li>
@@ -52,27 +52,13 @@
                         </li>
                     </ul>
                 </div>
-                <div class="filterOfertas">
-                    <form class="">
-                        <div class="">
-                            <input type="radio" name="filteroferta" id="promociones" />
-                            <label for="promociones" class="">Promociones</label>
-                        </div>
-                        <div class="">
-                            <input type="radio" name="filteroferta" id="masvendidos" />
-                            <label for="masvendidos" class="">Mas Vendidos</label>
-                        </div>
-                        <div class="">
-                            <input type="radio" name="filteroferta" id="destacados" />
-                            <label for="destacados" class="">Destacados</label>
-                        </div>
-                    </form>
-                </div>
                 <div class="filterTags">
                     <h3>TAGS</h3>
                     <% products.forEach(element=> {%>
                         <p>
-                            <%= element.tags[0].tags %>
+                            <% element.tags.forEach(e => {%>
+                                <%= e.tags  %> 
+                                <% }) %> 
                         </p>
                         <% }) %>
                 </div>

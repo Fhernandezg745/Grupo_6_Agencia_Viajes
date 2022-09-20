@@ -51,8 +51,7 @@ const productController = {
             creatorId: userCreator.id,
         });
 
-        //Tags
-        console.log(req.body.tags);
+        //Save Tags
         if (req.body.tags && req.body.tags.length > 0) {
             let newTags = await Promise.all(
                 req.body.tags.split(" ").map((tag) => {
@@ -62,20 +61,18 @@ const productController = {
                     });
                 })
             );
-            console.log(newTags);
+
             let addTagsProducts = await Promise.all(
                 newTags.map((tagProduct) => {
-                    console.log(tagProduct);
                     return tagsProducts.create({
                         productId: newProduct.id,
                         tagId: tagProduct.id,
                     });
                 })
             );
-            console.log("********************", addTagsProducts);
         }
 
-        //Images
+        //Save Images
         if (req.files && req.files.length > 0) {
             let imagenes = await Promise.all(
                 req.files.map((file) => {
@@ -97,7 +94,9 @@ const productController = {
         return res.redirect("/products/productList");
     },
     editProduct: async(req, res) => {
-        let productDB = await products.findByPk(req.params.id);
+        let productDB = await products.findByPk(req.params.id, {
+            include: { all: true },
+        });
         if (!productDB) {
             return res.redirect("/products/productList");
         }
@@ -110,6 +109,7 @@ const productController = {
         let productsDB = await products.findByPk(req.params.id, {
             include: { all: true },
         });
+ 
         await productsDB.update({
             tittle: req.body.tittle,
             shortDescription: req.body.shortDescription,
@@ -125,9 +125,9 @@ const productController = {
             region: req.body.region,
             status: req.body.status,
             salesPrice: parseFloat(req.body.salesPrice),
-            creatorId: userCreator.id,
         });
 
+        //Update Images
         if (req.files && req.files.length > 0) {
             let imagenes = await Promise.all(
                 req.files.map((file) => {
@@ -153,30 +153,28 @@ const productController = {
             );
         }
 
-        if (req.body && req.body.tags.lenght > 1) {
-            //borro los tags asociados al producto
-            let tagsBorrados = await Promise.all(
-                tags.destroy({
-                    where: {
-                        id: productsDB.tags,
-                    },
-                })
-            );
-            //traigo los nuevos tags en un array para crearlos y asociarlos al prod
-            let arrayTags = req.body.tags.split(" ");
-            //creo y asocio
+        //Borro los Tags que tenia
+        await tagsProducts.destroy({
+            where: {
+                productID: productsDB.id,
+            },
+        });
+        // creo los nuevos tags y asocio
+        //Save Tags
+        if (req.body.tags && req.body.tags.length > 0) {
             let newTags = await Promise.all(
-                arrayTags.map((tag) => {
+                req.body.tags.split(" ").map((tag) => {
+                    console.log(tag);
                     return tags.create({
-                        tag: tag,
+                        tags: tag,
                     });
                 })
             );
-            await Promise.all(
-                newTags.map((tags) => {
-                    return imagesProducts.create({
+            let addTagsProducts = await Promise.all(
+                newTags.map((tagProduct) => {
+                    return tagsProducts.create({
                         productId: productsDB.id,
-                        tagId: tags.id,
+                        tagId: tagProduct.id,
                     });
                 })
             );

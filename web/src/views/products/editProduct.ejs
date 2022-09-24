@@ -138,12 +138,12 @@
                             <a href="/"><input type="submit" value="Confirmar Cambios" name="confirmarCambios" class="buttonCreateProduct"></a>
                             <a href="/products/productList"><input type="reset" value="Cancelar" name="cancelar" class="buttonClose"></a>
                         </fieldset>
-                        <a class="checkEdit"><input type="checkbox" name="eliminar" value="" required> Estoy seguro de realizar estos cambios</a>
+                        <a class="checkEdit"><input type="checkbox" name="eliminar" value=""> Estoy seguro de realizar estos cambios</a>
                     </div>
                 </form>
                 <form method="POST" action="/products/delete/<%= product.id %>?_method=DELETE" class="formAreaCreateProducts">
                     <a href="" class="checkDelete"><button><i class="fa-solid fa-trash-can"></i>Quiero eliminar este Producto</button><input
-                    type="checkbox" name="eliminar" value="" required> Estoy seguro de elminar el
+                    type="checkbox" name="eliminar" value=""> Estoy seguro de elminar el
                 producto</a>
                 </form>
             </section>

@@ -40,6 +40,11 @@ main {
     border-top: 1px solid #000;
 }
 
+.sideBar .filterTags .tagsLink {
+    color: black;
+    text-decoration: none;
+}
+
 .sideBar .filterTipoDestino {
     border-top: 1px solid #000;
 }

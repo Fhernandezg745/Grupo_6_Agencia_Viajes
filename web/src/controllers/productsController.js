@@ -11,6 +11,7 @@ const {
 const productController = {
     index: async(req, res) => {
         let productos = await products.findAll({ include: { all: true } });
+        //return res.send(productos)
         return res.render("products/productList", {
             title: "Product List",
             products: productos,
@@ -249,7 +250,7 @@ const productController = {
         });
     },
     filterCategory: async(req, res) => {
-        let productosF = await products.findAll(
+        let productosC = await products.findAll(
 
             {
                 where: {
@@ -262,7 +263,24 @@ const productController = {
 
         return res.render("products/productList", {
             title: "Product Lista",
-            products: productosF,
+            products: productosC,
+        });
+    },
+    filterTags: async(req, res) => {
+        let productosT = await products.findAll(
+
+            {
+                where: {
+                    tags: req.params.tags,
+                },
+                include: { all: true }
+            },
+
+        );
+
+        return res.render("products/productList", {
+            title: "Product Lista",
+            products: productosT,
         });
     },
 };

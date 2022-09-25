@@ -57,8 +57,10 @@
                     <% products.forEach(element=> {%>
                         <p>
                             <% element.tags.forEach(e => {%>
-                                <%= e.tags  %> 
-                                <% }) %> 
+                                <a class="tagsLink" href="/products/productList/tags/<%=e.tags%>">
+                                    <%=e.tags%>
+                                </a>
+                                <% }) %>
                         </p>
                         <% }) %>
                 </div>

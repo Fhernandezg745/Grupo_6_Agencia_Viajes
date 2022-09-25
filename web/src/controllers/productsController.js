@@ -11,7 +11,6 @@ const {
 const productController = {
     index: async(req, res) => {
         let productos = await products.findAll({ include: { all: true } });
-        return res.send(productos)
         return res.render("products/productList", {
             title: "Product List",
             products: productos,

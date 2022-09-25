@@ -1,4 +1,4 @@
-const axios = require('../modules/reqAxios');
+const axios = require('../../modules/reqAxios');
 
 
 module.exports = {

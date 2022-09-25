@@ -11,6 +11,7 @@ const {
 const productController = {
     index: async(req, res) => {
         let productos = await products.findAll({ include: { all: true } });
+        return res.send(productos)
         return res.render("products/productList", {
             title: "Product List",
             products: productos,
@@ -109,7 +110,7 @@ const productController = {
         let productsDB = await products.findByPk(req.params.id, {
             include: { all: true },
         });
- 
+
         await productsDB.update({
             tittle: req.body.tittle,
             shortDescription: req.body.shortDescription,

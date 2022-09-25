@@ -20,7 +20,7 @@ module.exports = {
             regionId: products.regionId,
             status: products.status,
             salesPrice: products.salesPrice,
-            creatorId: null
+            creatorId: products.creatorId
         }))
         await queryInterface.bulkInsert("products", productos, {});
     },

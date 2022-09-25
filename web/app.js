@@ -42,3 +42,4 @@ app.use("/users", require("./src/routes/usersRoutes"));
 
 //APIS
 app.use('/api/users', require('./src/routes/apis/usersApi.routes'))
+app.use('api/test', require('./src/routes/apis/test.routes'))

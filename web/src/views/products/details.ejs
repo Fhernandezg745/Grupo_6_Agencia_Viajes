@@ -6,6 +6,9 @@
         <link rel="stylesheet" href="/css/details-mobile.css">
         <link rel="stylesheet" href="/css/details-tablet.css">
         <link rel="stylesheet" href="/css/details-desktop.css">
+        <script src="https://unpkg.com/validator@latest/validator.min.js"></script>
+        <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script defer src="/scripts/deleteProduct.js"></script>
 </head>
 
 <body>
@@ -29,7 +32,12 @@
                         <%= product.id %>
                     </h3>
                     <%  if(user && user.isAdmin == true){ %>
-                        <a href="/products/editProduct/<%= product.id %>"><button>Editar Producto</button></a>
+                        <a href="/products/editProduct/<%= product.id %>"><button class="editProductSelected">Editar Producto</button></a>
+                        <%  } %>
+                        <%  if(user && user.isAdmin == true){ %>
+                        <form method="POST" action="/products/delete/<%= product.id %>?_method=DELETE" class="formAreaCreateProducts" id="deleteProductSelection">
+                            <a href="" class="checkDelete"><button><i class="fa-solid fa-trash-can"></i>Quiero eliminar este Producto</button></a>
+                        </form>
                         <%  } %>
                             <div class="articleDetails">
                                 <div>

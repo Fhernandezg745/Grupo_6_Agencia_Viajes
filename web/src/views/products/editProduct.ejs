@@ -8,6 +8,8 @@
         <link rel="stylesheet" href="/css/editProduct-desktop.css">
         <script src="https://unpkg.com/validator@latest/validator.min.js"></script>
         <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
+        <script defer src="/scripts/products.js"></script>
+        <script defer src="/scripts/deleteProduct.js"></script>
 </head>
 
 <body>
@@ -141,10 +143,8 @@
                         <a class="checkEdit"><input type="checkbox" name="eliminar" value=""> Estoy seguro de realizar estos cambios</a>
                     </div>
                 </form>
-                <form method="POST" action="/products/delete/<%= product.id %>?_method=DELETE" class="formAreaCreateProducts">
-                    <a href="" class="checkDelete"><button><i class="fa-solid fa-trash-can"></i>Quiero eliminar este Producto</button><input
-                    type="checkbox" name="eliminar" value=""> Estoy seguro de elminar el
-                producto</a>
+                <form method="POST" action="/products/delete/<%= product.id %>?_method=DELETE" class="formAreaCreateProducts" id="deleteProductSelection">
+                    <a href="" class="checkDelete"><button><i class="fa-solid fa-trash-can"></i>Quiero eliminar este Producto</button></a>
                 </form>
             </section>
         </main>

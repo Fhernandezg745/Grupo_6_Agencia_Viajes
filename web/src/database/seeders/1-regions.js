@@ -18,7 +18,7 @@ module.exports = {
             },
             {
                 id: 4,
-                region: "Islas del Pácifico Sur"
+                region: "Islas del Pacífico Sur"
             },
             {
                 id: 5,
@@ -30,7 +30,7 @@ module.exports = {
             },
             {
                 id: 7,
-                region: "Sudeste Asíatico"
+                region: "Sudeste Asiático"
             }
         ];
         await queryInterface.bulkInsert("regions", region, {});

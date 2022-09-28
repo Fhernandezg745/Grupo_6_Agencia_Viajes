@@ -41,7 +41,6 @@ inputsRegister.lastName.addEventListener("input", function(e) {
     }
 });
 
-
 inputsRegister.email.addEventListener("input", function(e) {
     let field = e.target.parentElement
     let value = e.target.value
@@ -61,7 +60,6 @@ inputsRegister.email.addEventListener("input", function(e) {
         feed.innerText = "Correcto"
     }
 });
-
 
 inputsRegister.password.addEventListener("input", function(e) {
     let field = e.target.parentElement

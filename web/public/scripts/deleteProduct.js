@@ -14,6 +14,7 @@ formDelete.addEventListener("click", function(e){
           Swal.fire(
             'Producto eliminado con éxito',
           )
-        } formDelete.submit()
+          return formDelete.submit()
+        } 
       })
 })

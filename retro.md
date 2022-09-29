@@ -30,3 +30,6 @@ En ese sentido, entendemos que en futuros trabajamos vamos a poder llegar mejor 
 Por otro lado, si bien dedicamos un esfuerzo enorme a plantear y replantear los DER, probar los migratios, seederes y models, etc, debermos reconocer que nuevamente tuvimos falencias de caracter quizas un poco mas individuales que se deberian pulir. Ya que, volvimos a insistir con las metodologías de trello y videollamadas donde pudimos poner en común las tareas necesarias para desarrollar un plan de trabajo. Y fue ahí, que se atrasó un poco el trabajo ante la falta en el compromiso de alguna tarea estructural que posteriormente fue recogida por el equipo pero se resintió el plan.
 Por otro lado, la incorporación del nuevo integrante fue muy importante, ya que estabamos tenienedo ciertas falencias desde el lado del backend y aportó soluciones, trabajo y proactividad para resolver tareas con el equipo docente.
 Debemos seguir por el mismo camino, pero con un compromiso individual completo, para que no se resienta en lo colectivo.
+
+// Sprint 7
+Seguimos en el desafío de corregir cada acción realizada entendiendo que es parte del proceso.

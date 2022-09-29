@@ -63,7 +63,7 @@
     text-decoration: none;
 }
 
-.description-product1 a button {
+.description-product1 a .editProductSelected {
     display: block;
     border-radius: 6px;
     background-color: #049473;
@@ -73,7 +73,22 @@
     color: #fff;
 }
 
-.description-product1 a button:hover {
+.description-product1 .formAreaCreateProducts a button {
+    display: block;
+    border-radius: 6px;
+    background-color: #e74c3c;
+    margin-top: 0.5rem;
+    margin-left: 3rem;
+    padding: 0.4rem;
+    color: #fff;
+}
+
+.description-product1 .formAreaCreateProducts a button:hover {
+    background-color: red;
+    color: #747474;
+}
+
+.description-product1 a .editProductSelected:hover {
     background-color: #3ab494;
     color: #747474;
 }

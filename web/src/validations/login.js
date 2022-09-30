@@ -6,10 +6,8 @@ const login = [
     //Email
     body("email")
     .notEmpty()
-    .withMessage("El email no puede quedar vacío.")
     .bail()
     .isEmail()
-    .withMessage("El formato de email no es válido.")
     .bail()
     .custom(async(value) => {
         let users = await user.findAll()
@@ -22,7 +20,6 @@ const login = [
     //Pass
     body("password")
     .notEmpty()
-    .withMessage("La contraseña no puede quedar vacía.")
     .bail()
     .isLength({ min: 4 })
     .bail()

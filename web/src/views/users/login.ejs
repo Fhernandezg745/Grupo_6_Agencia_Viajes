@@ -21,19 +21,19 @@
                     <fieldset class="labelFieldset">
                         <label for="email"><i class="fa-solid fa-envelope-open-text registerIcon"></i> Email</label>
                         <input type="email" name="email" id="email" placeholder="Ingresa tu email" class="inputTextFieldRegister" value="<%= locals.oldData ? oldData.email : null %>">
-                        <% if (locals.errors && errors.email) { %>
                         <p class="msg-error">
+                        </p>
+                        <% if (locals.errors && errors.email) { %>
                             <%= errors.email.msg %>
-                            </p>
                             <% } %>
                     </fieldset>
                     <fieldset class="labelFieldset">
                         <label for="password"><i class="fa-solid fa-lock registerIcon"></i> Contraseña</label>
                         <input type="password" name="password" id="password" placeholder="Ingresa tu contraseña" class="inputTextFieldRegister" value="<%= locals.oldData ? oldData.password : null %>">
-                        <% if (locals.errors && errors.password) { %>    
                         <p class="msg-error">
+                        </p>
+                        <% if (locals.errors && errors.password) { %>    
                             <%= errors.password.msg %>
-                            </p>
                             <% } %>
                     </fieldset>
                     <fieldset class="bottomCheck2">

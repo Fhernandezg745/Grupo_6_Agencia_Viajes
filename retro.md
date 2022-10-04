@@ -32,4 +32,5 @@ Por otro lado, la incorporación del nuevo integrante fue muy importante, ya que
 Debemos seguir por el mismo camino, pero con un compromiso individual completo, para que no se resienta en lo colectivo.
 
 // Sprint 7
-Seguimos en el desafío de corregir cada acción realizada entendiendo que es parte del proceso.
+Seguimos en el desafío de corregir cada acción realizada entendiendo que es parte del proceso. Las funcionalidades completas del spirnt no quedaron óptimas y esperamos subsanar los errores de este sprint y anteriores en la presentación final.
+Si bien el equipo se está acoplando mucho mejor mediante las herramientas de comunicación, quizás deberiamos mejorar en las funciones de testing.

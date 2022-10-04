@@ -1,16 +1,12 @@
+import Saludo from './components/Saludo';
 import './App.css'
-import NombreClase from './components/NombreClase'
-
 
 function App() {
-  let alumnos =['Juan','Marino','Pepe','Tito','Esteban']
-  return (
-    <>
-      {alumnos.map(alumno => 
-      <NombreClase nombre = {alumno}/>
-      )}
-    </>
-  )
+return <>
+<Saludo name="Damian" />
+<Saludo name="Irma" />
+
+  </>
 }
 
 export default App

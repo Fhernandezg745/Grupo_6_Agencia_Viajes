@@ -1,4 +1,4 @@
-const baseURL = "https://rickandmortyapi.com/api/character"
+const baseURL = 'http://localhost:3002/api/products?offset='  // ??
 
 export async function getAll(page){
     let endpoint = `${baseURL}?page=${page}`

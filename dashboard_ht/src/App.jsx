@@ -1,10 +1,12 @@
-import { Routes, Route, Link } from "react-router-dom";
-import Saludo from './components/Saludo';
+//import { Routes, Route, Link } from "react-router-dom";
+import Home from './pages/Home';
 import './App.css'
 
 function App() {
 return <>
-<Saludo name="Damian" />
+
+<Home/>
+
 
   </>
 }

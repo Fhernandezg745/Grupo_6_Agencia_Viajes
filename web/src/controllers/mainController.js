@@ -22,6 +22,11 @@ const mainController = {
             title: "Info",
         });
     },
+    infoOption: (req, res) => {
+        return res.render("infoOption", {
+            title: "InfoOption",
+        });
+    },
     us: (req, res) => {
         return res.render("us", {
             title: "us",

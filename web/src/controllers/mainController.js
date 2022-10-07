@@ -22,9 +22,24 @@ const mainController = {
             title: "Info",
         });
     },
-    infoOption: (req, res) => {
-        return res.render("infoOption", {
-            title: "InfoOption",
+    infoCovid: (req, res) => {
+        return res.render("infoCovid", {
+            title: "infoCovid",
+        });
+    },    
+    infoPassport: (req, res) => {
+        return res.render("infoPassport", {
+            title: "infoPassport",
+        });
+    },    
+    infoVaccine: (req, res) => {
+        return res.render("infoVaccine", {
+            title: "infoVaccine",
+        });
+    },    
+    infoVisa: (req, res) => {
+        return res.render("infoVisa", {
+            title: "infoVisa",
         });
     },
     us: (req, res) => {

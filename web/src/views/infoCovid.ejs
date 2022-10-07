@@ -1,0 +1,33 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<%- include("./includes/head") %>
+    <link rel="stylesheet" href="/css/infoPage-mobile.css" />
+    <link rel="stylesheet" href="/css/infoPage-desktop.css" />
+
+
+    <body>
+        <%- include("./includes/header") %>
+            <main>
+                <section class="sectionHead covidImg">
+                    <div class="infoHeader">
+                        <h2>
+                            INFORMACIÓN UTIL : COVID-19
+                        </h2>
+                    </div>
+                </section>
+                <h2>REQUISITOS PARA PASAJEROS VIAJANDO AL EXTERIOR CON PASAPORTE ARGENTINO:</h2>
+                <section class="sectionInfo">
+                    <p> Importante: es completa responsabilidad del pasajero poseer toda la documentación en regla al momento de su viaje. Pasajeros que viajen con pasaporte de otras nacionalidades deberán consultar en la embajada, consulado
+                        o representación correspondiente. Estos datos son de carácter informativo y sujetos a cambios sin previo aviso. ** Última actualización 01/09/2021 ** </p>
+                </section>
+                <section class="sections">
+                    <ul class="ulContainer">
+                        <li> - En primer lugar tener en cuenta los requisitos para salir y reingresar a Argentina. Dentro de las 48hs previas al viaje se debe completar una Declaración Jurada que puede encontrarse aquí: https://ddjj.migraciones.gob.ar/app/home.php
+                            Además se debe contar con la constancia de PCR negativo para el regreso.</li>
+                        <li> - Para conocer los requisitos de cada país a visitar, recomendamos ingresar a la web de IATA (Asociación Internacional de Transporte Aéreo), que brinda información actualizada de cada destino: https://www.iatatravelcentre.com/world.php</li>
+                    </ul>
+                </section>
+            </main>
+            <%- include("./includes/footer") %>
+    </body>

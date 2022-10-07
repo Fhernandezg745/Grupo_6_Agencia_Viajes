@@ -166,7 +166,7 @@ label .menu {
   label input { display: none; }
   
   label input:checked + .menu {
-    box-shadow: 0 0 0 100vw #FFF, 0 0 0 100vh #FFF;
+    box-shadow: 0 0 0 20vw #FFF, 0 0 0 25vh #FFF;
     border-radius: 0;
     
   }
@@ -196,8 +196,8 @@ label .menu {
   label ul {
     z-index: 200;
     position: absolute;
-    top: 50%;
-    left: 50%;
+    top: 20%;
+    left: 25%;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
     opacity: 0;
@@ -208,7 +208,7 @@ label .menu {
   label a {
     margin-bottom: 1em;
     display: block;
-    color: #f38630;
+    color: #74c4b4;
     text-decoration: none;
     
   }

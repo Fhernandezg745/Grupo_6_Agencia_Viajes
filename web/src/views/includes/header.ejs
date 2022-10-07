@@ -53,22 +53,24 @@
         <p>Quienes somos</p>
       </a>
       <%  if(!user){ %>
-      <a href="/users/login" class="iconMobile"
-        ><i class="fa-solid fa-arrow-right-to-bracket"></i> Iniciar sesión</a
+      <a href="/users/login" class="iconMobile">
+        <i class="fa-solid fa-arrow-right-to-bracket"></i> Iniciar sesión</a
       >
-      <a href="/users/register" class="iconMobile"
-        ><i class="fa-solid fa-id-card"></i> Registrate</a>
+      <a href="/users/register" class="iconMobile">
+        <i class="fa-solid fa-id-card"></i> Registrate</a>
       <% } else { %>
       <a href="/users/logged" class="iconMobile">Mi cuenta</a>
       <a href="/users/logout" class="iconMobile">Cerrar sesión <% user.firstName %></a>
       <%  } %>
     </nav>
   </section>
-  <section class="mobileHeader">
-    <nav id="burgerMenu">
-      <div>
-        <i class="fas fa-bars burger-menu burgerIcon"></i>
-      </div>
-    </nav>
-  </section>
+  <label class="navHamburguer">
+    <input type="checkbox">
+    <span class="menu"> <span class="hamburger"></span> </span>
+    <ul>
+      <li> <a href="#">Home</a> </li>
+      <li> <a href="#">About</a> </li>
+      <li> <a href="#">Contact</a> </li>
+    </ul>
+    </label>
 </header>

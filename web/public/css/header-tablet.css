@@ -1,7 +1,4 @@
 @media screen and (min-width: 480px) {
-    #burgerMenu div {
-        display: none;
-    }
     .RRSS {
         gap: 0;
         width: 100%;
@@ -84,4 +81,8 @@
         display: inline-block;
         transition: all 0.8s ease 0.1s;
     }
+    .menu {
+        display: none;
+    }
 }
+

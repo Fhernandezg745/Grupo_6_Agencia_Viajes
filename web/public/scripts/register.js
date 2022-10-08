@@ -127,7 +127,8 @@ formsRegister.addEventListener("submit", function(e){
         Swal.fire({
             title: "Error",
             text: "Por favor, revisa que todos los campos estén correctos",
-            icon: "error"
+            icon: "error",
+            confirmButtonColor: "#049473"
         })
     }
 })

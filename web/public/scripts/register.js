@@ -11,10 +11,14 @@ inputsRegister.firstName.addEventListener("input", function(e) {
     }
 
     if(msg){
+        firstName.classList.remove("valid")
+        firstName.classList.add("invalid")
         field.classList.remove("valid")
         field.classList.add("invalid")
         feed.innerText = msg
     } else {
+        firstName.classList.remove("invalid")
+        firstName.classList.add("valid")
         field.classList.remove("invalid")
         field.classList.add("valid")
         feed.innerText = "Correcto"
@@ -31,10 +35,14 @@ inputsRegister.lastName.addEventListener("input", function(e) {
     }
 
     if(msg){
+        lastName.classList.remove("valid")
+        lastName.classList.add("invalid")
         field.classList.remove("valid")
         field.classList.add("invalid")
         feed.innerText = msg
     } else {
+        lastName.classList.remove("invalid")
+        lastName.classList.add("valid")
         field.classList.remove("invalid")
         field.classList.add("valid")
         feed.innerText = "Correcto"
@@ -51,10 +59,14 @@ inputsRegister.email.addEventListener("input", function(e) {
     }
 
     if(msg){
+        email.classList.remove("valid")
+        email.classList.add("invalid")
         field.classList.remove("valid")
         field.classList.add("invalid")
         feed.innerText = msg
     } else {
+        email.classList.remove("invalid")
+        email.classList.add("valid")
         field.classList.remove("invalid")
         field.classList.add("valid")
         feed.innerText = "Correcto"
@@ -80,10 +92,14 @@ inputsRegister.password.addEventListener("input", function(e) {
     }
 
     if(msg){
+        password.classList.remove("valid")
+        password.classList.add("invalid")
         field.classList.remove("valid")
         field.classList.add("invalid")
         feed.innerText = msg
     } else {
+        password.classList.remove("invalid")
+        password.classList.add("valid")
         field.classList.remove("invalid")
         field.classList.add("valid")
         feed.innerText = "Correcto"

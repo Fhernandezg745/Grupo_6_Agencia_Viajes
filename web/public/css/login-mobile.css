@@ -144,9 +144,14 @@
   margin-top: .5rem;
 }
 
-.labelFieldset.invalid {
-  background-color:#4c2c2a;
+.formAreaRegister .labelFieldset .inputTextFieldRegister.invalid{
+   border-bottom: 2px solid red;
+   border-top: 2px solid red;
+   border-left: 2px solid red;
+   border-right: 2px solid red;
 }
+
+
 
 .labelFieldset.invalid .msg-error, .labelFieldset.invalid label {
   color: #fff;
@@ -156,8 +161,11 @@
   display: block;
 }
 
-.labelFieldset.valid {
-  background-color: #049473;
+.formAreaRegister .labelFieldset .inputTextFieldRegister.valid{
+  border-bottom: 2px solid green;
+  border-top: 2px solid green;
+  border-left: 2px solid green;
+  border-right: 2px solid green;
 }
 
 .labelFieldset.valid .msg-error, .labelFieldset.valid label {

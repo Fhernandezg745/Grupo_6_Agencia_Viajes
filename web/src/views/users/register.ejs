@@ -19,7 +19,7 @@
                     <input type="hidden" name="position" value="user">
                     <fieldset class="labelFieldset">
                         <label for="nombre"><i class="fa-solid fa-id-card registerIcon"></i> * Nombre</label>
-                        <input type="text" name="firstName" placeholder="Ingresa tu nombre" class="inputTextFieldRegister" value="<%= locals.oldData ? oldData.firstName : null %>">
+                        <input type="text" name="firstName" id="firstName" placeholder="Ingresa tu nombre" class="inputTextFieldRegister" value="<%= locals.oldData ? oldData.firstName : null %>">
                         <p class="msg-error">
                         </p>
                         <% if (locals.errors && errors.firstName) { %>
@@ -28,7 +28,7 @@
                     </fieldset>
                     <fieldset class="labelFieldset">
                         <label for="nombre"><i class="fa-solid fa-id-card registerIcon"></i> * Apellido</label>
-                        <input type="text" name="lastName" placeholder="Ingresa tu apellido" class="inputTextFieldRegister" value="<%= locals.oldData ? oldData.lastName : null %>">
+                        <input type="text" name="lastName" id="lastName" placeholder="Ingresa tu apellido" class="inputTextFieldRegister" value="<%= locals.oldData ? oldData.lastName : null %>">
                         <p class="msg-error">
                         </p>
                         <% if (locals.errors && errors.lastName) { %>

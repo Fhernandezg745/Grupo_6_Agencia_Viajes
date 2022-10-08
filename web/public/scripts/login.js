@@ -39,22 +39,3 @@ inputsRegister.password.addEventListener("change", function(e) {
         field.classList.add("valid")
     }
 });
-
-
-formsRegister.addEventListener("submit", function(e){
-    e.preventDefault()
-    let isCorrect = false
-
-    if(e.target.querySelectorAll(".labelFieldset.valid").length === 2){
-        isCorrect = true
-    }
-    if(isCorrect){
-        e.target.submit()
-    } else{
-        Swal.fire({
-            title: "Error",
-            text: "Por favor, revisa que todos los campos estén correctos",
-            icon: "error"
-        })
-    }
-})

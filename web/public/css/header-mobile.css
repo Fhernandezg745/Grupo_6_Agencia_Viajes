@@ -119,12 +119,15 @@
 
 
 label .menu {
+    align-items: center;
+    display: flex;
+    justify-content: center; 
     position: absolute;
-    left: 25px;
-    top: 50px;
+    left: 2.5rem;
+    top: 5.5rem;
     z-index: 100;
-    width: 80px;
-    height: 80px;
+    width: 5rem;
+    height: 5rem;
     background: #FFF;
     border-radius: 50% 50% 50% 50%;
     -webkit-transition: .5s ease-in-out;
@@ -135,9 +138,7 @@ label .menu {
   }
   
   label .hamburger {
-    position: absolute;
-    top: 40px;
-    left: 30px;
+    position: relative;
     width: 25px;
     height: 2px;
     background: #69D2e7;
@@ -191,16 +192,17 @@ label .menu {
     
   }
   
-  label input:checked + .menu + ul { opacity: 1; }
+  label input:checked + .menu + ul { display: block; }
   
   label ul {
     z-index: 200;
     position: absolute;
     top: 20%;
-    left: 25%;
+    left: 35%;
+    list-style-type: none;
     -webkit-transform: translate(-50%, -50%);
     transform: translate(-50%, -50%);
-    opacity: 0;
+    display: none;
     -webkit-transition: .25s 0s ease-in-out;
     transition: .25s 0s ease-in-out;
   }

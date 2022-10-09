@@ -364,7 +364,7 @@ main {
 
 .articleDetails .buttonDetailProduct {
     margin: 0 auto;
-    width: 10vw;
+    width: 10rem;
     display: block;
     padding: 4px 8px;
     color: rgba(255, 255, 255, 0.834);

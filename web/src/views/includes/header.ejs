@@ -59,8 +59,16 @@
       <a href="/users/register" class="iconMobile">
         <i class="fa-solid fa-id-card"></i> Registrate</a>
       <% } else { %>
-      <a href="/users/logged" class="iconMobile">Mi cuenta</a>
-      <a href="/users/logout" class="iconMobile">Cerrar sesión <% user.firstName %></a>
+      <div class="dropdown iconMobile">Mi cuenta
+      <button class="dropbtn"></button>
+        <div class="dropdown-content">
+        <a href="/products/createProducts" class="itemD">Crear Producto</a>
+        <a href="/products/productList" class="itemD">Ver todos los productos</a>
+        <a href="/users/logged" class="itemD">Mi perfil</a>
+        <a href="http://127.0.0.1:5173/" class="itemD">Panel de Control</a>
+        <a href="/users/logout" class="iconMobile">Cerrar sesión <% user.firstName %></a>
+        </div>
+      </div>
       <%  } %>
     </nav>
   </section>

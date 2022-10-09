@@ -21,7 +21,7 @@ inputsRegister.email.addEventListener("change", function(e) {
         field.classList.add("valid")
         email.classList.remove("invalid")
         email.classList.add("valid")
-        feed.innerText = "campo completado correctamente"
+        feed.innerText = "Campo completado correctamente"
     }
 });
 

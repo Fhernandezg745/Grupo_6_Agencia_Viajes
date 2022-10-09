@@ -171,9 +171,19 @@ main {
     margin-top: .5rem;
 }
 
-.labelFieldset.invalid {
-    background-color:#4c2c2a;
-}
+.labelFieldset .inputTextFieldCreateProducts.invalid{
+    border-bottom: 1px solid red;
+    border-top: 1px solid red;
+    border-left: 1px solid red;
+    border-right: 1px solid red;
+  }
+  
+  .labelFieldset .inputTextFieldCreateProducts.valid{
+    border-bottom: 1px solid green;
+    border-top: 1px solid green;
+    border-left: 1px solid green;
+    border-right: 1px solid green;
+  }
 
 .labelFieldset.invalid .msg-error, .labelFieldset.invalid label {
     color: #fff;
@@ -183,9 +193,6 @@ main {
     display: block;
 }
 
-.labelFieldset.valid {
-    background-color: #049473;
-}
 
 .labelFieldset.valid .msg-error, .labelFieldset.valid label {
     color: #fff;

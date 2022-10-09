@@ -92,7 +92,7 @@
     margin-left: 2em;
     padding-left: 1em;
     background-color: rgba(255, 255, 255, 0.734);
-    border-bottom: 2px solid #7c7c7c;
+
     font-size: 0.5em;
     display: flex;
     width: 30vw;
@@ -143,10 +143,10 @@
 }
 
 .inputTextFieldRegister.invalid{
-    border-bottom: 2px solid red;
-    border-top: 2px solid red;
-    border-left: 2px solid red;
-    border-right: 2px solid red;
+    border-bottom: 1px solid red;
+    border-top: 1px solid red;
+    border-left: 1px solid red;
+    border-right: 1px solid red;
  }
 
 .labelFieldset.invalid .msg-error, .labelFieldset.invalid label {
@@ -158,10 +158,10 @@
 }
 
 .inputTextFieldRegister.valid{
-    border-bottom: 2px solid green;
-    border-top: 2px solid green;
-    border-left: 2px solid green;
-    border-right: 2px solid green;
+    border-bottom: 1px solid green;
+    border-top: 1px solid green;
+    border-left: 1px solid green;
+    border-right: 1px solid green;
   }
 
 .labelFieldset.valid .msg-error, .labelFieldset.valid label {

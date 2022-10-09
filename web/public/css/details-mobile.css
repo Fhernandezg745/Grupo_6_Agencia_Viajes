@@ -113,6 +113,10 @@
     margin-bottom: 4px;
 }
 
+.listDetails li {
+    font-size: 15px;
+}
+
 .description-product1 .articleDetails .precioArticuloMain {
     display: flex;
     flex-direction: column;
@@ -134,7 +138,7 @@
     padding: 20px;
     box-sizing: border-box;
     gap: 1rem;
-    background-color: #fff;
+    background-color: #F5F7FA;
     width: 100%;
 }
 
@@ -160,6 +164,26 @@
     display: inline-block;
 }
 
+.details-header {
+    background-image:url(/assets/passports.jpg);
+    background-repeat: no-repeat;
+    background-size:cover;
+    background-position: center;
+    background-color: #fef9f9;
+}
+
+.headerInfo {
+    display: inline-block;
+    background-color: #c7c7c7;
+    color: #049473;
+    padding: 1rem;
+}
+
+.headerInfo p {
+    font-size: 12px;
+}
+
+
 .details-header,
 .details-title-description,
 .details-body-description {
@@ -171,6 +195,7 @@
     margin-right: 15vw;
     height: auto;
     margin-bottom: 1em;
+    background-color: #fff;
 }
 
 .adminBtns{

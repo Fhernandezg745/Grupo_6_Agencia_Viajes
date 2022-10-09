@@ -11,13 +11,17 @@ inputsCreateUpProd.tittle.addEventListener("input", function(e) {
     }
 
     if(msg){
+        tittle.classList.remove("valid")
+        tittle.classList.add("invalid")
         field.classList.remove("valid")
         field.classList.add("invalid")
         feed.innerText = msg
     } else {
+        tittle.classList.remove("invalid")
+        tittle.classList.add("valid")
         field.classList.remove("invalid")
         field.classList.add("valid")
-        feed.innerText = "Correcto"
+        feed.innerText = "Campo completado correctamente"
     }
 });
 
@@ -32,13 +36,17 @@ inputsCreateUpProd.shortDescription.addEventListener("input", function(e) {
     }
 
     if(msg){
+        shortDescription.classList.remove("valid")
+        shortDescription.classList.add("invalid")
         field.classList.remove("valid")
         field.classList.add("invalid")
         feed.innerText = msg
     } else {
+        shortDescription.classList.remove("invalid")
+        shortDescription.classList.add("valid")
         field.classList.remove("invalid")
         field.classList.add("valid")
-        feed.innerText = "Correcto"
+        feed.innerText = "Campo completado correctamente"
     }
 });
 
@@ -78,7 +86,8 @@ formAreaCreateProducts.addEventListener("submit", function(e){
         Swal.fire({
             title: "Error",
             text: "Por favor, revisa que todos los campos estén correctos",
-            icon: "error"
+            icon: "error",
+            confirmButtonColor: "#049473"
         })
     }
 })

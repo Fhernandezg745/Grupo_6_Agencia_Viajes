@@ -21,7 +21,7 @@ const login = [
     body("password")
     .notEmpty()
     .bail()
-    .isLength({ min: 4 })
+    .isLength({ min: 1 })
     .bail()
     .custom(async(value, { req }) => {
         let { email } = req.body

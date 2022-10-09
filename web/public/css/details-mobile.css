@@ -68,7 +68,6 @@
     border-radius: 6px;
     background-color: #049473;
     margin-top: 0.5rem;
-    margin-left: 3rem;
     padding: 0.4rem;
     color: #fff;
 }
@@ -78,7 +77,6 @@
     border-radius: 6px;
     background-color: #e74c3c;
     margin-top: 0.5rem;
-    margin-left: 3rem;
     padding: 0.4rem;
     color: #fff;
 }
@@ -173,6 +171,13 @@
     margin-right: 15vw;
     height: auto;
     margin-bottom: 1em;
+}
+
+.adminBtns{
+    display: flex;
+    flex-wrap: wrap;
+    gap: 2rem;
+    justify-content: center;
 }
 
 .section-book {

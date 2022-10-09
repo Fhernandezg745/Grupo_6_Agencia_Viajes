@@ -13,10 +13,15 @@ inputsRegister.email.addEventListener("change", function(e) {
     if(msg){
         field.classList.remove("valid")
         field.classList.add("invalid")
+        email.classList.remove("valid")
+        email.classList.add("invalid")
         feed.innerText = msg
     } else {
         field.classList.remove("invalid")
         field.classList.add("valid")
+        email.classList.remove("invalid")
+        email.classList.add("valid")
+        feed.innerText = "Campo completado correctamente"
     }
 });
 
@@ -33,10 +38,14 @@ inputsRegister.password.addEventListener("change", function(e) {
     if(msg){
         field.classList.remove("valid")
         field.classList.add("invalid")
+        password.classList.remove("valid")
+        password.classList.add("invalid")
         feed.innerText = msg
     } else {
         field.classList.remove("invalid")
         field.classList.add("valid")
+        password.classList.remove("invalid")
+        password.classList.add("valid")
     }
 });
 
@@ -53,8 +62,9 @@ formsRegister.addEventListener("submit", function(e){
     } else{
         Swal.fire({
             title: "Error",
-            text: "Por favor, revisa que todos los campos estén correctos",
-            icon: "error"
+            text: "Por favor, revisa que todos los campos estén completos",
+            icon: "error",
+            confirmButtonColor: "#049473"
         })
     }
-})
+});

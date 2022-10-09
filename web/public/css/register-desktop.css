@@ -1,7 +1,8 @@
-@media screen and (min-width: 780px) {
+@media screen and (min-width: 1200px) {
     .formAreaRegister .labelFieldset label {
         display: flex;
-        width: 15vw;
+        flex-wrap: wrap;
+        width: 20vw;
         font-size: 1.2em;
         height: 2rem;
         border-radius: 4px;
@@ -11,13 +12,22 @@
         margin-left: 3em;
         padding-left: 1em;
         background-color: #c7c7c7;
-        font-size: 1.2em;
+        font-size: 0.8em;
         display: flex;
         width: 30vw;
         height: 2em;
         border-radius: 4px;
         justify-content: center;
     }
+
+    .formAreaRegister{
+        width: 60vw;
+        margin-top: 5vw;
+        margin-left: 20vw;
+        margin-right: 20vw;
+        margin-bottom: 10vw;
+    }
+
     .buttonField a {
         width: 20%;
     }

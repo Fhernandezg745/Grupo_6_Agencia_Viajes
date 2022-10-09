@@ -24,7 +24,6 @@
         font-size: 18px;
     }
     .main-header .site a {
-        display: inline-block;
         padding: 13px 10px 13px 10px;
         text-decoration: none;
         background-color: #049473;
@@ -35,6 +34,19 @@
     .main-header .site a:hover {
         background-color: rgba(0, 0, 0, 0.3);
     }
+
+    .dropdown-content{
+        top: 0;
+    }
+
+    .dropdown-content a{
+        color: #fff;
+    }
+
+    .main-header .site .dropdown:hover {
+        background-color: rgba(0, 0, 0, 0.3);
+    }
+
     .main-header .top-header {
         align-items: center;
         width: 100%;
@@ -81,8 +93,10 @@
         display: inline-block;
         transition: all 0.8s ease 0.1s;
     }
-    .menu {
+    .menu, label .menu {
         display: none;
     }
+
+    
 }
 

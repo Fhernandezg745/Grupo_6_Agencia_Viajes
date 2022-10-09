@@ -85,7 +85,7 @@
         display: inline-block;
         transition: all 0.8s ease 0.1s;
     }
-    .menu {
+    .menu, label .menu {
         display: none;
     }
 }

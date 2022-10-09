@@ -108,7 +108,7 @@ const usersController = {
             to: req.body.email, // list of receivers
             replyTo: "harbortripconfirmation@gmail.com",
             subject: " Recupero de Contraseña Harbor Trip - No contestar este correo", // Subject line
-            text: "¿Olvidaste tu contraseña?\n\n Para reestablecer su contraseña, por favor haga click en el siguiente enlace.\n\nhttp://"+process.env.DOMAIN+'/users/resetPassword?token='+encodeURIComponent(fpSalt)+'&email='+req.body.email+"\n\n Token de confirmacion: "+fpSalt // plain text body 
+            text: "¿Olvidaste tu contraseña?\n\n Para reestablecer su contraseña, por favor haga click en el siguiente enlace.\n\nhttp://"+"localhost:3002"+'/users/resetPassword?token='+encodeURIComponent(fpSalt)+'&email='+req.body.email+"\n\n Token de confirmacion: "+fpSalt // plain text body 
         }
         //mando el email
         await transport.sendMail(message,function(err,info){

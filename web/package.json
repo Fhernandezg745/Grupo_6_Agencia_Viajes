@@ -7,8 +7,8 @@
         "start": "node app.js",
         "sq-i": "sequelize init",
         "sq-ms": "sequelize init:migrations && sequelize init:seeders",
-        "sq-mg": "sequelize migration:generate --name ImagesProducts",
-        "sq-sg": "sequelize seed:generate --name ImagesProducts",
+        "sq-mg": "sequelize migration:generate --name ResetToken",
+        "sq-sg": "sequelize seed:generate --name ResetToken",
         "sq-db": "sequelize db:drop && sequelize db:create && sequelize db:migrate && sequelize db:seed:all"
     },
     "author": "",
@@ -17,7 +17,9 @@
         "axios": "^0.27.2",
         "bcryptjs": "^2.4.3",
         "cors": "^2.8.5",
+        "crypto": "^1.0.1",
         "dependencies": "^0.0.1",
+        "dotenv": "^16.0.3",
         "ejs": "^3.1.8",
         "express": "^4.18.1",
         "express-session": "^1.17.3",
@@ -26,6 +28,7 @@
         "multer": "^1.4.5-lts.1",
         "mysql2": "^2.3.3",
         "node": "^17.7.2",
+        "nodemailer": "^6.8.0",
         "sequelize": "^6.21.3"
     },
     "keywords": [],

@@ -1,5 +1,5 @@
 //Require de librerias, frameworks, etc.
-
+const nodemailer = require('nodemailer')
 const { resolve } = require("path");
 const express = require("express");
 const app = express();

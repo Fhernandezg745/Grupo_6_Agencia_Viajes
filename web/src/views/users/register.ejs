@@ -5,6 +5,7 @@
     <%- include("../includes/head") %>
         <link rel="stylesheet" href="/css/register-mobile.css">
         <link rel="stylesheet" href="/css/register-tablet.css">
+        <link rel="stylesheet" href="/css/register-desktop.css">
         <script src="https://unpkg.com/validator@latest/validator.min.js"></script>
         <script src="//cdn.jsdelivr.net/npm/sweetalert2@11"></script>
         <script defer src="/scripts/register.js"></script>
@@ -69,7 +70,7 @@
                         </p>
                         <% if (locals.errors && errors.avatar) { %>
                             <%= errors.avatar %>
-                            <% } %>>
+                            <% } %>
 
                     </fieldset>
                     <fieldset class="bottomCheck">

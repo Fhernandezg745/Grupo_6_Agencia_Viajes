@@ -32,12 +32,12 @@
                         <%= product.id %>
                     </h3>
                     <%  if(user && user.isAdmin == true){ %>
-                        <a href="/products/editProduct/<%= product.id %>"><button class="editProductSelected">Editar Producto</button></a>
-                        <%  } %>
-                        <%  if(user && user.isAdmin == true){ %>
-                        <form method="POST" action="/products/delete/<%= product.id %>?_method=DELETE" class="formAreaCreateProducts" id="deleteProductSelection">
-                            <a href="" class="checkDelete"><button><i class="fa-solid fa-trash-can"></i>Quiero eliminar este Producto</button></a>
-                        </form>
+                        <div class="adminBtns">
+                            <a href="/products/editProduct/<%= product.id %>"><button class="editProductSelected">Editar Producto</button></a>
+                            <form method="POST" action="/products/delete/<%= product.id %>?_method=DELETE" class="formAreaCreateProducts" id="deleteProductSelection">
+                                <a href="" class="checkDelete"><button><i class="fa-solid fa-trash-can"></i>Eliminar Producto</button></a>
+                            </form>
+                        </div>
                         <%  } %>
                             <div class="articleDetails">
                                 <div>

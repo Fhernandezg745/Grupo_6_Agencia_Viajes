@@ -1,0 +1,40 @@
+@media screen and (min-width: 1200px) {
+    .formAreaRegister .labelFieldset label {
+        display: flex;
+        flex-wrap: wrap;
+        width: 20vw;
+        font-size: 1.2em;
+        height: 2rem;
+        border-radius: 4px;
+        padding-left: 10px;
+    }
+    .formAreaRegister .labelFieldset .inputTextFieldRegister {
+        margin-left: 3em;
+        padding-left: 1em;
+        background-color: #c7c7c7;
+        font-size: 0.8em;
+        display: flex;
+        width: 30vw;
+        height: 2em;
+        border-radius: 4px;
+        justify-content: center;
+    }
+
+    .formAreaRegister{
+        width: 60vw;
+        margin-top: 5vw;
+        margin-left: 20vw;
+        margin-right: 20vw;
+        margin-bottom: 10vw;
+    }
+
+    .buttonField a {
+        width: 20%;
+    }
+    .bottomCheck label {
+        font-size: 1rem;
+    }
+    .bottomCheck {
+        text-align: center;
+    }
+}

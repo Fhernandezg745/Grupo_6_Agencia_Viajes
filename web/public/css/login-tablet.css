@@ -2,14 +2,12 @@
     .formAreaRegister .labelFieldset label {
         display: flex;
         width: 15vw;
-        font-size: 1.2em;
+        font-size: 1.2rem;
         height: 2rem;
         border-radius: 4px;
         padding-left: 0px;
     }
-    main {
-        text-align: center;
-    }
+    
     .formAreaRegister {
         max-width: 650px;
     }
@@ -17,9 +15,9 @@
         padding-left: 2rem;
         background-color: #c7c7c7;
         border-bottom: 2px solid #7c7c7c;
-        font-size: 0.8rem;
+        font-size: 1rem;
         display: flex;
-        width: 30vw;
+        width: 50vw;
         height: 2em;
         border-radius: 4px;
         justify-content: center;

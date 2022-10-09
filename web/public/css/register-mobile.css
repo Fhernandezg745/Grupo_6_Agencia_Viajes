@@ -39,11 +39,13 @@
     display: inline-flex;
     flex-direction: column;
     justify-content: center;
+    align-items: center;
+    align-content: center;
     background-color: rgba(140, 139, 139, 0.734);
-    width: 60vw;
+    width: 90vw;
     margin-top: 5vw;
-    margin-left: 20vw;
-    margin-right: 20vw;
+    margin-left: 5vw;
+    margin-right: 5vw;
     margin-bottom: 10vw;
     border-radius: 22px;
 }
@@ -53,11 +55,19 @@
     padding: 1vw;
     display: flex;
     flex-wrap: wrap;
+    font-size: 1.2rem;
+    justify-items: center;
+    align-items: center;
+    align-content: center;
     justify-content: center;
 }
 
-.labelFieldset .recordarPass {
-    font-size: 5px;
+.labelFieldset label{
+    width: 90vw;
+}
+
+.recordarPass {
+    font-size: 1rem;
 }
 
 .bottomCheck {
@@ -67,6 +77,9 @@
     padding: 1vw;
     display: flex;
     flex-wrap: nowrap;
+    align-items: center;
+    align-content: center;
+    gap: 0.5rem;
     justify-content: center;
 }
 
@@ -81,8 +94,11 @@
 .formAreaRegister .labelFieldset label {
     color: rgba(255, 255, 255, 0.734);
     display: flex;
-    width: 15vw;
-    font-size: 0.5em;
+    flex-wrap: wrap;
+    align-items: center;
+    align-content: center;
+    width: 25vw;
+    font-size: 0.7rem;
     height: 2rem;
     border-radius: 4px;
     padding-left: 5px;
@@ -93,9 +109,9 @@
     padding-left: 1em;
     background-color: rgba(255, 255, 255, 0.734);
 
-    font-size: 0.5em;
+    font-size: 1rem;
     display: flex;
-    width: 30vw;
+    width: 50vw;
     height: 2em;
     border-radius: 4px;
     justify-content: center;
@@ -117,7 +133,7 @@
 }
 
 .sendButton {
-    width: 10vw;
+    width: 10rem;
     display: block;
     padding: 4px 8px;
     color: rgba(255, 255, 255, 0.834);

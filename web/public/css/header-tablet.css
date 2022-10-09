@@ -35,6 +35,14 @@
         background-color: rgba(0, 0, 0, 0.3);
     }
 
+    .dropdown-content{
+        top: 0;
+    }
+
+    .dropdown-content a{
+        color: #fff;
+    }
+
     .main-header .site .dropdown:hover {
         background-color: rgba(0, 0, 0, 0.3);
     }
@@ -88,5 +96,7 @@
     .menu, label .menu {
         display: none;
     }
+
+    
 }
 

@@ -134,7 +134,7 @@ formsRegister.addEventListener("submit", function(e){
     e.preventDefault()
     let isCorrect = false
 
-    if(e.target.querySelectorAll(".labelFieldset.valid").length === 4){
+    if(e.target.querySelectorAll(".labelFieldset.valid").length === 5){
         isCorrect = true
     }
     if(isCorrect){

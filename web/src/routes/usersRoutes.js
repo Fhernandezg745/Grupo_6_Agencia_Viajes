@@ -13,14 +13,16 @@ router.get("/logout", isLogged, logout);
 router.get("/logged", isLogged, logged);
 router.post("/save", middlewaresUser, process);
 router.post("/access", middlewareLogin, access);
+
 router.get('/forgotPass', forgotPass)
 router.get('/forgotPassMessage', forgotPassMessage)
 router.post('/recover', changePass)
-router.get('/succesPassRecover', succesPassRecover)
-router.get('/errorPassRecover', errorPassRecover)
+
 
 router.get('/resetPassword',resetPass)
 router.post('/newPass',newPass)
 
+router.get('/succesPassRecover', succesPassRecover)
+router.get('/errorPassRecover', errorPassRecover)
 
 module.exports = router;

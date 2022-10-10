@@ -66,5 +66,27 @@ formsRegister.addEventListener("submit", function(e){
             icon: "error",
             confirmButtonColor: "#049473"
         })
+        window.history.back()
     }
 });
+
+const showBtn = document.querySelector(".show");
+function active_2(){
+if(password.value != "")  {
+    showBtn.style.display = "block";
+    showBtn.onclick = function(){
+        if(password.type == "password"){
+          password.type = "text";
+          this.textContent = "Hide";
+          this.classList.add("active");
+        }else{
+          password.type = "password";
+          this.textContent = "Show";
+          this.classList.remove("active");
+        }
+      }
+    }else{
+      showBtn.style.display = "none";
+    }
+}
+  

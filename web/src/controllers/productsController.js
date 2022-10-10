@@ -237,7 +237,7 @@ const productController = {
         });
     },
     filterRegion: async(req, res) => {
-        let productosF = await products.findAll({
+        let productosR = await products.findAll({
             where: {
                 regionId: req.params.regions,
             },
@@ -246,7 +246,7 @@ const productController = {
 
         return res.render("products/productList", {
             title: "Product Lista",
-            products: productosF,
+            products: productosR,
         });
     },
     filterCategory: async(req, res) => {
@@ -267,17 +267,18 @@ const productController = {
         });
     },
     filterTags: async(req, res) => {
+        return res.send(productosT)
         let productosT = await products.findAll(
 
             {
                 where: {
-                    tags: req.params.tags,
+                    tags: req.params.tag,
                 },
                 include: { all: true }
             },
 
         );
-
+        
         return res.render("products/productList", {
             title: "Product Lista",
             products: productosT,

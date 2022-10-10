@@ -11,6 +11,28 @@ main {
   text-align: center;
     }
 
+form .field{
+  position: relative;
+  margin: 15px 0;
+  outline: none;
+}
+
+
+form .field .show{
+  position: absolute;
+  right: 10px;
+  top: 50%;
+  transform: translateY(-50%);
+  font-size: 14px;
+  font-weight: 600;
+  user-select: none;
+  cursor: pointer;
+  display: block;
+}
+form .field .show.active{
+  color: #27ae60;
+}
+
 .imageLogin {
   background-image: url(/assets/mapa_camara_2.jpeg);
   background-repeat: no-repeat;
@@ -100,7 +122,7 @@ main {
 .formAreaRegister .labelFieldset .inputTextFieldRegister {
   margin-left: 2em;
   padding-left: 1em;
-  background-color: rgba(255, 255, 255, 0.734);
+  outline: none;
   border-bottom: 2px solid #7c7c7c;
   font-size: 1rem;
   display: flex;

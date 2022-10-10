@@ -51,17 +51,17 @@ const usersController = {
         let validaciones = validationResult(req)
         let { errors } = validaciones
         if (errors && errors.length > 0) {
-            return res.render('users/login', {
+            return res.render('./users/login', {
                 styles: ['forms'],
-                oldData: req.body,
-                errors: validaciones.mapped()
+                errors: validaciones.mapped(),
+                script: "../../public/scripts/login.js"
             });
-        }
+        } else{
         let users = await user.findAll();
 
         let userDB = users.find(u => u.email === req.body.email)
         req.session.user = userDB
-        return res.redirect('/users/logged')
+        return res.redirect('/users/logged')}
     },
     logout: function(req, res) {
         delete req.session.user
@@ -117,7 +117,8 @@ const usersController = {
         });
         return res.redirect("/users/forgotPassMessage")
     },
-    resetPass: async (req, res, next) => {
+    resetPass: async (req, res) => {
+        console.log("*******",req)
         await resetTokens.destroy({
             where: {
               expiration: { [Op.lt]: Sequelize.fn('CURDATE')},
@@ -139,12 +140,14 @@ const usersController = {
               showForm: false
             });
         }
+
+        console.log(record)
         res.render('users/resetPassword', {
             showForm: true,
             record: record
         });
     },
-    newPass: async (req, res, next) => {
+    newPass: async (req, res) => {
         //comparo passwords
         if (req.body.password1 !== req.body.password2) {
             return res.redirect("/users/errorPassRecover");

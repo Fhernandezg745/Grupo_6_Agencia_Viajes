@@ -4,11 +4,22 @@
     font-size: 12px;
     display: flex;
     flex-direction: row;
+    flex-wrap: nowrap;
     font-family: "Varela Round", sans-serif;
     background-color: #fff;
     justify-content: center;
     background-color: #eee;
   }
+
+  .mobileDropDown{
+    display: none;
+  }
+
+  .collapsibleBody{
+    display: block;
+    height: auto;
+  }
+
   .sideBar {
     gap: 20px;
     float: left;

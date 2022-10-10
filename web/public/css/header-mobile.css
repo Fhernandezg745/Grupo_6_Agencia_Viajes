@@ -40,9 +40,7 @@
 
 .main-header .top-header {
     align-items: center;
-    width: 100%;
     display: flex;
-    justify-content: space-between;
 }
 
 .main-header .top-header .nav-logo {
@@ -51,41 +49,36 @@
 }
 
 .main-header .top-header .site {
-    height: 40%;
     display: flex;
     gap: 1rem;
-}
-
-.main-header .top-header .site .buttonNavSite2 {
+  }
+  
+  .main-header .top-header .site .buttonNavSite2 {
     display: none
-}
-
-.main-header .top-header .site .iconMobile {
+  }
+  
+  .main-header .top-header .site .iconMobile {
     align-items: center;
     color: rgba(255, 255, 255);
     display: flex;
     justify-content: center;
     gap: 0.5rem;
     text-decoration: none;
-}
-
-.main-header .top-header .site .iconMobile i {
+  }
+  
+  .main-header .top-header .site .iconMobile i {
     font-size: 1.2rem;
     margin-left: 10px;
     color: aliceblue;
-}
-
-.logoHB {
+  }
+  
+  .logoHB {
     width: 120px;
     height: 120px;
-}
+  }
 
-.main-header .top-header {
-    width: 50%;
-    display: flex;
-}
-
-.main-header {
+  
+  .main-header {
     display: flex;
     flex-flow: wrap-reverse;
     flex-direction: row-reverse;
@@ -94,23 +87,27 @@
     padding: 0px 40px;
     align-items: center;
     justify-content: space-between;
-}
-
-.main-header .top-header .site .buttonNavSite {
+  }
+  
+  .main-header .top-header .site .buttonNavSite {
     display: none;
-}
-
-.main-header .top-header {
+  }
+  
+  .main-header .top-header {
     width: 70%;
-}
-
-.main-header .top-header .site {
+  }
+  
+  .main-header .top-header .site {
     box-sizing: border-box;
     margin-left: 30px;
     width: 30%;
     display: flex;
     flex-wrap: wrap;
     background-color: #049473;
+  }
+  
+  .site>a{
+    font-family: 'Varela Round', sans-serif;
 }
 
 .main-header .sectionSearch {

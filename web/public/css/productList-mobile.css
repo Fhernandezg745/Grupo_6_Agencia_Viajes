@@ -3,6 +3,7 @@ main {
     font-size: 12px;
     display: flex;
     flex-direction: row;
+    flex-wrap: wrap;
     font-family: "Varela Round", sans-serif;
     background-color: #fff;
     justify-content: center;
@@ -15,11 +16,15 @@ main {
     display: flex;
     flex-wrap: nowrap;
     flex-direction: column;
-    width: 100px;
-    height: 100vh;
+    width: 90%;
+    height: 3rem;
     background-color: #eee;
     margin-left: 10px;
     margin-right: 10px;
+}
+
+.sideBar>h2{
+    height: 2rem;
 }
 
 .sideBar h3 {
@@ -63,9 +68,40 @@ main {
     font-size: 1.1rem;
 }
 
+.mobileDropDown{
+    color: #049473;
+    margin-left: 15rem;
+    position: relative;
+    top: -1.5rem;
+}
+
+.collapsed, .collapseStart:target, .collapsibleBody:where(:not(.collapsed:target)){
+    display: none;
+}
+
+.collapseStart:target + .collapsed, .sideBar>h2:has(.collapseStart:target) ~ .collapsibleBody{
+    display: block;
+    margin-bottom: 10rem;
+}
+
+.sideBar:has(h2>.collapseStart:target) ~ .articleContainer{
+    top: 55rem;
+}
+
+.collapsibleBody{
+    height: 10rem;
+}
+
+.filterTipoDestino{
+    height: 3rem;
+    margin-top: 5rem;
+}
+
 .articleContainer {
     display: flex;
     justify-content: center;
+    margin-top: 3rem;
+    position: relative;
 }
 
 .productoBox {

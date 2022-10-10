@@ -1,12 +1,22 @@
 @media screen and (min-width: 480px) {
+    main{
+        flex-wrap: nowrap;
+    }
+
+    .sideBar:has(h2>.collapseStart:target) ~ .articleContainer{
+        top: 0;
+    }
+
+    .mobileDropDown{
+        margin-left: 12rem;
+    }
+    
     .sideBar {
         gap: 20px;
         float: left;
         display: flex;
-        flex-wrap: nowrap;
         flex-direction: column;
-        width: 200px;
-        height: 100vh;
+        width: 15%;
         background-color: #eee;
         margin-left: 10px;
         margin-right: 10px;

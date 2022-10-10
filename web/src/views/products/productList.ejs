@@ -13,8 +13,8 @@
     <%- include("../includes/header") %>
         <main>
             <aside class="sideBar">
-                <h2>FILTROS</h2>
-                <div class="filterRegiones">
+                <h2>FILTROS <a href="#hideFilters" id="hideFilters" class="mobileDropDown collapseStart"><span class="fa-solid fa-circle-chevron-down"></span></a><a id="showFilters" href="#showFilters" class="mobileDropDown collapsed"><span class="fa-solid fa-circle-chevron-up"></span></a></h2>
+                <div class="filterRegiones collapsibleBody">
                     <h3 class="">Regiones</h3>
                     <ul>
                         <li><a href="/products/productList/regions/1">Africa</a></li>
@@ -27,7 +27,7 @@
                         <li><a href="/products/productList">QUITAR FILTROS</a></li>
                     </ul>
                 </div>
-                <div class="filterTipoDestino">
+                <div class="filterTipoDestino collapsibleBody">
                     <h3 class="">Tipo de destino</h3>
                     <ul class="list-group">
                         <li class="">
@@ -52,7 +52,7 @@
                         </li>
                     </ul>
                 </div>
-                <div class="filterTags">
+                <div class="filterTags collapsibleBody">
                     <h3>TAGS</h3>
                     <% products.forEach(element=> {%>
                         <p>

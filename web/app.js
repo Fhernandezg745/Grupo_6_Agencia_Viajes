@@ -7,6 +7,7 @@ const { port } = require("./src/modules/port");
 const method = require('method-override');
 const session = require('express-session')
 const cors = require('cors');
+const {notFound} = require('./src/controllers/mainController');
 
 //levanto servidor
 app.listen(port, () =>
@@ -39,6 +40,7 @@ app.use(require('./src/middlewares/user'));
 app.use("/", require("./src/routes/mainRoutes"));
 app.use("/products", require("./src/routes/productRoutes"));
 app.use("/users", require("./src/routes/usersRoutes"));
+app.use("*", notFound);
 
 //APIS
 app.use('/api/users', require('./src/routes/apis/usersApi.routes'));

@@ -17,21 +17,18 @@
 
         <main>
             <section class="imageLogged">
-                <div class="userOptions">
-                    <a href="/"><i class="fa-solid fa-address-card"></i><p class="options">Editar mi perfil</p></a>
-                    <% if (user.isAdmin == true) {  %>
-                        <a href="/products/createProducts"><i class="fa-solid fa-plus"></i><p class="options">Crear producto</p></a>
-                        <% }  %>
-                            <a href="/products/productList"><i class="fa-solid fa-pen-to-square"></i><p class="options">Ver listado de productos</p></a>
-                            <a href="/"><i class="fa-solid fa-chart-line"></i><p class="options">Mis cotizaciones</p></a>
-                            <a href="/"><i class="fa-solid fa-receipt"></i><p class="options">Mis ventas</p></a>
-                </div>
-                <div class="userOptions">
-                    <a href="/"><i class="fa-solid fa-comments-dollar"></i><p class="options">Cotización USD</p></a>
-                    <a href="/"><i class="fa-solid fa-newspaper"></i><p class="options">Novedades</p></a>
-                    <a href="/"><i class="fa-solid fa-circle-info"></i><p class="options">Bases y condiciones</p></a>
-                    <a href="/"><i class="fa-solid fa-handshake-angle"></i><p class="options">Ayuda</p></a>
-                    <a href="http://127.0.0.1:5173/" target="_blank"><i class="fa-solid fa-table-columns"></i><p class="options">Panel de control</p></a>
+                <div class="userData">
+                    <figure class="imageContainer">
+                        <img <% if (user.avatar) { %>
+                                src="/avatars/<%= user.avatar %>"
+                            <% } else { %>
+                                src="/avatars/<%= "avatar-166012345-123456.gif" %>"  
+                        <% } %> 
+                         " alt="Avatar usuario <%= user.id %> ">
+                    </figure>
+                    <p class="userInfo">Nombre : <%= user.firstName %> </p>
+                    <p class="userInfo">Apellido : <%= user.lastName %> </p>
+                    <p class="userInfo">Email: <%= user.email %> </p>
                 </div>
             </section>
         </main>

@@ -46,6 +46,11 @@ const mainController = {
         return res.render("us", {
             title: "us",
         });
+    },
+    notFound: (req, res) => {
+       return  res.status(404).render("404", {
+            title: "Página no encontrada"
+        });
     }
 };
 

@@ -16,16 +16,16 @@ function active(){
   }
 }
 btn.onclick = function(){
-    if(pswrd_1.value != pswrd_2.value){
+    if(password1.value != password2.value){
       errorText.style.display = "block";
       errorText.classList.remove("matched");
-      errorText.textContent = "Error! Confirm Password Not Match";
+      errorText.textContent = "Error! Las contraseñas no coinciden";
       return false;
     }else{
       errorText.style.display = "block";
       errorText.classList.add("matched");
-      errorText.textContent = "Nice! Confirm Password Matched";
-      return false;
+      errorText.textContent = "Excelente! Las contraseñas coinciden";
+      return btn.value;
     }}
 function active_2(){
   if(password2.value != ""){
@@ -47,3 +47,4 @@ function active_2(){
     showBtn.style.display = "none";
   }
 }
+

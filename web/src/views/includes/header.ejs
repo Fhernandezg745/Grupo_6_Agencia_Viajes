@@ -62,7 +62,9 @@
       <div class="dropdown iconMobile">
       <button class="dropbtn">Mi cuenta<span class="fa-solid fa-square-caret-down"></span></button>
         <div class="dropdown-content">
+          <% if (user.isAdmin == true) {  %>
         <a href="/products/createProducts" class="itemD">Crear Producto</a>
+        <% }  %>
         <a href="/products/productList" class="itemD">Ver todos los productos</a>
         <a href="/users/logged" class="itemD">Mi perfil</a>
         <a href="http://127.0.0.1:5173/" class="itemD">Panel de Control</a>
@@ -73,7 +75,7 @@
     </nav>
   </section>
   <label class="navHamburguer">
-    <input type="checkbox">
+    <input type="checkbox" class="checkItems">
     <span class="menu"> <span class="hamburger"></span> </span>
     <ul>
       <li> <a href="/info" class="buttonNavSite">

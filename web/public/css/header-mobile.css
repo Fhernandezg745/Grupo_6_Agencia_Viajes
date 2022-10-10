@@ -165,35 +165,35 @@ label .menu {
   
   label .hamburger:after { bottom: -10px; }
   
-  label input { display: none; }
+  label .checkItems { display: none; }
   
-  label input:checked + .menu {
+  label .checkItems:checked + .menu {
     box-shadow: 0 0 0 20vw #FFF, 0 0 0 25vh #FFF;
     border-radius: 0;
     
   }
   
-  label input:checked + .menu .hamburger {
+  label .checkItems:checked + .menu .hamburger {
     -webkit-transform: rotate(45deg);
     transform: rotate(45deg);
     
   }
   
-  label input:checked + .menu .hamburger:after {
+  label .checkItems:checked + .menu .hamburger:after {
     -webkit-transform: rotate(90deg);
     transform: rotate(90deg);
     bottom: 0;
     
   }
   
-  label input:checked + .menu .hamburger:before {
+  label .checkItems:checked + .menu .hamburger:before {
     -webkit-transform: rotate(90deg);
     transform: rotate(90deg);
     top: 0;
     
   }
   
-  label input:checked + .menu + ul { display: block; }
+  label .checkItems:checked + .menu + ul { display: block; }
   
   label ul {
     z-index: 200;

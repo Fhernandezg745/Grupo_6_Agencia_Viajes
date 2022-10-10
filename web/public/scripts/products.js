@@ -77,7 +77,7 @@ formAreaCreateProducts.addEventListener("submit", function(e){
     e.preventDefault()
     let isCorrect = false
 
-    if(e.target.querySelectorAll(".labelFieldset.valid").length === 2){
+    if(e.target.querySelectorAll(".labelFieldset.valid").length === 3){
         isCorrect = true
     }
     if(isCorrect){

@@ -382,3 +382,79 @@ main {
 .articleDetails a {
     text-decoration: none;
 }
+
+/* ====================================Products Carousel============================= */
+
+.carousel{
+    height: 50rem;
+    overflow: hidden;
+    position: relative;
+}
+
+.track{
+    height: 100%;
+    position: relative;
+    transition: all 700ms ease-in;
+    width: 100%;
+}
+
+.horsey{
+    height: 100%;
+    position: absolute;
+    width: 85vw !important;
+}
+
+.btn-next, .btn-prev{
+    align-items: center;
+    background-color: rgba(220, 220, 220, 0.734);
+    border-radius: 50%;
+    display: flex;
+    height: 3.5rem;
+    justify-content: center;
+    position: absolute;
+    width: 3.5rem;
+}
+
+.btn-next>span, .btn-prev>span{
+    color: rgba(140, 139, 139, 0.734);
+    font-size: 2rem;
+}
+
+.btn-next{
+    left: 75vw;
+    top: 50%;
+}
+
+.btn-prev{
+    top: 50%;
+}
+
+.btn-next:hover, .btn-prev:hover{
+    background-color: rgba(0, 185, 117, 0.734);
+}
+
+.btn-next:hover:first-child, .btn-prev:hover:first-child{
+    color: rgba(255, 255, 255, 0.734);
+}
+
+.breadcrumbs{
+    align-items: center;
+    background-color: rgba(255, 255, 255, 0);
+    display: flex;
+    gap: 0.3rem;
+    justify-content: center;
+    left: 9rem;
+    position: absolute;
+    top: 49rem;
+}
+
+.breadcrumb{
+    background-color: rgba(220, 220, 220, 0.734);
+    border-radius: 50%;
+    height: 1rem;
+    width: 1rem;
+}
+
+.breadcrumbs>.activeB{
+    background-color: rgba(0, 185, 117, 0.734);
+}

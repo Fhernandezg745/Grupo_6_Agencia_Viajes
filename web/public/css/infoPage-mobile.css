@@ -48,6 +48,9 @@ main {
 .vaccineImg{
     background-image:url(/assets/vaccine-info.jpeg);
 }
+.destinationImg{
+    background-image:url(/assets/info-Destination.jpg);
+}
 
 
 

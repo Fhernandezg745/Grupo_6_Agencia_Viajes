@@ -30,6 +30,9 @@
         width: 100%;
     }
 
+    .articlebox{
+        height:600px;
+    }
     .horsey{
         width: 33.3% !important;
     }

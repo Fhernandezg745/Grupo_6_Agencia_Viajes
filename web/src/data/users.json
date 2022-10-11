@@ -58,7 +58,7 @@
         "id": 8,
         "firstName": "Juan",
         "lastName": "Perezoso",
-        "email": "juan@gmail.com",
+        "email": "juan@ht.com",
         "password": "$2a$10$t8czM32MCnrWY.7ddFsPN.eJ0b4uVlzFWuSWiIYmrd36oCdh1ka6a",
         "isAdmin": true,
         "birthDate": "1992-12-03",

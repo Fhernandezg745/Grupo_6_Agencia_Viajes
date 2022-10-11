@@ -8,13 +8,13 @@ const productsApi = {
         try {
             let page = 0;
             
-            if (req.query.offset) {
-                page = parseInt(req.query.offset);
+            if (req.query.page) {
+                page = parseInt(req.query.page);
             }
 
             let productsDB = await products.findAll({
                 include: { all: true },
-                limit: 10,
+                limit: 5,
                 offset: page,
                 order: [['id', 'ASC']]
             });
@@ -67,7 +67,7 @@ const productsApi = {
                 region: product.productoRegion.region,
                 price: product.salesPrice
             }));
-            return res.status(200).json({ next: data.products.length> 0 ? 'http://localhost:3002/api/products?offset=' + (page + 10) : null, data });
+            return res.status(200).json({ next: data.products.length> 0 ? 'http://localhost:3002/api/products?page=' + (page + 10) : null, data });
             // return res.status(200).json(data);
         } catch (error) {
             return res.status(500).json(error)

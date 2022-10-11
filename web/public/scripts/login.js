@@ -21,6 +21,7 @@ inputsRegister.email.addEventListener("change", function(e) {
         field.classList.add("valid")
         email.classList.remove("invalid")
         email.classList.add("valid")
+        feed.innerText = " "
         let check = document.createElement("span");
         check.classList.add("fa-solid", "fa-circle-check");
         feed.appendChild(check); 

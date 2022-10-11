@@ -21,7 +21,9 @@ inputsRegister.email.addEventListener("change", function(e) {
         field.classList.add("valid")
         email.classList.remove("invalid")
         email.classList.add("valid")
-        feed.innerText = "Campo completado correctamente"
+        let check = document.createElement("span");
+        check.classList.add("fa-solid", "fa-circle-check");
+        feed.appendChild(check); 
     }
 });
 
@@ -46,6 +48,9 @@ inputsRegister.password.addEventListener("change", function(e) {
         field.classList.add("valid")
         password.classList.remove("invalid")
         password.classList.add("valid")
+        let check = document.createElement("span");
+        check.classList.add("fa-solid", "fa-circle-check");
+        feed.appendChild(check);
     }
 });
 

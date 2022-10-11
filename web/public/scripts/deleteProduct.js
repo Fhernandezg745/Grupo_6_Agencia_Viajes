@@ -8,12 +8,14 @@ formDelete.addEventListener("click", function(e){
         icon: "warning",
         confirmButtonText: "Si",
         showCancelButton: true,
-        cancelButtonText: "Cancelar"
+        cancelButtonText: "Cancelar",
+        confirmButtonColor: "#049473"
     }).then((result) => {
         if (result.isConfirmed) {
-          Swal.fire(
-            'Producto eliminado con éxito',
-          )
+          Swal.fire({
+            text: 'Producto eliminado con éxito',
+            confirmButtonColor: "#049473"
+        })
           return formDelete.submit()
         } 
       })

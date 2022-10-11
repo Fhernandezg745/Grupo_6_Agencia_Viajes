@@ -21,7 +21,9 @@ inputsRegister.firstName.addEventListener("input", function(e) {
         firstName.classList.add("valid")
         field.classList.remove("invalid")
         field.classList.add("valid")
-        feed.innerText = "Correcto"
+        let check = document.createElement("span");
+        check.classList.add("fa-solid", "fa-circle-check");
+        feed.appendChild(check);
     }
 });
 
@@ -45,7 +47,9 @@ inputsRegister.lastName.addEventListener("input", function(e) {
         lastName.classList.add("valid")
         field.classList.remove("invalid")
         field.classList.add("valid")
-        feed.innerText = "Correcto"
+        let check = document.createElement("span");
+        check.classList.add("fa-solid", "fa-circle-check");
+        feed.appendChild(check);
     }
 });
 
@@ -69,7 +73,9 @@ inputsRegister.email.addEventListener("input", function(e) {
         email.classList.add("valid")
         field.classList.remove("invalid")
         field.classList.add("valid")
-        feed.innerText = "Correcto"
+        let check = document.createElement("span");
+        check.classList.add("fa-solid", "fa-circle-check");
+        feed.appendChild(check);
     }
 });
 
@@ -102,7 +108,9 @@ inputsRegister.password.addEventListener("input", function(e) {
         password.classList.add("valid")
         field.classList.remove("invalid")
         field.classList.add("valid")
-        feed.innerText = "Correcto"
+        let check = document.createElement("span");
+        check.classList.add("fa-solid", "fa-circle-check");
+        feed.appendChild(check);
     }
 });
 
@@ -127,6 +135,9 @@ inputsRegister.avatar.addEventListener("change", function(e) {
     } else {
         field.classList.remove("invalid")
         field.classList.add("valid")
+        let check = document.createElement("span");
+        check.classList.add("fa-solid", "fa-circle-check");
+        feed.appendChild(check);
     }
 });
 

@@ -21,7 +21,7 @@ inputsCreateUpProd.tittle.addEventListener("input", function(e) {
         tittle.classList.add("valid")
         field.classList.remove("invalid")
         field.classList.add("valid")
-        feed.innerText = "Campo completado correctamente"
+        feed.innerHtml = "<span class='fa-solid fa-circle-check'></span>"
     }
 });
 
@@ -46,7 +46,9 @@ inputsCreateUpProd.shortDescription.addEventListener("input", function(e) {
         shortDescription.classList.add("valid")
         field.classList.remove("invalid")
         field.classList.add("valid")
-        feed.innerText = "Campo completado correctamente"
+        let check = document.createElement("span");
+        check.classList.add("fa-solid", "fa-circle-check");
+        feed.appendChild(check);
     }
 });
 
@@ -69,7 +71,10 @@ inputsCreateUpProd.image.addEventListener("change", function(e) {
         feed.innerText = msg
     } else {
         field.classList.remove("invalid")
-        field.classList.add("valid")
+        field.classList.add("valid");
+        let check = document.createElement("span");
+        check.classList.add("fa-solid", "fa-circle-check");
+        feed.appendChild(check);
     }
 });
 

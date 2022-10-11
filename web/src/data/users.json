@@ -6,7 +6,8 @@
         "password": "AAl8fOhZ",
         "isAdmin": true,
         "birthDate": "1954-09-23",
-        "avatar": null
+        "avatar": "avatar-1659735258563-670394932.jpeg",
+        "avatarId":19
     },
     {
         "id": 4,
@@ -16,7 +17,9 @@
         "password": "rUBzHTWyGW",
         "isAdmin": true,
         "birthDate": "1954-09-23",
-        "avatar": null
+        "avatar": "avatar-1659735258563-670394932.jpeg",
+        "avatarId":20
+        
     },
     {
         "id": 5,
@@ -26,7 +29,8 @@
         "password": "$2a$10$oz1Be1RuW4wxHS70gVNuge7tnEvRBQD94kQ9gqOzX2WMWRzppvHIC",
         "isAdmin": true,
         "birthDate": "1954-09-23",
-        "avatar": null
+        "avatar": "avatar-1659735258563-670394932.jpeg",
+        "avatarId":21
     },
     {
         "id": 6,
@@ -36,7 +40,8 @@
         "password": "$2a$10$QZX2Mr3ng25EXMioey6gB.7Dw6mRh46coJrYR4txp96v.iA6qcH2y",
         "isAdmin": true,
         "birthDate": "1992-12-12",
-        "avatar": null
+        "avatar": "avatar-1659735258563-670394932.jpeg",
+        "avatarId":22
     },
     {
         "id": 7,
@@ -46,7 +51,8 @@
         "password": "$2a$10$rEa/5JjB3/pMhAD74q6fXeVgGNcp0s9J4VMy1nZWiQWxqy9C5WUIu",
         "isAdmin": true,
         "birthDate": "2022-08-02",
-        "avatar": null
+        "avatar": "avatar-1659735258563-670394932.jpeg",
+        "avatarId":23
     },
     {
         "id": 8,
@@ -56,7 +62,8 @@
         "password": "$2a$10$t8czM32MCnrWY.7ddFsPN.eJ0b4uVlzFWuSWiIYmrd36oCdh1ka6a",
         "isAdmin": true,
         "birthDate": "1992-12-03",
-        "avatar": null
+        "avatar": "avatar-1659735258563-670394932.jpeg",
+        "avatarId":24
     },
     {
         "id": 9,
@@ -66,7 +73,8 @@
         "password": "$2a$10$.KIDO4HBuRMhlySVQtDpWu45O7KIUB1pqSpM54wvj7lIpWuUKuqTe",
         "isAdmin": true,
         "birthDate": "2022-08-02",
-        "avatar": null
+        "avatar": "avatar-1659735258563-670394932.jpeg",
+        "avatarId":25
     },
     {
         "id": 10,
@@ -76,7 +84,8 @@
         "password": "$2a$10$SFssKt29HszxP5BbVjuYYemAaUmEs1ySTcj0scRnjNNuu2ORvh8v.",
         "isAdmin": true,
         "birthDate": "2005-08-22",
-        "avatar": "avatar-1659735258563-670394932.jpeg"
+        "avatar": "avatar-1659735258563-670394932.jpeg",
+        "avatarId":26
     },
     {
         "id": 11,
@@ -86,6 +95,7 @@
         "password": "$2a$10$TauxJbuW91zkB/FGnK2KyeUReB.nsklwSnSQpfmkppdVSICU/QsWq",
         "isAdmin": true,
         "birthDate": "1999-12-30",
-        "avatar": "avatar-1659735258563-670394932.jpeg"
+        "avatar": "avatar-1659735258563-670394932.jpeg",
+        "avatarId":27
     }
 ]

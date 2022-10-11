@@ -28,8 +28,9 @@ module.exports = {
             isAdmin: {
                 type: Sequelize.BOOLEAN
             },
-            avatar: {
+            avatarId: {
                 type: Sequelize.INTEGER,
+                allowNull: true,
                 references:{
                     model:'images',
                     key:'id'

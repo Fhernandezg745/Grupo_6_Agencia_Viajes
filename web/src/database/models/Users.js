@@ -26,8 +26,9 @@ module.exports = (sequelize, DataTypes) => {
             type: DataTypes.BOOLEAN,
             defaultValue: false
         },
-        avatar: {
+        avatarId: {
             type: DataTypes.INTEGER,
+            allowNull: true
         }
 
     }
@@ -43,13 +44,15 @@ module.exports = (sequelize, DataTypes) => {
 
     user.associate = function(models) {
         user.belongsTo(models.images, {
-            as: 'avatarId',
-            foreignKey: 'avatar'
+            as: 'avatarImg',
+            foreignKey: 'avatarId'
         })
         user.hasMany(models.products, {
             as: "userProduct",
             foreignKey: "creatorId",
         });
+
+
     }
 
     return user

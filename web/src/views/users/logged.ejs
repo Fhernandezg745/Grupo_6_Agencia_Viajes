@@ -19,12 +19,13 @@
             <section class="imageLogged">
                 <div class="userData">
                     <figure class="imageContainer">
-                        <img <% if (user.avatar) { %>
-                                src="/avatars/<%= user.avatar %>"
+                        <img <% if (user.avatarId) { %>
+                                src="/avatars/<%= "avatar-166012345-123456.gif"  %>"
                             <% } else { %>
-                                src="/avatars/<%= "avatar-166012345-123456.gif" %>"  
+                                src="/avatars/<%= "avatar-1665515768232-287200034.jpg" %>"  
                         <% } %> 
                          " alt="Avatar usuario <%= user.id %> ">
+                         
                     </figure>
                     <p class="userInfo">Nombre : <%= user.firstName %> </p>
                     <p class="userInfo">Apellido : <%= user.lastName %> </p>

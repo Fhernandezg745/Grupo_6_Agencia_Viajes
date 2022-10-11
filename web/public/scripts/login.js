@@ -71,7 +71,6 @@ formsRegister.addEventListener("submit", function(e){
             icon: "error",
             confirmButtonColor: "#049473"
         })
-        window.history.back()
     }
 });
 

@@ -40,4 +40,24 @@
     .mainClass .sectionSearch form {
         max-height: 40px;
     }
+
+    /* ====================================Products Carousel============================= */
+
+    .carousel{
+        display: flex !important;
+        height: 55rem !important;
+        width: 100%;
+    }
+
+    .horsey{
+        width: 50% !important;
+    }
+
+    .btn-next{
+        left: 88.5vw;
+    }
+
+    .breadcrumbs{
+        left: 43%;
+    }
 }

@@ -21,4 +21,25 @@
     .bottomClassMain .lastSection {
         grid-template-columns: 1fr 1fr 1fr 1fr;
     }
+
+    /* ====================================Products Carousel============================= */
+
+    .carousel{
+        display: flex !important;
+        height: 53rem !important;
+        width: 100%;
+    }
+
+    .horsey{
+        width: 33.3% !important;
+    }
+
+    .btn-next{
+        left: 93vw;
+    }
+
+    .breadcrumbs{
+        left: 45%;
+        top: 98%;
+    }
 }

@@ -12,7 +12,7 @@ module.exports = {
       return Object({images: user.avatar})
     })
     let total = [...images, ...imageUsers];
-    await queryInterface.bulkInsert("images", total, {});
+    await queryInterface.bulkInsert("images", total, {}); 
   },
 
   async down (queryInterface, Sequelize) {

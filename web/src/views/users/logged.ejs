@@ -19,8 +19,8 @@
             <section class="imageLogged">
                 <div class="userData">
                     <figure class="imageContainer">
-                        <img <% if (user.avatarId) { %>
-                                src="/avatars/<%= user.avatarImg %>"
+                        <img <% if (user.avatar) { %>
+                                src="/avatars/<%= user.avatar %>"
                             <% } else { %>
                                 src="/avatars/<%= "avatar-166012345-123456.gif" %>"  
                         <% } %> 
